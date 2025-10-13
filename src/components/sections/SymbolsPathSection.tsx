@@ -1,25 +1,26 @@
 import React from 'react';
+import { Mountain, Square, Palette, Users } from 'lucide-react';
 import Logo from '../ui/Logo';
 
 const SymbolsPathSection: React.FC = () => {
     const symbols = [
         {
-            icon: "🏔️",
+            icon: Mountain,
             title: "The Mountain Line",
             description: "represents persistence and exploration."
         },
         {
-            icon: "🟢",
+            icon: Square,
             title: "The Green Square",
             description: "reflects balance, grounding and growth."
         },
         {
-            icon: "🔴🔵🟡",
+            icon: Palette,
             title: "The Circles",
             description: "Coral captures creativity and curiosity. Blue symbolizes freedom and exploration. Golden embodies inspiration, imagination and photography."
         },
         {
-            icon: "🤝",
+            icon: Users,
             title: "The Three Shapes Together",
             description: "illustrate collaboration, empathy and community."
         }
@@ -40,21 +41,24 @@ const SymbolsPathSection: React.FC = () => {
                         </p>
 
                         <div className="space-y-6">
-                            {symbols.map((symbol, index) => (
-                                <div key={index} className="flex items-start space-x-4">
-                                    <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                                        <span className="text-lg">{symbol.icon}</span>
+                            {symbols.map((symbol, index) => {
+                                const IconComponent = symbol.icon;
+                                return (
+                                    <div key={index} className="flex items-start space-x-4">
+                                        <div className="flex-shrink-0 w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                                            <IconComponent className="w-6 h-6 text-white" />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-semibold text-gray-900 mb-1">
+                                                {symbol.title}:
+                                            </h3>
+                                            <p className="text-gray-600">
+                                                {symbol.description}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="font-semibold text-gray-900 mb-1">
-                                            {symbol.title}:
-                                        </h3>
-                                        <p className="text-gray-600">
-                                            {symbol.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
 

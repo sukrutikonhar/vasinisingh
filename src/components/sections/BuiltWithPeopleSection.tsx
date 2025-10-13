@@ -39,8 +39,8 @@ const BuiltWithPeopleSection: React.FC = () => {
                             const IconComponent = value.icon;
                             return (
                                 <div key={index} className="text-center space-y-4">
-                                    <div className="w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center mx-auto">
-                                        <IconComponent className="w-8 h-8 text-white" />
+                                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+                                        <IconComponent className="w-8 h-8 text-black" />
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-semibold mb-2">
