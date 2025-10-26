@@ -1,8 +1,8 @@
 import Layout from '@/components/layout/Layout';
-import ContactHeroSection from '@/components/sections/ContactHeroSection';
-import OpportunitiesContactSection from '@/components/sections/OpportunitiesContactSection';
-import ContactFormSection from '@/components/sections/ContactFormSection';
-import WriteToMeSection from '@/components/sections/WriteToMeSection';
+import ContactHeroSection from '@/components/contact/ContactHeroSection';
+import OpportunitiesContactSection from '@/components/contact/OpportunitiesContactSection';
+import ContactFormSection from '@/components/contact/ContactFormSection';
+import WriteToMeSection from '@/components/contact/WriteToMeSection';
 
 export default function Contact() {
     return (

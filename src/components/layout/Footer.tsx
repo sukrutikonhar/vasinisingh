@@ -141,7 +141,7 @@ const Footer: React.FC = () => {
             {showScrollTop && (
                 <button
                     onClick={scrollToTop}
-                    className="fixed bottom-8 right-8 w-12 h-12 bg-white text-gray-900 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center z-50"
+                    className="fixed bottom-8 right-8 w-12 h-12 bg-white text-gray-900 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center z-50 cursor-pointer"
                     aria-label="Scroll to top"
                 >
                     <ArrowUp className="w-6 h-6" />

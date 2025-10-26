@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface LogoProps {
     className?: string;
@@ -25,28 +26,15 @@ const Logo: React.FC<LogoProps> = ({
 
     return (
         <div className={`flex items-center gap-3 ${className}`}>
-            {/* Mountain Icon */}
-            <div className={`${sizeClasses[size]} relative`}>
-                <svg
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-full h-full"
-                >
-                    {/* Mountain peaks */}
-                    <path
-                        d="M4 24 L12 8 L20 16 L28 4"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                    />
-
-                    {/* Colored dots on peaks */}
-                    <circle cx="12" cy="8" r="2" fill="#ff6b47" />
-                    <circle cx="20" cy="16" r="2" fill="#22c55e" />
-                    <circle cx="28" cy="4" r="2" fill="#3b82f6" />
-                </svg>
+            {/* Logo Image */}
+            <div className={`${sizeClasses[size]} relative flex-shrink-0`}>
+                <Image
+                    src="/images/About us/about-03.webp"
+                    alt="Vasini Singh Logo"
+                    width={32}
+                    height={32}
+                    className="w-full h-full object-contain"
+                />
             </div>
 
             {/* Text */}

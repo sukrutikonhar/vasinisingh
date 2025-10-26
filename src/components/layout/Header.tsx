@@ -47,13 +47,13 @@ const Header: React.FC = () => {
 
                     {/* Search Icon */}
                     <div className="flex items-center space-x-4">
-                        <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+                        <button className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors cursor-pointer">
                             <Search className="w-5 h-5 text-gray-600" />
                         </button>
 
                         {/* Mobile menu button */}
                         <button
-                            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             aria-label="Toggle menu"
                         >

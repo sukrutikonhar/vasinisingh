@@ -1,7 +1,7 @@
 import Layout from '@/components/layout/Layout';
-import BlogsHeroSection from '@/components/sections/BlogsHeroSection';
-import MyPerspectiveSection from '@/components/sections/MyPerspectiveSection';
-import BlogPostsSection from '@/components/sections/BlogPostsSection';
+import BlogsHeroSection from '@/components/blogs/BlogsHeroSection';
+import MyPerspectiveSection from '@/components/blogs/MyPerspectiveSection';
+import BlogPostsSection from '@/components/blogs/BlogPostsSection';
 
 export default function Blogs() {
     return (

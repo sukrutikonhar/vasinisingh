@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -20,18 +21,35 @@
   --container-padding: 1.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+@theme {
+  --font-poppins: "Poppins", system-ui, sans-serif;
+  --font-inter: "Inter", system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-inter);
   line-height: 1.6;
   scroll-behavior: smooth;
+}
+
+/* Pointer cursor for interactive elements */
+button,
+a,
+[role="button"],
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}
+
+/* Custom font classes */
+.font-poppins {
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 /* Custom scrollbar */
