@@ -1,14 +1,12 @@
-import Layout from '@/components/layout/Layout';
-import ProjectsHeroSection from '@/components/projects/ProjectsHeroSection';
-import MainProjectsSection from '@/components/projects/MainProjectsSection';
-import OtherProjectsSection from '@/components/projects/OtherProjectsSection';
+import MinimalLayout from '@/components/layout/MinimalLayout';
+import ProjectsPageHero from '@/components/projects/ProjectsPageHero';
+import ProjectsGrid from '@/components/projects/ProjectsGrid';
 
 export default function Projects() {
     return (
-        <Layout>
-            <ProjectsHeroSection />
-            <MainProjectsSection />
-            <OtherProjectsSection />
-        </Layout>
+        <MinimalLayout>
+            <ProjectsPageHero />
+            <ProjectsGrid />
+        </MinimalLayout>
     );
 }

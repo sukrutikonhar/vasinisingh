@@ -1,22 +1,20 @@
-import Layout from '@/components/layout/Layout';
-import HeroSection from '@/components/home/HeroSection';
-import PhilosophySection from '@/components/home/PhilosophySection';
-import MyPhilosophySection from '@/components/home/MyPhilosophySection';
-import FeaturedWorkSection from '@/components/home/FeaturedWorkSection';
-import BeyondDesignSection from '@/components/home/BeyondDesignSection';
-import OpportunitiesSection from '@/components/home/OpportunitiesSection';
-import ContactSection from '@/components/home/ContactSection';
+import MinimalLayout from '@/components/layout/MinimalLayout';
+import NewHeroSection from '@/components/home/NewHeroSection';
+import AboutSection from '@/components/home/AboutSection';
+import AnimatedProjectGrid from '@/components/home/AnimatedProjectGrid';
+import SkillsSection from '@/components/home/SkillsSection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
+import CTASection from '@/components/home/CTASection';
 
 export default function Home() {
   return (
-    <Layout>
-      <HeroSection />
-      <PhilosophySection />
-      <MyPhilosophySection />
-      <FeaturedWorkSection />
-      <BeyondDesignSection />
-      <OpportunitiesSection />
-      <ContactSection />
-    </Layout>
+    <MinimalLayout>
+      <NewHeroSection />
+      <AnimatedProjectGrid />
+      <AboutSection />
+      <SkillsSection />
+      <TestimonialsSection />
+      <CTASection />
+    </MinimalLayout>
   );
 }
