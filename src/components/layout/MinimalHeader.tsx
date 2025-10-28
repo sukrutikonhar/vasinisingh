@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const MinimalHeader: React.FC = () => {
     const pathname = usePathname();
@@ -21,6 +22,7 @@ const MinimalHeader: React.FC = () => {
     const navigation = [
         { name: 'Work', href: '/projects' },
         { name: 'About', href: '/about' },
+        { name: 'Blogs', href: '/blogs' },
         { name: 'Contact', href: '/contact' },
     ];
 
@@ -29,9 +31,19 @@ const MinimalHeader: React.FC = () => {
             }`}>
             <div className="container-custom px-4 sm:px-6">
                 <div className="flex items-center justify-between h-16 sm:h-20">
-                    {/* Logo/Name */}
-                    <Link href="/" className="text-xl sm:text-2xl font-grotesk font-bold text-black hover:opacity-70 transition-opacity">
-                        VS
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity">
+                        <div className="relative w-8 h-8 sm:w-10 sm:h-10">
+                            <Image
+                                src="/images/About us/about-03.webp"
+                                alt="Vasini Singh Logo"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
+                        <span className="text-lg sm:text-xl font-grotesk font-bold text-black hidden sm:inline">
+                            VASINI SINGH
+                        </span>
                     </Link>
 
                     {/* Desktop Navigation */}

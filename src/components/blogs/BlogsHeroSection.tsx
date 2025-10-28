@@ -1,20 +1,26 @@
+'use client';
+
 import React from 'react';
-import { BookOpen } from 'lucide-react';
-import { typography, spacing, containers } from '@/lib/typography';
 
 const BlogsHeroSection: React.FC = () => {
     return (
-        <section className={`bg-gray-900 text-white ${spacing.section}`}>
-            <div className={containers.main}>
-                <div className="flex items-center gap-4">
-                    <BookOpen className="w-12 h-12 lg:w-16 lg:h-16" />
-                    <h1 className={`${typography.h1.pageHero}`} style={{ fontFamily: '"Poppins", system-ui, sans-serif' }}>
+        <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 bg-white">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-4xl mx-auto text-center">
+                    <div className="inline-block border-2 border-black px-3 py-1.5 sm:px-4 sm:py-2 mb-6 sm:mb-8">
+                        <span className="text-xs sm:text-sm font-grotesk font-medium uppercase tracking-wider">
+                            Thoughts & Insights
+                        </span>
+                    </div>
+
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-grotesk font-bold text-black mb-6 sm:mb-8 leading-tight">
                         Blogs
                     </h1>
+
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-inter text-gray-600 max-w-3xl mx-auto px-4">
+                        Insights, stories, and reflections on design, creativity, and the craft of building meaningful experiences.
+                    </p>
                 </div>
-                <p className={`${typography.body.large} text-gray-300 mt-6 max-w-2xl`} style={{ fontFamily: '"Inter", system-ui, sans-serif' }}>
-                    Insights, stories, and reflections on design, creativity, and the craft of building meaningful experiences.
-                </p>
             </div>
         </section>
     );

@@ -5,10 +5,10 @@ import { Mail, Linkedin, Twitter, Github, Instagram, Coffee } from 'lucide-react
 
 const ContactInfo: React.FC = () => {
     const socialLinks = [
-        { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/in/vasinisingh' },
-        { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/vasinisingh' },
-        { name: 'GitHub', icon: Github, url: 'https://github.com/vasinisingh' },
-        { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/vasinisingh' }
+        { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/vasini-singh-18a442205/' },
+        { name: 'Twitter/X', icon: Twitter, url: 'https://x.com/VasiniSingh' },
+        { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/ghumakkkad_ladki/' },
+        { name: 'Medium', icon: Github, url: 'https://medium.com/@vasinisingh' }
     ];
 
     return (
@@ -28,10 +28,10 @@ const ContactInfo: React.FC = () => {
                                 </h3>
                             </div>
                             <a
-                                href="mailto:hello@vasinisingh.com"
+                                href="mailto:vasinisingh@gmail.com"
                                 className="text-base sm:text-lg font-inter text-gray-700 hover:text-black transition-colors break-all"
                             >
-                                hello@vasinisingh.com
+                                vasinisingh@gmail.com
                             </a>
                         </div>
 

@@ -6,10 +6,10 @@ import { Mail, ArrowRight, Linkedin, Twitter, Github, Instagram } from 'lucide-r
 
 const CTASection: React.FC = () => {
     const socialLinks = [
-        { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/in/vasinisingh', ariaLabel: 'Connect on LinkedIn' },
-        { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/vasinisingh', ariaLabel: 'Follow on Twitter' },
-        { name: 'GitHub', icon: Github, url: 'https://github.com/vasinisingh', ariaLabel: 'View GitHub Profile' },
-        { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/vasinisingh', ariaLabel: 'Follow on Instagram' }
+        { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/vasini-singh-18a442205/', ariaLabel: 'Connect on LinkedIn' },
+        { name: 'Twitter/X', icon: Twitter, url: 'https://x.com/VasiniSingh', ariaLabel: 'Follow on Twitter/X' },
+        { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/ghumakkkad_ladki/', ariaLabel: 'Follow on Instagram' },
+        { name: 'Medium', icon: Github, url: 'https://medium.com/@vasinisingh', ariaLabel: 'Read on Medium' }
     ];
 
     return (
@@ -34,11 +34,11 @@ const CTASection: React.FC = () => {
                         </Link>
 
                         <a
-                            href="mailto:hello@vasinisingh.com"
+                            href="mailto:vasinisingh@gmail.com"
                             className="inline-flex items-center justify-center w-full sm:w-auto border-2 border-white px-6 py-3 sm:px-8 sm:py-4 font-medium hover:bg-white hover:text-black transition-all group"
                         >
                             <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-                            <span className="text-sm sm:text-base">hello@vasinisingh.com</span>
+                            <span className="text-sm sm:text-base">vasinisingh@gmail.com</span>
                         </a>
                     </div>
 
