@@ -10,7 +10,7 @@ const MainProjectsSection: React.FC = () => {
             id: 1,
             title: "ecoPRISM - ESG SaaS Platform",
             description: "Turning fragmented compliance data into a unified and actionable system with role-based dashboards and intelligent reporting.",
-            image: "/images/ecoprism/Landing page.webp",
+            image: "/images/projects/ecoprism/Landing page.webp",
             buttonText: "View Project",
             href: "/projects/ecoprism"
         },

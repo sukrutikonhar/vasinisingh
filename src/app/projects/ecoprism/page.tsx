@@ -12,13 +12,13 @@ import Gallery from '@/components/projects/ecoprism/Gallery';
 import NextProject from '@/components/projects/NextProject';
 
 export const metadata = {
-    title: 'EcoPRISM - ESG SaaS Platform | Vasini Singh',
+    title: 'ecoPRISM - ESG SaaS Platform | Vasini Singh',
     description: 'A case study on designing an intuitive ESG compliance and sustainability reporting platform.',
 };
 
 export default function EcoprismProject() {
     const heroData = {
-        title: 'EcoPRISM',
+        title: 'ecoPRISM',
         subtitle: 'ESG Compliance Made Simple',
         image: '/images/projects/ecoprism/Landing page.webp',
         tags: ['SaaS', 'Enterprise', 'Dashboard']

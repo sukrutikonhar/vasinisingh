@@ -19,8 +19,22 @@
   --gray-900: #171717;
 
   /* Spacing */
-  --section-padding: 5rem 0;
-  --container-padding: 1.5rem;
+  --section-padding: 3rem 0;
+  --container-padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --section-padding: 4rem 0;
+    --container-padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-padding: 5rem 0;
+    --container-padding: 2rem;
+  }
 }
 
 @theme {

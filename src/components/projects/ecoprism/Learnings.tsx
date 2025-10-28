@@ -4,14 +4,14 @@ import React from 'react';
 
 const Learnings: React.FC = () => {
     return (
-        <section className="py-20 bg-gray-50">
-            <div className="container-custom">
+        <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+            <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-4xl sm:text-5xl font-grotesk font-bold text-black mb-12">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-8 sm:mb-12">
                         Learnings & Reflection
                     </h2>
 
-                    <div className="space-y-8">
+                    <div className="space-y-6 sm:space-y-8">
                         <div className="bg-white border-2 border-black p-8">
                             <h3 className="text-2xl font-grotesk font-bold text-black mb-4">
                                 What I Learned

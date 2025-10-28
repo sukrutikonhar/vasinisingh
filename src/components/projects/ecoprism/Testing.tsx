@@ -22,14 +22,14 @@ const Testing: React.FC = () => {
     ];
 
     return (
-        <section className="py-20 bg-white">
-            <div className="container-custom">
+        <section className="py-12 sm:py-16 md:py-20 bg-white">
+            <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl sm:text-5xl font-grotesk font-bold text-black mb-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6 sm:mb-8">
                         Testing & Iteration
                     </h2>
 
-                    <p className="text-xl font-inter text-gray-700 leading-relaxed mb-12">
+                    <p className="text-base sm:text-lg md:text-xl font-inter text-gray-700 leading-relaxed mb-8 sm:mb-12">
                         Conducted usability testing with 8 ESG professionals to validate design decisions
                         and identify areas for improvement.
                     </p>

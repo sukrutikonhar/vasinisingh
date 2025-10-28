@@ -30,7 +30,7 @@ const Gallery: React.FC = () => {
                                 <div className="relative aspect-video bg-gray-100">
                                     <Image
                                         src={screen}
-                                        alt={`EcoPRISM Screen ${index + 1}`}
+                                        alt={`ecoPRISM Screen ${index + 1}`}
                                         fill
                                         className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                                     />

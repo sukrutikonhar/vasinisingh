@@ -61,28 +61,28 @@ const TestimonialsSection: React.FC = () => {
                     </div>
 
                     {/* Testimonials Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                         {testimonials.map((testimonial, index) => (
                             <div
                                 key={index}
-                                className="bg-white border-2 border-black p-8 hover:shadow-xl transition-shadow duration-300"
+                                className="bg-white border-2 border-black p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300"
                             >
                                 {/* Quote Icon */}
-                                <div className="mb-6">
-                                    <Quote className="w-10 h-10 text-black" />
+                                <div className="mb-4 sm:mb-6">
+                                    <Quote className="w-8 h-8 sm:w-10 sm:h-10 text-black" />
                                 </div>
 
                                 {/* Quote Text */}
-                                <blockquote className="text-lg font-inter text-gray-800 leading-relaxed mb-6">
+                                <blockquote className="text-base sm:text-lg font-inter text-gray-800 leading-relaxed mb-4 sm:mb-6">
                                     &ldquo;{testimonial.quote}&rdquo;
                                 </blockquote>
 
                                 {/* Author Info */}
                                 <div className="border-t-2 border-gray-200 pt-4">
-                                    <p className="font-grotesk font-bold text-black">
+                                    <p className="font-grotesk font-bold text-black text-sm sm:text-base">
                                         {testimonial.author}
                                     </p>
-                                    <p className="text-sm font-inter text-gray-600">
+                                    <p className="text-xs sm:text-sm font-inter text-gray-600">
                                         {testimonial.role} at {testimonial.company}
                                     </p>
                                 </div>

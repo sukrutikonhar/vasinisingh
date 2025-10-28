@@ -24,15 +24,15 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <section className="py-20 bg-gray-50">
-            <div className="container-custom">
+        <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+            <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-3xl mx-auto">
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                         {/* Name */}
                         <div>
                             <label
                                 htmlFor="name"
-                                className="block text-sm font-grotesk font-semibold text-black mb-3 uppercase tracking-wider"
+                                className="block text-xs sm:text-sm font-grotesk font-semibold text-black mb-2 sm:mb-3 uppercase tracking-wider"
                             >
                                 Your Name
                             </label>
@@ -43,7 +43,7 @@ const ContactForm: React.FC = () => {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-6 py-4 border-2 border-black bg-white font-inter text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-600 transition-colors"
+                                className="w-full px-4 py-3 sm:px-6 sm:py-4 border-2 border-black bg-white font-inter text-sm sm:text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-600 transition-colors"
                                 placeholder="John Doe"
                             />
                         </div>
@@ -52,7 +52,7 @@ const ContactForm: React.FC = () => {
                         <div>
                             <label
                                 htmlFor="email"
-                                className="block text-sm font-grotesk font-semibold text-black mb-3 uppercase tracking-wider"
+                                className="block text-xs sm:text-sm font-grotesk font-semibold text-black mb-2 sm:mb-3 uppercase tracking-wider"
                             >
                                 Email Address
                             </label>
@@ -63,7 +63,7 @@ const ContactForm: React.FC = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
-                                className="w-full px-6 py-4 border-2 border-black bg-white font-inter text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-600 transition-colors"
+                                className="w-full px-4 py-3 sm:px-6 sm:py-4 border-2 border-black bg-white font-inter text-sm sm:text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-600 transition-colors"
                                 placeholder="john@example.com"
                             />
                         </div>
@@ -72,7 +72,7 @@ const ContactForm: React.FC = () => {
                         <div>
                             <label
                                 htmlFor="message"
-                                className="block text-sm font-grotesk font-semibold text-black mb-3 uppercase tracking-wider"
+                                className="block text-xs sm:text-sm font-grotesk font-semibold text-black mb-2 sm:mb-3 uppercase tracking-wider"
                             >
                                 Your Message
                             </label>
@@ -83,7 +83,7 @@ const ContactForm: React.FC = () => {
                                 onChange={handleChange}
                                 required
                                 rows={6}
-                                className="w-full px-6 py-4 border-2 border-black bg-white font-inter text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-600 transition-colors resize-none"
+                                className="w-full px-4 py-3 sm:px-6 sm:py-4 border-2 border-black bg-white font-inter text-sm sm:text-base text-gray-900 placeholder-gray-400 focus:outline-none focus:border-gray-600 transition-colors resize-none"
                                 placeholder="Tell me about your project..."
                             />
                         </div>
@@ -91,10 +91,10 @@ const ContactForm: React.FC = () => {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="group inline-flex items-center gap-3 bg-black text-white px-10 py-5 font-grotesk font-semibold hover:bg-gray-800 transition-all"
+                            className="group inline-flex items-center justify-center gap-3 bg-black text-white px-6 py-3 sm:px-10 sm:py-5 font-grotesk font-semibold hover:bg-gray-800 transition-all w-full sm:w-auto"
                         >
-                            <span>Send Message</span>
-                            <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            <span className="text-sm sm:text-base">Send Message</span>
+                            <Send className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                         </button>
                     </form>
                 </div>

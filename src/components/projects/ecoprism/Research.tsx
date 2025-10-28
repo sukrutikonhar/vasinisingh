@@ -30,15 +30,15 @@ const Research: React.FC = () => {
     ];
 
     return (
-        <section className="py-20 bg-gray-50">
-            <div className="container-custom">
+        <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+            <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl sm:text-5xl font-grotesk font-bold text-black mb-16 text-center">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-12 sm:mb-16 text-center">
                         Research & Discovery
                     </h2>
 
                     {/* Research Methods */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
                         {researchMethods.map((method, index) => (
                             <div
                                 key={index}

@@ -1,14 +1,14 @@
-import Layout from '@/components/layout/Layout';
+import MinimalLayout from '@/components/layout/MinimalLayout';
 import BlogsHeroSection from '@/components/blogs/BlogsHeroSection';
 import MyPerspectiveSection from '@/components/blogs/MyPerspectiveSection';
 import BlogPostsSection from '@/components/blogs/BlogPostsSection';
 
 export default function Blogs() {
     return (
-        <Layout>
+        <MinimalLayout>
             <BlogsHeroSection />
             <MyPerspectiveSection />
             <BlogPostsSection />
-        </Layout>
+        </MinimalLayout>
     );
 }

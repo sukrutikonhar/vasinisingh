@@ -50,7 +50,7 @@ const NewHeroSection: React.FC = () => {
             className="min-h-screen flex items-center justify-center bg-white relative overflow-hidden pt-20"
         >
             {/* Animated Background Elements */}
-            <div className="absolute inset-0 pointer-events-none">
+            {/* <div className="absolute inset-0 pointer-events-none">
                 <div
                     className="absolute top-20 right-20 w-64 h-64 border border-gray-200 rounded-full"
                     style={{
@@ -65,12 +65,12 @@ const NewHeroSection: React.FC = () => {
                         transition: 'transform 0.3s ease-out'
                     }}
                 />
-            </div>
+            </div> */}
 
             <div className="container-custom w-full relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
                     {/* Left Content */}
-                    <div className="space-y-8 order-2 lg:order-1">
+                    <div className="space-y-8 order-2 lg:order-1 lg:col-span-7">
                         {/* Animated Label */}
                         <div className="inline-block">
                             <div className="border-2 border-black px-4 py-2 inline-flex items-center gap-2">
@@ -83,7 +83,7 @@ const NewHeroSection: React.FC = () => {
                         <div className="space-y-4">
                             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-grotesk font-bold text-black leading-[0.95] tracking-tight">
                                 Product<br />
-                                <span className="relative inline-block min-w-[300px] sm:min-w-[400px] md:min-w-[500px] lg:min-w-[600px]">
+                                <span className="relative inline-block w-full">
                                     <span className="relative block h-[1.1em] overflow-hidden">
                                         {words.map((word, index) => (
                                             <span
@@ -151,10 +151,10 @@ const NewHeroSection: React.FC = () => {
                     </div>
 
                     {/* Right Content - Image with 3D Effect */}
-                    <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+                    <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end px-4 sm:px-0">
                         <div
                             ref={imageRef}
-                            className="relative w-full max-w-md lg:max-w-lg"
+                            className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg"
                             style={{
                                 transform: `perspective(1000px) rotateY(${mousePosition.x * 5}deg) rotateX(${mousePosition.y * -5}deg)`,
                                 transition: 'transform 0.3s ease-out'
@@ -163,11 +163,11 @@ const NewHeroSection: React.FC = () => {
                             {/* 3D Image Container */}
                             <div className="relative group">
                                 {/* Shadow layers for 3D effect */}
-                                <div className="absolute inset-0 bg-black transform translate-x-4 translate-y-4 -z-10" />
-                                <div className="absolute inset-0 bg-gray-400 transform translate-x-2 translate-y-2 -z-10" />
+                                <div className="absolute inset-0 bg-black transform translate-x-2 translate-y-2 sm:translate-x-4 sm:translate-y-4 -z-10" />
+                                <div className="absolute inset-0 bg-gray-400 transform translate-x-1 translate-y-1 sm:translate-x-2 sm:translate-y-2 -z-10" />
 
                                 {/* Main Image */}
-                                <div className="relative h-[500px] sm:h-[600px] w-full border-4 border-black overflow-hidden bg-white">
+                                <div className="relative h-[400px] sm:h-[500px] lg:h-[600px] w-full border-2 sm:border-4 border-black overflow-hidden bg-white">
                                     <Image
                                         src="/images/vasini.webp"
                                         alt="Vasini Singh - Product Designer"
@@ -186,10 +186,10 @@ const NewHeroSection: React.FC = () => {
                                 </div>
 
                                 {/* Floating badge */}
-                                <div className="absolute -top-4 -right-4 bg-black text-white p-4 border-4 border-white shadow-lg animate-pulse">
+                                <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-black text-white p-3 sm:p-4 border-2 sm:border-4 border-white shadow-lg animate-pulse">
                                     <div className="text-center">
-                                        <div className="text-3xl font-grotesk font-bold">7+</div>
-                                        <div className="text-xs uppercase tracking-wider">Years<br />Experience</div>
+                                        <div className="text-2xl sm:text-3xl font-grotesk font-bold">7+</div>
+                                        <div className="text-[10px] sm:text-xs uppercase tracking-wider">Years<br />Experience</div>
                                     </div>
                                 </div>
                             </div>

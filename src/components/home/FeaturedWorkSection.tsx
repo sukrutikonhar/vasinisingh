@@ -11,7 +11,7 @@ const FeaturedWorkSection: React.FC = () => {
             id: 1,
             title: "ecoPRISM - ESG SaaS Platform",
             description: "Turning fragmented compliance data into a unified, actionable system with role-based dashboards and intelligent reporting.",
-            image: "/images/ecoprism/Landing page.webp",
+            image: "/images/projects/ecoprism/Landing page.webp",
             tech: ["React", "TypeScript", "Node.js"],
             icon: Layers,
             link: "/projects/ecoprism"

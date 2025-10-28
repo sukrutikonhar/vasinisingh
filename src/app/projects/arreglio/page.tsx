@@ -36,7 +36,7 @@ export default function ArreglioProject() {
             <Outcome />
             <Learnings />
             <Gallery />
-            <NextProject nextSlug="ecoprism" nextTitle="EcoPRISM" />
+            <NextProject nextSlug="ecoprism" nextTitle="ecoPRISM" />
         </MinimalLayout>
     );
 }

@@ -5,20 +5,20 @@ import Image from 'next/image';
 
 const Ideation: React.FC = () => {
     return (
-        <section className="py-20 bg-white">
-            <div className="container-custom">
+        <section className="py-12 sm:py-16 md:py-20 bg-white">
+            <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl sm:text-5xl font-grotesk font-bold text-black mb-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6 sm:mb-8">
                         Ideation & Strategy
                     </h2>
 
-                    <p className="text-xl font-inter text-gray-700 leading-relaxed mb-12">
+                    <p className="text-base sm:text-lg md:text-xl font-inter text-gray-700 leading-relaxed mb-8 sm:mb-12">
                         Based on research insights, I mapped out user flows and created wireframes to test
                         different approaches to organizing complex ESG data.
                     </p>
 
                     {/* Wireframes Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                         <div className="border-2 border-black overflow-hidden">
                             <Image
                                 src="/images/projects/ecoprism/Draft Phase.webp"

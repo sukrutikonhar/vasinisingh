@@ -61,19 +61,19 @@ const SkillsSection: React.FC = () => {
 
                     {/* Tools Grid */}
                     <div className="mb-20">
-                        <h3 className="text-2xl font-grotesk font-semibold text-black mb-8 text-center">
+                        <h3 className="text-xl sm:text-2xl font-grotesk font-semibold text-black mb-6 sm:mb-8 text-center">
                             Design Tools
                         </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
                             {tools.map((tool, index) => (
                                 <div
                                     key={index}
-                                    className="group flex flex-col items-center justify-center p-8 border-2 border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
+                                    className="group flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 border-2 border-black hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
                                 >
                                     {React.createElement(tool.icon, {
-                                        className: "w-12 h-12 mb-4 group-hover:scale-110 transition-transform"
+                                        className: "w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mb-3 sm:mb-4 group-hover:scale-110 transition-transform"
                                     })}
-                                    <span className="text-sm font-grotesk font-medium text-center">
+                                    <span className="text-xs sm:text-sm font-grotesk font-medium text-center">
                                         {tool.name}
                                     </span>
                                 </div>
@@ -82,22 +82,22 @@ const SkillsSection: React.FC = () => {
                     </div>
 
                     {/* UX Skills */}
-                    <div className="bg-gray-50 border-2 border-black p-12">
-                        <h3 className="text-2xl font-grotesk font-semibold text-black mb-8 text-center">
+                    <div className="bg-gray-50 border-2 border-black p-6 sm:p-8 md:p-12">
+                        <h3 className="text-xl sm:text-2xl font-grotesk font-semibold text-black mb-6 sm:mb-8 text-center">
                             UX Capabilities
                         </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                             {uxSkills.map((skill, index) => (
                                 <div
                                     key={index}
                                     className="flex items-center gap-3 group"
                                 >
-                                    <div className="w-8 h-8 border-2 border-black flex items-center justify-center group-hover:bg-black transition-colors flex-shrink-0">
-                                        <span className="text-xs font-grotesk font-bold group-hover:text-white">
+                                    <div className="w-7 h-7 sm:w-8 sm:h-8 border-2 border-black flex items-center justify-center group-hover:bg-black transition-colors flex-shrink-0">
+                                        <span className="text-[10px] sm:text-xs font-grotesk font-bold group-hover:text-white">
                                             {String(index + 1).padStart(2, '0')}
                                         </span>
                                     </div>
-                                    <span className="text-base font-inter text-gray-800 group-hover:font-semibold transition-all">
+                                    <span className="text-sm sm:text-base font-inter text-gray-800 group-hover:font-semibold transition-all">
                                         {skill}
                                     </span>
                                 </div>

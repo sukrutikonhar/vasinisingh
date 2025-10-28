@@ -4,15 +4,15 @@ import React from 'react';
 
 const AboutIntro: React.FC = () => {
     return (
-        <section className="py-32 bg-gray-50">
-            <div className="container-custom">
+        <section className="py-16 sm:py-24 md:py-32 bg-gray-50">
+            <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-4xl mx-auto">
-                    <h2 className="text-4xl sm:text-5xl font-grotesk font-bold text-black mb-12">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-8 sm:mb-12">
                         My Journey
                     </h2>
 
-                    <div className="space-y-8 text-lg font-inter text-gray-800 leading-relaxed">
-                        <div className="border-l-4 border-black pl-8">
+                    <div className="space-y-6 sm:space-y-8 text-base sm:text-lg font-inter text-gray-800 leading-relaxed">
+                        <div className="border-l-2 sm:border-l-4 border-black pl-4 sm:pl-8">
                             <p className="mb-6">
                                 My story begins in India, where creativity and curiosity were my constant companions.
                                 Growing up, I was fascinated by how things worked—not just mechanically, but emotionally.
@@ -25,7 +25,7 @@ const AboutIntro: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="border-l-4 border-black pl-8">
+                        <div className="border-l-2 sm:border-l-4 border-black pl-4 sm:pl-8">
                             <p className="mb-6">
                                 The transition to product design felt natural. I realized that designing digital products
                                 was an extension of storytelling—except now, I was crafting interactive narratives that
@@ -38,8 +38,8 @@ const AboutIntro: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="bg-white border-2 border-black p-8 mt-12">
-                            <p className="text-xl font-grotesk font-semibold text-black mb-4">
+                        <div className="bg-white border-2 border-black p-6 sm:p-8 mt-8 sm:mt-12">
+                            <p className="text-lg sm:text-xl font-grotesk font-semibold text-black mb-4">
                                 What drives me?
                             </p>
                             <p>
