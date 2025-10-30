@@ -23,7 +23,7 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data }) => {
                         {data.tags.map((tag, index) => (
                             <span
                                 key={index}
-                                className="inline-flex items-center gap-1.5 sm:gap-2 border-2 border-black px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-grotesk font-medium uppercase tracking-wider"
+                                className="inline-flex items-center gap-1.5 sm:gap-2 bg-gray-100 px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-grotesk font-medium uppercase tracking-wider rounded-[6px] shadow-card"
                             >
                                 <Tag className="w-3 h-3 sm:w-4 sm:h-4" />
                                 {tag}
@@ -40,7 +40,7 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data }) => {
                     </p>
 
                     {/* Hero Image */}
-                    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] border-2 sm:border-4 border-black overflow-hidden bg-gray-100">
+                    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-gray-100 rounded-[6px] shadow-card">
                         <Image
                             src={data.image}
                             alt={data.title}

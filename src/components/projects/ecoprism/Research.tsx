@@ -42,7 +42,7 @@ const Research: React.FC = () => {
                         {researchMethods.map((method, index) => (
                             <div
                                 key={index}
-                                className="bg-white border-2 border-black p-8"
+                                className="bg-white p-8 rounded-[6px] shadow-card"
                             >
                                 <div className="w-16 h-16 bg-black flex items-center justify-center mb-6">
                                     {React.createElement(method.icon, {
@@ -60,7 +60,7 @@ const Research: React.FC = () => {
                     </div>
 
                     {/* Key Insights */}
-                    <div className="bg-black text-white p-12 border-4 border-black">
+                    <div className="bg-black text-white p-12 rounded-[6px] shadow-card">
                         <h3 className="text-3xl font-grotesk font-bold mb-8">
                             Key Insights
                         </h3>

@@ -25,7 +25,7 @@ const Gallery: React.FC = () => {
                         {screens.map((screen, index) => (
                             <div
                                 key={index}
-                                className="border-2 border-black overflow-hidden hover:shadow-2xl transition-shadow group"
+                                className="overflow-hidden hover:shadow-2xl transition-shadow group shadow-card rounded-[6px]"
                             >
                                 <div className="relative aspect-video bg-gray-100">
                                     <Image

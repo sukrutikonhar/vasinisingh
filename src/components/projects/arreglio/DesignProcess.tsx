@@ -19,7 +19,7 @@ const DesignProcess: React.FC = () => {
 
                     {/* Design Screens */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                        <div className="border-2 border-black overflow-hidden bg-white p-8">
+                        <div className="overflow-hidden bg-white p-8 shadow-card rounded-[6px]">
                             <Image
                                 src="/images/projects/Arreglio/Phone Mock.webp"
                                 alt="Mobile mockup"
@@ -28,7 +28,7 @@ const DesignProcess: React.FC = () => {
                                 className="w-full h-auto mx-auto"
                             />
                         </div>
-                        <div className="border-2 border-black overflow-hidden bg-gray-100">
+                        <div className="overflow-hidden bg-gray-100 shadow-card rounded-[6px]">
                             <Image
                                 src="/images/projects/Arreglio/arreglio-UI-01.webp"
                                 alt="UI design system"
@@ -41,7 +41,7 @@ const DesignProcess: React.FC = () => {
 
                     {/* Design Principles */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="bg-white border-2 border-black p-6">
+                        <div className="bg-white p-6 shadow-card rounded-[6px]">
                             <h3 className="text-xl font-grotesk font-bold text-black mb-3">
                                 Mobile First
                             </h3>
@@ -49,7 +49,7 @@ const DesignProcess: React.FC = () => {
                                 Designed for on-the-go use by both customers and shop owners
                             </p>
                         </div>
-                        <div className="bg-white border-2 border-black p-6">
+                        <div className="bg-white p-6 shadow-card rounded-[6px]">
                             <h3 className="text-xl font-grotesk font-bold text-black mb-3">
                                 Simple & Clear
                             </h3>
@@ -57,7 +57,7 @@ const DesignProcess: React.FC = () => {
                                 Reduced cognitive load with clear labels and intuitive navigation
                             </p>
                         </div>
-                        <div className="bg-white border-2 border-black p-6">
+                        <div className="bg-white p-6 shadow-card rounded-[6px]">
                             <h3 className="text-xl font-grotesk font-bold text-black mb-3">
                                 Trust Building
                             </h3>

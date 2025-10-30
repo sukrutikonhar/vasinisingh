@@ -18,7 +18,7 @@ const DesignProcess: React.FC = () => {
                     </p>
 
                     {/* Main Design Image */}
-                    <div className="border-2 sm:border-4 border-black overflow-hidden mb-8 sm:mb-12">
+                    <div className="overflow-hidden mb-8 sm:mb-12 rounded-[6px] shadow-card">
                         <Image
                             src="/images/projects/ecoprism/Landing page.webp"
                             alt="ecoPRISM Dashboard"
@@ -31,7 +31,7 @@ const DesignProcess: React.FC = () => {
 
                     {/* Design Principles */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="bg-white border-2 border-black p-6">
+                        <div className="bg-white p-6 rounded-[6px] shadow-card">
                             <h3 className="text-xl font-grotesk font-bold text-black mb-3">
                                 Clear Hierarchy
                             </h3>
@@ -39,7 +39,7 @@ const DesignProcess: React.FC = () => {
                                 Organized information with visual weight to guide users through complex data
                             </p>
                         </div>
-                        <div className="bg-white border-2 border-black p-6">
+                        <div className="bg-white p-6 rounded-[6px] shadow-card">
                             <h3 className="text-xl font-grotesk font-bold text-black mb-3">
                                 Consistent Patterns
                             </h3>
@@ -47,7 +47,7 @@ const DesignProcess: React.FC = () => {
                                 Established design patterns for predictable and intuitive interactions
                             </p>
                         </div>
-                        <div className="bg-white border-2 border-black p-6">
+                        <div className="bg-white p-6 rounded-[6px] shadow-card">
                             <h3 className="text-xl font-grotesk font-bold text-black mb-3">
                                 Accessibility First
                             </h3>

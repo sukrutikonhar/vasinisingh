@@ -105,11 +105,10 @@ const NewHeroSection: React.FC = () => {
 
                         {/* Description */}
                         <div className="relative">
-                            <div className="absolute -left-4 top-0 bottom-0 w-1 bg-black" />
+                            <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gray-800" />
                             <p className="text-lg sm:text-xl text-gray-700 font-inter leading-relaxed pl-4">
-                                Hi, I&apos;m <span className="font-semibold text-black">Vasini Singh</span> — a Product Designer
-                                with 7+ years of experience crafting digital experiences that balance
-                                <span className="italic"> form, function, and empathy</span>.
+                                Hi, I&apos;m <span className="font-semibold text-black">Vasini Singh</span> — a Product Designer with over 15 years of professional experience, including 7+ years dedicated to design. I help build digital products that are
+                                <span className="italic">  simple, effective, and user-friendly</span>.
                             </p>
                         </div>
 
@@ -121,12 +120,12 @@ const NewHeroSection: React.FC = () => {
                             </div>
                             <div className="w-px h-12 bg-gray-300" />
                             <div className="group">
-                                <div className="text-4xl font-grotesk font-bold text-black group-hover:scale-110 transition-transform">30+</div>
+                                <div className="text-4xl font-grotesk font-bold text-black group-hover:scale-110 transition-transform">40+</div>
                                 <div className="text-xs text-gray-600 font-inter uppercase tracking-wider">Projects</div>
                             </div>
                             <div className="w-px h-12 bg-gray-300" />
                             <div className="group">
-                                <div className="text-4xl font-grotesk font-bold text-black group-hover:scale-110 transition-transform">50+</div>
+                                <div className="text-4xl font-grotesk font-bold text-black group-hover:scale-110 transition-transform">30+</div>
                                 <div className="text-xs text-gray-600 font-inter uppercase tracking-wider">Clients</div>
                             </div>
                         </div>
@@ -135,14 +134,14 @@ const NewHeroSection: React.FC = () => {
                         <div className="flex flex-col sm:flex-row gap-4 pt-4">
                             <Link
                                 href="/projects"
-                                className="group inline-flex items-center justify-center bg-black text-white px-8 py-4 font-medium hover:bg-gray-800 transition-all"
+                                className="group inline-flex items-center justify-center bg-black text-white px-8 py-4 font-medium hover:bg-gray-800 transition-all rounded-[12px]"
                             >
                                 <span className="mr-2">View My Work</span>
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <Link
                                 href="/contact"
-                                className="group inline-flex items-center justify-center border-2 border-black px-8 py-4 font-medium hover:bg-black hover:text-white transition-all"
+                                className="group inline-flex items-center justify-center border-2 border-black px-8 py-4 font-medium hover:bg-black hover:text-white transition-all rounded-[12px]"
                             >
                                 <Download className="w-5 h-5 mr-2" />
                                 <span>Download Resume</span>

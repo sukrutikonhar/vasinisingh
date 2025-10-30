@@ -45,22 +45,6 @@ const AnimatedProjectGrid: React.FC = () => {
             image: '/images/projects/Untitled design (3).webp',
             link: '/projects/arreglio'
         },
-        {
-            id: 3,
-            title: 'Design System',
-            category: 'Component Library',
-            year: '2023',
-            image: '/images/s_cover.svg',
-            link: '/'
-        },
-        {
-            id: 4,
-            title: 'Analytics Tool',
-            category: 'Data Visualization',
-            year: '2023',
-            image: '/images/projects/ecoprism/Landing page.webp',
-            link: '/'
-        }
     ];
 
     return (
@@ -83,23 +67,23 @@ const AnimatedProjectGrid: React.FC = () => {
                             href={project.link}
                             className="project-item group block"
                         >
-                            <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden bg-gray-100 border-2 border-black">
+                            <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden bg-gray-100 rounded-[6px] shadow-card">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
                                     fill
                                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
 
                                 {/* Content Overlay */}
                                 <div className="absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-end">
                                     <div className="transform translate-y-0 group-hover:-translate-y-2 transition-transform duration-300">
-                                        <p className="text-white/80 text-xs sm:text-sm mb-2">{project.category} • {project.year}</p>
-                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-grotesk font-bold text-white mb-2 sm:mb-4">
+                                        <p className="text-white text-xs sm:text-sm mb-2 drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">{project.category} • {project.year}</p>
+                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-grotesk font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)]">
                                             {project.title}
                                         </h3>
-                                        <div className="flex items-center text-white/90 group-hover:translate-x-2 transition-transform duration-300">
+                                        <div className="flex items-center text-white group-hover:translate-x-2 transition-transform duration-300 drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
                                             <span className="text-xs sm:text-sm font-medium mr-2">View Project</span>
                                             <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                                         </div>

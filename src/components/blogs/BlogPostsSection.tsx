@@ -92,7 +92,7 @@ const BlogPostsSection: React.FC = () => {
                         <div className="flex flex-wrap gap-2 sm:gap-3">
                             <button
                                 onClick={() => setSelectedTag(null)}
-                                className={`px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-grotesk font-medium border-2 transition-all ${selectedTag === null
+                                className={`px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-grotesk font-medium border-2 transition-all rounded-[12px] ${selectedTag === null
                                     ? 'bg-black text-white border-black'
                                     : 'bg-white text-black border-black hover:bg-gray-100'
                                     }`}
@@ -103,7 +103,7 @@ const BlogPostsSection: React.FC = () => {
                                 <button
                                     key={tag}
                                     onClick={() => setSelectedTag(tag)}
-                                    className={`px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-grotesk font-medium border-2 transition-all ${selectedTag === tag
+                                    className={`px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-grotesk font-medium border-2 transition-all rounded-[12px] ${selectedTag === tag
                                         ? 'bg-black text-white border-black'
                                         : 'bg-white text-black border-black hover:bg-gray-100'
                                         }`}
@@ -122,7 +122,7 @@ const BlogPostsSection: React.FC = () => {
                                 href={post.readMoreLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group bg-white border-2 border-black overflow-hidden hover:shadow-2xl transition-all duration-300"
+                                className="group bg-white overflow-hidden shadow-card hover:shadow-2xl transition-all duration-300 rounded-[6px]"
                             >
                                 {/* Image */}
                                 <div className="relative h-48 sm:h-56 md:h-64 w-full bg-gray-100 overflow-hidden">
@@ -135,7 +135,7 @@ const BlogPostsSection: React.FC = () => {
                                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
 
                                     {/* Platform Badge */}
-                                    <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white px-2 py-1 sm:px-3 sm:py-1.5 border border-black">
+                                    <div className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white px-2 py-1 sm:px-3 sm:py-1.5 shadow-card rounded-[6px]">
                                         <span className="text-[10px] sm:text-xs font-grotesk font-semibold uppercase tracking-wider">
                                             {post.platform}
                                         </span>
@@ -196,7 +196,7 @@ const BlogPostsSection: React.FC = () => {
                                     href="https://medium.com/@vasinisingh"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center gap-2 bg-white text-black px-6 py-3 sm:px-8 sm:py-4 font-grotesk font-semibold hover:bg-gray-100 transition-all w-full sm:w-auto"
+                                    className="inline-flex items-center justify-center gap-2 bg-white text-black px-6 py-3 sm:px-8 sm:py-4 font-grotesk font-semibold hover:bg-gray-100 transition-all w-full sm:w-auto rounded-[12px]"
                                 >
                                     <span className="text-sm sm:text-base">Follow on Medium</span>
                                     <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -205,7 +205,7 @@ const BlogPostsSection: React.FC = () => {
                                     href="https://www.linkedin.com/in/vasini-singh-18a442205/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center gap-2 border-2 border-white px-6 py-3 sm:px-8 sm:py-4 font-grotesk font-semibold hover:bg-white hover:text-black transition-all w-full sm:w-auto"
+                                    className="inline-flex items-center justify-center gap-2 border-2 border-white px-6 py-3 sm:px-8 sm:py-4 font-grotesk font-semibold hover:bg-white hover:text-black transition-all w-full sm:w-auto rounded-[12px]"
                                 >
                                     <span className="text-sm sm:text-base">Connect on LinkedIn</span>
                                     <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />

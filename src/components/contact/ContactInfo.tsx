@@ -18,7 +18,7 @@ const ContactInfo: React.FC = () => {
                     {/* Direct Contact */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 mb-12 sm:mb-16">
                         {/* Email */}
-                        <div className="border-2 border-black p-6 sm:p-8">
+                        <div className="p-6 sm:p-8 rounded-[6px] shadow-card bg-white">
                             <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black flex items-center justify-center">
                                     <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
@@ -36,7 +36,7 @@ const ContactInfo: React.FC = () => {
                         </div>
 
                         {/* Coffee Chat */}
-                        <div className="border-2 border-black p-6 sm:p-8 bg-gray-50">
+                        <div className="p-6 sm:p-8 bg-gray-50 rounded-[6px] shadow-card">
                             <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black flex items-center justify-center">
                                     <Coffee className="w-5 h-5 sm:w-6 sm:h-6 text-white" />

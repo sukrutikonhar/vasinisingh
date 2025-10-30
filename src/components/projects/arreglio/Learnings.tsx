@@ -12,7 +12,7 @@ const Learnings: React.FC = () => {
                     </h2>
 
                     <div className="space-y-8">
-                        <div className="bg-white border-2 border-black p-8">
+                        <div className="bg-white p-8 shadow-card rounded-[6px]">
                             <h3 className="text-2xl font-grotesk font-bold text-black mb-4">
                                 What I Learned
                             </h3>
@@ -41,7 +41,7 @@ const Learnings: React.FC = () => {
                             </ul>
                         </div>
 
-                        <div className="bg-black text-white p-8">
+                        <div className="bg-black text-white p-8 shadow-card rounded-[6px]">
                             <h3 className="text-2xl font-grotesk font-bold mb-4">
                                 What I&apos;d Do Differently
                             </h3>
@@ -52,7 +52,7 @@ const Learnings: React.FC = () => {
                             </p>
                         </div>
 
-                        <div className="border-2 border-black p-8">
+                        <div className="p-8 shadow-card rounded-[6px]">
                             <h3 className="text-2xl font-grotesk font-bold text-black mb-4">
                                 Next Steps
                             </h3>

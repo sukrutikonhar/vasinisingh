@@ -30,7 +30,7 @@ const AboutHero: React.FC = () => {
 
                     {/* Right - Content */}
                     <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
-                        <div className="inline-block border-2 border-black px-3 py-1.5 sm:px-4 sm:py-2">
+                        <div className="inline-block bg-gray-100 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full">
                             <span className="text-xs sm:text-sm font-grotesk font-medium uppercase tracking-wider">
                                 About Me
                             </span>

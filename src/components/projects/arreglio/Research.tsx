@@ -60,7 +60,7 @@ const Research: React.FC = () => {
                         {researchMethods.map((method, index) => (
                             <div
                                 key={index}
-                                className="bg-white border-2 border-black p-8"
+                                className="bg-white p-8 shadow-card rounded-[6px]"
                             >
                                 <div className="w-16 h-16 bg-black flex items-center justify-center mb-6">
                                     {React.createElement(method.icon, {
@@ -84,7 +84,7 @@ const Research: React.FC = () => {
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {personas.map((persona, index) => (
-                                <div key={index} className="bg-white border-2 border-black p-8">
+                                <div key={index} className="bg-white p-8 shadow-card rounded-[6px]">
                                     <div className="flex items-center justify-between mb-6">
                                         <div>
                                             <p className="text-sm font-grotesk uppercase tracking-wider text-gray-500 mb-1">
@@ -104,7 +104,7 @@ const Research: React.FC = () => {
                                                 ))}
                                             </ul>
                                         </div>
-                                        <div className="bg-gray-50 p-4">
+                                        <div className="bg-gray-50 p-4 rounded-[6px] shadow-card">
                                             <p className="text-sm font-grotesk font-semibold text-black mb-1">Pain Point:</p>
                                             <p className="text-sm font-inter text-gray-700 italic">{persona.pain}</p>
                                         </div>
@@ -115,7 +115,7 @@ const Research: React.FC = () => {
                     </div>
 
                     {/* Key Insight */}
-                    <div className="bg-black text-white p-12 text-center">
+                    <div className="bg-black text-white p-12 text-center shadow-card rounded-[6px]">
                         <p className="text-3xl font-grotesk font-bold mb-4">
                             &ldquo;We needed a system that works for both busy shop owners
                             and customers who want transparency.&rdquo;

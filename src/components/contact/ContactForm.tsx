@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
                         {/* Submit Button */}
                         <button
                             type="submit"
-                            className="group inline-flex items-center justify-center gap-3 bg-black text-white px-6 py-3 sm:px-10 sm:py-5 font-grotesk font-semibold hover:bg-gray-800 transition-all w-full sm:w-auto"
+                            className="group inline-flex items-center justify-center gap-3 bg-black text-white px-6 py-3 sm:px-10 sm:py-5 font-grotesk font-semibold hover:bg-gray-800 transition-all w-full sm:w-auto rounded-[12px]"
                         >
                             <span className="text-sm sm:text-base">Send Message</span>
                             <Send className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />

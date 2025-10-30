@@ -24,7 +24,7 @@ const Outcome: React.FC = () => {
                         {metrics.map((metric, index) => (
                             <div
                                 key={index}
-                                className="border-2 border-white p-8 text-center hover:bg-white hover:text-black transition-all group"
+                                className="border-2 border-white p-8 text-center hover:bg-white hover:text-black transition-all group rounded-[6px]"
                             >
                                 <div className="flex justify-center mb-4">
                                     {React.createElement(metric.icon, {
@@ -45,7 +45,7 @@ const Outcome: React.FC = () => {
                     </div>
 
                     {/* Key Results */}
-                    <div className="border-2 border-white p-10">
+                    <div className="border-2 border-white p-10 rounded-[6px]">
                         <h3 className="text-2xl font-grotesk font-bold mb-6">
                             Key Results
                         </h3>

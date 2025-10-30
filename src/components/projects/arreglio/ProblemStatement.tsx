@@ -12,7 +12,7 @@ const ProblemStatement: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         {/* Left - Content */}
                         <div>
-                            <div className="inline-flex items-center gap-2 border-2 border-black px-4 py-2 mb-6">
+                            <div className="inline-flex items-center gap-2 bg-gray-100 px-4 py-2 mb-6 rounded-full">
                                 <AlertCircle className="w-5 h-5" />
                                 <span className="text-sm font-grotesk font-medium uppercase tracking-wider">
                                     The Problem
@@ -29,7 +29,7 @@ const ProblemStatement: React.FC = () => {
                                     The owner flips through a messy notebook, muttering: &apos;Maybe tomorrow?&apos;&rdquo;
                                 </p>
 
-                                <div className="bg-gray-50 border-2 border-black p-6">
+                                <div className="bg-gray-50 p-6 shadow-card rounded-[6px]">
                                     <p className="font-semibold text-black mb-3">The Reality:</p>
                                     <ul className="space-y-2">
                                         <li>→ Customers frustrated with lack of updates</li>
@@ -42,7 +42,7 @@ const ProblemStatement: React.FC = () => {
                         </div>
 
                         {/* Right - Visual */}
-                        <div className="border-4 border-black overflow-hidden bg-gray-100">
+                        <div className="overflow-hidden bg-gray-100 shadow-card rounded-[6px]">
                             <Image
                                 src="/images/projects/Arreglio/arreglio-problem.webp"
                                 alt="Workshop problem illustration"

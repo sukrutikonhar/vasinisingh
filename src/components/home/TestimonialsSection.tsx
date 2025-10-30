@@ -65,7 +65,7 @@ const TestimonialsSection: React.FC = () => {
                         {testimonials.map((testimonial, index) => (
                             <div
                                 key={index}
-                                className="bg-white border-2 border-black p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300"
+                                className="bg-white p-6 sm:p-8 shadow-card hover:shadow-xl transition-shadow duration-300 rounded-[6px]"
                             >
                                 {/* Quote Icon */}
                                 <div className="mb-4 sm:mb-6">
@@ -92,7 +92,7 @@ const TestimonialsSection: React.FC = () => {
 
                     {/* Collaboration Note */}
                     <div className="mt-16 text-center">
-                        <div className="inline-block border-2 border-black px-6 py-3">
+                        <div className="inline-block px-6 py-3 rounded-[6px] shadow-card bg-white">
                             <p className="text-sm font-grotesk font-medium">
                                 Open to collaborations with passionate teams and innovative projects
                             </p>

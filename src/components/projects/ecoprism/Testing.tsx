@@ -37,7 +37,7 @@ const Testing: React.FC = () => {
                     {/* Before/After Comparisons */}
                     <div className="space-y-8">
                         {improvements.map((item, index) => (
-                            <div key={index} className="grid grid-cols-1 lg:grid-cols-3 gap-6 border-2 border-black overflow-hidden">
+                            <div key={index} className="grid grid-cols-1 lg:grid-cols-3 gap-6 overflow-hidden rounded-[6px] shadow-card">
                                 <div className="bg-gray-50 p-6">
                                     <p className="text-sm font-grotesk uppercase tracking-wider text-gray-500 mb-2">
                                         Before

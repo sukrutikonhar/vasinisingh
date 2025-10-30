@@ -32,7 +32,7 @@ const ProjectOverview: React.FC = () => {
                         {details.map((detail, index) => (
                             <div
                                 key={index}
-                                className="bg-white border-2 border-black p-6 hover:bg-black hover:text-white transition-all group"
+                                className="bg-white border-2 border-black p-6 hover:bg-black hover:text-white transition-all group rounded-[6px]"
                             >
                                 <div className="mb-4">
                                     {React.createElement(detail.icon, {

@@ -18,7 +18,7 @@ const Ideation: React.FC = () => {
                     </p>
 
                     {/* Solution Image */}
-                    <div className="border-4 border-black overflow-hidden mb-12 bg-gray-100">
+                    <div className="overflow-hidden mb-12 bg-gray-100 shadow-card rounded-[6px]">
                         <Image
                             src="/images/projects/Arreglio/arreglio-solution.webp"
                             alt="Arreglio solution approach"
@@ -30,7 +30,7 @@ const Ideation: React.FC = () => {
 
                     {/* Key Decisions */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="bg-gray-50 border-2 border-black p-8">
+                        <div className="bg-gray-50 p-8 shadow-card rounded-[6px]">
                             <h3 className="text-2xl font-grotesk font-bold text-black mb-4">
                                 Customer Flow
                             </h3>
@@ -54,7 +54,7 @@ const Ideation: React.FC = () => {
                             </ul>
                         </div>
 
-                        <div className="bg-black text-white p-8">
+                        <div className="bg-black text-white p-8 shadow-card rounded-[6px]">
                             <h3 className="text-2xl font-grotesk font-bold mb-4">
                                 Shop Owner Flow
                             </h3>

@@ -33,9 +33,9 @@ const AboutSection: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
                         {/* Left - Label */}
                         <div className="space-y-4">
-                            <div className="inline-block border-2 border-black px-3 py-1.5 sm:px-4 sm:py-2">
+                            <div className="inline-block bg-gray-100 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full">
                                 <span className="text-xs sm:text-sm font-grotesk font-medium uppercase tracking-wider">
-                                    About Preview
+                                    About Me
                                 </span>
                             </div>
                             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-grotesk font-bold text-black leading-tight">
@@ -46,12 +46,10 @@ const AboutSection: React.FC = () => {
                         {/* Right - Bio & CTA */}
                         <div className="space-y-6 sm:space-y-8">
                             {/* Bio */}
-                            <div className="relative pl-4 sm:pl-6 border-l-2 sm:border-l-4 border-black">
-                                <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-inter text-gray-800 leading-relaxed">
-                                    My journey started where design meets storytelling. Through photography,
-                                    I learned to see the world in frames—now I apply that lens to digital products,
-                                    capturing moments of clarity in complex systems and translating human needs into
-                                    experiences that resonate.
+                            <div className="relative pl-4 sm:pl-6 border-l-2 sm:border-l-4 border-gray-700">
+                                <p className="text-base sm:text-lg md:text-xl font-inter text-gray-800 leading-relaxed">
+                                    My journey into product design wasn’t linear. It evolved through experience.
+                                    I started in back-office operations, where I learned structure and precision. As a Community Manager, I discovered the value of empathy, listening, and building trust. Those lessons shaped my approach as a Product Designer, combining systems thinking with human understanding to create digital experiences that truly serve people.
                                 </p>
                             </div>
 
@@ -71,7 +69,7 @@ const AboutSection: React.FC = () => {
                                         Background
                                     </div>
                                     <p className="text-sm sm:text-base font-inter text-gray-700">
-                                        Photography → Product Design
+                                        Back-Office Operations → Community Manager → Product Designer
                                     </p>
                                 </div>
                                 <div>
@@ -79,7 +77,7 @@ const AboutSection: React.FC = () => {
                                         Focus
                                     </div>
                                     <p className="text-sm sm:text-base font-inter text-gray-700">
-                                        SaaS & Enterprise Tools
+                                        SaaS & Human-Centered Products
                                     </p>
                                 </div>
                             </div>

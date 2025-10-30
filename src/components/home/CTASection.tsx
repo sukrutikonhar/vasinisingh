@@ -27,7 +27,7 @@ const CTASection: React.FC = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
                         <Link
                             href="/contact"
-                            className="inline-flex items-center justify-center w-full sm:w-auto bg-white text-black px-6 py-3 sm:px-8 sm:py-4 font-medium hover:bg-gray-100 transition-all group"
+                            className="inline-flex items-center justify-center w-full sm:w-auto bg-white text-black px-6 py-3 sm:px-8 sm:py-4 font-medium hover:bg-gray-100 transition-all group rounded-[12px]"
                         >
                             <span className="mr-2 text-sm sm:text-base">Get in Touch</span>
                             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -35,7 +35,7 @@ const CTASection: React.FC = () => {
 
                         <a
                             href="mailto:vasinisingh@gmail.com"
-                            className="inline-flex items-center justify-center w-full sm:w-auto border-2 border-white px-6 py-3 sm:px-8 sm:py-4 font-medium hover:bg-white hover:text-black transition-all group"
+                            className="inline-flex items-center justify-center w-full sm:w-auto border-2 border-white px-6 py-3 sm:px-8 sm:py-4 font-medium hover:bg-white hover:text-black transition-all group rounded-[12px]"
                         >
                             <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                             <span className="text-sm sm:text-base">vasinisingh@gmail.com</span>

@@ -1,27 +1,30 @@
 'use client';
 
 import React from 'react';
-import { Figma, Box, Layers, Users, Palette, Code2 } from 'lucide-react';
+import { Icon } from '@iconify/react';
 
 const SkillsTools: React.FC = () => {
     const tools = [
-        { name: 'Figma', icon: Figma },
-        { name: 'Adobe XD', icon: Palette },
-        { name: 'Sketch', icon: Box },
-        { name: 'Miro', icon: Users },
-        { name: 'Notion', icon: Layers },
-        { name: 'Webflow', icon: Code2 }
+        { name: 'Figma', icon: 'simple-icons:figma' },
+        { name: 'FigJam', icon: 'simple-icons:figma' },
+        { name: 'Adobe XD', icon: 'simple-icons:adobexd' },
+        { name: 'Sketch', icon: 'simple-icons:sketch' },
+        { name: 'Notion', icon: 'simple-icons:notion' },
+        { name: 'Miro', icon: 'simple-icons:miro' },
+        { name: 'Maze', icon: 'simple-icons:maze' },
+        { name: 'AI tools', icon: 'simple-icons:openai' }
     ];
 
     const uxSkills = [
         'User Research',
-        'Personas & Journey Maps',
         'Wireframing',
         'Prototyping',
-        'UI Design',
-        'Interaction Design',
+        'UI/Interaction Design',
         'Usability Testing',
-        'Design Systems'
+        'Design Systems & Component Libraries',
+        'Website Design',
+        'UX Audits',
+        'Information Architecture'
     ];
 
     return (
@@ -37,15 +40,16 @@ const SkillsTools: React.FC = () => {
                         <h3 className="text-xl sm:text-2xl font-grotesk font-semibold text-black mb-6 sm:mb-8">
                             Tools I Use
                         </h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-6">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 sm:gap-6">
                             {tools.map((tool, index) => (
                                 <div
                                     key={index}
-                                    className="group flex flex-col items-center justify-center p-4 sm:p-6 border-2 border-black hover:bg-black hover:text-white transition-all duration-300"
+                                    className="group flex flex-col items-center justify-center p-4 sm:p-6 shadow-card hover:bg-black hover:text-white transition-all duration-300 rounded-[6px]"
                                 >
-                                    {React.createElement(tool.icon, {
-                                        className: "w-8 h-8 sm:w-10 sm:h-10 mb-2 sm:mb-3 group-hover:scale-110 transition-transform"
-                                    })}
+                                    <Icon
+                                        icon={tool.icon}
+                                        className="w-8 h-8 sm:w-10 sm:h-10 mb-2 sm:mb-3"
+                                    />
                                     <span className="text-xs sm:text-sm font-grotesk font-medium text-center">
                                         {tool.name}
                                     </span>

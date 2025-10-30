@@ -41,7 +41,7 @@ const ProjectsGrid: React.FC = () => {
                         {projects.map((project, index) => (
                             <div
                                 key={project.id}
-                                className="group bg-white border-2 border-black overflow-hidden hover:shadow-2xl transition-all duration-300"
+                                className="group bg-white overflow-hidden shadow-card hover:shadow-2xl transition-all duration-300 rounded-[6px]"
                             >
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                                     {/* Image */}
@@ -64,7 +64,7 @@ const ProjectsGrid: React.FC = () => {
                                             {project.tags.map((tag, tagIndex) => (
                                                 <span
                                                     key={tagIndex}
-                                                    className="inline-flex items-center gap-1 border border-black px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-grotesk uppercase tracking-wider"
+                                                    className="inline-flex items-center gap-1 bg-gray-100 px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-grotesk uppercase tracking-wider rounded-[6px]"
                                                 >
                                                     <Tag className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                                                     {tag}
@@ -117,7 +117,7 @@ const ProjectsGrid: React.FC = () => {
                                         {/* CTA */}
                                         <Link
                                             href={`/projects/${project.slug}`}
-                                            className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3 sm:px-8 sm:py-4 font-grotesk font-semibold hover:bg-gray-800 transition-all group/btn w-full sm:w-fit"
+                                            className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3 sm:px-8 sm:py-4 font-grotesk font-semibold hover:bg-gray-800 transition-all group/btn w-full sm:w-fit rounded-[12px]"
                                         >
                                             <span className="text-sm sm:text-base">View Case Study</span>
                                             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform" />

@@ -19,7 +19,7 @@ const Ideation: React.FC = () => {
 
                     {/* Wireframes Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                        <div className="border-2 border-black overflow-hidden">
+                        <div className="overflow-hidden rounded-[6px] shadow-card">
                             <Image
                                 src="/images/projects/ecoprism/Draft Phase.webp"
                                 alt="Wireframe draft"
@@ -28,7 +28,7 @@ const Ideation: React.FC = () => {
                                 className="w-full h-auto grayscale"
                             />
                         </div>
-                        <div className="border-2 border-black overflow-hidden">
+                        <div className="overflow-hidden rounded-[6px] shadow-card">
                             <Image
                                 src="/images/projects/ecoprism/Draft Phase (1).webp"
                                 alt="User flow diagram"
@@ -39,7 +39,7 @@ const Ideation: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="mt-12 bg-gray-50 border-2 border-black p-8">
+                    <div className="mt-12 bg-gray-50 p-8 rounded-[6px] shadow-card">
                         <h3 className="text-2xl font-grotesk font-bold text-black mb-4">
                             Strategic Decisions
                         </h3>
