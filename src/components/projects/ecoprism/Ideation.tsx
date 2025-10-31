@@ -72,11 +72,6 @@ const Ideation: React.FC = () => {
                                         {solution.tag}
                                     </div>
                                     <div className="flex items-start gap-4 mb-6">
-                                        <div className="w-12 h-12 bg-[#202022] rounded-lg flex items-center justify-center flex-shrink-0">
-                                            {React.createElement(solution.icon, {
-                                                className: "w-6 h-6 text-white"
-                                            })}
-                                        </div>
                                         <h3 className="text-2xl sm:text-3xl font-grotesk font-bold text-black">
                                             {solution.title}
                                         </h3>

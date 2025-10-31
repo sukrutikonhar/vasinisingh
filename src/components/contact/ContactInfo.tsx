@@ -1,77 +1,45 @@
 'use client';
 
 import React from 'react';
-import { Mail, Linkedin, Twitter, Github, Instagram, Coffee } from 'lucide-react';
+import { Mail, Coffee } from 'lucide-react';
 
 const ContactInfo: React.FC = () => {
-    const socialLinks = [
-        { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/vasini-singh-18a442205/' },
-        { name: 'Twitter/X', icon: Twitter, url: 'https://x.com/VasiniSingh' },
-        { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/ghumakkkad_ladki/' },
-        { name: 'Medium', icon: Github, url: 'https://medium.com/@vasinisingh' }
-    ];
-
     return (
-        <section className="py-12 sm:py-16 md:py-20 bg-white">
+        <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-5xl mx-auto">
-                    {/* Direct Contact */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 mb-12 sm:mb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                         {/* Email */}
-                        <div className="p-6 sm:p-8 rounded-[6px] shadow-card bg-white">
-                            <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black flex items-center justify-center">
-                                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                        <div className="p-8 sm:p-10 rounded-[6px] shadow-card bg-white border-2 border-gray-200 hover:border-black transition-all">
+                            <div className="flex items-center gap-4 mb-4">
+                                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-black flex items-center justify-center">
+                                    <Mail className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
                                 </div>
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-grotesk font-bold text-black">
+                                <h3 className="text-xl sm:text-2xl md:text-3xl font-grotesk font-bold text-black">
                                     Email Me
                                 </h3>
                             </div>
                             <a
                                 href="mailto:vasinisingh@gmail.com"
-                                className="text-base sm:text-lg font-inter text-gray-700 hover:text-black transition-colors break-all"
+                                className="text-lg sm:text-xl font-inter text-gray-700 hover:text-black transition-colors break-all"
                             >
                                 vasinisingh@gmail.com
                             </a>
                         </div>
 
                         {/* Coffee Chat */}
-                        <div className="p-6 sm:p-8 bg-gray-50 rounded-[6px] shadow-card">
-                            <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black flex items-center justify-center">
-                                    <Coffee className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                        <div className="p-8 sm:p-10 bg-white rounded-[6px] shadow-card border-2 border-gray-200 hover:border-black transition-all">
+                            <div className="flex items-center gap-4 mb-4">
+                                <div className="w-14 h-14 sm:w-16 sm:h-16 bg-black flex items-center justify-center">
+                                    <Coffee className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
                                 </div>
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-grotesk font-bold text-black">
+                                <h3 className="text-xl sm:text-2xl md:text-3xl font-grotesk font-bold text-black">
                                     Coffee Chat
                                 </h3>
                             </div>
-                            <p className="text-base sm:text-lg font-inter text-gray-700">
-                                Always up for coffee and good design talk ☕
+                            <p className="text-lg sm:text-xl font-inter text-gray-700">
+                                Always up for coffee & good design talk ☕
                             </p>
-                        </div>
-                    </div>
-
-                    {/* Social Links */}
-                    <div className="text-center">
-                        <h3 className="text-xs sm:text-sm font-grotesk uppercase tracking-wider text-gray-500 mb-4 sm:mb-6">
-                            Connect With Me
-                        </h3>
-                        <div className="flex items-center justify-center gap-3 sm:gap-4">
-                            {socialLinks.map((social, index) => (
-                                <a
-                                    key={index}
-                                    href={social.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-12 h-12 sm:w-14 sm:h-14 border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition-all group"
-                                    aria-label={social.name}
-                                    title={social.name}
-                                >
-                                    {React.createElement(social.icon, {
-                                        className: "w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition-transform"
-                                    })}
-                                </a>
-                            ))}
                         </div>
                     </div>
                 </div>

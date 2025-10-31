@@ -49,21 +49,21 @@ const SkillsSection: React.FC = () => {
     ];
 
     return (
-        <section className="py-32 bg-white">
-            <div className="container-custom">
+        <section className="py-16 sm:py-24 md:py-32 bg-white">
+            <div className="container-custom px-4 sm:px-6">
                 <div ref={skillsRef} className="max-w-6xl mx-auto">
                     {/* Header */}
-                    <div className="text-center mb-20">
-                        <h2 className="text-5xl sm:text-6xl md:text-7xl font-grotesk font-bold text-black mb-6">
+                    <div className="text-center mb-12 sm:mb-16 md:mb-20">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-grotesk font-bold text-black mb-4 sm:mb-6">
                             Skills & Tools
                         </h2>
-                        <p className="text-xl text-gray-600 font-inter max-w-2xl mx-auto">
+                        <p className="text-base sm:text-lg md:text-xl text-gray-600 font-inter max-w-2xl mx-auto px-4">
                             The toolkit that brings ideas to life
                         </p>
                     </div>
 
                     {/* Tools Grid */}
-                    <div className="mb-20">
+                    <div className="mb-12 sm:mb-16 md:mb-20">
                         <h3 className="text-xl sm:text-2xl font-grotesk font-semibold text-black mb-6 sm:mb-8 text-center">
                             Design Tools
                         </h3>

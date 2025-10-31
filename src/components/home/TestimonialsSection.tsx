@@ -47,15 +47,15 @@ const TestimonialsSection: React.FC = () => {
     ];
 
     return (
-        <section className="py-32 bg-gray-50">
-            <div className="container-custom">
+        <section className="py-16 sm:py-24 md:py-32 bg-gray-50">
+            <div className="container-custom px-4 sm:px-6">
                 <div ref={testimonialsRef} className="max-w-6xl mx-auto">
                     {/* Header */}
-                    <div className="text-center mb-20">
-                        <h2 className="text-5xl sm:text-6xl md:text-7xl font-grotesk font-bold text-black mb-6">
+                    <div className="text-center mb-12 sm:mb-16 md:mb-20">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-grotesk font-bold text-black mb-4 sm:mb-6">
                             Testimonials
                         </h2>
-                        <p className="text-xl text-gray-600 font-inter">
+                        <p className="text-base sm:text-lg md:text-xl text-gray-600 font-inter">
                             Kind words from collaborators
                         </p>
                     </div>
@@ -91,9 +91,9 @@ const TestimonialsSection: React.FC = () => {
                     </div>
 
                     {/* Collaboration Note */}
-                    <div className="mt-16 text-center">
-                        <div className="inline-block px-6 py-3 rounded-[6px] shadow-card bg-white">
-                            <p className="text-sm font-grotesk font-medium">
+                    <div className="mt-12 sm:mt-16 text-center px-4">
+                        <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 rounded-[6px] shadow-card bg-white">
+                            <p className="text-xs sm:text-sm font-grotesk font-medium">
                                 Open to collaborations with passionate teams and innovative projects
                             </p>
                         </div>
