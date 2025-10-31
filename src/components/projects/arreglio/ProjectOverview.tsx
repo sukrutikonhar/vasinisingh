@@ -11,17 +11,9 @@ const ProjectOverview: React.FC = () => {
     ];
 
     return (
-        <section className="py-12 sm:py-16 bg-gray-50">
+        <section className="py-12 sm:py-16 bg-black text-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    {/* Section Header */}
-                    <div className="text-center mb-10">
-                        <div className="inline-block bg-gray-100 rounded-full px-4 py-2 mb-4">
-                            <span className="text-xs font-grotesk font-bold text-[#202022] uppercase tracking-wider">
-                                Project Details
-                            </span>
-                        </div>
-                    </div>
 
                     {/* Metadata Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

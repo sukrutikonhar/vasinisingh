@@ -1,6 +1,7 @@
 import MinimalLayout from '@/components/layout/MinimalLayout';
 import CaseStudyHero from '@/components/projects/CaseStudyHero';
 import ProjectOverview from '@/components/projects/arreglio/ProjectOverview';
+import ExecutiveSummary from '@/components/projects/arreglio/ExecutiveSummary';
 import ProblemStatement from '@/components/projects/arreglio/ProblemStatement';
 import Research from '@/components/projects/arreglio/Research';
 import Ideation from '@/components/projects/arreglio/Ideation';
@@ -32,6 +33,7 @@ export default function ArreglioProject() {
         <MinimalLayout>
             <CaseStudyHero data={heroData} />
             <ProjectOverview />
+            <ExecutiveSummary />
             <ProblemStatement />
             <Research />
             <Ideation />

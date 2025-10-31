@@ -51,38 +51,25 @@ const Learnings: React.FC = () => {
                     </div>
 
                     {/* Learnings Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {learnings.map((learning, index) => (
                             <div
                                 key={index}
-                                className="bg-gradient-to-br from-gray-50 to-white p-6 sm:p-8 rounded-[6px] shadow-card border-2 border-gray-100 hover:border-gray-800 hover:shadow-xl transition-all group"
+                                className="bg-white p-6 sm:p-8 rounded-[6px] shadow-card hover:shadow-xl transition-all group"
                             >
-                                <div className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${learning.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                                <div className="w-12 h-12 sm:w-14 sm:h-14 border-2 border-[#202022] flex items-center justify-center mb-6 group-hover:bg-[#202022] transition-colors">
                                     {React.createElement(learning.icon, {
-                                        className: "w-7 h-7 sm:w-8 sm:h-8 text-white"
+                                        className: "w-6 h-6 sm:w-7 sm:h-7 text-[#202022] group-hover:text-white transition-colors"
                                     })}
                                 </div>
-                                <h3 className="text-xl sm:text-2xl font-grotesk font-bold text-black mb-4">
+                                <h3 className="text-lg sm:text-xl font-grotesk font-bold text-[#202022] mb-3">
                                     {learning.title}
                                 </h3>
-                                <p className="text-base font-inter text-gray-600 leading-relaxed">
+                                <p className="text-sm sm:text-base font-inter text-gray-600 leading-relaxed">
                                     {learning.description}
                                 </p>
                             </div>
                         ))}
-                    </div>
-
-                    {/* Reflection */}
-                    <div className="mt-12 sm:mt-16 bg-gradient-to-r from-gray-50 to-gray-100 p-8 sm:p-12 rounded-[6px] shadow-card border-l-4 border-gray-800">
-                        <h3 className="text-2xl sm:text-3xl font-grotesk font-bold text-black mb-6">
-                            Strategic Impact Beyond Metrics
-                        </h3>
-                        <p className="text-base sm:text-lg font-inter text-gray-700 leading-relaxed mb-6">
-                            ecoPRISM represents more than a digital transformation—it&apos;s a case study in strategic problem-solving, cross-functional collaboration, and user-centered design at scale. By deeply understanding both regulatory complexity and user needs, we created a platform that didn&apos;t just automate processes—it fundamentally improved how enterprises approach sustainability.
-                        </p>
-                        <p className="text-base sm:text-lg font-inter text-gray-700 leading-relaxed">
-                            This project reinforced my belief that exceptional design emerges from the intersection of strategic thinking, rigorous user research, and collaborative problem-solving.
-                        </p>
                     </div>
                 </div>
             </div>

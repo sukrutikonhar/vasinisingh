@@ -1,39 +1,29 @@
 'use client';
 
 import React from 'react';
-import { Lightbulb, Shield, BarChart3, Users2, Wrench } from 'lucide-react';
+import { Lightbulb, Shield, BarChart3, Users2 } from 'lucide-react';
 
 const Learnings: React.FC = () => {
     const learnings = [
         {
             icon: Lightbulb,
             title: 'Simplicity Wins with SMB Users',
-            description: 'Small business owners value ease of use above all else. A feature-rich product that&apos;s difficult to adopt will fail regardless of its capabilities. Progressive disclosure and familiar mental models (like physical Kanban boards) were essential to driving adoption.',
-            color: 'from-yellow-500 to-yellow-600'
+            description: 'Small business owners value ease of use above all else. A feature-rich product that&apos;s difficult to adopt will fail regardless of its capabilities. Progressive disclosure and familiar mental models (like physical Kanban boards) were essential to driving adoption.'
         },
         {
             icon: Shield,
             title: 'Trust is a Design Problem',
-            description: 'Customer trust in repair shops was fundamentally broken. By making pricing transparency, reviews, and real-time updates core to the platform architecture—not afterthoughts—we transformed trust from a marketing challenge into a design solution.',
-            color: 'from-blue-500 to-blue-600'
+            description: 'Customer trust in repair shops was fundamentally broken. By making pricing transparency, reviews, and real-time updates core to the platform architecture—not afterthoughts—we transformed trust from a marketing challenge into a design solution.'
         },
         {
             icon: BarChart3,
             title: 'Data-Driven Iteration Reduces Risk',
-            description: 'Testing prototypes with Maze revealed a 30% drop-off in onboarding that stakeholder reviews missed. Continuous user testing throughout development prevented costly post-launch redesigns and validated our strategic decisions early.',
-            color: 'from-green-500 to-green-600'
+            description: 'Testing prototypes with Maze revealed a 30% drop-off in onboarding that stakeholder reviews missed. Continuous user testing throughout development prevented costly post-launch redesigns and validated our strategic decisions early.'
         },
         {
             icon: Users2,
             title: 'Cross-Functional Collaboration Accelerates Success',
-            description: 'Weekly engineering syncs, compliance team partnerships, and business development alignment ensured technical feasibility, legal compliance, and market fit. Design doesn&apos;t exist in isolation—success requires orchestrating multiple stakeholders toward shared goals.',
-            color: 'from-purple-500 to-purple-600'
-        },
-        {
-            icon: Wrench,
-            title: 'Solving for Constraints Drives Innovation',
-            description: 'Working within the constraints of low digital literacy, limited resources, and multi-region compliance forced creative solutions (AI assistant, automated updates, template customization) that became competitive advantages.',
-            color: 'from-orange-500 to-orange-600'
+            description: 'Weekly engineering syncs, compliance team partnerships, and business development alignment ensured technical feasibility, legal compliance, and market fit. Design doesn&apos;t exist in isolation—success requires orchestrating multiple stakeholders toward shared goals.'
         }
     ];
 
@@ -57,21 +47,21 @@ const Learnings: React.FC = () => {
                     </div>
 
                     {/* Learnings Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 sm:mb-16">
                         {learnings.map((learning, index) => (
                             <div
                                 key={index}
-                                className="bg-gradient-to-br from-gray-50 to-white p-6 sm:p-8 rounded-[6px] shadow-card border-2 border-gray-100 hover:border-gray-800 hover:shadow-xl transition-all group"
+                                className="bg-white p-6 sm:p-8 rounded-[6px] shadow-card hover:shadow-xl transition-all group"
                             >
-                                <div className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${learning.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                                <div className="w-12 h-12 sm:w-14 sm:h-14 border-2 border-[#202022] flex items-center justify-center mb-6 group-hover:bg-[#202022] transition-colors">
                                     {React.createElement(learning.icon, {
-                                        className: "w-7 h-7 sm:w-8 sm:h-8 text-white"
+                                        className: "w-6 h-6 sm:w-7 sm:h-7 text-[#202022] group-hover:text-white transition-colors"
                                     })}
                                 </div>
-                                <h3 className="text-xl sm:text-2xl font-grotesk font-bold text-black mb-4">
+                                <h3 className="text-lg sm:text-xl font-grotesk font-bold text-[#202022] mb-3">
                                     {learning.title}
                                 </h3>
-                                <p className="text-base font-inter text-gray-600 leading-relaxed">
+                                <p className="text-sm sm:text-base font-inter text-gray-600 leading-relaxed">
                                     {learning.description}
                                 </p>
                             </div>
