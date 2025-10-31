@@ -5,12 +5,14 @@ interface LogoProps {
     className?: string;
     showText?: boolean;
     size?: 'sm' | 'md' | 'lg';
+    variant?: 'light' | 'dark';
 }
 
 const Logo: React.FC<LogoProps> = ({
     className = '',
     showText = true,
-    size = 'md'
+    size = 'md',
+    variant = 'dark'
 }) => {
     const sizeClasses = {
         sm: 'w-6 h-6',
@@ -24,12 +26,16 @@ const Logo: React.FC<LogoProps> = ({
         lg: 'text-2xl'
     };
 
+    const logoSrc = variant === 'light'
+        ? '/images/logo/logo-light-01.webp'
+        : '/images/logo/logo-dark-01.webp';
+
     return (
         <div className={`flex items-center gap-3 ${className}`}>
             {/* Logo Image */}
             <div className={`${sizeClasses[size]} relative flex-shrink-0`}>
                 <Image
-                    src="/images/About us/about-03.webp"
+                    src={logoSrc}
                     alt="Vasini Singh Logo"
                     width={32}
                     height={32}

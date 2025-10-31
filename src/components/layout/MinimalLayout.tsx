@@ -1,5 +1,6 @@
 import React from 'react';
 import MinimalHeader from './MinimalHeader';
+import Footer from './Footer';
 
 interface LayoutProps {
     children: React.ReactNode;
@@ -12,6 +13,7 @@ const MinimalLayout: React.FC<LayoutProps> = ({ children }) => {
             <main className="relative">
                 {children}
             </main>
+            <Footer />
         </div>
     );
 };

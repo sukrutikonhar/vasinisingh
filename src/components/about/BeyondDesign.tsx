@@ -1,29 +1,29 @@
 'use client';
 
 import React from 'react';
-import { Camera, BookOpen, Coffee, Music } from 'lucide-react';
+import { Camera, Plane, Coffee, Heart } from 'lucide-react';
 
 const BeyondDesign: React.FC = () => {
     const interests = [
         {
             icon: Camera,
             title: 'Photography',
-            description: 'Capturing moments and exploring visual storytelling through my lens.'
+            description: 'Capturing moments and stories through my lens.'
         },
         {
-            icon: BookOpen,
-            title: 'Reading',
-            description: 'Diving into design psychology, user behavior, and creative narratives.'
+            icon: Plane,
+            title: 'Travel',
+            description: 'Exploring new cultures and learning from diverse perspectives.'
         },
         {
             icon: Coffee,
             title: 'Coffee Culture',
-            description: 'Exploring local cafes and meaningful conversations over good coffee.'
+            description: 'Discovering local cafés and ideas over good coffee.'
         },
         {
-            icon: Music,
-            title: 'Music',
-            description: 'Finding inspiration in diverse sounds and creative rhythms.'
+            icon: Heart,
+            title: 'Advocacy & Impact',
+            description: 'Advocating for acid attack survivors with Chhanv Foundation\'s POSH Committee.'
         }
     ];
 

@@ -47,7 +47,7 @@ const AboutSection: React.FC = () => {
                         <div className="space-y-6 sm:space-y-8">
                             {/* Bio */}
                             <div className="relative pl-4 sm:pl-6 border-l-2 sm:border-l-4 border-gray-700">
-                                <p className="text-base sm:text-lg md:text-xl font-inter text-gray-800 leading-relaxed">
+                                <p className="text-base sm:text-lg font-inter text-gray-800 leading-relaxed">
                                     My journey into product design wasn’t linear. It evolved through experience.
                                     I started in back-office operations, where I learned structure and precision. As a Community Manager, I discovered the value of empathy, listening, and building trust. Those lessons shaped my approach as a Product Designer, combining systems thinking with human understanding to create digital experiences that truly serve people.
                                 </p>
@@ -63,7 +63,7 @@ const AboutSection: React.FC = () => {
                             </Link>
 
                             {/* Additional Info */}
-                            <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-4">
+                            <div className="space-y-4 sm:space-y-6 pt-4">
                                 <div>
                                     <div className="text-xs sm:text-sm text-gray-500 font-inter uppercase tracking-wider mb-1 sm:mb-2">
                                         Background

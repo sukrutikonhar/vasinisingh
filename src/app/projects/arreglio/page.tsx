@@ -5,7 +5,6 @@ import ProblemStatement from '@/components/projects/arreglio/ProblemStatement';
 import Research from '@/components/projects/arreglio/Research';
 import Ideation from '@/components/projects/arreglio/Ideation';
 import DesignProcess from '@/components/projects/arreglio/DesignProcess';
-import Testing from '@/components/projects/arreglio/Testing';
 import Outcome from '@/components/projects/arreglio/Outcome';
 import Learnings from '@/components/projects/arreglio/Learnings';
 import Gallery from '@/components/projects/arreglio/Gallery';
@@ -19,9 +18,14 @@ export const metadata = {
 export default function ArreglioProject() {
     const heroData = {
         title: 'Arreglio',
-        subtitle: 'Turning Sticky Notes into Smart SaaS',
+        subtitle: 'Digitizing workshop operations for global enterprises through strategic design thinking and user-centered innovation',
         image: '/images/projects/Arreglio/Untitled design (3).png',
-        tags: ['Mobile App', 'SaaS', 'B2B']
+        tags: ['B2B SAAS', 'LIVE MVP', 'WEB & MOBILE'],
+        metrics: [
+            { value: '70%', label: 'Faster Turnaround' },
+            { value: '80%', label: 'Customer Satisfaction' },
+            { value: '40%', label: 'Cost Savings' }
+        ]
     };
 
     return (
@@ -32,7 +36,6 @@ export default function ArreglioProject() {
             <Research />
             <Ideation />
             <DesignProcess />
-            <Testing />
             <Outcome />
             <Learnings />
             <Gallery />

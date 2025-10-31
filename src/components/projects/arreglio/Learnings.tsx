@@ -1,67 +1,97 @@
 'use client';
 
 import React from 'react';
+import { Lightbulb, Shield, BarChart3, Users2, Wrench } from 'lucide-react';
 
 const Learnings: React.FC = () => {
+    const learnings = [
+        {
+            icon: Lightbulb,
+            title: 'Simplicity Wins with SMB Users',
+            description: 'Small business owners value ease of use above all else. A feature-rich product that&apos;s difficult to adopt will fail regardless of its capabilities. Progressive disclosure and familiar mental models (like physical Kanban boards) were essential to driving adoption.',
+            color: 'from-yellow-500 to-yellow-600'
+        },
+        {
+            icon: Shield,
+            title: 'Trust is a Design Problem',
+            description: 'Customer trust in repair shops was fundamentally broken. By making pricing transparency, reviews, and real-time updates core to the platform architecture—not afterthoughts—we transformed trust from a marketing challenge into a design solution.',
+            color: 'from-blue-500 to-blue-600'
+        },
+        {
+            icon: BarChart3,
+            title: 'Data-Driven Iteration Reduces Risk',
+            description: 'Testing prototypes with Maze revealed a 30% drop-off in onboarding that stakeholder reviews missed. Continuous user testing throughout development prevented costly post-launch redesigns and validated our strategic decisions early.',
+            color: 'from-green-500 to-green-600'
+        },
+        {
+            icon: Users2,
+            title: 'Cross-Functional Collaboration Accelerates Success',
+            description: 'Weekly engineering syncs, compliance team partnerships, and business development alignment ensured technical feasibility, legal compliance, and market fit. Design doesn&apos;t exist in isolation—success requires orchestrating multiple stakeholders toward shared goals.',
+            color: 'from-purple-500 to-purple-600'
+        },
+        {
+            icon: Wrench,
+            title: 'Solving for Constraints Drives Innovation',
+            description: 'Working within the constraints of low digital literacy, limited resources, and multi-region compliance forced creative solutions (AI assistant, automated updates, template customization) that became competitive advantages.',
+            color: 'from-orange-500 to-orange-600'
+        }
+    ];
+
     return (
-        <section className="py-20 bg-gray-50">
-            <div className="container-custom">
-                <div className="max-w-4xl mx-auto">
-                    <h2 className="text-4xl sm:text-5xl font-grotesk font-bold text-black mb-12">
-                        Key Learnings
-                    </h2>
-
-                    <div className="space-y-8">
-                        <div className="bg-white p-8 shadow-card rounded-[6px]">
-                            <h3 className="text-2xl font-grotesk font-bold text-black mb-4">
-                                What I Learned
-                            </h3>
-                            <ul className="space-y-4 font-inter text-gray-700 text-lg">
-                                <li className="flex items-start gap-3">
-                                    <span className="text-black">→</span>
-                                    <span>
-                                        <strong>Context is everything:</strong> Spending time in actual workshops
-                                        revealed pain points that interviews alone never would have uncovered.
-                                    </span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-black">→</span>
-                                    <span>
-                                        <strong>Simplicity sells:</strong> The simpler the interface, the faster
-                                        the adoption—especially for non-tech users.
-                                    </span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-black">→</span>
-                                    <span>
-                                        <strong>Build trust early:</strong> Transparent pricing and clear communication
-                                        were key to user confidence.
-                                    </span>
-                                </li>
-                            </ul>
+        <section className="py-16 sm:py-20 md:py-24 bg-white">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-6xl mx-auto">
+                    {/* Section Header */}
+                    <div className="mb-12 sm:mb-16">
+                        <div className="inline-block bg-gray-100 rounded-full px-4 py-2 mb-6">
+                            <span className="text-xs sm:text-sm font-grotesk font-bold text-[#202022] uppercase tracking-wider">
+                                05 — Key Learnings & Insights
+                            </span>
                         </div>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6">
+                            Strategic Takeaways
+                        </h2>
+                        <p className="text-lg sm:text-xl font-inter text-gray-600 max-w-3xl leading-relaxed">
+                            This project reinforced critical principles that guide my approach to product design and stakeholder collaboration.
+                        </p>
+                    </div>
 
-                        <div className="bg-black text-white p-8 shadow-card rounded-[6px]">
-                            <h3 className="text-2xl font-grotesk font-bold mb-4">
-                                What I&apos;d Do Differently
-                            </h3>
-                            <p className="font-inter text-lg leading-relaxed">
-                                I would have involved workshop owners earlier in the wireframing stage as
-                                co-designers. Their practical insights could have saved time during iteration.
-                                I&apos;d also test with more diverse workshop sizes to ensure scalability.
-                            </p>
-                        </div>
+                    {/* Learnings Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
+                        {learnings.map((learning, index) => (
+                            <div
+                                key={index}
+                                className="bg-gradient-to-br from-gray-50 to-white p-6 sm:p-8 rounded-[6px] shadow-card border-2 border-gray-100 hover:border-gray-800 hover:shadow-xl transition-all group"
+                            >
+                                <div className={`w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br ${learning.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                                    {React.createElement(learning.icon, {
+                                        className: "w-7 h-7 sm:w-8 sm:h-8 text-white"
+                                    })}
+                                </div>
+                                <h3 className="text-xl sm:text-2xl font-grotesk font-bold text-black mb-4">
+                                    {learning.title}
+                                </h3>
+                                <p className="text-base font-inter text-gray-600 leading-relaxed">
+                                    {learning.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
 
-                        <div className="p-8 shadow-card rounded-[6px]">
-                            <h3 className="text-2xl font-grotesk font-bold text-black mb-4">
-                                Next Steps
-                            </h3>
-                            <p className="font-inter text-gray-700 text-lg leading-relaxed">
-                                Future iterations would include automated parts ordering, integration with
-                                supplier systems, and predictive maintenance reminders for customers.
-                                Voice-based status updates could also help busy shop owners.
-                            </p>
-                        </div>
+                    {/* Strategic Impact */}
+                    <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-8 sm:p-12 rounded-[6px] shadow-card border-l-4 border-gray-800">
+                        <h3 className="text-2xl sm:text-3xl font-grotesk font-bold text-black mb-6">
+                            Strategic Impact Beyond Metrics
+                        </h3>
+                        <p className="text-base sm:text-lg font-inter text-gray-700 leading-relaxed mb-6">
+                            Arreglio represents more than a digital transformation—it&apos;s a case study in strategic problem-solving, cross-functional collaboration, and user-centered design at scale. By deeply understanding both workshop owners&apos; operational constraints and customers&apos; trust concerns, we created a platform that didn&apos;t just digitize processes—it fundamentally improved how small businesses operate and serve their communities.
+                        </p>
+                        <p className="text-base sm:text-lg font-inter text-gray-700 leading-relaxed mb-6">
+                            The 70% efficiency improvement and 80% satisfaction rate aren&apos;t just numbers—they represent shop owners who can finally focus on their craft instead of paperwork, and customers who no longer experience the frustration of uncertainty and miscommunication.
+                        </p>
+                        <p className="text-base sm:text-lg font-inter text-gray-700 leading-relaxed">
+                            This project reinforced my belief that exceptional design emerges from the intersection of strategic thinking, rigorous user research, and collaborative problem-solving. It&apos;s not about creating beautiful interfaces—it&apos;s about solving real problems that create measurable business and human impact.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -70,4 +100,3 @@ const Learnings: React.FC = () => {
 };
 
 export default Learnings;
-

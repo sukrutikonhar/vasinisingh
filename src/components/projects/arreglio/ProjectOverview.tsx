@@ -1,49 +1,40 @@
 'use client';
 
 import React from 'react';
-import { Calendar, User, Wrench, Package } from 'lucide-react';
 
 const ProjectOverview: React.FC = () => {
-    const details = [
-        { icon: Calendar, label: 'Duration', value: '6 weeks' },
-        { icon: User, label: 'Role', value: 'Product Designer' },
-        { icon: Wrench, label: 'Tools', value: 'Figma, FigJam, Maze' },
-        { icon: Package, label: 'Category', value: 'B2B SaaS' }
+    const metadata = [
+        { label: 'DURATION', value: '6 months' },
+        { label: 'ROLE', value: 'Product Designer' },
+        { label: 'TOOLS', value: 'Figma, FigJam, Maze' },
+        { label: 'CATEGORY', value: 'B2B SaaS' }
     ];
 
     return (
-        <section className="py-20 bg-gray-50">
-            <div className="container-custom">
+        <section className="py-12 sm:py-16 bg-gray-50">
+            <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <div className="mb-16">
-                        <h2 className="text-4xl sm:text-5xl font-grotesk font-bold text-black mb-6">
-                            Project Overview
-                        </h2>
-                        <p className="text-xl font-inter text-gray-700 leading-relaxed max-w-4xl">
-                            Arreglio is a workshop management platform designed to help automotive repair shops
-                            streamline service bookings, customer management, and job tracking. The goal was to
-                            replace chaotic paper-based systems with an intuitive mobile-first experience that
-                            works for both shop owners and customers.
-                        </p>
+                    {/* Section Header */}
+                    <div className="text-center mb-10">
+                        <div className="inline-block bg-gray-100 rounded-full px-4 py-2 mb-4">
+                            <span className="text-xs font-grotesk font-bold text-[#202022] uppercase tracking-wider">
+                                Project Details
+                            </span>
+                        </div>
                     </div>
 
-                    {/* Project Details Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {details.map((detail, index) => (
+                    {/* Metadata Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {metadata.map((item, index) => (
                             <div
                                 key={index}
-                                className="bg-white border-2 border-black p-6 hover:bg-black hover:text-white transition-all group rounded-[6px]"
+                                className="bg-white p-6 shadow-card hover:shadow-xl transition-all group"
                             >
-                                <div className="mb-4">
-                                    {React.createElement(detail.icon, {
-                                        className: "w-8 h-8"
-                                    })}
-                                </div>
-                                <p className="text-sm font-grotesk uppercase tracking-wider text-gray-500 group-hover:text-gray-300 mb-2">
-                                    {detail.label}
+                                <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-500 mb-3">
+                                    {item.label}
                                 </p>
-                                <p className="text-lg font-grotesk font-semibold">
-                                    {detail.value}
+                                <p className="text-base sm:text-lg font-grotesk font-semibold text-[#202022] leading-snug">
+                                    {item.value}
                                 </p>
                             </div>
                         ))}
@@ -55,4 +46,3 @@ const ProjectOverview: React.FC = () => {
 };
 
 export default ProjectOverview;
-

@@ -5,7 +5,6 @@ import ProblemStatement from '@/components/projects/ecoprism/ProblemStatement';
 import Research from '@/components/projects/ecoprism/Research';
 import Ideation from '@/components/projects/ecoprism/Ideation';
 import DesignProcess from '@/components/projects/ecoprism/DesignProcess';
-import Testing from '@/components/projects/ecoprism/Testing';
 import Outcome from '@/components/projects/ecoprism/Outcome';
 import Learnings from '@/components/projects/ecoprism/Learnings';
 import Gallery from '@/components/projects/ecoprism/Gallery';
@@ -19,9 +18,14 @@ export const metadata = {
 export default function EcoprismProject() {
     const heroData = {
         title: 'ecoPRISM',
-        subtitle: 'ESG Compliance Made Simple',
+        subtitle: 'Simplifying ESG compliance for global enterprises through strategic UI/UX design and user-centered innovation',
         image: '/images/projects/ecoprism/Landing page.webp',
-        tags: ['SaaS', 'Enterprise', 'Dashboard']
+        tags: ['🚀 LIVE PRODUCT', 'GLOBAL ENTERPRISE', 'B2B SAAS'],
+        metrics: [
+            { value: '89%', label: 'Task Completion Rate' },
+            { value: '4.6/5', label: 'User Satisfaction' },
+            { value: '40%', label: 'Time Saved' }
+        ]
     };
 
     return (
@@ -32,7 +36,6 @@ export default function EcoprismProject() {
             <Research />
             <Ideation />
             <DesignProcess />
-            <Testing />
             <Outcome />
             <Learnings />
             <Gallery />

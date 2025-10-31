@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const AboutHero: React.FC = () => {
     return (
-        <section className="min-h-screen flex items-center justify-center bg-white pt-20 sm:pt-24 md:pt-20">
+        <section className="py-16 sm:py-24 md:py-32 bg-white pt-20 sm:pt-24 md:pt-20">
             <div className="container-custom w-full px-4 sm:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
                     {/* Left - Image */}
@@ -16,7 +16,7 @@ const AboutHero: React.FC = () => {
                             <div className="absolute inset-0 bg-gray-400 transform translate-x-1.5 translate-y-1.5 sm:translate-x-3 sm:translate-y-3 -z-10" />
 
                             {/* Main Image */}
-                            <div className="relative h-[400px] sm:h-[500px] md:h-[600px] w-full border-2 sm:border-4 border-black overflow-hidden bg-white">
+                            <div className="relative h-[300px] sm:h-[350px] md:h-[500px] w-full border-2 sm:border-4 border-black overflow-hidden bg-white">
                                 <Image
                                     src="/images/vasini.webp"
                                     alt="Vasini Singh"

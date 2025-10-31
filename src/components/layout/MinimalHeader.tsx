@@ -33,9 +33,9 @@ const MinimalHeader: React.FC = () => {
                 <div className="flex items-center justify-between h-16 sm:h-20">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity">
-                        <div className="relative w-8 h-8 sm:w-10 sm:h-10">
+                        <div className="relative w-8 h-8 sm:w-20">
                             <Image
-                                src="/images/About us/about-03.webp"
+                                src="/images/logo/logo-dark.webp"
                                 alt="Vasini Singh Logo"
                                 fill
                                 className="object-contain"

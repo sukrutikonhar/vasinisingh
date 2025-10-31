@@ -10,62 +10,62 @@ const BlogPostsSection: React.FC = () => {
             id: 1,
             title: "From Trial to Paid: How UX Can Turn SaaS Users Into Subscribers",
             image: "/images/projects/ecoprism/eco-01.webp",
-            date: "March 2024",
+            date: "Oct 12, 2025",
             platform: "Medium",
-            readMoreLink: "#", // Replace with actual Medium/LinkedIn link
+            readMoreLink: "https://medium.com/@vasinisingh/from-trial-to-paid-how-ux-can-turn-saas-users-into-subscribers-af6ad2597125",
             description: "Exploring the psychology and design patterns that drive user conversion in SaaS products.",
             tags: ["SaaS", "UX Strategy", "Conversion"]
         },
         {
             id: 2,
-            title: "How Role-Based Dashboards Can Transform Your SaaS Product Experience",
-            image: "/images/projects/ecoprism/eco-02.webp",
-            date: "February 2024",
-            platform: "LinkedIn",
-            readMoreLink: "#", // Replace with actual Medium/LinkedIn link
-            description: "A deep dive into creating personalized dashboard experiences for different user personas.",
-            tags: ["SaaS", "UI Design", "Enterprise"]
+            title: "The Story Behind My Logo: The UI Mountain Path",
+            image: "/images/About us/story-03.webp",
+            date: "Oct 12, 2025",
+            platform: "Medium",
+            readMoreLink: "https://medium.com/@vasinisingh/the-story-behind-my-logo-the-ui-mountain-path-c3b5d974b639",
+            description: "A personal story about the journey, symbolism, and design process behind my brand identity.",
+            tags: ["Design Process", "Personal Story", "Branding"]
         },
         {
             id: 3,
             title: "Designing for Retention: The Hidden Metric Behind Great SaaS UX",
             image: "/images/projects/ecoprism/eco-04.webp",
-            date: "February 2024",
-            platform: "Medium",
-            readMoreLink: "#", // Replace with actual Medium/LinkedIn link
+            date: "Oct 6, 2025",
+            platform: "LinkedIn",
+            readMoreLink: "https://www.linkedin.com/pulse/designing-retention-hidden-metric-behind-great-saas-ux-vasini-singh-b5gcc/",
             description: "Understanding how thoughtful UX design directly impacts user retention and lifetime value.",
             tags: ["SaaS", "UX Strategy", "Product Design"]
         },
         {
             id: 4,
-            title: "How to Simplify Sustainability Dashboards for Maximum Impact",
-            image: "/images/projects/ecoprism/eco-05.webp",
-            date: "January 2024",
+            title: "How Role-Based Dashboards Can Transform Your SaaS Product Experience",
+            image: "/images/projects/ecoprism/eco-02.webp",
+            date: "Sep 26, 2025",
             platform: "LinkedIn",
-            readMoreLink: "#", // Replace with actual Medium/LinkedIn link
-            description: "Making complex ESG data accessible and actionable through design.",
-            tags: ["UI Design", "Data Visualization", "Enterprise"]
+            readMoreLink: "https://www.linkedin.com/pulse/how-role-based-dashboards-can-transform-your-saas-product-singh-csf2c/",
+            description: "A deep dive into creating personalized dashboard experiences for different user personas.",
+            tags: ["SaaS", "UI Design", "Enterprise"]
         },
         {
             id: 5,
-            title: "The Story Behind My Logo: The UI Mountain Path",
-            image: "/images/About us/story-03.webp",
-            date: "December 2023",
-            platform: "Medium",
-            readMoreLink: "#", // Replace with actual Medium/LinkedIn link
-            description: "A personal story about the journey, symbolism, and design process behind my brand identity.",
-            tags: ["Design Process", "Personal Story", "Branding"]
+            title: "Why and How I Chose Design as a Career",
+            image: "/images/About us/story-01.webp",
+            date: "Sep 9, 2025",
+            platform: "LinkedIn",
+            readMoreLink: "https://www.linkedin.com/pulse/why-how-i-chose-design-career-vasini-singh-cgytc/",
+            description: "From photography to product design — the story of my creative career transition.",
+            tags: ["Career", "Personal Story", "Design Process"]
         },
         {
             id: 6,
-            title: "Why and How I Chose Design as a Career",
-            image: "/images/About us/story-01.webp",
-            date: "November 2023",
+            title: "Simplifying Sustainability Dashboards for Maximum Impact",
+            image: "/images/projects/ecoprism/eco-05.webp",
+            date: "Apr 24, 2025",
             platform: "LinkedIn",
-            readMoreLink: "#", // Replace with actual Medium/LinkedIn link
-            description: "From photography to product design — the story of my creative career transition.",
-            tags: ["Career", "Personal Story", "Design Process"]
-        }
+            readMoreLink: "https://ecoprism.com/resources/insights/simplifying-sustainability-dashboards/",
+            description: "Making complex ESG data accessible and actionable through design.",
+            tags: ["UI Design", "Data Visualization", "Enterprise"]
+        },
     ];
 
     // Extract all unique tags
