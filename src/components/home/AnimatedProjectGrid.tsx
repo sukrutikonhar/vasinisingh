@@ -31,15 +31,15 @@ const AnimatedProjectGrid: React.FC = () => {
     const projects = [
         {
             id: 1,
-            title: 'Enterprise Dashboard',
+            title: 'ecoPRISM: ESG Compliance Platform',
             category: 'SaaS Platform',
             year: '2024',
-            image: '/images/projects/ecoprism/Landing page.webp',
+            image: '/images/projects/ecoprism/ecoprism-landing-image.webp',
             link: '/projects/ecoprism'
         },
         {
             id: 2,
-            title: 'Workshop Management',
+            title: 'Arreglio: Workshop Management System',
             category: 'Mobile App',
             year: '2024',
             image: '/images/projects/Untitled design (3).webp',

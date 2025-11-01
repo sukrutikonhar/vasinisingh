@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Zap, DollarSign, MessageSquare, Layout, ShieldCheck, Palette } from 'lucide-react';
+import { Zap, DollarSign, MessageSquare, Layout, ShieldCheck, Palette, CheckCircle2 } from 'lucide-react';
 
 const Ideation: React.FC = () => {
     const decisions = [
@@ -9,8 +9,8 @@ const Ideation: React.FC = () => {
             number: '01',
             title: 'Simplified Onboarding Over Feature Richness',
             challenge: 'Workshop owners needed extensive functionality but had low digital literacy.',
-            solution: 'Progressive disclosure—launch with essential features (shop profile, services, pricing) and introduce advanced tools (Kanban board, analytics) after adoption.',
-            result: 'Onboarding time reduced from 15 to 4 minutes.',
+            solution: 'Progressive disclosure—launch with essential features (shop profile, services, pricing) and introduce advanced tools after adoption.',
+            result: 'Onboarding time reduced from 15 to 4 minutes',
             icon: Zap
         },
         {
@@ -18,15 +18,15 @@ const Ideation: React.FC = () => {
             title: 'Pricing Transparency as Competitive Advantage',
             challenge: 'Customers cited "unexpected charges" as primary pain point; competitors buried pricing.',
             solution: 'Made pricing mandatory in service listings and prominently displayed in customer search results.',
-            result: '45% increase in booking conversion vs. industry average.',
+            result: '45% increase in booking conversion vs industry average',
             icon: DollarSign
         },
         {
             number: '03',
             title: 'Real-Time Communication Without Overwhelming Shops',
-            challenge: 'Customers demanded updates, but shops couldn&apos;t manage constant notifications.',
-            solution: 'Automated status updates (received, in progress, ready) with optional custom messages. Added 24/7 AI assistant for FAQs.',
-            result: '60% reduction in customer support calls.',
+            challenge: 'Customers demanded updates, but shops couldn\'t manage constant notifications.',
+            solution: 'Automated status updates (received, in progress, ready) with optional custom messages plus 24/7 AI assistant.',
+            result: '60% reduction in customer support calls',
             icon: MessageSquare
         },
         {
@@ -34,7 +34,7 @@ const Ideation: React.FC = () => {
             title: 'Kanban Board for Visual Task Management',
             challenge: 'Shop owners used physical boards; digital lists felt foreign.',
             solution: 'Designed familiar Kanban interface (To Do, In Progress, Done) with drag-and-drop functionality.',
-            result: '90% adoption rate among active users.',
+            result: '90% adoption rate among active users',
             icon: Layout
         },
         {
@@ -42,7 +42,7 @@ const Ideation: React.FC = () => {
             title: 'Multi-Region Compliance by Design',
             challenge: 'Operating across EU, India, and UAE with different data protection laws.',
             solution: 'Built consent management, data portability, and erasure mechanisms into core architecture from day one.',
-            result: 'Zero compliance issues post-launch.',
+            result: 'Zero compliance issues post-launch',
             icon: ShieldCheck
         },
         {
@@ -50,78 +50,90 @@ const Ideation: React.FC = () => {
             title: 'Website Customization for Brand Identity',
             challenge: 'Small shops valued brand identity but lacked technical skills.',
             solution: 'Template-based customization with color, logo, and layout options—no coding required.',
-            result: '75% of shops customized their storefront within first week.',
+            result: '75% of shops customized their storefront within first week',
             icon: Palette
         }
     ];
 
     return (
-        <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
-            <div className="container-custom px-4 sm:px-6">
-                <div className="max-w-6xl mx-auto">
+        <section className="py-16 sm:py-20 md:py-24 bg-black text-white relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-5">
+                <div className="absolute top-0 left-0 w-full h-full" style={{
+                    backgroundImage: 'radial-gradient(circle at 4px 4px, white 1px, transparent 0)',
+                    backgroundSize: '60px 60px'
+                }}></div>
+            </div>
+
+            <div className="container-custom px-4 sm:px-6 relative z-10">
+                <div className="max-w-7xl mx-auto">
                     {/* Section Header */}
-                    <div className="mb-12 sm:mb-16">
-                        <div className="inline-block bg-gray-100 rounded-full px-4 py-2 mb-6">
-                            <span className="text-xs sm:text-sm font-grotesk font-bold text-[#202022] uppercase tracking-wider">
+                    <div className="mb-20">
+                        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
+                            <CheckCircle2 className="w-4 h-4 text-white" />
+                            <span className="text-xs font-grotesk font-bold uppercase tracking-wider text-white">
                                 03 — Key Design Decisions
                             </span>
                         </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-white mb-6 max-w-4xl">
                             Strategic Trade-offs & Solutions
                         </h2>
-                        <p className="text-lg sm:text-xl font-inter text-gray-600 max-w-3xl leading-relaxed">
+                        <p className="text-lg sm:text-xl font-inter text-white/80 max-w-3xl leading-relaxed">
                             Every design decision balanced competing priorities: simplicity vs. functionality, trust vs. speed, and flexibility vs. standardization.
                         </p>
                     </div>
 
                     {/* Decisions Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {decisions.map((decision, index) => (
                             <div
                                 key={index}
-                                className="bg-white p-6 sm:p-8 rounded-[6px] shadow-card border-2 border-gray-100 hover:border-gray-800 hover:shadow-xl transition-all"
+                                className="group relative"
                             >
-                                <div className="flex items-start gap-4 mb-6">
-                                    <div className="w-12 h-12 bg-gray-800 text-white rounded-lg flex items-center justify-center font-grotesk font-bold text-sm flex-shrink-0">
-                                        {decision.number}
-                                    </div>
-                                    <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">
-                                        {React.createElement(decision.icon, {
-                                            className: "w-6 h-6 text-white"
-                                        })}
-                                    </div>
-                                </div>
-
-                                <h3 className="text-xl sm:text-2xl font-grotesk font-bold text-black mb-4">
-                                    {decision.title}
-                                </h3>
-
-                                <div className="space-y-4">
-                                    <div>
-                                        <p className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-2">
-                                            Challenge
-                                        </p>
-                                        <p className="text-sm font-inter text-gray-700">
-                                            {decision.challenge}
-                                        </p>
+                                <div className="absolute inset-0 bg-white transform rotate-1 group-hover:rotate-2 transition-transform duration-300 rounded-[6px]"></div>
+                                <div className="relative bg-black border-2 border-white/20 p-8 h-full hover:border-white hover:bg-white/5 transition-all duration-300 rounded-[6px]">
+                                    <div className="flex items-start gap-4 mb-6">
+                                        <div className="w-14 h-14 bg-white text-black rounded-lg flex items-center justify-center font-grotesk font-bold text-lg flex-shrink-0 group-hover:scale-110 transition-transform">
+                                            {decision.number}
+                                        </div>
                                     </div>
 
-                                    <div>
-                                        <p className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-2">
-                                            Solution
-                                        </p>
-                                        <p className="text-sm font-inter text-gray-700">
-                                            {decision.solution}
-                                        </p>
-                                    </div>
+                                    <h3 className="text-xl sm:text-2xl font-grotesk font-bold text-white mb-6">
+                                        {decision.title}
+                                    </h3>
 
-                                    <div className="bg-green-50 border-l-4 border-green-500 p-3 rounded">
-                                        <p className="text-xs font-grotesk font-bold text-green-800 uppercase tracking-wider mb-1">
-                                            Result
-                                        </p>
-                                        <p className="text-sm font-inter font-semibold text-green-900">
-                                            {decision.result}
-                                        </p>
+                                    <div className="space-y-5">
+                                        <div className="border-l-4 border-white/30 pl-4">
+                                            <p className="text-xs font-grotesk font-bold text-white/60 uppercase tracking-wider mb-2">
+                                                Challenge
+                                            </p>
+                                            <p className="text-sm font-inter text-white/90 leading-relaxed">
+                                                {decision.challenge}
+                                            </p>
+                                        </div>
+
+                                        <div className="border-l-4 border-white/30 pl-4">
+                                            <p className="text-xs font-grotesk font-bold text-white/60 uppercase tracking-wider mb-2">
+                                                Solution
+                                            </p>
+                                            <p className="text-sm font-inter text-white/90 leading-relaxed">
+                                                {decision.solution}
+                                            </p>
+                                        </div>
+
+                                        <div className="bg-white text-black p-5 border-2 border-white">
+                                            <div className="flex items-start gap-3">
+                                                <CheckCircle2 className="w-5 h-5 text-black flex-shrink-0 mt-0.5" />
+                                                <div>
+                                                    <p className="text-xs font-grotesk font-bold uppercase tracking-wider mb-1">
+                                                        Result
+                                                    </p>
+                                                    <p className="text-sm font-inter font-semibold">
+                                                        {decision.result}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

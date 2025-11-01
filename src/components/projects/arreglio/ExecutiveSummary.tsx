@@ -1,61 +1,91 @@
 'use client';
 
 import React from 'react';
-import { Target, Lightbulb, TrendingUp } from 'lucide-react';
+import { Target, Lightbulb, TrendingUp, ArrowRight, Sparkles } from 'lucide-react';
 
 const ExecutiveSummary: React.FC = () => {
     const insights = [
         {
             icon: Target,
-            label: 'Challenge',
-            text: 'Small repair shops operated on paper logs and phone calls, leading to communication breakdowns and poor customer satisfaction.'
+            label: 'The Challenge',
+            text: 'Traditional repair shops operated on handwritten logs, missed calls, and chaotic workflows. This operational inefficiency led to poor customer satisfaction and stifled business growth.',
+            highlight: '86% of failures'
         },
         {
             icon: Lightbulb,
-            label: 'Solution',
-            text: 'A dual-sided platform enabling workshop owners to digitize operations while giving customers visibility and seamless booking.'
+            label: 'The Solution',
+            text: 'A comprehensive dual-platform ecosystem enabling workshop owners to digitize operations while providing customers transparent booking, real-time tracking, and secure payments.',
+            highlight: 'Zero friction'
         },
         {
             icon: TrendingUp,
-            label: 'Impact',
-            text: 'Early MVP validation showing 70% faster turnaround, 80% customer satisfaction, and 40% cost savings.'
+            label: 'The Impact',
+            text: 'Early MVP metrics demonstrate strong product-market fit: 70% faster turnaround, 80% customer satisfaction, and 40% operational cost reduction.',
+            highlight: 'Live MVP'
         }
     ];
 
     return (
-        <section className="py-16 sm:py-20 bg-white">
-            <div className="container-custom px-4 sm:px-6">
-                <div className="max-w-6xl mx-auto">
+        <section className="py-16 sm:py-20 bg-white relative overflow-hidden">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gray-50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 opacity-50" />
+
+            <div className="container-custom px-4 sm:px-6 relative z-10">
+                <div className="max-w-7xl mx-auto">
                     {/* Header */}
-                    <div className="mb-10">
-                        <div className="inline-block bg-gray-100 rounded-full px-4 py-2 mb-6">
-                            <span className="text-xs font-grotesk font-bold text-[#202022] uppercase tracking-wider">
+                    <div className="mb-16">
+                        <div className="inline-flex items-center gap-2 bg-black text-white rounded-full px-4 py-2 mb-8">
+                            <Sparkles className="w-4 h-4" />
+                            <span className="text-xs font-grotesk font-bold uppercase tracking-wider">
                                 Executive Summary
                             </span>
                         </div>
-                        <p className="text-lg sm:text-xl font-inter text-gray-700 leading-relaxed max-w-4xl">
-                            Arreglio is a B2B SaaS platform designed to empower small workshop owners with digital infrastructure, enabling them to manage operations, build trust, and grow their customer base. Through strategic problem-solving and cross-functional collaboration, we transformed traditional repair shop workflows into an efficient digital ecosystem.
-                        </p>
+
+                        <div className="max-w-4xl">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6 leading-tight">
+                                Transforming Traditional Workshops Into Digital-First Operations
+                            </h2>
+                            <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed mb-6">
+                                Arreglio is a strategic B2B SaaS platform designed to empower small workshop owners with enterprise-grade digital infrastructure. Through comprehensive user research, strategic design decisions, and cross-functional collaboration, we transformed paper-based workflows into an efficient, trust-building digital ecosystem.
+                            </p>
+                            <div className="flex items-center gap-2 text-sm font-inter text-gray-800 font-semibold">
+                                <span>Strategic design thinking meets operational excellence</span>
+                                <ArrowRight className="w-4 h-4" />
+                            </div>
+                        </div>
                     </div>
 
                     {/* Insights Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         {insights.map((insight, index) => (
                             <div
                                 key={index}
-                                className="bg-white border-2 border-[#202022] p-8 hover:bg-[#202022] group transition-all duration-300"
+                                className="group relative"
                             >
-                                <div className="flex items-center gap-3 mb-4">
-                                    {React.createElement(insight.icon, {
-                                        className: "w-6 h-6 text-[#202022] group-hover:text-white transition-colors"
-                                    })}
-                                    <h4 className="text-sm font-grotesk font-bold text-[#202022] group-hover:text-white uppercase tracking-wider transition-colors">
-                                        {insight.label}
-                                    </h4>
+                                <div className="absolute inset-0 bg-black transform rotate-1 group-hover:rotate-2 transition-transform duration-300 rounded-[6px]"></div>
+                                <div className="relative bg-white border-2 border-black p-8 h-full hover:bg-black transition-all duration-300 rounded-[6px]">
+                                    <div className="flex items-start gap-3 mb-6">
+                                        <div className="w-12 h-12 bg-black !hover:bg-white text-white flex items-center justify-center rounded-lg group-hover:bg-white group-hover:text-black transition-colors">
+                                            {React.createElement(insight.icon, {
+                                                className: "w-6 h-6"
+                                            })}
+                                        </div>
+                                        <div>
+                                            <h4 className="text-sm font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-1">
+                                                {insight.label}
+                                            </h4>
+                                            {insight.highlight && (
+                                                <span className="inline-block bg-gray-100 text-black px-2 py-1 text-xs font-bold rounded">
+                                                    {insight.highlight}
+                                                </span>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <p className="text-base font-inter text-gray-600 group-hover:text-white leading-relaxed transition-colors">
+                                        {insight.text}
+                                    </p>
                                 </div>
-                                <p className="text-sm sm:text-base font-inter text-gray-600 group-hover:text-gray-300 leading-relaxed transition-colors">
-                                    {insight.text}
-                                </p>
                             </div>
                         ))}
                     </div>

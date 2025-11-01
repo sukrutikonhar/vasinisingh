@@ -13,10 +13,10 @@ const ProjectsGrid: React.FC = () => {
             slug: 'ecoprism',
             tagline: 'ESG Compliance Platform',
             description: 'Transforming complex ESG compliance data into intuitive dashboards for enterprise sustainability teams.',
-            image: '/images/projects/ecoprism/Landing page.webp',
+            image: '/images/projects/ecoprism/ecoprism-landing-image.webp',
             year: '2024',
             tags: ['SaaS', 'Enterprise', 'Dashboard'],
-            role: 'Senior UI/UX Designer',
+            role: 'Foundation Designer',
             tools: ['Figma', 'Miro', 'Notion']
         },
         {
@@ -28,7 +28,7 @@ const ProjectsGrid: React.FC = () => {
             image: '/images/projects/Untitled design (3).webp',
             year: '2024',
             tags: ['Mobile App', 'SaaS', 'B2B'],
-            role: 'Product Designer',
+            role: 'Senior Product Designer',
             tools: ['Figma', 'Protopie', 'Maze']
         }
     ];

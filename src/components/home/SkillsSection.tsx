@@ -29,7 +29,6 @@ const SkillsSection: React.FC = () => {
         { name: 'Figma', icon: 'simple-icons:figma' },
         { name: 'FigJam', icon: 'simple-icons:figma' },
         { name: 'Adobe XD', icon: 'simple-icons:adobexd' },
-        { name: 'Sketch', icon: 'simple-icons:sketch' },
         { name: 'Notion', icon: 'simple-icons:notion' },
         { name: 'Miro', icon: 'simple-icons:miro' },
         { name: 'Maze', icon: 'simple-icons:maze' },
@@ -67,7 +66,7 @@ const SkillsSection: React.FC = () => {
                         <h3 className="text-xl sm:text-2xl font-grotesk font-semibold text-black mb-6 sm:mb-8 text-center">
                             Design Tools
                         </h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4 sm:gap-6">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6">
                             {tools.map((tool, index) => (
                                 <div
                                     key={index}
