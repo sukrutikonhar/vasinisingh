@@ -44,7 +44,7 @@ const BeyondDesign: React.FC = () => {
                         {interests.map((interest, index) => (
                             <div
                                 key={index}
-                                className="bg-white border-2 border-black p-8 hover:shadow-xl transition-all group"
+                                className="bg-white border-2 border-black p-8 hover:shadow-xl transition-all group rounded-[6px]"
                             >
                                 <div className="flex items-start gap-6">
                                     <div className="w-16 h-16 bg-black flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">

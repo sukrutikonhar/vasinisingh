@@ -58,22 +58,22 @@ const SkillsTools: React.FC = () => {
                     </div>
 
                     {/* UX Skills */}
-                    <div>
-                        <h3 className="text-xl sm:text-2xl font-grotesk font-semibold text-black mb-6 sm:mb-8">
+                    <div className="bg-gray-50 p-6 sm:p-8 md:p-12 rounded-[6px] shadow-card">
+                        <h3 className="text-xl sm:text-2xl font-grotesk font-semibold text-black mb-6 sm:mb-8 text-center">
                             UX Capabilities
                         </h3>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                             {uxSkills.map((skill, index) => (
                                 <div
                                     key={index}
-                                    className="flex items-center gap-2 sm:gap-3 bg-gray-50 border-2 border-black p-3 sm:p-4 hover:bg-black hover:text-white transition-all group"
+                                    className="flex items-center gap-3 group"
                                 >
-                                    <div className="w-7 h-7 sm:w-8 sm:h-8 bg-black group-hover:bg-white flex items-center justify-center flex-shrink-0">
-                                        <span className="text-[10px] sm:text-xs font-grotesk font-bold text-white group-hover:text-black">
+                                    <div className="w-7 h-7 sm:w-8 sm:h-8 border-2 border-black flex items-center justify-center group-hover:bg-black transition-colors flex-shrink-0">
+                                        <span className="text-[10px] sm:text-xs font-grotesk font-bold group-hover:text-white">
                                             {String(index + 1).padStart(2, '0')}
                                         </span>
                                     </div>
-                                    <span className="text-xs sm:text-sm font-inter font-medium">
+                                    <span className="text-sm sm:text-base font-inter text-gray-800 group-hover:font-semibold transition-all">
                                         {skill}
                                     </span>
                                 </div>

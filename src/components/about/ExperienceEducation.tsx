@@ -157,7 +157,7 @@ const ExperienceEducation: React.FC = () => {
                         </span>
                     </div>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-grotesk font-bold text-black mb-3 sm:mb-4">
-                        Experience & Education
+                        Experience
                     </h2>
                     <p className="text-sm sm:text-base md:text-lg font-inter text-gray-600 max-w-2xl mx-auto">
                         15+ years transforming ideas into impactful digital experiences
