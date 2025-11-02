@@ -14,13 +14,12 @@ const ProjectOverview: React.FC = () => {
         <section className="py-12 sm:py-16 bg-black text-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-
                     {/* Metadata Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {metadata.map((item, index) => (
                             <div
                                 key={index}
-                                className="bg-white p-6 shadow-card hover:shadow-xl transition-all group"
+                                className="bg-white border border-gray-200 p-6 hover:border-black transition-all group"
                             >
                                 <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-500 mb-3">
                                     {item.label}

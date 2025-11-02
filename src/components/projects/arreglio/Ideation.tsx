@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Zap, DollarSign, MessageSquare, Layout, ShieldCheck, Palette, CheckCircle2 } from 'lucide-react';
+import { Zap, DollarSign, MessageSquare, Layout, ShieldCheck, Palette, CheckCircle2, Target } from 'lucide-react';
 
 const Ideation: React.FC = () => {
     const decisions = [
@@ -56,82 +56,70 @@ const Ideation: React.FC = () => {
     ];
 
     return (
-        <section className="py-16 sm:py-20 md:py-24 bg-black text-white relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-0 left-0 w-full h-full" style={{
-                    backgroundImage: 'radial-gradient(circle at 4px 4px, white 1px, transparent 0)',
-                    backgroundSize: '60px 60px'
-                }}></div>
-            </div>
-
-            <div className="container-custom px-4 sm:px-6 relative z-10">
-                <div className="max-w-7xl mx-auto">
+        <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
-                    <div className="mb-20">
-                        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
-                            <CheckCircle2 className="w-4 h-4 text-white" />
-                            <span className="text-xs font-grotesk font-bold uppercase tracking-wider text-white">
+                    <div className="mb-12">
+                        <div className="inline-flex items-center gap-2 bg-black text-white rounded-full px-4 py-2 mb-6">
+                            <Target className="w-4 h-4" />
+                            <span className="text-xs font-grotesk font-bold uppercase tracking-wider">
                                 03 — Key Design Decisions
                             </span>
                         </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-white mb-6 max-w-4xl">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4 max-w-4xl">
                             Strategic Trade-offs & Solutions
                         </h2>
-                        <p className="text-lg sm:text-xl font-inter text-white/80 max-w-3xl leading-relaxed">
+                        <p className="text-lg sm:text-xl font-inter text-gray-600 max-w-3xl leading-relaxed">
                             Every design decision balanced competing priorities: simplicity vs. functionality, trust vs. speed, and flexibility vs. standardization.
                         </p>
                     </div>
 
                     {/* Decisions Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {decisions.map((decision, index) => (
                             <div
                                 key={index}
-                                className="group relative"
+                                className="bg-white border border-gray-200 p-6"
                             >
-                                <div className="absolute inset-0 bg-white transform rotate-1 group-hover:rotate-2 transition-transform duration-300 rounded-[6px]"></div>
-                                <div className="relative bg-black border-2 border-white/20 p-8 h-full hover:border-white hover:bg-white/5 transition-all duration-300 rounded-[6px]">
-                                    <div className="flex items-start gap-4 mb-6">
-                                        <div className="w-14 h-14 bg-white text-black rounded-lg flex items-center justify-center font-grotesk font-bold text-lg flex-shrink-0 group-hover:scale-110 transition-transform">
-                                            {decision.number}
-                                        </div>
+                                <div className="flex items-start gap-3 mb-4">
+                                    <div className="w-12 h-12 bg-black text-white rounded-lg flex items-center justify-center font-grotesk font-bold text-sm flex-shrink-0">
+                                        {decision.number}
                                     </div>
-
-                                    <h3 className="text-xl sm:text-2xl font-grotesk font-bold text-white mb-6">
+                                    <h3 className="text-xl font-grotesk font-bold text-black">
                                         {decision.title}
                                     </h3>
+                                </div>
 
-                                    <div className="space-y-5">
-                                        <div className="border-l-4 border-white/30 pl-4">
-                                            <p className="text-xs font-grotesk font-bold text-white/60 uppercase tracking-wider mb-2">
-                                                Challenge
-                                            </p>
-                                            <p className="text-sm font-inter text-white/90 leading-relaxed">
-                                                {decision.challenge}
-                                            </p>
-                                        </div>
+                                <div className="space-y-3">
+                                    <div>
+                                        <p className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-1">
+                                            Challenge
+                                        </p>
+                                        <p className="text-sm font-inter text-gray-700 leading-relaxed">
+                                            {decision.challenge}
+                                        </p>
+                                    </div>
 
-                                        <div className="border-l-4 border-white/30 pl-4">
-                                            <p className="text-xs font-grotesk font-bold text-white/60 uppercase tracking-wider mb-2">
-                                                Solution
-                                            </p>
-                                            <p className="text-sm font-inter text-white/90 leading-relaxed">
-                                                {decision.solution}
-                                            </p>
-                                        </div>
+                                    <div>
+                                        <p className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-1">
+                                            Solution
+                                        </p>
+                                        <p className="text-sm font-inter text-gray-700 leading-relaxed">
+                                            {decision.solution}
+                                        </p>
+                                    </div>
 
-                                        <div className="bg-white text-black p-5 border-2 border-white">
-                                            <div className="flex items-start gap-3">
-                                                <CheckCircle2 className="w-5 h-5 text-black flex-shrink-0 mt-0.5" />
-                                                <div>
-                                                    <p className="text-xs font-grotesk font-bold uppercase tracking-wider mb-1">
-                                                        Result
-                                                    </p>
-                                                    <p className="text-sm font-inter font-semibold">
-                                                        {decision.result}
-                                                    </p>
-                                                </div>
+                                    <div className="bg-black text-white p-4">
+                                        <div className="flex items-start gap-3">
+                                            <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                                            <div>
+                                                <p className="text-xs font-grotesk font-bold uppercase tracking-wider mb-1">
+                                                    Result
+                                                </p>
+                                                <p className="text-sm font-inter font-semibold">
+                                                    {decision.result}
+                                                </p>
                                             </div>
                                         </div>
                                     </div>

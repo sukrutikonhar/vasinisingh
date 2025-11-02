@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Search, Target, TestTube, Users2, ArrowRight } from 'lucide-react';
+import { Search, Target, TestTube, Users2 } from 'lucide-react';
 
 const Research: React.FC = () => {
     const phases = [
@@ -63,100 +63,61 @@ const Research: React.FC = () => {
     ];
 
     return (
-        <section className="py-16 sm:py-20 md:py-24 bg-white relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-[0.02]">
-                <div className="absolute top-0 left-0 w-full h-full" style={{
-                    backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)',
-                    backgroundSize: '40px 40px'
-                }}></div>
-            </div>
-
-            <div className="container-custom px-4 sm:px-6 relative z-10">
-                <div className="max-w-7xl mx-auto">
+        <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
-                    <div className="mb-20">
-                        <div className="inline-flex items-center gap-2 bg-black text-white rounded-full px-4 py-2 mb-8">
+                    <div className="mb-12">
+                        <div className="inline-flex items-center gap-2 bg-black text-white rounded-full px-4 py-2 mb-6">
                             <Target className="w-4 h-4" />
                             <span className="text-xs font-grotesk font-bold uppercase tracking-wider">
                                 02 — Strategic Approach
                             </span>
                         </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6 max-w-4xl">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
                             Problem-Solving Framework
                         </h2>
-                        <p className="text-lg sm:text-xl font-inter text-gray-600 max-w-3xl leading-relaxed">
+                        <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed">
                             I led the design strategy through a structured, data-driven approach that balanced business objectives with user needs across multiple stakeholders and regions.
                         </p>
                     </div>
 
                     {/* Process Phases */}
-                    <div className="space-y-8 sm:space-y-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {phases.map((phase, index) => (
-                            <div key={index} className="group relative">
-                                {/* Connection Line */}
-                                {index < phases.length - 1 && (
-                                    <div className="absolute left-8 top-32 bottom-[-4rem] w-0.5 bg-black/10 hidden lg:block"></div>
-                                )}
-
-                                <div className="bg-white border-2 border-black hover:shadow-2xl transition-all">
-                                    <div className="flex flex-col lg:flex-row">
-                                        {/* Left: Number & Icon */}
-                                        <div className="lg:w-48 flex lg:flex-col items-center gap-6 p-8 lg:border-r-2 lg:border-b-0 border-b-2 border-black bg-gray-50">
-                                            <div className="relative">
-                                                <div className="w-20 h-20 bg-black text-white rounded-full flex items-center justify-center font-grotesk font-bold text-2xl">
-                                                    {phase.number}
-                                                </div>
-                                                <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-black rounded-full border-4 border-white flex items-center justify-center">
-                                                    {React.createElement(phase.icon, {
-                                                        className: "w-4 h-4 text-white"
-                                                    })}
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* Right: Content */}
-                                        <div className="flex-1 p-8 lg:p-12">
-                                            <div className="flex items-start justify-between mb-6">
-                                                <h3 className="text-2xl sm:text-3xl font-grotesk font-bold text-black">
-                                                    {phase.title}
-                                                </h3>
-                                                {index < phases.length - 1 && (
-                                                    <ArrowRight className="w-6 h-6 text-gray-400 hidden lg:block group-hover:text-black transition-colors" />
-                                                )}
-                                            </div>
-
-                                            <p className="text-base font-inter text-gray-700 mb-8">
-                                                <strong className="text-black">Objective:</strong> {phase.objective}
-                                            </p>
-
-                                            <div className="mb-8">
-                                                <h4 className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-4">
-                                                    Key Activities
-                                                </h4>
-                                                <ul className="space-y-3">
-                                                    {phase.activities.map((activity, idx) => (
-                                                        <li key={idx} className="flex items-start gap-3">
-                                                            <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 flex-shrink-0"></span>
-                                                            <span className="text-sm sm:text-base font-inter text-gray-700 leading-relaxed">{activity}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-
-                                            {phase.insight && (
-                                                <div className="bg-black p-6 border-l-4 border-white">
-                                                    <p className="text-xs font-grotesk font-bold text-white/60 uppercase tracking-wider mb-2">
-                                                        Key Insight
-                                                    </p>
-                                                    <p className="text-sm font-inter text-white leading-relaxed">
-                                                        {phase.insight}
-                                                    </p>
-                                                </div>
-                                            )}
-                                        </div>
+                            <div key={index} className="bg-white border border-gray-200 p-6">
+                                <div className="flex items-start gap-4 mb-4">
+                                    <div className="w-12 h-12 bg-black text-white rounded-lg flex items-center justify-center font-grotesk font-bold text-sm flex-shrink-0">
+                                        {phase.number}
                                     </div>
+                                    <h3 className="text-xl font-grotesk font-bold text-black">
+                                        {phase.title}
+                                    </h3>
                                 </div>
+
+                                <p className="text-sm font-inter text-gray-700 mb-4">
+                                    <strong className="text-black">Objective:</strong> {phase.objective}
+                                </p>
+
+                                <ul className="space-y-2 mb-4">
+                                    {phase.activities.map((activity, idx) => (
+                                        <li key={idx} className="flex items-start gap-2 text-sm font-inter text-gray-700">
+                                            <span className="text-black font-bold mt-0.5">•</span>
+                                            <span>{activity}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+
+                                {phase.insight && (
+                                    <div className="bg-gray-100 border-l-4 border-black p-4">
+                                        <p className="text-xs font-grotesk font-bold text-gray-600 uppercase tracking-wider mb-1">
+                                            Key Insight
+                                        </p>
+                                        <p className="text-sm font-inter text-gray-800">
+                                            {phase.insight}
+                                        </p>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>

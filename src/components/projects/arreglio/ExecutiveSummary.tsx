@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Target, Lightbulb, TrendingUp, ArrowRight, Sparkles } from 'lucide-react';
+import { Target, Lightbulb, TrendingUp, Sparkles } from 'lucide-react';
 
 const ExecutiveSummary: React.FC = () => {
     const insights = [
@@ -26,34 +26,23 @@ const ExecutiveSummary: React.FC = () => {
     ];
 
     return (
-        <section className="py-16 sm:py-20 bg-white relative overflow-hidden">
-            {/* Decorative Elements */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gray-50 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 opacity-50" />
-
-            <div className="container-custom px-4 sm:px-6 relative z-10">
-                <div className="max-w-7xl mx-auto">
+        <section className="py-16 sm:py-20 bg-white">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-6xl mx-auto">
                     {/* Header */}
-                    <div className="mb-16">
-                        <div className="inline-flex items-center gap-2 bg-black text-white rounded-full px-4 py-2 mb-8">
+                    <div className="mb-12">
+                        <div className="inline-flex items-center gap-2 bg-black text-white rounded-full px-4 py-2 mb-6">
                             <Sparkles className="w-4 h-4" />
                             <span className="text-xs font-grotesk font-bold uppercase tracking-wider">
                                 Executive Summary
                             </span>
                         </div>
-
-                        <div className="max-w-4xl">
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6 leading-tight">
-                                Transforming Traditional Workshops Into Digital-First Operations
-                            </h2>
-                            <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed mb-6">
-                                Arreglio is a strategic B2B SaaS platform designed to empower small workshop owners with enterprise-grade digital infrastructure. Through comprehensive user research, strategic design decisions, and cross-functional collaboration, we transformed paper-based workflows into an efficient, trust-building digital ecosystem.
-                            </p>
-                            <div className="flex items-center gap-2 text-sm font-inter text-gray-800 font-semibold">
-                                <span>Strategic design thinking meets operational excellence</span>
-                                <ArrowRight className="w-4 h-4" />
-                            </div>
-                        </div>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4 leading-tight">
+                            Transforming Traditional Workshops Into Digital-First Operations
+                        </h2>
+                        <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed">
+                            Arreglio is a strategic B2B SaaS platform designed to empower small workshop owners with enterprise-grade digital infrastructure. Through comprehensive user research, strategic design decisions, and cross-functional collaboration, we transformed paper-based workflows into an efficient, trust-building digital ecosystem.
+                        </p>
                     </div>
 
                     {/* Insights Grid */}
@@ -61,31 +50,28 @@ const ExecutiveSummary: React.FC = () => {
                         {insights.map((insight, index) => (
                             <div
                                 key={index}
-                                className="group relative"
+                                className="bg-gray-50 border border-gray-200 p-8 hover:border-black transition-all"
                             >
-                                <div className="absolute inset-0 bg-black transform rotate-1 group-hover:rotate-2 transition-transform duration-300 rounded-[6px]"></div>
-                                <div className="relative bg-white border-2 border-black p-8 h-full hover:bg-black transition-all duration-300 rounded-[6px]">
-                                    <div className="flex items-start gap-3 mb-6">
-                                        <div className="w-12 h-12 bg-black !hover:bg-white text-white flex items-center justify-center rounded-lg group-hover:bg-white group-hover:text-black transition-colors">
-                                            {React.createElement(insight.icon, {
-                                                className: "w-6 h-6"
-                                            })}
-                                        </div>
-                                        <div>
-                                            <h4 className="text-sm font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-1">
-                                                {insight.label}
-                                            </h4>
-                                            {insight.highlight && (
-                                                <span className="inline-block bg-gray-100 text-black px-2 py-1 text-xs font-bold rounded">
-                                                    {insight.highlight}
-                                                </span>
-                                            )}
-                                        </div>
+                                <div className="flex items-start gap-3 mb-4">
+                                    <div className="w-10 h-10 bg-black text-white flex items-center justify-center rounded-lg">
+                                        {React.createElement(insight.icon, {
+                                            className: "w-5 h-5"
+                                        })}
                                     </div>
-                                    <p className="text-base font-inter text-gray-600 group-hover:text-white leading-relaxed transition-colors">
-                                        {insight.text}
-                                    </p>
+                                    <div>
+                                        <h4 className="text-sm font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-1">
+                                            {insight.label}
+                                        </h4>
+                                        {insight.highlight && (
+                                            <span className="inline-block bg-black text-white px-2 py-1 text-xs font-bold rounded">
+                                                {insight.highlight}
+                                            </span>
+                                        )}
+                                    </div>
                                 </div>
+                                <p className="text-base font-inter text-gray-700 leading-relaxed">
+                                    {insight.text}
+                                </p>
                             </div>
                         ))}
                     </div>
