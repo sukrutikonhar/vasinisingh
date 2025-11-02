@@ -43,11 +43,6 @@ const Outcome: React.FC = () => {
                                 key={index}
                                 className="bg-white/10 backdrop-blur-sm p-6 sm:p-8 rounded-[6px] border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all text-center"
                             >
-                                <div className="flex justify-center mb-4">
-                                    {React.createElement(metric.icon, {
-                                        className: "w-10 h-10 sm:w-12 sm:h-12 text-white"
-                                    })}
-                                </div>
                                 <div className="text-4xl sm:text-5xl font-grotesk font-bold text-white mb-3">
                                     {metric.value}
                                 </div>
@@ -63,7 +58,7 @@ const Outcome: React.FC = () => {
 
                     {/* Success Story */}
                     <div className="bg-white/10 backdrop-blur-sm p-8 sm:p-12 rounded-[6px] border-2 border-white/20">
-                        <h3 className="text-2xl sm:text-3xl font-grotesk font-bold text-white mb-6">
+                        <h3 className="text-2xl sm:text-3xl font-grotesk font-bold text-green-500 mb-6">
                             Product Success
                         </h3>
                         <p className="text-lg sm:text-xl font-inter text-white/90 leading-relaxed mb-6">

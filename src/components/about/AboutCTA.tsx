@@ -27,7 +27,7 @@ const AboutCTA: React.FC = () => {
                         </Link>
 
                         <a
-                            href="/resume.pdf"
+                            href="/vasini-singh-resume.pdf"
                             download
                             className="inline-flex items-center border-2 border-black px-10 py-5 font-grotesk font-semibold hover:bg-black hover:text-white transition-all group"
                         >

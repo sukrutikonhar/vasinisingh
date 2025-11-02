@@ -7,8 +7,8 @@ const Gallery: React.FC = () => {
     const screens = [
         '/images/projects/ecoprism/eco-05.webp',
         '/images/projects/ecoprism/eco-06.webp',
-        '/images/projects/ecoprism/eco-07.webp',
-        '/images/projects/ecoprism/eco-08.webp',
+        '/images/projects/ecoprism/eco-03.webp',
+        '/images/projects/ecoprism/eco-04.webp',
         '/images/projects/ecoprism/eco-01.webp',
         '/images/projects/ecoprism/eco-02.webp'
     ];
@@ -32,7 +32,7 @@ const Gallery: React.FC = () => {
                                         src={screen}
                                         alt={`ecoPRISM Screen ${index + 1}`}
                                         fill
-                                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        className="object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
                                     />
                                 </div>
                             </div>

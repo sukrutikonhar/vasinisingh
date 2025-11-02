@@ -32,7 +32,7 @@ const Gallery: React.FC = () => {
                                         src={screen}
                                         alt={`Arreglio Screen ${index + 1}`}
                                         fill
-                                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        className="object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
                                     />
                                 </div>
                             </div>

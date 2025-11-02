@@ -12,7 +12,7 @@ const ContactPageHero: React.FC = () => {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-grotesk font-bold text-black mb-6 sm:mb-8 leading-tight">
-                Let&apos;s Work<br />Together 👋
+                Let&apos;s Work<br />Together
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl font-inter text-gray-600 leading-relaxed">

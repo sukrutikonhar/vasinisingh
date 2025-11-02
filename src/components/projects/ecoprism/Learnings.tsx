@@ -57,9 +57,9 @@ const Learnings: React.FC = () => {
                                 key={index}
                                 className="bg-white p-6 sm:p-8 rounded-[6px] shadow-card hover:shadow-xl transition-all group"
                             >
-                                <div className="w-12 h-12 sm:w-14 sm:h-14 border-2 border-[#202022] flex items-center justify-center mb-6 group-hover:bg-[#202022] transition-colors">
+                                <div className="mb-6">
                                     {React.createElement(learning.icon, {
-                                        className: "w-6 h-6 sm:w-7 sm:h-7 text-[#202022] group-hover:text-white transition-colors"
+                                        className: "w-8 h-8 text-[#202022]"
                                     })}
                                 </div>
                                 <h3 className="text-lg sm:text-xl font-grotesk font-bold text-[#202022] mb-3">

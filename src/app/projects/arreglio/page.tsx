@@ -7,6 +7,7 @@ import Research from '@/components/projects/arreglio/Research';
 import Ideation from '@/components/projects/arreglio/Ideation';
 import DesignProcess from '@/components/projects/arreglio/DesignProcess';
 import Outcome from '@/components/projects/arreglio/Outcome';
+import Testimonials from '@/components/projects/arreglio/Testimonials';
 import Learnings from '@/components/projects/arreglio/Learnings';
 import Gallery from '@/components/projects/arreglio/Gallery';
 import NextProject from '@/components/projects/NextProject';
@@ -20,8 +21,8 @@ export default function ArreglioProject() {
     const heroData = {
         title: 'Arreglio',
         subtitle: 'Digitizing workshop operations for global enterprises through strategic design thinking and user-centered innovation',
-        image: '/images/projects/Arreglio/arreglio-landing-image.webp',
-        tags: ['B2B SAAS', 'LIVE MVP', 'WEB & MOBILE'],
+        image: '/images/projects/arreglio/arreglio-landing-image.webp',
+        tags: ['B2B SaaS', 'LIVE MVP', 'WEB & MOBILE'],
         metrics: [
             { value: '70%', label: 'Faster Turnaround' },
             { value: '80%', label: 'Customer Satisfaction' },
@@ -39,6 +40,7 @@ export default function ArreglioProject() {
             <Ideation />
             <DesignProcess />
             <Outcome />
+            <Testimonials />
             <Learnings />
             <Gallery />
             <NextProject nextSlug="ecoprism" nextTitle="ecoPRISM" />

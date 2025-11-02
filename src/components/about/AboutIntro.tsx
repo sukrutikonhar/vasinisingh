@@ -14,39 +14,28 @@ const AboutIntro: React.FC = () => {
                     <div className="space-y-6 sm:space-y-8 text-base sm:text-lg font-inter text-gray-800 leading-relaxed">
                         <div className="border-l-2 sm:border-l-4 border-black pl-4 sm:pl-8">
                             <p className="mb-6">
-                                My story begins in India, where creativity and curiosity were my constant companions.
-                                Growing up, I was fascinated by how things worked—not just mechanically, but emotionally.
-                                How does a product make someone feel? Why do we connect with some experiences and not others?
+                                Hi, I'm Vasini, a designer who believes great design begins with empathy and curiosity.
                             </p>
                             <p>
-                                This curiosity led me to explore photography first, where I learned to see the world through
-                                a different lens—literally and metaphorically. Framing shots taught me about composition,
-                                balance, and most importantly, telling stories without words.
+                                My path into design started with a fascination: how small details shape how people feel, connect, and interact. That curiosity evolved into crafting meaningful digital experiences across SaaS, sustainability, and community-driven platforms.
                             </p>
                         </div>
 
                         <div className="border-l-2 sm:border-l-4 border-black pl-4 sm:pl-8">
                             <p className="mb-6">
-                                The transition to product design felt natural. I realized that designing digital products
-                                was an extension of storytelling—except now, I was crafting interactive narratives that
-                                people could participate in, shape, and make their own.
+                                I've worked with diverse teams and global clients like ABB and Danish Agro, learning how design bridges cultures and simplifies complexity.
                             </p>
                             <p>
-                                Currently, I&apos;m deepening my expertise through a comprehensive product design course,
-                                while working on real-world projects that challenge me to think systematically about user
-                                problems and business goals.
+                                Travel and photography are integral to my process—they help me see stories in everyday moments, notice subtleties of human behavior, and bring that perspective into my work.
                             </p>
                         </div>
 
                         <div className="bg-white border-2 border-black p-6 sm:p-8 mt-8 sm:mt-12">
                             <p className="text-lg sm:text-xl font-grotesk font-semibold text-black mb-4">
-                                What drives me?
+                                What Drives Me
                             </p>
                             <p>
-                                I love solving problems that sit at the intersection of complexity and clarity.
-                                Give me a tangled user flow, a confusing enterprise tool, or a product that needs
-                                to serve diverse audiences—and I&apos;ll find a way to make it intuitive, elegant,
-                                and delightful.
+                                I'm driven to create experiences that feel human—simple, useful, and emotionally resonant. Design, for me, is about listening first and building second. Finding clarity in chaos and crafting solutions that quietly improve someone's day.
                             </p>
                         </div>
                     </div>

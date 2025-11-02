@@ -11,19 +11,6 @@ const Outcome: React.FC = () => {
         { icon: Heart, value: '60%', label: 'Owner Satisfaction', description: 'Streamlined operations improved work-life balance' }
     ];
 
-    const testimonials = [
-        {
-            quote: 'Now I never lose track of jobs. Everything is organized, customers are happy, and I can focus on what I do best—fixing things.',
-            author: 'Workshop Owner',
-            role: 'Using Arreglio for 4 months'
-        },
-        {
-            quote: 'I get instant updates and never have to call again. I can see photos of the work and know exactly when to pick up my bike.',
-            author: 'Customer',
-            role: 'Repeat user'
-        }
-    ];
-
     return (
         <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-gray-800 to-gray-900 text-white relative overflow-hidden">
             {/* Background Pattern */}
@@ -50,15 +37,12 @@ const Outcome: React.FC = () => {
                     </div>
 
                     {/* Metrics Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {metrics.map((metric, index) => (
                             <div
                                 key={index}
                                 className="bg-white/10 backdrop-blur-sm p-6 rounded-[6px] border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all text-center"
                             >
-                                {React.createElement(metric.icon, {
-                                    className: "w-10 h-10 text-white mx-auto mb-4"
-                                })}
                                 <div className="text-4xl font-grotesk font-bold text-white mb-2">
                                     {metric.value}
                                 </div>
@@ -70,33 +54,6 @@ const Outcome: React.FC = () => {
                                 </p>
                             </div>
                         ))}
-                    </div>
-
-                    {/* User Validation */}
-                    <div className="mt-16">
-                        <h3 className="text-2xl font-grotesk font-bold text-white mb-8 text-center">
-                            User Testimonials
-                        </h3>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            {testimonials.map((testimonial, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white/10 backdrop-blur-sm p-6 rounded-[6px] border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all"
-                                >
-                                    <p className="text-base font-inter text-white/90 leading-relaxed mb-4">
-                                        {testimonial.quote}
-                                    </p>
-                                    <div className="border-t border-white/20 pt-4">
-                                        <p className="text-sm font-grotesk font-bold text-white mb-1">
-                                            {testimonial.author}
-                                        </p>
-                                        <p className="text-xs font-inter text-white/70">
-                                            {testimonial.role}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
                     </div>
                 </div>
             </div>

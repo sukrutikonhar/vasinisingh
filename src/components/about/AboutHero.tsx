@@ -16,12 +16,12 @@ const AboutHero: React.FC = () => {
                             <div className="absolute inset-0 bg-gray-400 transform translate-x-1.5 translate-y-1.5 sm:translate-x-3 sm:translate-y-3 -z-10" />
 
                             {/* Main Image */}
-                            <div className="relative h-[300px] sm:h-[350px] md:h-[500px] w-full border-2 sm:border-4 border-black overflow-hidden bg-white">
+                            <div className="relative h-[300px] sm:h-[350px] md:h-[500px] w-full border-2 sm:border-4 border-black overflow-hidden bg-white group">
                                 <Image
-                                    src="/images/vasini.webp"
+                                    src="/images/vasini-singh1.webp"
                                     alt="Vasini Singh"
                                     fill
-                                    className="object-cover grayscale"
+                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                                     priority
                                 />
                             </div>

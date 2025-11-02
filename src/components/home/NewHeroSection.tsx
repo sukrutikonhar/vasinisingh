@@ -132,13 +132,14 @@ const NewHeroSection: React.FC = () => {
                                 <span className="mr-2">View My Work</span>
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <Link
-                                href="/contact"
+                            <a
+                                href="/vasini-singh-resume.pdf"
+                                download
                                 className="group inline-flex items-center justify-center border-2 border-black px-8 py-4 font-medium hover:bg-black hover:text-white transition-all rounded-[12px]"
                             >
                                 <Download className="w-5 h-5 mr-2" />
                                 <span>Download Resume</span>
-                            </Link>
+                            </a>
                         </div>
                     </div>
 

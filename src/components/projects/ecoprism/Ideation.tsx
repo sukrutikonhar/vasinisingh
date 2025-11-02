@@ -98,17 +98,22 @@ const Ideation: React.FC = () => {
                                     </div>
 
                                     {/* Metrics */}
-                                    <div className="flex gap-8">
-                                        {solution.metrics.map((metric, idx) => (
-                                            <div key={idx}>
-                                                <div className="text-3xl sm:text-4xl font-grotesk font-bold text-[#202022] mb-2">
-                                                    {metric.value}
+                                    <div>
+                                        <h4 className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-3">
+                                            Impact
+                                        </h4>
+                                        <div className="flex gap-8">
+                                            {solution.metrics.map((metric, idx) => (
+                                                <div key={idx}>
+                                                    <div className="text-3xl sm:text-4xl font-grotesk font-bold text-[#202022] mb-2">
+                                                        {metric.value}
+                                                    </div>
+                                                    <p className="text-sm font-inter text-gray-600">
+                                                        {metric.label}
+                                                    </p>
                                                 </div>
-                                                <p className="text-sm font-inter text-gray-600">
-                                                    {metric.label}
-                                                </p>
-                                            </div>
-                                        ))}
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
 
