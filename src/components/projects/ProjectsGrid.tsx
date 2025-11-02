@@ -25,7 +25,7 @@ const ProjectsGrid: React.FC = () => {
             slug: 'arreglio',
             tagline: 'Workshop Management System',
             description: 'Streamlining service bookings and customer management for automotive workshops with an intuitive mobile-first experience.',
-            image: '/images/projects/arreglio/arreglio-landing-image1.webp',
+            image: '/images/projects/arreglio1/arreglio-landing-image.webp',
             year: '2024',
             tags: ['Mobile App', 'SaaS', 'B2B'],
             role: 'Senior Product Designer',

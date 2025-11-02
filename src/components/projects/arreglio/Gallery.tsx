@@ -5,12 +5,12 @@ import Image from 'next/image';
 
 const Gallery: React.FC = () => {
     const screens = [
-        '/images/projects/arreglio/arreglio-01.webp',
-        '/images/projects/arreglio/arreglio-02.webp',
-        '/images/projects/arreglio/arreglio-03.webp',
-        '/images/projects/arreglio/arreglio-04.webp',
-        '/images/projects/arreglio/arreglio-05.webp',
-        '/images/projects/arreglio/arreglio-06.webp'
+        '/images/projects/arreglio1/arreglio-01.webp',
+        '/images/projects/arreglio1/arreglio-02.webp',
+        '/images/projects/arreglio1/arreglio-03.webp',
+        '/images/projects/arreglio1/arreglio-04.webp',
+        '/images/projects/arreglio1/arreglio-05.webp',
+        '/images/projects/arreglio1/arreglio-06.webp'
     ];
 
     return (
