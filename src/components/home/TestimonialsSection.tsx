@@ -27,22 +27,22 @@ const TestimonialsSection: React.FC = () => {
 
     const testimonials = [
         {
-            quote: "Vasini's ability to translate complex user needs into elegant solutions is remarkable. Her design work consistently elevates our product.",
-            author: "Sarah Mitchell",
-            role: "Product Manager",
-            company: "TechCorp"
+            quote: "Vasini stood out for her creativity and commitment, delivering 30+ successful projects as she transitioned from intern to skilled Product Designer. Her blend of visual storytelling and user experience makes her a joy to mentor.",
+            author: "Abhishek Katiyar",
+            role: "Founder & CEO",
+            company: "Web Concepts Technologies | Bizmeth Solutions | Flowix"
         },
         {
-            quote: "Working with Vasini has been transformative. She brings both creative vision and strategic thinking to every project.",
-            author: "David Chen",
-            role: "Engineering Lead",
-            company: "StartupCo"
+            quote: "I've collaborated with Vasini on numerous successful projects. Her design thinking, attention to detail, and user-first mindset consistently bring clarity and impact to every delivery. A reliable partner who elevates both process and outcome.",
+            author: "Vignesh R",
+            role: "Chapter Lead & Technical Consultant",
+            company: "Acumant"
         },
         {
-            quote: "Her attention to detail and user-centric approach made our platform not just functional, but delightful to use.",
-            author: "Emily Rodriguez",
-            role: "CEO",
-            company: "DesignLab"
+            quote: "Her empathy, creativity, and strategic mindset strengthened our outreach. She brought professionalism and heart to every initiative, amplifying our mission with clarity and purpose. A true asset to any impact-driven organization.",
+            author: "Alok Dixit",
+            role: "Founder & CEO",
+            company: "Chhanv Foundation"
         }
     ];
 
@@ -90,14 +90,7 @@ const TestimonialsSection: React.FC = () => {
                         ))}
                     </div>
 
-                    {/* Collaboration Note */}
-                    <div className="mt-12 sm:mt-16 text-center px-4">
-                        <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 rounded-[6px] shadow-card bg-white">
-                            <p className="text-xs sm:text-sm font-grotesk font-medium">
-                                Open to collaborations with passionate teams and innovative projects
-                            </p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>

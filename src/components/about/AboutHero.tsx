@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const AboutHero: React.FC = () => {
     return (
-        <section className="py-16 sm:py-24 md:py-32 bg-white pt-20 sm:pt-24 md:pt-20">
+        <section className="bg-white py-16 sm:py-24 md:py-32">
             <div className="container-custom w-full px-4 sm:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
                     {/* Left - Image */}

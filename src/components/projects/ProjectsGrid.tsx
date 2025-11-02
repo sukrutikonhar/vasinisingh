@@ -9,15 +9,15 @@ const ProjectsGrid: React.FC = () => {
     const completedProjects = [
         {
             id: 1,
-            title: 'ecoPRISM',
+            title: 'ecoPRISM Tool',
             slug: 'ecoprism',
-            tagline: 'ESG Compliance Platform',
-            description: 'Transforming complex ESG compliance data into intuitive dashboards for enterprise sustainability teams.',
+            tagline: 'ESG Compliance Made Simple',
+            description: 'Simplifying ESG compliance for global enterprises through strategic UI/UX design and user-centered innovation.',
             image: '/images/projects/ecoprism/ecoprism-landing-image.webp',
             year: '2024',
             tags: ['SaaS', 'Enterprise', 'Dashboard'],
             role: 'Foundation Designer',
-            tools: ['Figma', 'Miro', 'Notion']
+            tools: ['Adobe XD', 'Miro', 'Notion']
         },
         {
             id: 2,
@@ -29,7 +29,7 @@ const ProjectsGrid: React.FC = () => {
             year: '2024',
             tags: ['Mobile App', 'SaaS', 'B2B'],
             role: 'Senior Product Designer',
-            tools: ['Figma', 'Protopie', 'Maze']
+            tools: ['Figma', 'FigJam', 'Maze']
         }
     ];
 
