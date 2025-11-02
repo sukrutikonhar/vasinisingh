@@ -21,7 +21,7 @@ export default function ArreglioProject() {
     const heroData = {
         title: 'Arreglio',
         subtitle: 'Digitizing workshop operations for global enterprises through strategic design thinking and user-centered innovation',
-        image: '/images/projects/arreglio/arreglio-landing-image.webp',
+        image: '/images/projects/arreglio/arreglio-landing-image1.webp',
         tags: ['B2B SaaS', 'LIVE MVP', 'WEB & MOBILE'],
         metrics: [
             { value: '70%', label: 'Faster Turnaround' },

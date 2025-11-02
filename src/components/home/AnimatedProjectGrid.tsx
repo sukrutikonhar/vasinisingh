@@ -42,7 +42,7 @@ const AnimatedProjectGrid: React.FC = () => {
             title: 'Arreglio: Workshop Management System',
             category: 'SaaS Platform',
             year: '2024',
-            image: '/images/projects/arreglio/arreglio-landing-image.webp',
+            image: '/images/projects/arreglio/arreglio-landing-image1.webp',
             link: '/projects/arreglio'
         },
     ];
