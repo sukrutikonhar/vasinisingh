@@ -19,7 +19,7 @@ export default function EcoprismProject() {
     const heroData = {
         title: 'ecoPRISM',
         subtitle: 'Simplifying ESG compliance for global enterprises through strategic UI/UX design and user-centered innovation',
-        image: '/images/projects/ecoprism/Landing page.webp',
+        image: '/images/projects/ecoprism/ecoprism-landing-image.webp',
         tags: ['🚀 LIVE PRODUCT', 'GLOBAL ENTERPRISE', 'B2B SAAS'],
         metrics: [
             { value: '89%', label: 'Task Completion Rate' },

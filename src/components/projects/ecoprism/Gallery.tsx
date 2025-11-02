@@ -5,12 +5,12 @@ import Image from 'next/image';
 
 const Gallery: React.FC = () => {
     const screens = [
-        '/images/projects/ecoprism/eco-01.webp',
-        '/images/projects/ecoprism/eco-02.webp',
-        '/images/projects/ecoprism/eco=03.webp',
-        '/images/projects/ecoprism/eco-04.webp',
         '/images/projects/ecoprism/eco-05.webp',
-        '/images/projects/ecoprism/eco-06.webp'
+        '/images/projects/ecoprism/eco-06.webp',
+        '/images/projects/ecoprism/eco-07.webp',
+        '/images/projects/ecoprism/eco-08.webp',
+        '/images/projects/ecoprism/eco-01.webp',
+        '/images/projects/ecoprism/eco-02.webp'
     ];
 
     return (

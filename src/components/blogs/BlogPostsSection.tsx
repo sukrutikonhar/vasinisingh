@@ -9,7 +9,7 @@ const BlogPostsSection: React.FC = () => {
         {
             id: 1,
             title: "From Trial to Paid: How UX Can Turn SaaS Users Into Subscribers",
-            image: "/images/projects/ecoprism/eco-01.webp",
+            image: "/images/blogs/blog-06.webp",
             date: "Oct 12, 2025",
             platform: "Medium",
             readMoreLink: "https://medium.com/@vasinisingh/from-trial-to-paid-how-ux-can-turn-saas-users-into-subscribers-af6ad2597125",
@@ -19,7 +19,7 @@ const BlogPostsSection: React.FC = () => {
         {
             id: 2,
             title: "The Story Behind My Logo: The UI Mountain Path",
-            image: "/images/About us/story-03.webp",
+            image: "/images/blogs/blog-05.webp",
             date: "Oct 12, 2025",
             platform: "Medium",
             readMoreLink: "https://medium.com/@vasinisingh/the-story-behind-my-logo-the-ui-mountain-path-c3b5d974b639",
@@ -29,7 +29,7 @@ const BlogPostsSection: React.FC = () => {
         {
             id: 3,
             title: "Designing for Retention: The Hidden Metric Behind Great SaaS UX",
-            image: "/images/projects/ecoprism/eco-04.webp",
+            image: "/images/blogs/blog-04.webp",
             date: "Oct 6, 2025",
             platform: "LinkedIn",
             readMoreLink: "https://www.linkedin.com/pulse/designing-retention-hidden-metric-behind-great-saas-ux-vasini-singh-b5gcc/",
@@ -39,7 +39,7 @@ const BlogPostsSection: React.FC = () => {
         {
             id: 4,
             title: "How Role-Based Dashboards Can Transform Your SaaS Product Experience",
-            image: "/images/projects/ecoprism/eco-02.webp",
+            image: "/images/blogs/blog-03.webp",
             date: "Sep 26, 2025",
             platform: "LinkedIn",
             readMoreLink: "https://www.linkedin.com/pulse/how-role-based-dashboards-can-transform-your-saas-product-singh-csf2c/",
@@ -49,7 +49,7 @@ const BlogPostsSection: React.FC = () => {
         {
             id: 5,
             title: "Why and How I Chose Design as a Career",
-            image: "/images/About us/story-01.webp",
+            image: "/images/blogs/blog-02.webp",
             date: "Sep 9, 2025",
             platform: "LinkedIn",
             readMoreLink: "https://www.linkedin.com/pulse/why-how-i-chose-design-career-vasini-singh-cgytc/",
@@ -59,7 +59,7 @@ const BlogPostsSection: React.FC = () => {
         {
             id: 6,
             title: "Simplifying Sustainability Dashboards for Maximum Impact",
-            image: "/images/projects/ecoprism/eco-05.webp",
+            image: "/images/blogs/blog-01.webp",
             date: "Apr 24, 2025",
             platform: "LinkedIn",
             readMoreLink: "https://ecoprism.com/resources/insights/simplifying-sustainability-dashboards/",
