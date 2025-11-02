@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { AlertCircle, TrendingDown, Users, MapPin, AlertTriangle, Target } from 'lucide-react';
+import { AlertCircle, TrendingDown, Users, MapPin, AlertTriangle } from 'lucide-react';
 
 const ProblemStatement: React.FC = () => {
     const painPoints = [

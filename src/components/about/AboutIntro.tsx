@@ -14,7 +14,7 @@ const AboutIntro: React.FC = () => {
                     <div className="space-y-6 sm:space-y-8 text-base sm:text-lg font-inter text-gray-800 leading-relaxed">
                         <div className="border-l-2 sm:border-l-4 border-black pl-4 sm:pl-8">
                             <p className="mb-6">
-                                Hi, I'm Vasini, a designer who believes great design begins with empathy and curiosity.
+                                Hi, I&apos;m Vasini, a designer who believes great design begins with empathy and curiosity.
                             </p>
                             <p>
                                 My path into design started with a fascination: how small details shape how people feel, connect, and interact. That curiosity evolved into crafting meaningful digital experiences across SaaS, sustainability, and community-driven platforms.
@@ -23,7 +23,7 @@ const AboutIntro: React.FC = () => {
 
                         <div className="border-l-2 sm:border-l-4 border-black pl-4 sm:pl-8">
                             <p className="mb-6">
-                                I've worked with diverse teams and global clients like ABB and Danish Agro, learning how design bridges cultures and simplifies complexity.
+                                I&apos;ve worked with diverse teams and global clients like ABB and Danish Agro, learning how design bridges cultures and simplifies complexity.
                             </p>
                             <p>
                                 Travel and photography are integral to my process—they help me see stories in everyday moments, notice subtleties of human behavior, and bring that perspective into my work.
@@ -35,7 +35,7 @@ const AboutIntro: React.FC = () => {
                                 What Drives Me
                             </p>
                             <p>
-                                I'm driven to create experiences that feel human—simple, useful, and emotionally resonant. Design, for me, is about listening first and building second. Finding clarity in chaos and crafting solutions that quietly improve someone's day.
+                                I&apos;m driven to create experiences that feel human—simple, useful, and emotionally resonant. Design, for me, is about listening first and building second. Finding clarity in chaos and crafting solutions that quietly improve someone&apos;s day.
                             </p>
                         </div>
                     </div>

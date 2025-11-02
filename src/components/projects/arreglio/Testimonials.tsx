@@ -51,7 +51,7 @@ const Testimonials: React.FC = () => {
 
                                 <div className="relative flex flex-col flex-grow">
                                     <p className="text-base font-inter text-gray-800 leading-relaxed mb-6 italic flex-grow">
-                                        "{testimonial.quote}"
+                                        &ldquo;{testimonial.quote}&rdquo;
                                     </p>
                                     <div className="border-t-2 border-black pt-4 mt-auto">
                                         <p className="text-sm font-grotesk font-bold text-black mb-1">

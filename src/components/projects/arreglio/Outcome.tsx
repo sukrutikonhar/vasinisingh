@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Clock, Users, DollarSign, Heart, Rocket } from 'lucide-react';
+import { Clock, Users, DollarSign, Heart } from 'lucide-react';
 
 const Outcome: React.FC = () => {
     const metrics = [
