@@ -53,7 +53,7 @@ const ImpactResults: React.FC = () => {
                     {/* Testimonial */}
                     <div className="bg-green-50 border border-green-200 rounded-lg p-8 sm:p-12">
                         <blockquote className="text-lg sm:text-xl font-inter text-gray-800 leading-relaxed mb-4 text-center">
-                            "This system transformed our entire business. What used to take hours now takes minutes, and our customers are amazed by how professional we've become."
+                            &quot;This system transformed our entire business. What used to take hours now takes minutes, and our customers are amazed by how professional we&apos;ve become.&quot;
                         </blockquote>
                         <p className="text-sm font-inter text-gray-600 text-center">
                             —Maria Rodriguez, Shop Owner

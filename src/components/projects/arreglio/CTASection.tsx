@@ -12,7 +12,7 @@ const CTASection: React.FC = () => {
                         Interested in working together?
                     </h2>
                     <p className="text-lg sm:text-xl font-inter text-gray-600 mb-10 leading-relaxed">
-                        I'm always excited to tackle complex design challenges and create meaningful user experiences.
+                        I&apos;m always excited to tackle complex design challenges and create meaningful user experiences.
                     </p>
                     
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
