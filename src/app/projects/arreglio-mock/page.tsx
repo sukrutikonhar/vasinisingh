@@ -37,8 +37,8 @@ export default function ArreglioMockProject() {
             <Solutions />
             <ImpactResults />
             <ReflectionLearnings />
-            <CTASection />
             <Gallery />
+            <CTASection />
             <NextProject nextSlug="ecoprism" nextTitle="ecoPRISM" />
         </MinimalLayout>
     );

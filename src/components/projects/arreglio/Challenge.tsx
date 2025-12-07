@@ -23,7 +23,7 @@ const Challenge: React.FC = () => {
     ];
 
     return (
-        <section className="py-16 sm:py-20 md:py-24 bg-white">
+        <section className="py-16 sm:py-20 md:py-24 bg-gray-50">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
@@ -31,11 +31,6 @@ const Challenge: React.FC = () => {
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8">
                             The Challenge
                         </h2>
-                        <div className="bg-gray-50 border border-gray-200 p-8 sm:p-12 rounded-[6px] mb-12">
-                            <p className="text-xl sm:text-2xl md:text-3xl font-inter text-gray-800 leading-relaxed text-center italic">
-                                &quot;How do we modernize a traditional repair shop workflow without overwhelming users who are resistant to digital change?&quot;
-                            </p>
-                        </div>
                     </div>
 
                     {/* Challenge Cards */}
@@ -43,7 +38,7 @@ const Challenge: React.FC = () => {
                         {challenges.map((challenge, index) => (
                             <div
                                 key={index}
-                                className="bg-white border-2 border-gray-200 p-6 hover:border-black transition-all"
+                                className="bg-white border-2 border-gray-300 p-6 hover:border-black transition-all shadow-sm"
                             >
                                 <div className="mb-4">
                                     {React.createElement(challenge.icon, {

@@ -22,7 +22,7 @@ const ImpactResults: React.FC = () => {
     ];
 
     return (
-        <section className="py-16 sm:py-20 md:py-24 bg-white">
+        <section className="py-16 sm:py-20 md:py-24 bg-gray-100">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
