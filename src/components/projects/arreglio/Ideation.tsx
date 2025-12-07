@@ -9,7 +9,7 @@ const Ideation: React.FC = () => {
             number: '01',
             title: 'Simplified Onboarding Over Feature Richness',
             challenge: 'Workshop owners needed extensive functionality but had low digital literacy.',
-            solution: 'Progressive disclosure—launch with essential features (shop profile, services, pricing) and introduce advanced tools after adoption.',
+            solution: 'Started with core features (shop profile, services, pricing) and gradually introduced advanced tools once users were comfortable.',
             result: 'Onboarding time reduced from 15 to 4 minutes',
             icon: Zap
         },

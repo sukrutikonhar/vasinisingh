@@ -14,7 +14,7 @@ const CTASection: React.FC = () => {
                     <p className="text-lg sm:text-xl font-inter text-gray-600 mb-10 leading-relaxed">
                         Let&apos;s discuss your project and explore how we can bring your vision to life.
                     </p>
-                    
+
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <Link
                             href="/contact"

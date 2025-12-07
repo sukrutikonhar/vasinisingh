@@ -1,24 +1,24 @@
 'use client';
 
 import React from 'react';
-import { RefreshCw, Users, Clock } from 'lucide-react';
+import { Database, FileText, Clock } from 'lucide-react';
 
 const Challenge: React.FC = () => {
     const challenges = [
         {
-            icon: RefreshCw,
-            title: 'Legacy System Dependencies',
-            description: 'Existing paper-based processes deeply embedded in daily operations'
+            icon: Database,
+            title: 'Data Fragmentation',
+            description: 'Users spent 60% of their time aggregating data from multiple disconnected systems.'
         },
         {
-            icon: Users,
-            title: 'User Resistance',
-            description: 'Technophobic users requiring intuitive, non-intimidating interfaces'
+            icon: FileText,
+            title: 'Complex Reporting',
+            description: 'Existing tools couldn\'t handle the complexity of ESG reporting frameworks.'
         },
         {
             icon: Clock,
-            title: 'Operational Complexity',
-            description: 'Multiple stakeholders with varying technical proficiency levels'
+            title: 'Time Constraints',
+            description: 'Manual processes delayed critical sustainability insights by weeks.'
         }
     ];
 
@@ -28,12 +28,12 @@ const Challenge: React.FC = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
                     <div className="mb-12">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8 text-center">
                             The Challenge
                         </h2>
-                        <div className="bg-gray-50 border border-gray-300 p-8 sm:p-12 rounded-[6px] mb-12 shadow-sm">
-                            <p className="text-xl sm:text-2xl md:text-3xl font-inter text-gray-800 leading-relaxed text-center italic">
-                                &quot;How do we modernize a traditional repair shop workflow without overwhelming users who are resistant to digital change?&quot;
+                        <div className="bg-white border border-gray-200 p-8 sm:p-12 rounded-[6px] mb-12">
+                            <p className="text-lg sm:text-xl font-inter text-gray-800 leading-relaxed text-center">
+                                Sustainability professionals were struggling with fragmented data sources, complex reporting requirements, and time-consuming manual processes that hindered strategic decision-making.
                             </p>
                         </div>
                     </div>
@@ -59,8 +59,6 @@ const Challenge: React.FC = () => {
                             </div>
                         ))}
                     </div>
-
-
                 </div>
             </div>
         </section>
