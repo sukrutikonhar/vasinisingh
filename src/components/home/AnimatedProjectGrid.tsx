@@ -45,6 +45,14 @@ const AnimatedProjectGrid: React.FC = () => {
             image: '/images/projects/arreglio1/arreglio-landing-image.webp',
             link: '/projects/arreglio'
         },
+        {
+            id: 3,
+            title: 'MockOraa: AI Interview Coach',
+            category: 'AI / EdTech',
+            year: '2024',
+            image: '/images/projects/mockoraa/mockoraa-01.webp',
+            link: '/projects/mockoraa'
+        }
     ];
 
     return (
@@ -60,7 +68,7 @@ const AnimatedProjectGrid: React.FC = () => {
                     </p>
                 </div>
 
-                <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {projects.map((project) => (
                         <Link
                             key={project.id}

@@ -2,42 +2,64 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { LayoutDashboard, FileCheck, BarChart3 } from 'lucide-react';
+import { Video, TrendingUp, Heart, User, Shield } from 'lucide-react';
 
 const Solutions: React.FC = () => {
     const solutions = [
         {
-            title: 'Unified Data Dashboard',
-            description: 'Created a centralized view that aggregates data from multiple sources, providing real-time visibility into sustainability metrics across the organization.',
+            title: 'AI Powered Mock Interviews',
+            description: 'Simulated interview sessions tailored to roles and experience levels, creating realistic practice environments.',
             features: [
-                'Real-time data synchronization from 50+ sources',
-                'Customizable KPI tracking and alerting',
-                'Interactive data exploration tools'
+                'Role specific interview scenarios',
+                'Real time AI driven feedback on confidence and clarity',
+                'Adaptive question flow based on user responses'
             ],
-            icon: LayoutDashboard,
-            image: '/images/projects/ecoprism/eco-01.webp'
+            icon: Video,
+            image: '/images/projects/mockoraa/mockoraa-01.webp'
         },
         {
-            title: 'AI-Powered CSRD Reporting Flow',
-            description: 'Streamlined the reporting process with templates, automation, and compliance frameworks that reduce manual work by 80%.',
+            title: 'Progress Tracking & Readiness Score',
+            description: 'A simple way for users to see growth over time and understand interview readiness at a glance.',
             features: [
-                'Pre-built templates for major frameworks (GRI, SASB, TCFD)',
-                'Automated data validation and quality checks',
-                'One-click report generation and distribution'
+                'Session wise performance tracking',
+                'Readiness score based on consistency and improvement',
+                'Visual progress indicators'
             ],
-            icon: FileCheck,
-            image: '/images/projects/ecoprism/eco-02.webp'
+            icon: TrendingUp,
+            image: '/images/projects/mockoraa/mockoraa-02.webp'
         },
         {
-            title: 'Advanced Analytics & Insights',
-            description: 'Comprehensive analytics tools that transform raw sustainability data into actionable insights for strategic decision-making.',
+            title: 'Confidence Focused Feedback',
+            description: 'Clear, empathetic feedback that highlights strengths before pointing out improvements, helping users build confidence gradually.',
             features: [
-                'Trend analysis and predictive modeling',
-                'Customizable reporting dashboards',
-                'Benchmarking against industry standards'
+                'Confidence and communication insights',
+                'Actionable improvement suggestions',
+                'Supportive and non judgmental tone'
             ],
-            icon: BarChart3,
-            image: '/images/projects/ecoprism/eco-04.webp'
+            icon: Heart,
+            image: '/images/projects/mockoraa/mockoraa-03.webp'
+        },
+        {
+            title: 'Role Based Interview Preparation',
+            description: 'Structured preparation paths tailored to specific roles and seniority levels.',
+            features: [
+                'Fresher, mid level, and senior role tracks',
+                'Technical and behavioural interview formats',
+                'Company style interview simulations'
+            ],
+            icon: User,
+            image: '/images/projects/mockoraa/mockoraa-04.webp'
+        },
+        {
+            title: 'Safe Practice Environment',
+            description: 'A private space that encourages experimentation without fear of failure or judgment.',
+            features: [
+                'Practice without peer or interviewer pressure',
+                'Replay and self review responses',
+                'Stress free, repeatable sessions'
+            ],
+            icon: Shield,
+            image: '/images/projects/mockoraa/mockoraa-05.webp'
         }
     ];
 
@@ -51,7 +73,7 @@ const Solutions: React.FC = () => {
                             Few Design Solutions
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                            Strategic solutions designed to transform complex sustainability data into clear, actionable insights
+                            A comprehensive platform that transforms interview preparation into clear, actionable insights
                         </p>
                     </div>
 

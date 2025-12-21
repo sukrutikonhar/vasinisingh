@@ -1,16 +1,14 @@
 import MinimalLayout from '@/components/layout/MinimalLayout';
 import CaseStudyHero from '@/components/projects/CaseStudyHero';
 import ProjectOverview from '@/components/projects/arreglio/ProjectOverview';
-import ExecutiveSummary from '@/components/projects/arreglio/ExecutiveSummary';
-import ProblemStatement from '@/components/projects/arreglio/ProblemStatement';
-import Research from '@/components/projects/arreglio/Research';
-import Ideation from '@/components/projects/arreglio/Ideation';
-import DesignProcess from '@/components/projects/arreglio/DesignProcess';
-import Outcome from '@/components/projects/arreglio/Outcome';
-import Testimonials from '@/components/projects/arreglio/Testimonials';
-import Learnings from '@/components/projects/arreglio/Learnings';
+import Role from '@/components/projects/arreglio/Role';
+import Challenge from '@/components/projects/arreglio/Challenge';
+import Solutions from '@/components/projects/arreglio/Solutions';
+import ImpactResults from '@/components/projects/arreglio/ImpactResults';
+import ReflectionLearnings from '@/components/projects/arreglio/ReflectionLearnings';
+import CTASection from '@/components/projects/arreglio/CTASection';
 import Gallery from '@/components/projects/arreglio/Gallery';
-import NextProject from '@/components/projects/NextProject';
+import PrevNextProject from '@/components/projects/PrevNextProject';
 
 export const metadata = {
     title: 'Arreglio - Workshop Management SaaS | Vasini Singh',
@@ -34,16 +32,14 @@ export default function ArreglioProject() {
         <MinimalLayout>
             <CaseStudyHero data={heroData} />
             <ProjectOverview />
-            <ExecutiveSummary />
-            <ProblemStatement />
-            <Research />
-            <Ideation />
-            <DesignProcess />
-            <Outcome />
-            <Testimonials />
-            <Learnings />
+            <Role />
+            <Challenge />
+            <Solutions />
+            <ImpactResults />
+            <ReflectionLearnings />
             <Gallery />
-            <NextProject nextSlug="ecoprism" nextTitle="ecoPRISM" />
+            <CTASection />
+            <PrevNextProject prevSlug="ecoprism" prevTitle="ecoPRISM" />
         </MinimalLayout>
     );
 }

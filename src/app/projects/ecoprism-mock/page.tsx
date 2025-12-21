@@ -1,12 +1,12 @@
 import MinimalLayout from '@/components/layout/MinimalLayout';
 import CaseStudyHero from '@/components/projects/CaseStudyHero';
 import ProjectOverview from '@/components/projects/ecoprism/ProjectOverview';
-import Role from '@/components/projects/ecoprism/Role';
-import Challenge from '@/components/projects/ecoprism/Challenge';
-import Solutions from '@/components/projects/ecoprism/Solutions';
-import ImpactResults from '@/components/projects/ecoprism/ImpactResults';
-import ReflectionLearnings from '@/components/projects/ecoprism/ReflectionLearnings';
-import CTASection from '@/components/projects/ecoprism/CTASection';
+import ProblemStatement from '@/components/projects/ecoprism/ProblemStatement';
+import Research from '@/components/projects/ecoprism/Research';
+import Ideation from '@/components/projects/ecoprism/Ideation';
+import DesignProcess from '@/components/projects/ecoprism/DesignProcess';
+import Outcome from '@/components/projects/ecoprism/Outcome';
+import Learnings from '@/components/projects/ecoprism/Learnings';
 import Gallery from '@/components/projects/ecoprism/Gallery';
 import NextProject from '@/components/projects/NextProject';
 
@@ -32,13 +32,13 @@ export default function EcoprismMockProject() {
         <MinimalLayout>
             <CaseStudyHero data={heroData} />
             <ProjectOverview />
-            <Role />
-            <Challenge />
-            <Solutions />
-            <ImpactResults />
-            <ReflectionLearnings />
+            <ProblemStatement />
+            <Research />
+            <Ideation />
+            <DesignProcess />
+            <Outcome />
+            <Learnings />
             <Gallery />
-            <CTASection />
             <NextProject nextSlug="arreglio" nextTitle="Arreglio" />
         </MinimalLayout>
     );

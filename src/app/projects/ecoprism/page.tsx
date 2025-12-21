@@ -1,14 +1,15 @@
 import MinimalLayout from '@/components/layout/MinimalLayout';
 import CaseStudyHero from '@/components/projects/CaseStudyHero';
 import ProjectOverview from '@/components/projects/ecoprism/ProjectOverview';
-import ProblemStatement from '@/components/projects/ecoprism/ProblemStatement';
-import Research from '@/components/projects/ecoprism/Research';
-import Ideation from '@/components/projects/ecoprism/Ideation';
-import DesignProcess from '@/components/projects/ecoprism/DesignProcess';
-import Outcome from '@/components/projects/ecoprism/Outcome';
-import Learnings from '@/components/projects/ecoprism/Learnings';
+import Role from '@/components/projects/ecoprism/Role';
+import Challenge from '@/components/projects/ecoprism/Challenge';
+import Solutions from '@/components/projects/ecoprism/Solutions';
+import KeyInsights from '@/components/projects/ecoprism/KeyInsights';
+import ImpactResults from '@/components/projects/ecoprism/ImpactResults';
+import ReflectionLearnings from '@/components/projects/ecoprism/ReflectionLearnings';
+import CTASection from '@/components/projects/ecoprism/CTASection';
 import Gallery from '@/components/projects/ecoprism/Gallery';
-import NextProject from '@/components/projects/NextProject';
+import PrevNextProject from '@/components/projects/PrevNextProject';
 
 export const metadata = {
     title: 'ecoPRISM - ESG SaaS Platform | Vasini Singh',
@@ -32,14 +33,15 @@ export default function EcoprismProject() {
         <MinimalLayout>
             <CaseStudyHero data={heroData} />
             <ProjectOverview />
-            <ProblemStatement />
-            <Research />
-            <Ideation />
-            <DesignProcess />
-            <Outcome />
-            <Learnings />
+            <Role />
+            <Challenge />
+            <Solutions />
+            <KeyInsights />
+            <ImpactResults />
+            <ReflectionLearnings />
             <Gallery />
-            <NextProject nextSlug="arreglio" nextTitle="Arreglio" />
+            <CTASection />
+            <PrevNextProject prevSlug="mockoraa" prevTitle="MockOraa" nextSlug="arreglio" nextTitle="Arreglio" />
         </MinimalLayout>
     );
 }

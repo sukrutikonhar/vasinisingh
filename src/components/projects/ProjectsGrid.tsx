@@ -30,21 +30,22 @@ const ProjectsGrid: React.FC = () => {
             tags: ['Mobile App', 'SaaS', 'B2B'],
             role: 'Senior Product Designer',
             tools: ['Figma', 'FigJam', 'Maze']
+        },
+        {
+            id: 3,
+            title: 'MockOraa',
+            slug: 'mockoraa',
+            tagline: 'AI Mock Interview Platform',
+            description: 'Practice realistic interview scenarios with empathetic AI avatars that listen, respond, and guide. Get instant feedback on confidence, clarity, and technical depth.',
+            image: '/images/projects/mockoraa/mockoraa-01.webp',
+            year: '2024',
+            tags: ['AI', 'EdTech', 'Mobile App'],
+            role: 'Product Designer',
+            tools: ['Figma', 'FigJam']
         }
     ];
 
     const inProgressProjects = [
-        {
-            id: 3,
-            title: 'MockOraa',
-            tagline: 'AI Mock Interview Platform',
-            description: 'Creating fearless interview experiences through design. Built a platform that enables candidates to practice interviews anytime, receive instant AI-driven feedback, and grow their confidence before the real thing.',
-            image: '/images/projects/AI-powered practice interviews designed for your role, your resume, and your industry..webp',
-            year: '2024',
-            tags: ['AI', 'EdTech', 'Hackathon'],
-            role: 'Product Designer',
-            tools: ['Figma', 'FigJam', 'Notion']
-        },
         {
             id: 4,
             title: 'Suana',
