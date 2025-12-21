@@ -10,31 +10,31 @@ const Solutions: React.FC = () => {
             title: 'Kanban Board Management',
             description: 'Visual task tracking dashboard allowing shop owners to drag-and-drop jobs through stages, prioritize urgent repairs, and manage workload at a glance.',
             icon: LayoutDashboard,
-            image: '/images/projects/arreglio1/arreglio-01.webp'
+            image: '/images/projects/arreglio1/kanban-board.webp'
         },
         {
             title: 'Transparent Pricing Display',
             description: 'Mandatory service pricing with rental tenure and availability information—building customer trust through transparency.',
             icon: DollarSign,
-            image: '/images/projects/arreglio1/arreglio-02.webp'
+            image: '/images/projects/arreglio1/arreglio-landing-image.webp'
         },
         {
             title: 'Real-Time Status Updates',
             description: 'Automated notifications keeping customers informed at each repair stage—eliminating the need for follow-up calls.',
             icon: Bell,
-            image: '/images/projects/arreglio1/arreglio-03.webp'
+            image: '/images/projects/arreglio1/arreglio-08.webp'
         },
         {
             title: '24/7 AI Virtual Assistant',
             description: 'Intelligent chatbot handling common customer queries about services, pricing, and availability—reducing support burden.',
             icon: Bot,
-            image: '/images/projects/arreglio1/arreglio-04.webp'
+            image: '/images/projects/arreglio1/arreglio-06.webp'
         },
         {
             title: 'Website Customization',
             description: 'No-code storefront builder allowing shops to customize branding, colors, and layouts—maintaining identity while leveraging platform infrastructure.',
             icon: Palette,
-            image: '/images/projects/arreglio1/arreglio-05.webp'
+            image: '/images/projects/arreglio1/arreglio-04.webp'
         },
         {
             title: 'Review & Rating System',

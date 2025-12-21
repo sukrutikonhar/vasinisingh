@@ -15,7 +15,7 @@ const Solutions: React.FC = () => {
                 'Adaptive question flow based on user responses'
             ],
             icon: Video,
-            image: '/images/projects/mockoraa/mockoraa-01.webp'
+            image: '/images/projects/mockoraa/mockoraa-02.webp'
         },
         {
             title: 'Progress Tracking & Readiness Score',
@@ -26,7 +26,18 @@ const Solutions: React.FC = () => {
                 'Visual progress indicators'
             ],
             icon: TrendingUp,
-            image: '/images/projects/mockoraa/mockoraa-02.webp'
+            image: '/images/projects/mockoraa/mockoraa-03.webp'
+        },
+        {
+            title: 'Role Based Interview Preparation',
+            description: 'Structured preparation paths tailored to specific roles and seniority levels.',
+            features: [
+                'Fresher, mid level, and senior role tracks',
+                'Technical and behavioural interview formats',
+                'Company style interview simulations'
+            ],
+            icon: User,
+            image: '/images/projects/mockoraa/mockoraa-05.webp'
         },
         {
             title: 'Confidence Focused Feedback',
@@ -40,17 +51,6 @@ const Solutions: React.FC = () => {
             image: '/images/projects/mockoraa/mockoraa-03.webp'
         },
         {
-            title: 'Role Based Interview Preparation',
-            description: 'Structured preparation paths tailored to specific roles and seniority levels.',
-            features: [
-                'Fresher, mid level, and senior role tracks',
-                'Technical and behavioural interview formats',
-                'Company style interview simulations'
-            ],
-            icon: User,
-            image: '/images/projects/mockoraa/mockoraa-04.webp'
-        },
-        {
             title: 'Safe Practice Environment',
             description: 'A private space that encourages experimentation without fear of failure or judgment.',
             features: [
@@ -59,7 +59,7 @@ const Solutions: React.FC = () => {
                 'Stress free, repeatable sessions'
             ],
             icon: Shield,
-            image: '/images/projects/mockoraa/mockoraa-05.webp'
+            image: '/images/projects/mockoraa/mockoraa-01.webp'
         }
     ];
 

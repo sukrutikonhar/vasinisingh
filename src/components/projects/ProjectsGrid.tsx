@@ -9,6 +9,30 @@ const ProjectsGrid: React.FC = () => {
     const completedProjects = [
         {
             id: 1,
+            title: 'MockOraa',
+            slug: 'mockoraa',
+            tagline: 'AI Mock Interview Platform',
+            description: 'Practice realistic interview scenarios with empathetic AI avatars that listen, respond, and guide. Get instant feedback on confidence, clarity, and technical depth.',
+            image: '/images/projects/mockoraa/mockoraa-01.webp',
+            year: '2025',
+            tags: ['AI', 'EdTech', 'Mobile App'],
+            role: 'Product Strategist',
+            tools: ['Figma', 'FigJam']
+        },
+        {
+            id: 2,
+            title: 'Arreglio',
+            slug: 'arreglio',
+            tagline: 'Workshop Management System',
+            description: 'Streamlining service bookings and customer management for automotive workshops with an intuitive mobile-first experience.',
+            image: '/images/projects/arreglio1/arreglio-landing.webp',
+            year: '2025',
+            tags: ['Mobile App', 'SaaS', 'B2B'],
+            role: 'Senior Product Designer',
+            tools: ['Figma', 'FigJam', 'Maze']
+        },
+        {
+            id: 3,
             title: 'ecoPRISM Tool',
             slug: 'ecoprism',
             tagline: 'ESG Compliance Made Simple',
@@ -19,30 +43,8 @@ const ProjectsGrid: React.FC = () => {
             role: 'Foundation Designer',
             tools: ['Adobe XD', 'Miro', 'Notion']
         },
-        {
-            id: 2,
-            title: 'Arreglio',
-            slug: 'arreglio',
-            tagline: 'Workshop Management System',
-            description: 'Streamlining service bookings and customer management for automotive workshops with an intuitive mobile-first experience.',
-            image: '/images/projects/arreglio1/arreglio-landing-image.webp',
-            year: '2024',
-            tags: ['Mobile App', 'SaaS', 'B2B'],
-            role: 'Senior Product Designer',
-            tools: ['Figma', 'FigJam', 'Maze']
-        },
-        {
-            id: 3,
-            title: 'MockOraa',
-            slug: 'mockoraa',
-            tagline: 'AI Mock Interview Platform',
-            description: 'Practice realistic interview scenarios with empathetic AI avatars that listen, respond, and guide. Get instant feedback on confidence, clarity, and technical depth.',
-            image: '/images/projects/mockoraa/mockoraa-01.webp',
-            year: '2024',
-            tags: ['AI', 'EdTech', 'Mobile App'],
-            role: 'Product Designer',
-            tools: ['Figma', 'FigJam']
-        }
+
+
     ];
 
     const inProgressProjects = [

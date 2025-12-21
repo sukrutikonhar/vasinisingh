@@ -15,7 +15,7 @@ const Solutions: React.FC = () => {
                 'Interactive data exploration tools'
             ],
             icon: LayoutDashboard,
-            image: '/images/projects/ecoprism/eco-01.webp'
+            image: '/images/projects/ecoprism/dashboard.webp'
         },
         {
             title: 'AI-Powered CSRD Reporting Flow',
@@ -26,7 +26,7 @@ const Solutions: React.FC = () => {
                 'One-click report generation and distribution'
             ],
             icon: FileCheck,
-            image: '/images/projects/ecoprism/eco-02.webp'
+            image: '/images/projects/ecoprism/ai.webp'
         },
         {
             title: 'Advanced Analytics & Insights',
@@ -37,7 +37,7 @@ const Solutions: React.FC = () => {
                 'Benchmarking against industry standards'
             ],
             icon: BarChart3,
-            image: '/images/projects/ecoprism/eco-04.webp'
+            image: '/images/projects/ecoprism/eco-03.webp'
         }
     ];
 
