@@ -15,18 +15,18 @@ interface CaseStudyHeroProps {
             label: string;
         }[];
         prototypeLink?: string;
-        hasTopPadding?: boolean;
     };
+    wideLeftColumn?: boolean;
 }
 
-const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data }) => {
+const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = false }) => {
     return (
-        <section className={data.hasTopPadding ? "pt-12" : ""}>
+        <section className="">
             <div className="container-custom px-4 sm:px-6 mb-0">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div className={`grid grid-cols-1 items-center ${wideLeftColumn ? 'gap-12 lg:gap-0 lg:grid-cols-12' : 'gap-12 lg:gap-16 lg:grid-cols-2'}`}>
                         {/* Left Content */}
-                        <div className="order-2 lg:order-1">
+                        <div className={`order-2 lg:order-1 ${wideLeftColumn ? 'lg:col-span-7' : ''}`}>
                             {/* Tags */}
                             <div className="flex flex-wrap items-center gap-3 mb-4">
                                 {data.tags.map((tag, index) => (
@@ -41,7 +41,7 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data }) => {
                             </div>
 
                             {/* Title */}
-                            <h1 className="text-5xl sm:text-6xl md:text-7xl font-grotesk font-bold text-[#202022] mb-6 leading-tight">
+                            <h1 className="text-5xl sm:text-6xl md:text-7xl font-grotesk font-bold text-[#202022] mb-4 leading-tight">
                                 {data.title}
                             </h1>
 
@@ -50,18 +50,6 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data }) => {
                                 {data.subtitle}
                             </p>
 
-                            {/* Prototype Link */}
-                            {data.prototypeLink && (
-                                <a
-                                    href={data.prototypeLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 bg-[#202022] text-white px-6 py-3 text-sm font-inter font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-200 mb-8"
-                                >
-                                    View Prototype
-                                    <ExternalLink className="w-4 h-4" />
-                                </a>
-                            )}
 
                             {/* Metrics */}
                             {data.metrics && (
@@ -81,10 +69,24 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data }) => {
                                     ))}
                                 </div>
                             )}
+
+
+                            {/* Prototype Link */}
+                            {data.prototypeLink && (
+                                <a
+                                    href={data.prototypeLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 bg-[#202022] text-white px-6 py-3 text-sm font-inter font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-200 mt-8"
+                                >
+                                    View Prototype
+                                    <ExternalLink className="w-4 h-4" />
+                                </a>
+                            )}
                         </div>
 
                         {/* Right Image */}
-                        <div className="order-1 lg:order-2">
+                        <div className={`order-1 lg:order-2 ${wideLeftColumn ? 'lg:col-span-5' : ''}`}>
                             <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px]">
                                 <Image
                                     src={data.image}
