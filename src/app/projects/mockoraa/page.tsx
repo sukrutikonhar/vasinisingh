@@ -26,7 +26,8 @@ export default function MockOraaProject() {
             { value: '90%', label: 'User Satisfaction' },
             { value: '15%', label: 'Confidence Increase' },
             { value: '6', label: 'Weeks Duration' }
-        ]
+        ],
+        prototypeLink: 'https://www.figma.com/proto/dDS6lfVky5LwPI8PadYt4O/Final-Flow?node-id=1448-6286&starting-point-node-id=1448%3A6286'
     };
 
     return (

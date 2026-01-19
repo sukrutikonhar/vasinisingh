@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Tag } from 'lucide-react';
+import { Tag, ExternalLink } from 'lucide-react';
 
 interface CaseStudyHeroProps {
     data: {
@@ -14,6 +14,7 @@ interface CaseStudyHeroProps {
             value: string;
             label: string;
         }[];
+        prototypeLink?: string;
     };
 }
 
@@ -47,6 +48,19 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data }) => {
                             <p className="text-base sm:text-lg md:text-xl font-inter text-gray-600 mb-10 leading-relaxed">
                                 {data.subtitle}
                             </p>
+
+                            {/* Prototype Link */}
+                            {data.prototypeLink && (
+                                <a
+                                    href={data.prototypeLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 bg-[#202022] text-white px-6 py-3 text-sm font-inter font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-200 mb-8"
+                                >
+                                    View Prototype
+                                    <ExternalLink className="w-4 h-4" />
+                                </a>
+                            )}
 
                             {/* Metrics */}
                             {data.metrics && (
