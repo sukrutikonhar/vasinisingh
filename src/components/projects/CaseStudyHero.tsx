@@ -15,19 +15,20 @@ interface CaseStudyHeroProps {
             label: string;
         }[];
         prototypeLink?: string;
+        hasTopPadding?: boolean;
     };
 }
 
 const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data }) => {
     return (
-        <section>
+        <section className={data.hasTopPadding ? "pt-12" : ""}>
             <div className="container-custom px-4 sm:px-6 mb-0">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                         {/* Left Content */}
                         <div className="order-2 lg:order-1">
                             {/* Tags */}
-                            <div className="flex flex-wrap items-center gap-3 mb-8">
+                            <div className="flex flex-wrap items-center gap-3 mb-4">
                                 {data.tags.map((tag, index) => (
                                     <span
                                         key={index}

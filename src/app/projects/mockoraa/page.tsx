@@ -19,7 +19,7 @@ export const metadata = {
 export default function MockOraaProject() {
     const heroData = {
         title: 'MockOraa',
-        subtitle: 'Your Empathetic AI Interview Coach. Practice realistic interview scenarios with empathetic AI avatars that listen, respond, and guide. Get instant feedback on confidence, clarity, and technical depth in a calm, supportive space built to help you show up prepared and self assured.',
+        subtitle: 'An empathetic AI interview coach that helps you practice realistic interview scenarios. Get instant feedback on your confidence, clarity, and technical depth in a supportive, calm environment.',
         image: '/images/projects/mockoraa/mockoraa-01.webp',
         tags: ['AI', 'EdTech', 'Mobile App'],
         metrics: [
@@ -27,7 +27,8 @@ export default function MockOraaProject() {
             { value: '15%', label: 'Confidence Increase' },
             { value: '6', label: 'Weeks Duration' }
         ],
-        prototypeLink: 'https://www.figma.com/proto/dDS6lfVky5LwPI8PadYt4O/Final-Flow?node-id=1448-6286&starting-point-node-id=1448%3A6286'
+        prototypeLink: 'https://www.figma.com/proto/dDS6lfVky5LwPI8PadYt4O/Final-Flow?node-id=1448-6286&starting-point-node-id=1448%3A6286',
+        hasTopPadding: true
     };
 
     return (
