@@ -17,11 +17,12 @@ interface CaseStudyHeroProps {
         prototypeLink?: string;
     };
     wideLeftColumn?: boolean;
+    topPadding?: boolean;
 }
 
-const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = false }) => {
+const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = false, topPadding = false }) => {
     return (
-        <section className="">
+        <section className={topPadding ? "pt-8 md:pt-8" : ""}>
             <div className="container-custom px-4 sm:px-6 mb-0">
                 <div className="max-w-7xl mx-auto">
                     <div className={`grid grid-cols-1 items-center ${wideLeftColumn ? 'gap-12 lg:gap-0 lg:grid-cols-12' : 'gap-12 lg:gap-16 lg:grid-cols-2'}`}>
@@ -50,7 +51,6 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = fa
                                 {data.subtitle}
                             </p>
 
-
                             {/* Metrics */}
                             {data.metrics && (
                                 <div className="grid grid-cols-3 gap-4">
@@ -69,7 +69,6 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = fa
                                     ))}
                                 </div>
                             )}
-
 
                             {/* Prototype Link */}
                             {data.prototypeLink && (

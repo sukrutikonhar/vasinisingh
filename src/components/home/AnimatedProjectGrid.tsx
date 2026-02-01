@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUp, ArrowDown } from 'lucide-react';
 
 const AnimatedProjectGrid: React.FC = () => {
     const gridRef = useRef<HTMLDivElement>(null);
@@ -31,27 +31,36 @@ const AnimatedProjectGrid: React.FC = () => {
     const projects = [
         {
             id: 1,
-            title: 'ecoPRISM: ESG Compliance Platform',
-            category: 'SaaS Platform',
-            year: '2024',
+            title: 'Designing Trust in a Sustainability Platform',
+            subtitle: 'Helping users believe and act',
             image: '/images/projects/ecoprism/ecoprism-landing-image.webp',
-            link: '/projects/ecoprism'
+            link: '/projects/ecoprism',
+            metrics: [
+                { value: '52%', label: 'user confidence score', direction: 'up' as const },
+                { value: '29%', label: 'decision making speed', direction: 'up' as const }
+            ]
         },
         {
             id: 2,
-            title: 'Arreglio: Workshop Management System',
-            category: 'SaaS Platform',
-            year: '2024',
+            title: 'A Scalable Marketplace for Local Service Ecosystems',
+            // subtitle: 'Connecting customers and workshop owners',
             image: '/images/projects/arreglio1/arreglio-landing.webp',
-            link: '/projects/arreglio'
+            link: '/projects/arreglio',
+            metrics: [
+                { value: '40%', label: 'manual coordination effort', direction: 'down' as const },
+                { value: '65%', label: 'task completion rate', direction: 'up' as const }
+            ]
         },
         {
             id: 3,
-            title: 'MockOraa: AI Interview Coach',
-            category: 'AI / EdTech',
-            year: '2024',
+            title: 'Practice Interviews That Actually Feel Real',
+            subtitle: 'and measurable',
             image: '/images/projects/mockoraa/mockoraa-01.webp',
-            link: '/projects/mockoraa'
+            link: '/projects/mockoraa',
+            metrics: [
+                { value: '2.4x', label: 'session engagement', direction: 'up' as const },
+                { value: '31%', label: 'hesitation pauses', direction: 'down' as const }
+            ]
         }
     ];
 
@@ -73,31 +82,60 @@ const AnimatedProjectGrid: React.FC = () => {
                         <Link
                             key={project.id}
                             href={project.link}
-                            className="project-item group block"
+                            className="project-item group block bg-white rounded-[6px] shadow-card overflow-hidden hover:shadow-lg transition-shadow duration-300"
                         >
-                            <div className="relative h-64 sm:h-80 md:h-96 w-full overflow-hidden bg-gray-100 rounded-[6px] shadow-card">
+                            {/* Top Section: Title, Description, Arrow */}
+                            <div className="p-4 sm:p-6">
+                                <div className="flex items-start justify-between gap-0 mb-2">
+                                    <div className="flex-1">
+                                        <h3 className="text-xl sm:text-2xl font-grotesk font-bold text-[#202022] mb-2 leading-tight">
+                                            {project.title}
+                                        </h3>
+                                        <p className="text-sm sm:text-base font-inter text-gray-600 leading-relaxed">
+                                            {project.subtitle}
+                                        </p>
+                                    </div>
+                                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#202022] flex-shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
+                                </div>
+                            </div>
+
+                            {/* Middle Section: Image */}
+                            <div className="relative w-full h-48 sm:h-64 md:h-80 overflow-hidden bg-gray-100">
                                 <Image
                                     src={project.image}
                                     alt={project.title}
                                     fill
                                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                            </div>
 
-                                {/* Content Overlay */}
-                                <div className="absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-end">
-                                    <div className="transform translate-y-0 group-hover:-translate-y-2 transition-transform duration-300">
-                                        <p className="text-white text-xs sm:text-sm mb-2 drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">{project.category} • {project.year}</p>
-                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-grotesk font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)]">
-                                            {project.title}
-                                        </h3>
-                                        <div className="flex items-center text-white group-hover:translate-x-2 transition-transform duration-300 drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
-                                            <span className="text-xs sm:text-sm font-medium mr-2">View Project</span>
-                                            <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
-                                        </div>
+                            {/* Bottom Section: Metrics */}
+                            {project.metrics && project.metrics.length > 0 && (
+                                <div className="p-4 sm:p-6 pt-4 border-t border-gray-200">
+                                    <div className="flex justify-between gap-4">
+                                        {project.metrics.map((metric, index) => (
+                                            <div
+                                                key={index}
+                                                className="flex flex-col"
+                                            >
+                                                <div className="flex items-center gap-2 mb-1">
+                                                    {metric.direction === 'up' ? (
+                                                        <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5 text-[#202022] flex-shrink-0" />
+                                                    ) : (
+                                                        <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 text-[#202022] flex-shrink-0" />
+                                                    )}
+                                                    <span className="text-base sm:text-lg font-grotesk font-bold text-[#202022]">
+                                                        {metric.value}
+                                                    </span>
+                                                </div>
+                                                <span className="text-xs sm:text-sm font-inter text-gray-600">
+                                                    {metric.label}
+                                                </span>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
-                            </div>
+                            )}
                         </Link>
                     ))}
                 </div>

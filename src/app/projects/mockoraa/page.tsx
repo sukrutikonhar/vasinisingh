@@ -32,7 +32,7 @@ export default function MockOraaProject() {
 
     return (
         <MinimalLayout>
-            <CaseStudyHero data={heroData} wideLeftColumn={true} />
+            <CaseStudyHero data={heroData} topPadding={true} />
             <ProjectOverview />
             <Role />
             <Challenge />
