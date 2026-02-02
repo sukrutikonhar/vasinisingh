@@ -42,8 +42,8 @@ const AnimatedProjectGrid: React.FC = () => {
         },
         {
             id: 2,
-            title: 'A Scalable Marketplace for Local Service Ecosystems',
-            // subtitle: 'Connecting customers and workshop owners',
+            title: 'Powering Local Service Ecosystems',
+            subtitle: 'Connecting customers and workshops',
             image: '/images/projects/arreglio1/arreglio-landing.webp',
             link: '/projects/arreglio',
             metrics: [
