@@ -38,7 +38,7 @@ const ReflectionLearnings: React.FC = () => {
                         {learnings.map((learning, index) => (
                             <div
                                 key={index}
-                                className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-black transition-all"
+                                className="bg-white border border-gray-200 rounded-lg p-6 shadow-subtle hover:shadow-lg transition-all"
                             >
                                 <div className="flex items-center gap-3 mb-4">
                                     <div className="w-10 h-10 bg-black text-white flex items-center justify-center rounded-full flex-shrink-0">

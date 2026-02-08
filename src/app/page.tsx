@@ -1,6 +1,6 @@
 import MinimalLayout from '@/components/layout/MinimalLayout';
 import NewHeroSection from '@/components/home/NewHeroSection';
-import AboutSection from '@/components/home/AboutSection';
+// import AboutSection from '@/components/home/AboutSection';
 import AnimatedProjectGrid from '@/components/home/AnimatedProjectGrid';
 import SkillsSection from '@/components/home/SkillsSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
@@ -11,7 +11,7 @@ export default function Home() {
     <MinimalLayout>
       <NewHeroSection />
       <AnimatedProjectGrid />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <SkillsSection />
       <TestimonialsSection />
       <CTASection />

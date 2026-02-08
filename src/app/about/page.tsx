@@ -3,7 +3,7 @@ import AboutHero from '@/components/about/AboutHero';
 import AboutIntro from '@/components/about/AboutIntro';
 import DesignPhilosophy from '@/components/about/DesignPhilosophy';
 import ExperienceEducation from '@/components/about/ExperienceEducation';
-import SkillsTools from '@/components/about/SkillsTools';
+// import SkillsTools from '@/components/about/SkillsTools';
 import BeyondDesign from '@/components/about/BeyondDesign';
 import AboutCTA from '@/components/about/AboutCTA';
 
@@ -14,7 +14,7 @@ export default function About() {
             <AboutIntro />
             <DesignPhilosophy />
             <ExperienceEducation />
-            <SkillsTools />
+            {/* <SkillsTools /> */}
             <BeyondDesign />
             <AboutCTA />
         </MinimalLayout>

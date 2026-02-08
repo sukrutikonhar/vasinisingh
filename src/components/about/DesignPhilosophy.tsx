@@ -43,7 +43,7 @@ const DesignPhilosophy: React.FC = () => {
                         {principles.map((principle, index) => (
                             <div
                                 key={index}
-                                className="group bg-gray-50 border-2 border-black p-6 sm:p-8 hover:bg-black hover:text-white transition-all duration-300"
+                                className="group bg-white border border-gray-200 p-6 sm:p-8 rounded-lg shadow-subtle hover:shadow-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300"
                             >
                                 <div className="mb-4 sm:mb-6">
                                     {React.createElement(principle.icon, {

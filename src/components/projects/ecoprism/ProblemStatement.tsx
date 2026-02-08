@@ -55,7 +55,7 @@ const ProblemStatement: React.FC = () => {
                         {challenges.map((challenge, index) => (
                             <div
                                 key={index}
-                                className="bg-white p-6 sm:p-8 rounded-[6px] shadow-card hover:shadow-xl transition-all border-2 border-gray-100 hover:border-gray-800"
+                                className="bg-white p-6 sm:p-8 rounded-lg shadow-subtle border border-gray-200 hover:shadow-lg transition-all"
                             >
                                 <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#202022] rounded-lg flex items-center justify-center mb-6">
                                     {React.createElement(challenge.icon, {

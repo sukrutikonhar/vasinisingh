@@ -42,7 +42,7 @@ const Testimonials: React.FC = () => {
                         {testimonials.map((testimonial, index) => (
                             <div
                                 key={index}
-                                className="bg-gray-50 border-2 border-gray-200 p-8 hover:border-black transition-all relative h-full flex flex-col"
+                                className="bg-white border border-gray-200 p-8 rounded-lg shadow-subtle hover:shadow-lg transition-all relative h-full flex flex-col"
                             >
                                 {/* Quote Icon */}
                                 <div className="absolute top-6 right-6">
@@ -53,7 +53,7 @@ const Testimonials: React.FC = () => {
                                     <p className="text-base font-inter text-gray-800 leading-relaxed mb-6 italic flex-grow">
                                         &ldquo;{testimonial.quote}&rdquo;
                                     </p>
-                                    <div className="border-t-2 border-black pt-4 mt-auto">
+                                    <div className="border-t border-gray-200 pt-4 mt-auto">
                                         <p className="text-sm font-grotesk font-bold text-black mb-1">
                                             {testimonial.author}
                                         </p>

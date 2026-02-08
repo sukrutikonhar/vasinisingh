@@ -54,7 +54,7 @@ const Research: React.FC = () => {
                                 {/* Timeline Dot */}
                                 <div className="absolute left-6 top-6 w-5 h-5 bg-gray-800 rounded-full border-4 border-white shadow-lg hidden md:block" />
 
-                                <div className="md:ml-20 bg-gradient-to-br from-gray-50 to-white p-6 sm:p-8 rounded-[6px] shadow-card border-2 border-gray-100 hover:border-gray-800 hover:shadow-xl transition-all">
+                                <div className="md:ml-20 bg-white p-6 sm:p-8 rounded-lg shadow-subtle border border-gray-200 hover:shadow-lg transition-all">
                                     <div className="flex flex-col sm:flex-row sm:items-start gap-6">
                                         <div className="w-16 h-16 bg-[#202022] rounded-lg flex items-center justify-center flex-shrink-0">
                                             {React.createElement(step.icon, {

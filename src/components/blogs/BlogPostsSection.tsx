@@ -89,27 +89,29 @@ const BlogPostsSection: React.FC = () => {
                                 Filter by Category
                             </h2>
                         </div>
-                        <div className="flex flex-wrap gap-2 sm:gap-3">
+                        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
                             <button
                                 onClick={() => setSelectedTag(null)}
-                                className={`px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-grotesk font-medium border-2 transition-all rounded-[12px] ${selectedTag === null
-                                    ? 'bg-black text-white border-black'
-                                    : 'bg-white text-black border-black hover:bg-gray-100'
+                                className={`text-sm sm:text-base font-grotesk font-medium transition-all ${selectedTag === null
+                                    ? 'text-black font-bold'
+                                    : 'text-gray-500 hover:text-black'
                                     }`}
                             >
-                                All Posts ({blogPosts.length})
+                                ALL
                             </button>
-                            {allTags.map((tag) => (
-                                <button
-                                    key={tag}
-                                    onClick={() => setSelectedTag(tag)}
-                                    className={`px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-grotesk font-medium border-2 transition-all rounded-[12px] ${selectedTag === tag
-                                        ? 'bg-black text-white border-black'
-                                        : 'bg-white text-black border-black hover:bg-gray-100'
-                                        }`}
-                                >
-                                    {tag} ({blogPosts.filter(post => post.tags.includes(tag)).length})
-                                </button>
+                            {allTags.map((tag, index) => (
+                                <div key={tag} className="flex items-center gap-3 sm:gap-4">
+                                    <span className="text-gray-300">•</span>
+                                    <button
+                                        onClick={() => setSelectedTag(tag)}
+                                        className={`text-sm sm:text-base font-grotesk font-medium transition-all ${selectedTag === tag
+                                            ? 'text-black font-bold'
+                                            : 'text-gray-500 hover:text-black'
+                                            }`}
+                                    >
+                                        {tag.toUpperCase()}
+                                    </button>
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -165,7 +167,7 @@ const BlogPostsSection: React.FC = () => {
                                         {post.tags.map((tag, index) => (
                                             <span
                                                 key={index}
-                                                className="inline-flex items-center gap-1 border border-black px-2 py-1 text-[10px] sm:text-xs font-grotesk font-medium uppercase tracking-wider"
+                                                className="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-3 py-1.5 text-[10px] sm:text-xs font-grotesk font-semibold uppercase tracking-wider rounded-full"
                                             >
                                                 {tag}
                                             </span>

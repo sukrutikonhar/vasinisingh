@@ -16,7 +16,7 @@ const AboutHero: React.FC = () => {
                             <div className="absolute inset-0 bg-gray-400 transform translate-x-1.5 translate-y-1.5 sm:translate-x-3 sm:translate-y-3 -z-10" />
 
                             {/* Main Image */}
-                            <div className="relative h-[300px] sm:h-[350px] md:h-[500px] w-full border-2 sm:border-4 border-black overflow-hidden bg-white group">
+                            <div className="relative h-[300px] sm:h-[350px] md:h-[500px] w-full border border-gray-200 overflow-hidden bg-white group rounded-lg shadow-subtle">
                                 <Image
                                     src="/images/vasini-singh1.webp"
                                     alt="Vasini Singh"
@@ -45,11 +45,11 @@ const AboutHero: React.FC = () => {
                         </p>
 
                         <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-4">
-                            <div className="border-l-2 sm:border-l-4 border-black pl-3 sm:pl-4">
+                            <div className="border-l-2 sm:border-l-4 border-gray-300 pl-3 sm:pl-4">
                                 <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider mb-1">Based in</p>
                                 <p className="text-base sm:text-lg font-grotesk font-semibold">India</p>
                             </div>
-                            <div className="border-l-2 sm:border-l-4 border-black pl-3 sm:pl-4">
+                            <div className="border-l-2 sm:border-l-4 border-gray-300 pl-3 sm:pl-4">
                                 <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider mb-1">Experience</p>
                                 <p className="text-base sm:text-lg font-grotesk font-semibold">7+ Years</p>
                             </div>

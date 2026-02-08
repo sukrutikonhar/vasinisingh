@@ -43,7 +43,7 @@ const Challenge: React.FC = () => {
                         {challenges.map((challenge, index) => (
                             <div
                                 key={index}
-                                className="bg-white border-2 border-gray-200 p-6 hover:border-black transition-all"
+                                className="bg-white border border-gray-200 p-6 rounded-lg shadow-subtle hover:shadow-lg transition-all"
                             >
                                 <div className="mb-4">
                                     {React.createElement(challenge.icon, {

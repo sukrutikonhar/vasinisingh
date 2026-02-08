@@ -68,7 +68,7 @@ const SkillsTools: React.FC = () => {
                                     key={index}
                                     className="flex items-center gap-3 group"
                                 >
-                                    <div className="w-7 h-7 sm:w-8 sm:h-8 border-2 border-black flex items-center justify-center group-hover:bg-black transition-colors flex-shrink-0">
+                                    <div className="w-7 h-7 sm:w-8 sm:h-8 border border-gray-300 flex items-center justify-center group-hover:bg-black group-hover:border-black group-hover:text-white transition-all flex-shrink-0">
                                         <span className="text-[10px] sm:text-xs font-grotesk font-bold group-hover:text-white">
                                             {String(index + 1).padStart(2, '0')}
                                         </span>
