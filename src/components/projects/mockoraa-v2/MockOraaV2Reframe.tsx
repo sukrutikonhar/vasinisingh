@@ -43,7 +43,7 @@ export default function MockOraaV2Reframe() {
                     {/* Old Way */}
                     <div className="bg-white p-12 rounded-xl w-full lg:w-80 text-center relative shadow-sm border-2 border-gray-200 opacity-70 hover:translate-y-1 transition-transform">
                         <span className="block text-xs uppercase tracking-wider text-gray-500 mb-4">The Assumption</span>
-                        <h3 className="text-2xl font-semibold mb-4">"A Knowledge Gap"</h3>
+                        <h3 className="text-2xl font-semibold mb-4">&ldquo;A Knowledge Gap&rdquo;</h3>
                         <p className="text-gray-600 mb-6">How might we train users to know more answers?</p>
                         <div className="text-3xl text-gray-400">✕</div>
                     </div>
@@ -57,7 +57,7 @@ export default function MockOraaV2Reframe() {
                     {/* New Way */}
                     <div className="bg-white p-12 rounded-xl w-full lg:w-80 text-center relative shadow-lg border-2 border-black transform scale-105 hover:translate-y-1 transition-transform">
                         <span className="block text-xs uppercase tracking-wider text-gray-500 mb-4">The Reality</span>
-                        <h3 className="text-2xl font-semibold mb-4">"A Performance Gap"</h3>
+                        <h3 className="text-2xl font-semibold mb-4">&ldquo;A Performance Gap&rdquo;</h3>
                         <p className="text-gray-800 font-medium mb-6">
                             How might we create a psychologically safe space to practice performance?
                         </p>

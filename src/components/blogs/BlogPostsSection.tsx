@@ -99,7 +99,7 @@ const BlogPostsSection: React.FC = () => {
                             >
                                 ALL
                             </button>
-                            {allTags.map((tag, index) => (
+                            {allTags.map((tag) => (
                                 <div key={tag} className="flex items-center gap-3 sm:gap-4">
                                     <span className="text-gray-300">•</span>
                                     <button

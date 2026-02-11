@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Lightbulb, FileText, Code, Users, Target, Zap } from 'lucide-react';
+import { Lightbulb, FileText, Code } from 'lucide-react';
 
 const MockOraaV2Role: React.FC = () => {
     const roles = [
