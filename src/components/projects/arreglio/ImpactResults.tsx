@@ -37,7 +37,7 @@ const ImpactResults: React.FC = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                         {metrics.map((metric, index) => (
                             <div key={index} className="text-center">
-                                <div className="text-5xl sm:text-6xl md:text-7xl font-grotesk font-bold text-black mb-3">
+                                <div className="text-5xl font-grotesk font-bold text-black mb-3">
                                     {metric.value}
                                 </div>
                                 <div className="text-lg sm:text-xl font-grotesk font-semibold text-black mb-2">

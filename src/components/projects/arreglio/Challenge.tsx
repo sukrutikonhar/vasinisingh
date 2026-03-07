@@ -28,11 +28,11 @@ const Challenge: React.FC = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
                     <div className="mb-12">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8 text-center">
                             The Challenge
                         </h2>
                         <div className="bg-gray-50 border border-gray-300 p-8 sm:p-12 rounded-[6px] mb-12 shadow-sm">
-                            <p className="text-xl sm:text-2xl md:text-3xl font-inter text-gray-800 leading-relaxed text-center italic">
+                            <p className="text-xl font-inter text-gray-800 leading-relaxed text-center italic max-w-3xl mx-auto">
                                 &quot;How do we modernize a traditional repair shop workflow without overwhelming users who are resistant to digital change?&quot;
                             </p>
                         </div>

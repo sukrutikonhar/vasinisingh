@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import { Quote } from 'lucide-react';
+import { Quote, Linkedin } from 'lucide-react';
 
 const TestimonialsSection: React.FC = () => {
     const testimonialsRef = useRef<HTMLDivElement>(null);
@@ -30,19 +30,22 @@ const TestimonialsSection: React.FC = () => {
             quote: "Vasini stood out for her creativity and commitment, delivering 30+ successful projects as she transitioned from intern to skilled Product Designer. Her blend of visual storytelling and user experience makes her a joy to mentor.",
             author: "Abhishek Katiyar",
             role: "Founder & CEO",
-            company: "Web Concepts Technologies | Bizmeth Solutions | Flowix"
+            company: "Web Concepts Technologies | Bizmeth Solutions | Flowix",
+            linkedin: "https://www.linkedin.com/in/abhishekkatiyar1/"
         },
         {
             quote: "I've collaborated with Vasini on numerous successful projects. Her design thinking, attention to detail, and user-first mindset consistently bring clarity and impact to every delivery. A reliable partner who elevates both process and outcome.",
             author: "Vignesh R",
             role: "Chapter Lead & Technical Consultant",
-            company: "Acumant"
+            company: "Acumant",
+            linkedin: "https://in.linkedin.com/in/vignesh-r-695a2b157"
         },
         {
             quote: "Her empathy, creativity, and strategic mindset strengthened our outreach. She brought professionalism and heart to every initiative, amplifying our mission with clarity and purpose. A true asset to any impact-driven organization.",
             author: "Alok Dixit",
             role: "Founder & CEO",
-            company: "Chhanv Foundation"
+            company: "Chhanv Foundation",
+            linkedin: "https://www.linkedin.com/in/alok-dixit?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
         }
     ];
 
@@ -79,10 +82,21 @@ const TestimonialsSection: React.FC = () => {
 
                                 {/* Author Info */}
                                 <div className="border-t-2 border-gray-200 pt-4">
-                                    <p className="font-grotesk font-bold text-black text-sm sm:text-base">
-                                        {testimonial.author}
-                                    </p>
-                                    <p className="text-xs sm:text-sm font-inter text-gray-600">
+                                    <div className="flex items-center justify-between gap-2">
+                                        <p className="font-grotesk font-bold text-black text-sm sm:text-base">
+                                            {testimonial.author}
+                                        </p>
+                                        <a
+                                            href={testimonial.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-gray-600 hover:text-black transition-colors"
+                                            aria-label={`View ${testimonial.author} on LinkedIn`}
+                                        >
+                                            <Linkedin className="w-5 h-5" />
+                                        </a>
+                                    </div>
+                                    <p className="text-xs sm:text-sm font-inter text-gray-600 mt-1">
                                         {testimonial.role} at {testimonial.company}
                                     </p>
                                 </div>

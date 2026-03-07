@@ -100,7 +100,7 @@ const NewHeroSection: React.FC = () => {
                         <div className="relative">
                             <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gray-800" />
                             <p className="text-lg sm:text-xl text-gray-700 font-inter leading-relaxed pl-4">
-                                Hi, I&apos;m <span className="font-semibold text-black">Vasini Singh</span> — a Product Designer with over 15 years of professional experience, including 7+ years dedicated to design. I help build digital products that are
+                                Hi, I'm <span className="font-semibold text-black">Vasini Singh</span> - a Product Designer with over 16 years of professional experience, including 8+ years dedicated to design. I help build digital products that are
                                 <span className="italic">  simple, effective, and user-friendly</span>.
                             </p>
                         </div>
@@ -108,7 +108,7 @@ const NewHeroSection: React.FC = () => {
                         {/* Stats Row */}
                         <div className="flex items-center gap-8 pt-4">
                             <div className="group">
-                                <div className="text-4xl font-grotesk font-bold text-black group-hover:scale-110 transition-transform">7+</div>
+                                <div className="text-4xl font-grotesk font-bold text-black group-hover:scale-110 transition-transform">8+</div>
                                 <div className="text-xs text-gray-600 font-inter uppercase tracking-wider">Years</div>
                             </div>
                             <div className="w-px h-12 bg-gray-300" />
@@ -181,7 +181,7 @@ const NewHeroSection: React.FC = () => {
                                 {/* Floating badge */}
                                 <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-black text-white p-3 sm:p-4 border-2 sm:border-4 border-white shadow-lg animate-pulse">
                                     <div className="text-center">
-                                        <div className="text-2xl sm:text-3xl font-grotesk font-bold">7+</div>
+                                        <div className="text-2xl sm:text-3xl font-grotesk font-bold">8+</div>
                                         <div className="text-[10px] sm:text-xs uppercase tracking-wider">Years<br />Experience</div>
                                     </div>
                                 </div>

@@ -51,7 +51,7 @@ const AboutHero: React.FC = () => {
                             </div>
                             <div className="border-l-2 sm:border-l-4 border-gray-300 pl-3 sm:pl-4">
                                 <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider mb-1">Experience</p>
-                                <p className="text-base sm:text-lg font-grotesk font-semibold">7+ Years</p>
+                                <p className="text-base sm:text-lg font-grotesk font-semibold">8+ Years</p>
                             </div>
                         </div>
                     </div>
