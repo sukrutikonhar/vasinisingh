@@ -40,7 +40,7 @@ const SkillsSection: React.FC = () => {
         { name: 'Notion', description: 'Docs, Structuring', icon: 'simple-icons:notion' }
     ];
 
-    const renderIcon = (tool: any) => {
+    const renderIcon = (tool: { name: string; description: string; icon: string; isText?: boolean }) => {
         if (tool.isText) {
             return (
                 <div className="sm:w-14 sm:h-14 flex items-center justify-center text-black text-xs bg-gray-200 rounded-md font-grotesk font-bold group-hover:scale-110 transition-transform">

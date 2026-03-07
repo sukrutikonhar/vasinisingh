@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Send } from 'lucide-react';
 import { Icon } from '@iconify/react';
 
 const ContactSection: React.FC = () => {

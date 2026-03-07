@@ -100,7 +100,7 @@ const NewHeroSection: React.FC = () => {
                         <div className="relative">
                             <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gray-800" />
                             <p className="text-lg sm:text-xl text-gray-700 font-inter leading-relaxed pl-4">
-                                Hi, I'm <span className="font-semibold text-black">Vasini Singh</span> - a Product Designer with over 16 years of professional experience, including 8+ years dedicated to design. I help build digital products that are
+                                Hi, I&apos;m <span className="font-semibold text-black">Vasini Singh</span> - a Product Designer with over 16 years of professional experience, including 8+ years dedicated to design. I help build digital products that are
                                 <span className="italic">  simple, effective, and user-friendly</span>.
                             </p>
                         </div>
