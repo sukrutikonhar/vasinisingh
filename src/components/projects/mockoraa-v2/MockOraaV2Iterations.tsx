@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import { Check } from 'lucide-react';
 
 export default function MockOraaV2Iterations() {
     const [isVisible, setIsVisible] = useState(false);
@@ -9,108 +11,69 @@ export default function MockOraaV2Iterations() {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
+                if (entry.isIntersecting) setIsVisible(true);
             },
             { threshold: 0.1 }
         );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
+        if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
     }, []);
 
-    const timelineItems = [
-        {
-            date: 'Round 1',
-            title: 'The Confusion',
-            description: 'Users were overwhelmed by specific technical feedback immediately after speaking.',
-            tag: 'Insight: Cognitive Overload',
-            type: 'problem'
-        },
-        {
-            date: 'Round 2',
-            title: 'The Simplification',
-            description: 'Moved detailed feedback to post-session. Introduced "calm" color palette.',
-            tag: 'Action: Reduce Noise',
-            type: 'action'
-        },
-        {
-            date: 'Final',
-            title: 'The Validation',
-            description: '31% faster task completion. Users reported feeling "guided" rather than "judged".',
-            tag: 'Result: Success',
-            type: 'success'
-        },
-        {
-            date: 'Next',
-            title: 'Future Scope',
-            description: 'Integration with LMS and peer-to-peer practice modes.',
-            tag: 'Roadmap',
-            type: 'future'
-        }
-    ];
-
-    const getCardStyles = (type: string) => {
-        switch (type) {
-            case 'success':
-                return 'border-green-500 bg-green-50';
-            case 'future':
-                return 'border-blue-500 bg-blue-50';
-            case 'action':
-                return 'border-orange-500 bg-orange-50';
-            default:
-                return 'border-gray-300 bg-white';
-        }
-    };
-
-    const getTagStyles = (type: string) => {
-        switch (type) {
-            case 'success':
-                return 'bg-green-500 text-white';
-            case 'future':
-                return 'bg-blue-500 text-white';
-            case 'action':
-                return 'bg-orange-500 text-white';
-            default:
-                return 'bg-gray-500 text-white';
-        }
-    };
-
     return (
-        <section ref={sectionRef} className="py-24 bg-gray-50">
-            <div className="max-w-6xl mx-auto px-8">
-                <h2 className="text-5xl font-semibold mb-16 tracking-tight">
-                    Iterations That Delivered Results
-                </h2>
-                
-                <div className={`transition-all duration-1000 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}>
-                    <div className="overflow-x-auto pb-4">
-                        <div className="flex gap-8 min-w-max">
-                            {timelineItems.map((item, index) => (
-                                <div 
-                                    key={index}
-                                    className={`flex-shrink-0 w-72 p-6 rounded-lg border-2 ${getCardStyles(item.type)} transition-transform hover:-translate-y-1`}
-                                >
-                                    <div className="text-sm font-medium text-gray-600 mb-2">
-                                        {item.date}
-                                    </div>
-                                    <h4 className="text-xl font-semibold mb-3">
-                                        {item.title}
-                                    </h4>
-                                    <p className="text-gray-700 mb-4 leading-relaxed">
-                                        {item.description}
-                                    </p>
-                                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${getTagStyles(item.type)}`}>
-                                        {item.tag}
-                                    </span>
-                                </div>
-                            ))}
+        <section ref={sectionRef} className="py-16 sm:py-20 md:py-24 bg-white">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                        {/* Left: Text content + Impact card */}
+                        <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                            <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">
+                                08. VALIDATION & ITERATION
+                            </p>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-6">
+                                Testing with Rigor
+                            </h2>
+                            <p className="text-base sm:text-lg font-inter text-gray-600 leading-relaxed mb-8">
+                                We ran moderated sessions (n=6) and unmoderated Maze testing (n=51) to validate our flows. The initial designs suffered from &ldquo;dashboard blindness&rdquo;—users were overwhelmed by metrics.
+                            </p>
+
+                            <div className="bg-gray-100 rounded-xl p-6 sm:p-8 border border-gray-200">
+                                <h3 className="text-lg font-grotesk font-bold text-black mb-4">
+                                    Before vs. After Impact
+                                </h3>
+                                <ul className="space-y-3">
+                                    <li className="flex items-start gap-3 text-sm sm:text-base font-inter text-gray-700">
+                                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-black flex items-center justify-center mt-0.5">
+                                            <Check className="w-3 h-3 text-white" strokeWidth={2.5} />
+                                        </span>
+                                        <span><strong className="text-black">Issue:</strong> Dense text blocks caused scanning fatigue.</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-sm sm:text-base font-inter text-gray-700">
+                                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-black flex items-center justify-center mt-0.5">
+                                            <Check className="w-3 h-3 text-white" strokeWidth={2.5} />
+                                        </span>
+                                        <span><strong className="text-black">Fix:</strong> Introduced progressive disclosure for feedback.</span>
+                                    </li>
+                                    <li className="flex items-start gap-3 text-sm sm:text-base font-inter text-gray-700">
+                                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-black flex items-center justify-center mt-0.5">
+                                            <Check className="w-3 h-3 text-white" strokeWidth={2.5} />
+                                        </span>
+                                        <span><strong className="text-black">Result:</strong> Time-on-task improved by 31%.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Right: Iteration image (Before/After) */}
+                        <div className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                            <div className="relative w-full rounded-xl overflow-hidden border border-gray-200 bg-gray-50">
+                                <Image
+                                    src="/images/projects/mockoraa/validation-iteration.webp"
+                                    alt="Validation and Iteration - Dashboard comparison"
+                                    width={800}
+                                    height={600}
+                                    className="object-contain w-full h-auto"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

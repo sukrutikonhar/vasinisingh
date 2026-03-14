@@ -1,80 +1,63 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import Button from "@/components/ui/Button";
+import { Brain, Code, Heart, Link, LinkIcon } from "lucide-react";
+import React from "react";
 
 export default function MockOraaV2Final() {
-    const [isVisible, setIsVisible] = useState(false);
-    const sectionRef = useRef<HTMLElement>(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.1 }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => observer.disconnect();
-    }, []);
-
     const learnings = [
-        'Confidence is measurable when broken into behavioral components.',
-        'Emotional safety increases engagement and retention.',
-        'AI products demand clarity over novelty.',
-        'Data driven iteration strengthens usability maturity.',
-        'Design must align with business scalability and ethical responsibility.'
+        {
+            icon: Brain,
+            title: 'AI is a Material, Not a Feature',
+            content: 'I learned to design for non-deterministic outcomes. AI responses fluctuate, so the UI must gracefully handle loading states, corrections, and varying text lengths.'
+        },
+        {
+            icon: Heart,
+            title: "Empathy as a Metric",
+            content: 'Designing for psychologically vulnerable users meant prioritizing "do no harm" in our copy. Shifting from "Your weaknesses" to "Areas for focus" drastically improved user retention in testing.'
+        },
+        {
+            icon: Code,
+            title: 'System-Level Thinking',
+            content: 'Building MockOraa wasn\'t just about screens; it was about designing the invisible data loops that transform an audio input into a structured learning roadmap.'
+        }
     ];
 
-    const references = [
-        'Interview anxiety statistics',
-        'Labor participation data',
-        'Youth employment data',
-        'Internal usability testing metrics',
-        'Project documentation'
-    ];
+
 
     return (
-        <section ref={sectionRef} className="py-16 sm:py-20 md:py-24 bg-white">
+        <section className="py-16 sm:py-20 md:py-24 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        <div className={`transition-all duration-1000 ${
-                            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                        }`}>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8">
-                                Key Learnings
-                            </h2>
-                            <ul className="space-y-4">
-                                {learnings.map((learning, index) => (
-                                    <li key={index} className="text-base font-inter text-gray-700 leading-relaxed flex items-start">
-                                        <span className="w-2 h-2 bg-black rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                        {learning}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        
-                        <div className={`transition-all duration-1000 delay-300 ${
-                            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                        }`}>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8">
-                                References
-                            </h2>
-                            <ul className="space-y-4">
-                                {references.map((reference, index) => (
-                                    <li key={index} className="text-base font-inter text-gray-700 leading-relaxed flex items-start">
-                                        <span className="w-2 h-2 bg-black rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                        {reference}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                    <div className="mb-12 sm:mb-16">
+                        <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">11. RETROSPECTIVE</p>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black">
+                            Reflection &amp; Learnings
+                        </h2>
+                    </div>
+
+                    {/* Learnings Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {learnings.map((learning, index) => (
+                            <div
+                                key={index}
+                                className="bg-white border border-gray-200 rounded-lg p-6 shadow-subtle hover:shadow-lg transition-all"
+                            >
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-10 h-10 bg-black text-white flex items-center justify-center rounded-full flex-shrink-0">
+                                        {React.createElement(learning.icon, {
+                                            className: "w-5 h-5"
+                                        })}
+                                    </div>
+                                    <h3 className="text-lg sm:text-xl font-grotesk font-bold text-black">
+                                        {learning.title}
+                                    </h3>
+                                </div>
+                                <p className="text-sm font-inter text-gray-600 leading-relaxed">
+                                    {learning.content}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

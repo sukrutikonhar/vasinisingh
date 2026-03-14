@@ -30,7 +30,7 @@ const MinimalHeader: React.FC = () => {
         <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled || isMenuOpen ? 'bg-white shadow-sm' : 'bg-transparent'
             }`}>
             <div className="container-custom px-4 sm:px-6">
-                <div className="flex items-center justify-between h-16 sm:h-20">
+                <div className="flex items-center justify-between h-12 sm:h-14">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 hover:opacity-70 transition-opacity">
                         <div className="relative w-8 h-8 sm:w-20">
@@ -78,7 +78,7 @@ const MinimalHeader: React.FC = () => {
 
                 {/* Mobile Navigation */}
                 {isMenuOpen && (
-                    <div className="md:hidden pb-6">
+                    <div className="md:hidden pb-4">
                         <nav className="flex flex-col space-y-4">
                             {navigation.map((item) => (
                                 <Link

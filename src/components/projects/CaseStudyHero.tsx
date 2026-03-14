@@ -8,7 +8,8 @@ interface CaseStudyHeroProps {
     data: {
         title: string;
         subtitle: string;
-        image: string;
+        image?: string;
+        youtubeVideoId?: string;
         tags: string[];
         metrics?: {
             value: string;
@@ -18,11 +19,18 @@ interface CaseStudyHeroProps {
     };
     wideLeftColumn?: boolean;
     topPadding?: boolean;
+    compactTitle?: boolean;
+    /** Extra top/bottom padding so hero doesn’t touch header or next section (e.g. MockOraa v2) */
+    comfortableSpacing?: boolean;
 }
 
-const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = false, topPadding = false }) => {
+const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = false, topPadding = false, compactTitle = false, comfortableSpacing = false }) => {
+    const sectionClass = [
+        topPadding && "pt-8 md:pt-8",
+        comfortableSpacing && "pt-24 md:pt-24 pb-24 md:pb-24",
+    ].filter(Boolean).join(" ");
     return (
-        <section className={topPadding ? "pt-8 md:pt-8" : ""}>
+        <section className={sectionClass}>
             <div className="container-custom px-4 sm:px-6 mb-0">
                 <div className="max-w-7xl mx-auto">
                     <div className={`grid grid-cols-1 items-center ${wideLeftColumn ? 'gap-12 lg:gap-0 lg:grid-cols-12' : 'gap-12 lg:gap-16 lg:grid-cols-2'}`}>
@@ -42,7 +50,7 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = fa
                             </div>
 
                             {/* Title */}
-                            <h1 className="text-5xl sm:text-6xl md:text-7xl font-grotesk font-bold text-[#202022] mb-4 leading-tight">
+                            <h1 className={`font-grotesk font-bold text-[#202022] mb-4 leading-tight ${compactTitle ? 'text-2xl sm:text-3xl md:text-5xl' : 'text-5xl sm:text-6xl md:text-7xl'}`}>
                                 {data.title}
                             </h1>
 
@@ -76,7 +84,7 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = fa
                                     href={data.prototypeLink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 bg-[#202022] text-white px-6 py-3 text-sm font-inter font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-200 mt-8"
+                                    className="inline-flex items-center gap-2 bg-[#202022] text-white px-6 py-3 text-sm font-inter font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-200 mt-0"
                                 >
                                     View Prototype
                                     <ExternalLink className="w-4 h-4" />
@@ -84,17 +92,29 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = fa
                             )}
                         </div>
 
-                        {/* Right Image */}
+                        {/* Right: Video or Image */}
                         <div className={`order-1 lg:order-2 ${wideLeftColumn ? 'lg:col-span-5' : ''}`}>
-                            <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px]">
-                                <Image
-                                    src={data.image}
-                                    alt={data.title}
-                                    fill
-                                    className="object-contain"
-                                    priority
-                                />
-                            </div>
+                            {data.youtubeVideoId ? (
+                                <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-100">
+                                    <iframe
+                                        src={`https://www.youtube.com/embed/${data.youtubeVideoId}`}
+                                        title={data.title}
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className="absolute inset-0 w-full h-full"
+                                    />
+                                </div>
+                            ) : data.image ? (
+                                <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px]">
+                                    <Image
+                                        src={data.image}
+                                        alt={data.title}
+                                        fill
+                                        className="object-contain"
+                                        priority
+                                    />
+                                </div>
+                            ) : null}
                         </div>
                     </div>
                 </div>

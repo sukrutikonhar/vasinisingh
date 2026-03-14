@@ -1,99 +1,70 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import { Check } from 'lucide-react';
+
+const pillars = [
+    {
+        title: 'JD-Embedded Intelligence',
+        description: 'AI contextualizes questions based on pasted Job Descriptions.',
+    },
+    {
+        title: 'Psychological Safety UI',
+        description: 'Avatar-first design with a calming color palette.',
+    },
+    {
+        title: 'Real-Time Analytics',
+        description: 'Live tracking of filler words, pacing, and confidence without causing panic.',
+    },
+    {
+        title: 'Structured Improvement Loop',
+        description: 'Actionable micro-tasks generated post-interview.',
+    },
+];
 
 export default function MockOraaV2Solution() {
-    const [isVisible, setIsVisible] = useState(false);
-    const sectionRef = useRef<HTMLElement>(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.1 }
-        );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
-        return () => observer.disconnect();
-    }, []);
-
-    const pillars = [
-        {
-            title: 'JD Embedded Intelligence',
-            items: [
-                'Resume and job description vector matching',
-                'Contextual question generation',
-                'Improved realism and relevance'
-            ]
-        },
-        {
-            title: 'Real Time Behavioral Analytics',
-            items: [
-                'Speech-to-text streaming',
-                'Filler word detection',
-                'Pace monitoring',
-                'Confidence scoring'
-            ],
-            note: 'Confidence became measurable, not subjective.'
-        },
-        {
-            title: 'Psychological Safety',
-            items: [
-                'Calm visual hierarchy',
-                'Minimal distractions',
-                'Supportive feedback tone',
-                'Clear step progression'
-            ],
-            note: 'Design reduces cognitive stress.'
-        },
-        {
-            title: 'Structured Improvement Loop',
-            items: [
-                'Post-session rubric',
-                'Next best practice suggestions',
-                'Micro-learning unlocks',
-                'Gamified progress tracking'
-            ],
-            note: 'Preparation becomes iterative and actionable.'
-        }
-    ];
-
     return (
-        <section ref={sectionRef} id="solution" className="py-24">
-            <div className="max-w-6xl mx-auto px-8">
-                <h2 className="text-5xl font-semibold mb-16 tracking-tight">
-                    From Anxiety to Measurable Confidence
-                </h2>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {pillars.map((pillar, index) => (
-                        <div 
-                            key={index}
-                            className={`p-8 border border-gray-200 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-500 ${
-                                isVisible ? `opacity-100 translate-y-0 delay-${index * 100}` : 'opacity-0 translate-y-8'
-                            }`}
-                        >
-                            <h3 className="text-2xl font-semibold mb-6">{pillar.title}</h3>
-                            <ul className="space-y-2 mb-4">
-                                {pillar.items.map((item, itemIndex) => (
-                                    <li key={itemIndex} className="text-gray-700 list-disc ml-5">
-                                        {item}
+        <section id="solution" className="py-16 sm:py-20 md:py-24 bg-black text-white">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                        {/* Left: Content */}
+                        <div>
+                            <p className="text-xs uppercase tracking-widest text-gray-400 font-grotesk font-bold mb-4">
+                                05. CONCEPTUALIZATION
+                            </p>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-white mb-6">
+                                Translating Ideas to Product Pillars
+                            </h2>
+                            <p className="text-base sm:text-lg font-inter text-gray-300 leading-relaxed mb-8">
+                                Using SCAMPER and Crazy 8s, we diverged rapidly before converging on four core product pillars designed to directly target our research insights.
+                            </p>
+                            <ul className="space-y-4">
+                                {pillars.map((pillar, index) => (
+                                    <li key={index} className="flex items-start gap-3">
+                                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-white flex items-center justify-center mt-0.5">
+                                            <Check className="w-3.5 h-3.5 text-black" strokeWidth={2.5} />
+                                        </span>
+                                        <div>
+                                            <span className="font-grotesk font-bold text-white">{pillar.title}:</span>
+                                            <span className="font-inter text-gray-300"> {pillar.description}</span>
+                                        </div>
                                     </li>
                                 ))}
                             </ul>
-                            {pillar.note && (
-                                <p className="text-sm text-gray-600 italic mt-4 border-l-2 border-green-600 pl-4">
-                                    {pillar.note}
-                                </p>
-                            )}
                         </div>
-                    ))}
+
+                        {/* Right: Product Pillars image */}
+                        <div className="relative w-full rounded-xl overflow-hidden border border-gray-700/50 bg-gray-900/50">
+                            <Image
+                                src="/images/projects/mockoraa/product-pillars.webp"
+                                alt="Product Pillars - Candidate Confidence"
+                                width={600}
+                                height={600}
+                                className="object-contain w-full h-auto"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

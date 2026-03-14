@@ -9,169 +9,81 @@ export default function MockOraaV2Research() {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
+                if (entry.isIntersecting) setIsVisible(true);
             },
             { threshold: 0.1 }
         );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
+        if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
     }, []);
 
-    const competitorData = [
-        {
-            feature: 'Role Specificity',
-            traditional: 'Generic / Static',
-            general: 'Text-based only',
-            mockOraa: 'JD & Resume Vector Matching'
-        },
-        {
-            feature: 'Feedback Loop',
-            traditional: 'None / Peer-based',
-            general: 'Logic only',
-            mockOraa: 'Behavioral & Speech Analytics'
-        },
-        {
-            feature: 'Emotional Safety',
-            traditional: 'Variable / High Stress',
-            general: 'Neutral',
-            mockOraa: 'Designed for Anxiety Reduction'
-        }
+    const frictionPoints = [
+        { label: 'The Feedback Void', desc: 'Candidates are rejected without knowing if the issue was content, pacing, or delivery.' },
+        { label: 'Role Mismatch', desc: 'Generic questions don\'t help. Candidates need questions contextualized to specific Job Descriptions (JDs).' },
+        { label: 'Anxiety Spikes', desc: 'The interface itself must not induce stress. Timers and harsh red error states trigger panic.' }
+
     ];
 
-    const methods = [
-        {
-            number: '01',
-            title: 'Discovery',
-            items: [
-                'Secondary Labor Market Data',
-                'Competitor Benchmarking',
-                'Journey Mapping'
-            ]
-        },
-        {
-            number: '02',
-            title: 'Ideation',
-            items: [
-                'Crazy 8s (Divergent)',
-                'SCAMPER (Lateral Thinking)',
-                'Six Thinking Hats (Perspective)'
-            ]
-        },
-        {
-            number: '03',
-            title: 'Validation',
-            items: [
-                'Moderated Usability (n=6)',
-                'Maze Unmoderated (n=51)',
-                'SUS Evaluation'
-            ]
-        }
-    ];
-
-    const decisions = [
-        {
-            problem: 'Users struggle to articulate answers under time pressure.',
-            decision: 'Integrated Real-time Pace Monitoring & Speech Analytics.'
-        },
-        {
-            problem: 'Generic questions feel irrelevant to specific career paths.',
-            decision: 'Built JD & Resume Embedding for hyper-personalized questions.'
-        },
-        {
-            problem: 'High anxiety caused by "judgmental" AI interfaces.',
-            decision: 'Designed "Psychologically Safe" UI with calm colors and supportive feedback tone.'
-        },
-        {
-            problem: 'Users don\'t know how to improve after a bad session.',
-            decision: 'Created a Structured Improvement Loop with actionable next steps.'
-        }
-    ];
 
     return (
-        <section ref={sectionRef} className="py-24">
-            <div className="max-w-6xl mx-auto px-8">
-                <h2 className="text-5xl font-semibold mb-8 tracking-tight">Research & Competitor Analysis</h2>
-                <p className="text-xl mb-16 text-gray-600">This was not assumption-driven design. We scrutinized the landscape.</p>
+        <section ref={sectionRef} className="py-16 sm:py-20 md:py-24 bg-white">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-6xl mx-auto">
+                    <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">02. RESEARCH & DISCOVERY</p>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8">Uncovering the Hidden Frictions</h2>
+                    <p className="text-base sm:text-lg font-inter text-gray-600 mb-12 max-w-3xl leading-relaxed">
+                        We initiated a rigorous discovery phase combining moderated interviews, behavioral surveys, and competitive audits to move beyond assumptions.
+                    </p>
 
-                {/* Competitor Analysis */}
-                <div className={`mb-16 transition-all duration-1000 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}>
-                    <h3 className="text-3xl font-semibold mb-8">The Landscape Gap</h3>
-                    <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
-                        <div className="grid grid-cols-4 bg-slate-900 text-white p-6 font-semibold">
-                            <div>Feature</div>
-                            <div>Traditional Mock Tools</div>
-                            <div>General AI (ChatGPT)</div>
-                            <div className="underline">MockOraa</div>
-                        </div>
-                        {competitorData.map((row, index) => (
-                            <div key={index} className="grid grid-cols-4 p-6 border-b border-gray-200 last:border-b-0">
-                                <div className="font-semibold">{row.feature}</div>
-                                <div className="text-gray-600">{row.traditional}</div>
-                                <div className="text-gray-600">{row.general}</div>
-                                <div className="font-semibold text-green-600">
-                                    <span className="mr-2">✓</span>{row.mockOraa}
-                                </div>
-                            </div>
-                        ))}
+                    {/* Quote */}
+                    <div className={`border-l-4 border-black pl-6 mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                        <p className="text-lg sm:text-xl font-inter italic text-gray-700 leading-relaxed mb-3">
+                            &ldquo;I know my domain perfectly, but the moment an interviewer asks &lsquo;Tell me about a time when…&rsquo; I freeze. The generic prep didn&rsquo;t work for me.&rdquo;
+                        </p>
+                        <span className="text-sm font-inter text-gray-500">— Mid-level Engineer during user interviews</span>
                     </div>
-                </div>
 
-                {/* Research Methods */}
-                <div className={`mb-16 transition-all duration-1000 delay-300 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}>
-                    <h3 className="text-3xl font-semibold mb-8">Research & Ideation Methods</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {methods.map((method, index) => (
-                            <div key={index} className="bg-gray-50 p-8 rounded-lg relative overflow-hidden h-full">
-                                <div className="absolute top-0 right-4 text-6xl font-bold text-black/5">
-                                    {method.number}
-                                </div>
-                                <h4 className="text-xl font-semibold mb-4 mt-4">{method.title}</h4>
-                                <ul className="space-y-1">
-                                    {method.items.map((item, itemIndex) => (
-                                        <li key={itemIndex} className="text-sm opacity-80">
-                                            {item.includes('(') ? (
-                                                <>
-                                                    <strong>{item.split(' (')[0]}</strong> ({item.split(' (')[1]}
-                                                </>
-                                            ) : (
-                                                item
-                                            )}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Design Decisions */}
-                <div className={`transition-all duration-1000 delay-600 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}>
-                    <h3 className="text-3xl font-semibold mb-8">From Insight to Design Decision</h3>
-                    <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
-                        <div className="grid grid-cols-2 bg-slate-900 text-white p-6 font-semibold">
-                            <div>Observed Problem</div>
-                            <div>Design Decision</div>
+                    {/* FigJam board embed - fits in one viewport (pan & zoom inside embed) */}
+                    <div className={`mb-10 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                        <div className="mb-3">
+                            <h3 className="text-lg font-grotesk font-bold text-black mb-1">Our FigJam Workspace</h3>
+                            <p className="text-sm font-inter text-gray-600 leading-relaxed max-w-3xl">
+                                Explore our ideation session—pan and zoom to explore the board.
+                            </p>
                         </div>
-                        {decisions.map((decision, index) => (
-                            <div key={index} className="grid grid-cols-2 p-6 border-b border-gray-200 last:border-b-0">
-                                <div className="pr-4 font-medium text-gray-600">{decision.problem}</div>
-                                <div className="font-semibold text-slate-900">
-                                    <span className="mr-2">→</span>{decision.decision}
-                                </div>
+                        <div className="rounded-xl overflow-hidden border border-gray-200 bg-gray-50 shadow-sm">
+                            <div className="relative w-full h-[85vh]">
+                                <iframe
+                                    title="MockOraa FigJam board - Research & ideation"
+                                    src="https://embed.figma.com/board/iWB7jm6lJYCobWR81d7iLG/MockOraa-Figjam?embed-host=vasini-portfolio&viewport-controls=1"
+                                    className="absolute inset-0 w-full h-full"
+                                    allowFullScreen
+                                />
                             </div>
-                        ))}
+                        </div>
+                        <p className="text-xs font-inter text-gray-400 mt-1.5">Research synthesis & affinity mapping</p>
+                    </div>
+
+                    {/* Key Research Insights - card grid to match theme */}
+                    <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                        <h3 className="text-2xl font-grotesk font-bold text-black mb-3">Key Research Insights</h3>
+                        <p className="text-base font-inter text-gray-600 mb-6 max-w-3xl leading-relaxed">
+                            Synthesizing data from 50+ participants revealed three core friction points:
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            {frictionPoints.map((point, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-gray-50 border border-gray-200 rounded-lg p-5 hover:border-gray-300 transition-colors"
+                                >
+                                    <span className="inline-block text-[10px] font-grotesk font-bold uppercase tracking-wider text-gray-500 mb-2">
+                                        {String(index + 1).padStart(2, '0')}
+                                    </span>
+                                    <h4 className="text-base font-grotesk font-bold text-black mb-2">{point.label}</h4>
+                                    <p className="text-sm font-inter text-gray-600 leading-relaxed">{point.desc}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

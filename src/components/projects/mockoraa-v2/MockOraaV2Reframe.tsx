@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 export default function MockOraaV2Reframe() {
     const [isVisible, setIsVisible] = useState(false);
@@ -9,73 +10,43 @@ export default function MockOraaV2Reframe() {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
+                if (entry.isIntersecting) setIsVisible(true);
             },
             { threshold: 0.1 }
         );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
+        if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
     }, []);
 
-    const causes = [
-        { icon: '🚫', title: 'Generic Q&A' },
-        { icon: '📉', title: 'No Behavioral Scoring' },
-        { icon: '😰', title: 'Emotional Stress' },
-        { icon: '🔄', title: 'No Feedback Loop' }
-    ];
-
     return (
-        <section ref={sectionRef} className="py-24 bg-gray-50">
-            <div className="max-w-6xl mx-auto px-8">
-                <h2 className="text-5xl font-semibold text-center mb-16 tracking-tight">
-                    Reframing the Challenge
-                </h2>
-                
-                <div className={`flex flex-col lg:flex-row justify-center items-center gap-8 mb-16 transition-all duration-1000 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}>
-                    {/* Old Way */}
-                    <div className="bg-white p-12 rounded-xl w-full lg:w-80 text-center relative shadow-sm border-2 border-gray-200 opacity-70 hover:translate-y-1 transition-transform">
-                        <span className="block text-xs uppercase tracking-wider text-gray-500 mb-4">The Assumption</span>
-                        <h3 className="text-2xl font-semibold mb-4">&ldquo;A Knowledge Gap&rdquo;</h3>
-                        <p className="text-gray-600 mb-6">How might we train users to know more answers?</p>
-                        <div className="text-3xl text-gray-400">✕</div>
+        <section ref={sectionRef} className="py-16 sm:py-20 md:py-24 bg-white">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-6xl mx-auto">
+                    <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">04. Strategy & Ideation</p>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-6">Finding the Opportunity Space</h2>
+                    <p className="text-base sm:text-lg font-inter text-gray-600 mb-10 leading-relaxed">
+                        We mapped the emotional journey of candidates from application to rejection. The lowest emotional point occurs exactly when feedback is withheld. Competitors like Huru.ai and InterviewBuddy focus heavily on basic video recording, but miss the mark on contextual intelligence and psychological safety.                    </p>
+
+                    {/* User Journey Map */}
+                    <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                        <div className="relative max-w-5xl mx-auto rounded-lg overflow-hidden mb-12" style={{ minHeight: '360px' }}>
+                            <Image
+                                src="/images/projects/mockoraa/user-journey.webp"
+                                alt="User Journey Map"
+                                width={1200}
+                                height={600}
+                                className="object-contain w-full h-auto"
+                            />
+                        </div>
                     </div>
 
-                    {/* Arrow */}
-                    <div className="flex flex-col items-center text-gray-600 font-medium">
-                        <span className="mb-2">Shift</span>
-                        <div className="text-3xl">→</div>
-                    </div>
-
-                    {/* New Way */}
-                    <div className="bg-white p-12 rounded-xl w-full lg:w-80 text-center relative shadow-lg border-2 border-black transform scale-105 hover:translate-y-1 transition-transform">
-                        <span className="block text-xs uppercase tracking-wider text-gray-500 mb-4">The Reality</span>
-                        <h3 className="text-2xl font-semibold mb-4">&ldquo;A Performance Gap&rdquo;</h3>
-                        <p className="text-gray-800 font-medium mb-6">
-                            How might we create a psychologically safe space to practice performance?
-                        </p>
-                        <div className="text-3xl text-black">✓</div>
-                    </div>
-                </div>
-
-                <div className={`bg-white p-12 border border-gray-200 rounded-xl transition-all duration-1000 delay-300 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                }`}>
-                    <h3 className="text-center text-2xl font-semibold mb-8">Solving for Root Causes</h3>
-                    <div className="flex justify-around flex-wrap gap-8">
-                        {causes.map((cause, index) => (
-                            <div key={index} className="text-center w-36">
-                                <span className="block text-4xl mb-2">{cause.icon}</span>
-                                <p className="font-medium">{cause.title}</p>
-                            </div>
-                        ))}
+                    {/* How Might We */}
+                    <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                        <div className="border border-gray-200 rounded-lg p-8 sm:p-10 bg-gray-50">
+                            <h3 className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">THE &ldquo;HOW MIGHT WE&rdquo;</h3>
+                            <p className="text-xl sm:text-2xl md:text-3xl font-grotesk font-bold text-black leading-snug">
+                                How might we help job seekers practice realistic interviews and receive actionable, non-judgmental feedback so they can build measurable confidence?                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

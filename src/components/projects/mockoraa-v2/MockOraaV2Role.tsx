@@ -44,12 +44,17 @@ const MockOraaV2Role: React.FC = () => {
         <section className="py-16 sm:py-20 md:py-24 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
+                    <div className="mb-12 sm:mb-16">
+                        <div className="inline-block bg-gray-100 rounded-full px-4 py-2 mb-6">
+                            <span className="text-xs sm:text-sm font-grotesk font-bold text-[#202022] uppercase tracking-wider">01 — My Role</span>
+                        </div>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6">
+                            My Role
+                        </h2>
+                    </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* My Role Section */}
                         <div>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8">
-                                My Role
-                            </h2>
                             <div className="space-y-6">
                                 {roles.map((role, index) => (
                                     <div key={index} className="flex items-start gap-4">
@@ -73,7 +78,7 @@ const MockOraaV2Role: React.FC = () => {
 
                         {/* Approach Section */}
                         <div>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8">
+                            <h2 className="text-2xl sm:text-3xl font-grotesk font-bold text-black mb-8">
                                 Approach
                             </h2>
                             <div className="space-y-6">

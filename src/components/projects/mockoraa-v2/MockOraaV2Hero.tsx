@@ -8,12 +8,9 @@ interface MockOraaV2HeroProps {
     data: {
         title: string;
         subtitle: string;
-        image: string;
+        image?: string;
+        youtubeVideoId?: string;
         tags: string[];
-        metrics?: {
-            value: string;
-            label: string;
-        }[];
         prototypeLink?: string;
         projectStatement?: string;
     };
@@ -21,10 +18,10 @@ interface MockOraaV2HeroProps {
 
 const MockOraaV2Hero: React.FC<MockOraaV2HeroProps> = ({ data }) => {
     return (
-        <section className="pt-8 md:pt-8">
+        <section className="pt-6 md:pt-8 pb-4 min-h-0">
             <div className="container-custom px-4 sm:px-6 mb-0">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 items-center gap-12 lg:gap-16 lg:grid-cols-2">
+                    <div className="grid grid-cols-1 items-center gap-8 lg:gap-12 lg:grid-cols-2">
                         {/* Left Content */}
                         <div className="order-2 lg:order-1">
                             {/* Tags */}
@@ -41,33 +38,14 @@ const MockOraaV2Hero: React.FC<MockOraaV2HeroProps> = ({ data }) => {
                             </div>
 
                             {/* Title */}
-                            <h1 className="text-5xl sm:text-6xl md:text-7xl font-grotesk font-bold text-[#202022] mb-4 leading-tight">
+                            <h1 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-[#202022] mb-3 leading-tight">
                                 {data.title}
                             </h1>
 
                             {/* Subtitle */}
-                            <p className="text-base sm:text-lg md:text-xl font-inter text-gray-600 mb-10 leading-relaxed">
+                            <p className="text-sm sm:text-base md:text-lg font-inter text-gray-600 mb-6 leading-relaxed">
                                 {data.subtitle}
                             </p>
-
-                            {/* Metrics */}
-                            {data.metrics && (
-                                <div className="grid grid-cols-3 gap-4 mb-8">
-                                    {data.metrics.map((metric, index) => (
-                                        <div
-                                            key={index}
-                                            className="bg-white border-2 border-[#202022] p-4 text-center"
-                                        >
-                                            <div className="text-3xl sm:text-4xl font-grotesk font-bold text-[#202022] mb-1">
-                                                {metric.value}
-                                            </div>
-                                            <div className="text-[10px] sm:text-xs font-inter text-gray-600 leading-tight">
-                                                {metric.label}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
 
                             {/* Project Statement */}
                             {data.projectStatement && (
@@ -90,17 +68,29 @@ const MockOraaV2Hero: React.FC<MockOraaV2HeroProps> = ({ data }) => {
                             )}
                         </div>
 
-                        {/* Right Image */}
+                        {/* Right: YouTube video or image */}
                         <div className="order-1 lg:order-2">
-                            <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px]">
-                                <Image
-                                    src={data.image}
-                                    alt={data.title}
-                                    fill
-                                    className="object-contain"
-                                    priority
-                                />
-                            </div>
+                            {data.youtubeVideoId ? (
+                                <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-100">
+                                    <iframe
+                                        src={`https://www.youtube.com/embed/${data.youtubeVideoId}`}
+                                        title="MockOraa video"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className="absolute inset-0 w-full h-full"
+                                    />
+                                </div>
+                            ) : data.image ? (
+                                <div className="relative w-full h-[320px] sm:h-[380px] md:h-[420px]">
+                                    <Image
+                                        src={data.image}
+                                        alt={data.title}
+                                        fill
+                                        className="object-contain"
+                                        priority
+                                    />
+                                </div>
+                            ) : null}
                         </div>
                     </div>
                 </div>

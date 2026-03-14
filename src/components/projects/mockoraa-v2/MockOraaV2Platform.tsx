@@ -1,165 +1,130 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import { Video, TrendingUp, Heart, User, Shield } from 'lucide-react';
+
+const solutions = [
+    {
+        title: 'AI Powered Mock Interviews',
+        challenge: '92% of candidates face interview anxiety and lack realistic practice environments.',
+        solution: 'AI powered mock interviews simulate role specific conversations with adaptive questioning and real time feedback.',
+        result: 'Users gain realistic interview exposure, helping reduce anxiety and improve interview readiness.',
+        icon: Video,
+        image: '/images/projects/mockoraa/mockoraa-02.webp',
+    },
+    {
+        title: 'Progress Tracking & Readiness Score',
+        challenge: 'Users struggle to understand whether their interview preparation is improving.',
+        solution: 'A performance dashboard tracks session results and generates an interview readiness score.',
+        result: 'Users clearly track progress over time, leading to higher engagement and consistent preparation.',
+        icon: TrendingUp,
+        image: '/images/projects/mockoraa/mockoraa-03.webp',
+    },
+    {
+        title: 'Role Based Interview Preparation',
+        challenge: 'Generic interview tools fail to prepare candidates for role specific interview scenarios.',
+        solution: 'Structured interview paths tailored for fresher, mid level, and experienced roles.',
+        result: 'Role confusion reduced by 40% and users practiced more relevant interview scenarios.',
+        icon: User,
+        image: '/images/projects/mockoraa/mockoraa-05.webp',
+    },
+    {
+        title: 'Confidence Focused Feedback',
+        challenge: 'Traditional feedback focuses only on answers rather than communication confidence.',
+        solution: 'Supportive feedback that highlights strengths and provides actionable improvement tips.',
+        result: 'Users reported higher clarity and achieved a CSAT score of 4.4/5 during testing.',
+        icon: Heart,
+        image: '/images/projects/mockoraa/mockoraa-03.webp',
+    },
+    {
+        title: 'Safe Practice Environment',
+        challenge: 'Fear of failure prevents many candidates from practicing interviews frequently.',
+        solution: 'A private mock interview environment with replay and self review capabilities.',
+        result: 'Practice sessions increased and task completion rates improved by 32% after design iterations.',
+        icon: Shield,
+        image: '/images/projects/mockoraa/mockoraa-01.webp',
+    },
+];
 
 export default function MockOraaV2Platform() {
     const [isVisible, setIsVisible] = useState(false);
-    const [activeFeature, setActiveFeature] = useState('img-avatar');
     const sectionRef = useRef<HTMLElement>(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
+                if (entry.isIntersecting) setIsVisible(true);
             },
             { threshold: 0.1 }
         );
-
-        if (sectionRef.current) {
-            observer.observe(sectionRef.current);
-        }
-
+        if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
     }, []);
 
-    const features = [
-        {
-            id: 'img-avatar',
-            number: '01',
-            title: 'AI Avatar Interview',
-            description: 'Dynamic questioning, Natural tone synthesis, Context aware interaction.',
-            uxFocus: 'UX Focus: Distraction free interface'
-        },
-        {
-            id: 'img-feedback',
-            number: '02',
-            title: 'Live Feedback Overlay',
-            description: 'Non intrusive pace alerts, Filler detection, Clarity indicators during speech.',
-            uxFocus: 'UX Focus: Real time insight without cognitive overload'
-        },
-        {
-            id: 'img-dashboard',
-            number: '03',
-            title: 'Post Session Dashboard',
-            description: 'Structured scoring, Strength breakdown, Improvement roadmap with actionable steps.',
-            uxFocus: 'UX Focus: Scannable layout & Progress motivation'
-        }
-    ];
-
-    const renderMockup = () => {
-        switch (activeFeature) {
-            case 'img-avatar':
-                return (
-                    <div className="flex flex-col items-center justify-center h-full">
-                        <div className="w-24 h-24 bg-gray-600 rounded-full mb-4"></div>
-                        <div className="flex gap-1 mb-4">
-                            {[...Array(8)].map((_, i) => (
-                                <div key={i} className="w-1 bg-green-400 rounded-full animate-pulse" style={{ height: Math.random() * 20 + 10 }}></div>
-                            ))}
-                        </div>
-                        <div className="text-center text-gray-600 text-sm">AI Avatar Speaking...</div>
-                    </div>
-                );
-            case 'img-feedback':
-                return (
-                    <div className="p-4">
-                        <div className="bg-yellow-100 border-l-4 border-yellow-400 p-3 mb-3 text-sm">
-                            <div className="font-medium text-yellow-800">Pace Alert</div>
-                            <div className="text-yellow-700">Speaking a bit fast - try slowing down</div>
-                        </div>
-                        <div className="bg-blue-100 border-l-4 border-blue-400 p-3 mb-3 text-sm">
-                            <div className="font-medium text-blue-800">Clarity Score: 85%</div>
-                            <div className="text-blue-700">Good articulation</div>
-                        </div>
-                        <div className="bg-green-100 border-l-4 border-green-400 p-3 text-sm">
-                            <div className="font-medium text-green-800">Confidence Level: High</div>
-                        </div>
-                    </div>
-                );
-            case 'img-dashboard':
-                return (
-                    <div className="p-4 space-y-4">
-                        <div className="text-center mb-4">
-                            <div className="text-2xl font-bold text-green-600">78/100</div>
-                            <div className="text-sm text-gray-600">Overall Score</div>
-                        </div>
-                        <div className="space-y-2">
-                            <div className="flex justify-between items-center">
-                                <span className="text-sm">Technical Knowledge</span>
-                                <div className="w-20 bg-gray-200 rounded-full h-2">
-                                    <div className="bg-green-500 h-2 rounded-full w-4/5"></div>
-                                </div>
-                            </div>
-                            <div className="flex justify-between items-center">
-                                <span className="text-sm">Communication</span>
-                                <div className="w-20 bg-gray-200 rounded-full h-2">
-                                    <div className="bg-blue-500 h-2 rounded-full w-3/5"></div>
-                                </div>
-                            </div>
-                            <div className="flex justify-between items-center">
-                                <span className="text-sm">Confidence</span>
-                                <div className="w-20 bg-gray-200 rounded-full h-2">
-                                    <div className="bg-purple-500 h-2 rounded-full w-4/5"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                );
-            default:
-                return null;
-        }
-    };
-
     return (
-        <section ref={sectionRef} className="py-24 bg-slate-900 text-white">
-            <div className="max-w-6xl mx-auto px-8">
-                <h2 className="text-5xl font-semibold text-center mb-16 tracking-tight">
-                    From Simulation to Scalable Platform
-                </h2>
-                
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    {/* Left: Feature List */}
-                    <div className="space-y-6">
-                        {features.map((feature, index) => (
-                            <div 
-                                key={feature.id}
-                                className={`cursor-pointer p-6 rounded-lg transition-all duration-300 ${
-                                    activeFeature === feature.id 
-                                        ? 'bg-white text-black' 
-                                        : 'hover:bg-white/5'
-                                } ${isVisible ? `opacity-100 translate-y-0 delay-${index * 100}` : 'opacity-0 translate-y-8'}`}
-                                onClick={() => setActiveFeature(feature.id)}
+        <section ref={sectionRef} className="py-16 sm:py-20 md:py-24 bg-white">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-6xl mx-auto">
+                    <div className="mb-16 sm:mb-20 text-center">
+                        <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">07. The solution</p>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
+                            The Core Experience
+                        </h2>
+                        <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                            Every pixel is optimized to balance realism with safety. The UI gets out of the way, allowing the conversation to take center stage.
+                        </p>
+                    </div>
+
+                    <div className="relative">
+                        {solutions.map((solution, index) => (
+                            <div
+                                key={index}
+                                className={`sticky top-20 mb-8 last:mb-0 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                                style={{ zIndex: index + 1, transitionDelay: `${index * 80}ms` }}
                             >
-                                <h3 className="text-xl font-semibold mb-2">
-                                    {feature.number}. {feature.title}
-                                </h3>
-                                <p className="mb-3 opacity-80">{feature.description}</p>
-                                <div className="text-sm font-medium opacity-70">
-                                    {feature.uxFocus}
+                                <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
+                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                                        <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
+                                            <div className="mb-4">
+                                                {(() => {
+                                                    const Icon = solution.icon;
+                                                    return <Icon className="w-10 h-10 text-black" />;
+                                                })()}
+                                            </div>
+                                            <h3 className="text-2xl sm:text-3xl font-grotesk font-bold text-black mb-6">
+                                                {solution.title}
+                                            </h3>
+                                            <div className="space-y-4">
+                                                <div>
+                                                    <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-500 mb-1">Challenge</p>
+                                                    <p className="text-base font-inter text-gray-700 leading-relaxed">{solution.challenge}</p>
+                                                </div>
+                                                <div>
+                                                    <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-500 mb-1">Solution</p>
+                                                    <p className="text-base font-inter text-gray-700 leading-relaxed">{solution.solution}</p>
+                                                </div>
+                                                <div>
+                                                    <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-500 mb-1">Result</p>
+                                                    <p className="text-base font-inter text-gray-700 leading-relaxed">{solution.result}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                                            <div className="relative w-full h-[350px] sm:h-[450px] bg-gray-100 rounded-xl overflow-hidden">
+                                                <Image
+                                                    src={solution.image}
+                                                    alt={solution.title}
+                                                    fill
+                                                    className="object-contain"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         ))}
-                    </div>
-
-                    {/* Right: Screen Mockup */}
-                    <div className={`transition-all duration-1000 delay-300 ${
-                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                    }`}>
-                        <div className="bg-white rounded-lg shadow-2xl overflow-hidden">
-                            {/* Screen Header */}
-                            <div className="bg-gray-100 px-4 py-3 flex items-center gap-2">
-                                <div className="w-3 h-3 bg-red-400 rounded-full"></div>
-                                <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                                <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                            </div>
-                            
-                            {/* Screen Content */}
-                            <div className="h-80 bg-white text-black">
-                                {renderMockup()}
-                            </div>
-                        </div>
+                        <div className="h-[50vh]" aria-hidden="true" />
                     </div>
                 </div>
             </div>
