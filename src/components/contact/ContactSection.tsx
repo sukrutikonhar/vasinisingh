@@ -84,8 +84,8 @@ const ContactSection: React.FC = () => {
     };
 
     const socialLinks = [
-        { name: 'Twitter', icon: 'mdi:twitter', url: '#' },
-        { name: 'Facebook', icon: 'mdi:facebook', url: '#' },
+        { name: 'X', icon: 'simple-icons:x', url: '#' },
+        { name: 'Medium', icon: 'simple-icons:medium', url: '#' },
         { name: 'LinkedIn', icon: 'mdi:linkedin', url: '#' },
         { name: 'Instagram', icon: 'mdi:instagram', url: '#' }
     ];
@@ -115,10 +115,11 @@ const ContactSection: React.FC = () => {
                                         href={social.url}
                                         className="flex items-center gap-2 group"
                                     >
-                                        <div className="w-8 h-8 rounded-full flex items-center justify-center group-hover:bg-black transition-all bg-gray-200">
+                                        <div className="w-8 h-8 rounded-full flex items-center justify-center bg-gray-200 group-hover:bg-black text-gray-900 group-hover:text-white transition-all duration-200 [&_.iconify]:shrink-0">
                                             <Icon
                                                 icon={social.icon}
-                                                className="w-4 h-4 text-black group-hover:text-white transition-colors"
+                                                className="w-4 h-4 [&_svg]:w-full [&_svg]:h-full"
+                                                style={{ color: 'currentColor' }}
                                             />
                                         </div>
                                         <span className="text-xs sm:text-sm font-inter text-gray-800 group-hover:font-semibold transition-all">

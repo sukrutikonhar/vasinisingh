@@ -1,9 +1,7 @@
 import MinimalLayout from '@/components/layout/MinimalLayout';
 import CaseStudyHero from '@/components/projects/CaseStudyHero';
 import MockOraaV2Overview from '@/components/projects/mockoraa-v2/MockOraaV2Overview';
-import MockOraaV2Role from '@/components/projects/mockoraa-v2/MockOraaV2Role';
 import MockOraaV2Problem from '@/components/projects/mockoraa-v2/MockOraaV2Problem';
-import MockOraaV2Summary from '@/components/projects/mockoraa-v2/MockOraaV2Summary';
 import MockOraaV2Research from '@/components/projects/mockoraa-v2/MockOraaV2Research';
 import MockOraaV2Audience from '@/components/projects/mockoraa-v2/MockOraaV2Audience';
 import MockOraaV2Reframe from '@/components/projects/mockoraa-v2/MockOraaV2Reframe';
@@ -14,9 +12,9 @@ import MockOraaV2Iterations from '@/components/projects/mockoraa-v2/MockOraaV2It
 import MockOraaV2System from '@/components/projects/mockoraa-v2/MockOraaV2System';
 import MockOraaV2Metrics from '@/components/projects/mockoraa-v2/MockOraaV2Metrics';
 import MockOraaV2Final from '@/components/projects/mockoraa-v2/MockOraaV2Final';
-import MockOraaV2Teams from '@/components/projects/mockoraa-v2/MockOraaV2Teams';
 import PrevNextProject from '@/components/projects/PrevNextProject';
-
+import Gallery from '@/components/projects/mockoraa/Gallery';
+import CTASection from '@/components/projects/mockoraa/CTASection';
 export const metadata = {
     title: 'MockOraa - AI-Driven Interview Intelligence | Case Study | Vasini Singh',
     description: 'MockOraa is an AI powered mock interview platform designed to transform interview anxiety into measurable performance improvement.',
@@ -46,6 +44,8 @@ export default function MockOraaV2Project() {
             <MockOraaV2System />
             <MockOraaV2Metrics />
             <MockOraaV2Final />
+            <Gallery />
+            <CTASection />
             <PrevNextProject nextSlug="ecoprism" nextTitle="ecoPRISM" />
         </MinimalLayout>
     );

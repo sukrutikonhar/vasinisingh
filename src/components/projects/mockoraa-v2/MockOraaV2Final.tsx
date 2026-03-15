@@ -1,7 +1,6 @@
 'use client';
 
-import Button from "@/components/ui/Button";
-import { Brain, Code, Heart, Link, LinkIcon } from "lucide-react";
+import { Brain, Code, Heart } from "lucide-react";
 import React from "react";
 
 export default function MockOraaV2Final() {

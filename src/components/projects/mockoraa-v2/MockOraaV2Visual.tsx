@@ -48,9 +48,6 @@ export default function MockOraaV2Visual() {
                     >
                         <div className="p-8 sm:p-10 md:p-12">
                             {/* Header */}
-                            <p className="text-xs font-grotesk font-bold uppercase tracking-wider mb-1" style={{ color: designTokens.primary }}>
-                                THE ENGINE — WEEKS 3-4
-                            </p>
                             <h3 className="text-2xl sm:text-3xl font-grotesk font-bold mb-8" style={{ color: designTokens.text }}>
                                 Design System: &ldquo;Deep Sea&rdquo;
                             </h3>

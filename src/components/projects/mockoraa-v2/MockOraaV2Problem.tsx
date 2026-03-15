@@ -46,7 +46,7 @@ export default function MockOraaV2Problem() {
                         ))}
                     </div>
 
-                    <div className="bg-gray-50 border border-gray-100 p-8 rounded-lg">
+                    <div className="bg-gray-50 border border-red-500 bg-red-500/10 p-8 rounded-lg border-l-4 border-red-500 shadow-md">
                         <p className="text-xl sm:text-2xl font-grotesk font-bold text-black mb-4">
                             Why Current Solutions Fail to Address the Problem?
                         </p>
