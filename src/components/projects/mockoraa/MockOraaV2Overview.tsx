@@ -26,7 +26,7 @@ const MockOraaV2Overview: React.FC = () => {
                                 Timeline & Team
                             </div>
                             <div className="text-lg font-grotesk font-bold">
-                                6 Weeks
+                                8 Weeks
                             </div>
                             <div className="text-sm font-inter text-gray-600 mt-1 leading-relaxed">
                                 8 Cross-functional members

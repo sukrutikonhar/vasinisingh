@@ -23,7 +23,8 @@ export default function MockOraaV2Metrics() {
                             Measurable Success
                         </h2>
                         <p className="text-base sm:text-lg font-inter text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            The final prototype successfully bridged the gap between human anxiety and structured learning, proving that confidence can be engineered through good design.                        </p>
+                            The final prototype successfully bridged the gap between human anxiety and structured learning, proving that confidence can be engineered through good design.
+                        </p>
                     </div>
 
                     {/* Top metrics */}
@@ -42,7 +43,7 @@ export default function MockOraaV2Metrics() {
 
                     {/* Business Impact + Future Roadmap */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                        <div>
+                        <div className="bg-white p-8 rounded-lg border border-gray-200">
                             <h3 className="text-xl font-grotesk font-bold text-black mb-6">Business Potential</h3>
                             <p className="text-sm font-inter text-gray-700 leading-relaxed">
                                 MockOraa targets a massive market of 10M+ fresh graduates and career-gap professionals. The scalable cloud-native architecture allows for a freemium B2C model alongside B2B licensing for university placement cells.

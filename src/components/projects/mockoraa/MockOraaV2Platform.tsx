@@ -80,38 +80,38 @@ export default function MockOraaV2Platform() {
                         {solutions.map((solution, index) => (
                             <div
                                 key={index}
-                                className={`sticky top-20 mb-8 last:mb-0 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                                className={`lg:sticky lg:top-20 mb-8 sm:mb-12 last:mb-0 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                                 style={{ zIndex: index + 1, transitionDelay: `${index * 80}ms` }}
                             >
-                                <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
-                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                                <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-6 sm:p-8 md:p-12 border border-gray-200 hover:shadow-2xl transition-shadow">
+                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
                                         <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                                             <div className="mb-4">
                                                 {(() => {
                                                     const Icon = solution.icon;
-                                                    return <Icon className="w-10 h-10 text-black" />;
+                                                    return <Icon className="w-8 sm:w-10 h-8 sm:h-10 text-black" />;
                                                 })()}
                                             </div>
-                                            <h3 className="text-2xl sm:text-3xl font-grotesk font-bold text-black mb-6">
+                                            <h3 className="text-xl sm:text-2xl md:text-3xl font-grotesk font-bold text-black mb-5 sm:mb-6">
                                                 {solution.title}
                                             </h3>
-                                            <div className="space-y-4">
+                                            <div className="space-y-4 sm:space-y-5">
                                                 <div>
-                                                    <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-500 mb-1">Challenge</p>
-                                                    <p className="text-base font-inter text-gray-700 leading-relaxed">{solution.challenge}</p>
+                                                    <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-red-500 mb-1">Challenge</p>
+                                                    <p className="text-sm sm:text-base font-inter text-gray-700 leading-relaxed">{solution.challenge}</p>
                                                 </div>
                                                 <div>
                                                     <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-500 mb-1">Solution</p>
-                                                    <p className="text-base font-inter text-gray-700 leading-relaxed">{solution.solution}</p>
+                                                    <p className="text-sm sm:text-base font-inter text-gray-700 leading-relaxed">{solution.solution}</p>
                                                 </div>
                                                 <div>
-                                                    <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-500 mb-1">Result</p>
-                                                    <p className="text-base font-inter text-gray-700 leading-relaxed">{solution.result}</p>
+                                                    <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-green-500 mb-1">Result</p>
+                                                    <p className="text-sm sm:text-base font-inter text-gray-700 leading-relaxed">{solution.result}</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                                            <div className="relative w-full h-[350px] sm:h-[450px] bg-gray-100 rounded-xl overflow-hidden">
+                                            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] bg-gray-100 rounded-lg sm:rounded-xl overflow-hidden">
                                                 <Image
                                                     src={solution.image}
                                                     alt={solution.title}
@@ -124,7 +124,7 @@ export default function MockOraaV2Platform() {
                                 </div>
                             </div>
                         ))}
-                        <div className="h-[50vh]" aria-hidden="true" />
+                        <div className="hidden lg:block h-[50vh]" aria-hidden="true" />
                     </div>
                 </div>
             </div>

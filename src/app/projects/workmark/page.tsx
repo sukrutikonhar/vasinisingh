@@ -49,7 +49,7 @@ export default function WorkmarkProject() {
             <NewCategory />
             <BeyondPerformanceReviews />
             <WorkmarkCTA />
-            <PrevNextProject prevSlug="mockoraa-v2" prevTitle="MockOraa" nextSlug="ecoprism" nextTitle="ecoPRISM" />
+            <PrevNextProject prevSlug="mockoraa" prevTitle="MockOraa" nextSlug="ecoprism" nextTitle="ecoPRISM" />
         </MinimalLayout>
     );
 }

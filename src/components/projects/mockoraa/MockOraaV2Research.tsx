@@ -43,16 +43,16 @@ export default function MockOraaV2Research() {
                         <span className="text-sm font-inter text-gray-500">— Mid-level Engineer during user interviews</span>
                     </div>
 
-                    {/* FigJam board embed - fits in one viewport (pan & zoom inside embed) */}
+                    {/* FigJam board embed - responsive height */}
                     <div className={`mb-10 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                         <div className="mb-3">
                             <h3 className="text-lg font-grotesk font-bold text-black mb-1">Our FigJam Workspace</h3>
                             <p className="text-sm font-inter text-gray-600 leading-relaxed max-w-3xl">
-                                Explore our ideation session—pan and zoom to explore the board.
+                                Pan and zoom to explore the board.
                             </p>
                         </div>
-                        <div className="rounded-xl overflow-hidden border border-gray-200 bg-gray-50 shadow-sm">
-                            <div className="relative w-full h-[85vh]">
+                        <div className="rounded-lg sm:rounded-xl overflow-hidden border border-gray-200 bg-gray-50 shadow-sm">
+                            <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[75vh] lg:h-[85vh]">
                                 <iframe
                                     title="MockOraa FigJam board - Research & ideation"
                                     src="https://embed.figma.com/board/iWB7jm6lJYCobWR81d7iLG/MockOraa-Figjam?embed-host=vasini-portfolio&viewport-controls=1"
@@ -61,7 +61,6 @@ export default function MockOraaV2Research() {
                                 />
                             </div>
                         </div>
-                        <p className="text-xs font-inter text-gray-400 mt-1.5">Research synthesis & affinity mapping</p>
                     </div>
 
                     {/* Key Research Insights - card grid to match theme */}

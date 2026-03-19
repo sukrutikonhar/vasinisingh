@@ -39,7 +39,7 @@ export default function ArreglioProject() {
             <ReflectionLearnings />
             <Gallery />
             <CTASection />
-            <PrevNextProject prevSlug="ecoprism" prevTitle="ecoPRISM" />
+            <PrevNextProject prevSlug="ecoprism" prevTitle="ecoPRISM" nextSlug="mockoraa" nextTitle="MockOraa" />
         </MinimalLayout>
     );
 }

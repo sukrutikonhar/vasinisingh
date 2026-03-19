@@ -78,28 +78,28 @@ const Solutions: React.FC = () => {
                         {solutions.map((solution, index) => (
                             <div
                                 key={index}
-                                className="sticky top-20 mb-8 last:mb-0"
+                                className="lg:sticky lg:top-20 mb-8 sm:mb-12 last:mb-0"
                                 style={{ zIndex: index + 1 }}
                             >
-                                <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
-                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                                <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-6 sm:p-8 md:p-12 border border-gray-200">
+                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
                                         {/* Content */}
                                         <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                                             <div className="mb-4">
                                                 {React.createElement(solution.icon, {
-                                                    className: "w-10 h-10 text-black"
+                                                    className: "w-8 sm:w-10 h-8 sm:h-10 text-black"
                                                 })}
                                             </div>
-                                            <h3 className="text-lg sm:text-xl font-grotesk font-bold text-black mb-6">
+                                            <h3 className="text-lg sm:text-xl md:text-2xl font-grotesk font-bold text-black mb-5 sm:mb-6">
                                                 {solution.title}
                                             </h3>
 
-                                            <div className="space-y-6 mb-8">
+                                            <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
                                                 <div>
                                                     <h4 className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-2">
                                                         Problem Identified
                                                     </h4>
-                                                    <p className="text-base font-inter text-gray-700 leading-relaxed">
+                                                    <p className="text-sm sm:text-base font-inter text-gray-700 leading-relaxed">
                                                         {solution.problem}
                                                     </p>
                                                 </div>
@@ -108,7 +108,7 @@ const Solutions: React.FC = () => {
                                                     <h4 className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-2">
                                                         My Design Approach
                                                     </h4>
-                                                    <p className="text-base font-inter text-gray-700 leading-relaxed">
+                                                    <p className="text-sm sm:text-base font-inter text-gray-700 leading-relaxed">
                                                         {solution.approach}
                                                     </p>
                                                 </div>
@@ -118,13 +118,13 @@ const Solutions: React.FC = () => {
                                                 <h4 className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-3">
                                                     Impact
                                                 </h4>
-                                                <div className="flex gap-8">
+                                                <div className="flex gap-6 sm:gap-8">
                                                     {solution.metrics.map((metric, idx) => (
                                                         <div key={idx}>
-                                                            <div className="text-3xl sm:text-4xl font-grotesk font-bold text-[#202022] mb-2">
+                                                            <div className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-[#202022] mb-2">
                                                                 {metric.value}
                                                             </div>
-                                                            <p className="text-sm font-inter text-gray-600">
+                                                            <p className="text-xs sm:text-sm font-inter text-gray-600">
                                                                 {metric.label}
                                                             </p>
                                                         </div>
@@ -135,7 +135,7 @@ const Solutions: React.FC = () => {
 
                                         {/* Image */}
                                         <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                                            <div className="relative w-full h-[350px] sm:h-[450px] bg-gray-100 rounded-xl overflow-hidden">
+                                            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] bg-gray-100 rounded-lg sm:rounded-xl overflow-hidden">
                                                 <Image
                                                     src={solution.image}
                                                     alt={solution.title}
@@ -148,8 +148,8 @@ const Solutions: React.FC = () => {
                                 </div>
                             </div>
                         ))}
-                        {/* Spacer to allow last card to stick */}
-                        <div className="h-[50vh]"></div>
+                        {/* Spacer to allow last card to stick - only visible on lg+ */}
+                        <div className="hidden lg:block h-[50vh]"></div>
                     </div>
                 </div>
             </div>

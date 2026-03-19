@@ -43,18 +43,18 @@ const ProjectsGrid: React.FC = () => {
             role: 'Foundation Designer',
             tools: ['Adobe XD', 'Miro', 'Notion']
         },
-        {
-            id: 5,
-            title: 'workmark',
-            slug: 'workmark',
-            tagline: 'Making Invisible Work Visible',
-            description: 'A product design case study focused on surfacing unrecognized contributions and improving internal collaboration, accountability, and employee recognition.',
-            image: '/images/projects/workmark/workmark-hero.webp',
-            year: '2024',
-            tags: ['Product Design', 'UX Research', 'CASE STUDY'],
-            role: 'Product Designer, UX Researcher',
-            tools: ['Figma', 'Notion', 'Protopie']
-        }
+        // {
+        //     id: 5,
+        //     title: 'Workmark',
+        //     slug: 'workmark',
+        //     tagline: 'Making Invisible Work Visible',
+        //     description: 'A product design case study focused on surfacing unrecognized contributions and improving internal collaboration, accountability, and employee recognition.',
+        //     image: '/images/projects/workmark/workmark-hero.webp',
+        //     year: '2025',
+        //     tags: ['Product Design', 'UX Research', 'CASE STUDY'],
+        //     role: 'Product Designer, UX Researcher',
+        //     tools: ['Figma', 'Notion', 'Protopie']
+        // }
     ];
 
     const inProgressProjects = [
