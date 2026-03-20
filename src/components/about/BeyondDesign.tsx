@@ -1,66 +1,69 @@
 'use client';
 
 import React from 'react';
-import { Camera, Plane, Coffee, Heart } from 'lucide-react';
+import Image from 'next/image';
 
 const BeyondDesign: React.FC = () => {
-    const interests = [
-        {
-            icon: Camera,
-            title: 'Photography',
-            description: 'Capturing moments and stories through my lens.'
-        },
-        {
-            icon: Plane,
-            title: 'Travel',
-            description: 'Exploring new cultures and learning from diverse perspectives.'
-        },
-        {
-            icon: Coffee,
-            title: 'Coffee Culture',
-            description: 'Discovering local cafés and ideas over good coffee.'
-        },
-        {
-            icon: Heart,
-            title: 'Advocacy & Impact',
-            description: 'Advocating for acid attack survivors with Chhanv Foundation\'s POSH Committee.'
-        }
-    ];
-
     return (
-        <section className="py-32 bg-gray-50">
-            <div className="container-custom">
-                <div className="max-w-6xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl sm:text-5xl font-grotesk font-bold text-black mb-6">
-                            Beyond Design
-                        </h2>
-                        <p className="text-xl font-inter text-gray-600 max-w-2xl mx-auto">
-                            What fuels my creativity and keeps me inspired outside of work
+        <section className="py-24 sm:py-28 md:py-32 bg-[#111] text-white">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                        <div className="max-w-xl">
+                            <div className="text-xs sm:text-sm font-inter uppercase tracking-[0.22em] text-gray-500 mb-4">
+                                BEYOND DESIGN
+                            </div>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold leading-[1.02]">
+                                The experiences that shape how I see people
+                            </h2>
+                        </div>
+
+                        <p className="text-sm sm:text-base md:text-lg font-inter text-gray-300 leading-relaxed pt-2">
+                            The way I design is deeply influenced by what I notice outside of work. These interests keep me observant, grounded, and connected to the human side of every product experience.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {interests.map((interest, index) => (
-                            <div
-                                key={index}
-                                className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all group rounded-lg shadow-subtle"
-                            >
-                                <div className="flex items-start gap-6">
-                                    <div className="w-16 h-16 bg-black flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                                        {React.createElement(interest.icon, {
-                                            className: "w-8 h-8 text-white"
-                                        })}
-                                    </div>
-                                    <div>
-                                        <h3 className="text-2xl font-grotesk font-bold text-black mb-3">
-                                            {interest.title}
-                                        </h3>
-                                        <p className="font-inter text-gray-700 leading-relaxed">
-                                            {interest.description}
-                                        </p>
+                    {/* Interest cards */}
+                    <div className="mt-14 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8">
+                        {[
+                            {
+                                image: '/images/about-us/story-05.webp',
+                                title: 'Photography',
+                                description: 'Photography sharpens my attention to detail, composition, and human moments that often go unnoticed.',
+                            },
+                            {
+                                image: '/images/about-us/vasini-06.webp',
+                                title: 'Travel',
+                                description: 'Travel broadens my perspective and reminds me that people experience the world and technology in different ways.',
+                            },
+                            {
+                                image: '/images/about-us/story-04.webp',
+                                title: 'Coffee Culture',
+                                description: 'Slow conversations over coffee often inspire ideas, reflection, and deeper thinking.',
+                            },
+                            {
+                                image: '/images/about-us/about-04.webp',
+                                title: 'Community Advocacy',
+                                description: 'As a POSH committee member in a non-profit, I stay connected to empathy, inclusion, and responsible decision making.',
+                            }
+                        ].map((card) => (
+                            <div key={card.title} className="bg-[#1a1a1a] rounded-lg p-6">
+                                <div className="rounded-lg overflow-hidden border border-white/10 bg-white/5">
+                                    <div className="relative w-full h-28 sm:h-32">
+                                        <Image
+                                            src={card.image}
+                                            alt={card.title}
+                                            fill
+                                            className="object-cover grayscale brightness-75"
+                                        />
                                     </div>
                                 </div>
+                                <h3 className="mt-5 text-lg sm:text-xl font-grotesk font-bold">
+                                    {card.title}
+                                </h3>
+                                <p className="mt-3 text-sm sm:text-base font-inter text-gray-300 leading-relaxed">
+                                    {card.description}
+                                </p>
                             </div>
                         ))}
                     </div>

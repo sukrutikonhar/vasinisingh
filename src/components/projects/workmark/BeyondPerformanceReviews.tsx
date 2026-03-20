@@ -19,11 +19,9 @@ const BeyondPerformanceReviews: React.FC = () => {
         <section className="py-16 sm:py-20 md:py-24 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <div className="border-t border-gray-200 pt-4 mb-2">
-                        <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-medium text-center">
-                            15 — FUTURE VISION
-                        </p>
-                    </div>
+                    <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4 text-center">
+                        15 — FUTURE VISION
+                    </p>
                     <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-6 text-center">
                         Beyond Performance Reviews
                     </h2>

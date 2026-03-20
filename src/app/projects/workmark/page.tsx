@@ -18,13 +18,13 @@ import WorkmarkCTA from '@/components/projects/workmark/WorkmarkCTA';
 import PrevNextProject from '@/components/projects/PrevNextProject';
 
 export const metadata = {
-    title: 'WorkMark — Making Invisible Work Visible | Case Study | Vasini Singh',
+    title: 'WorkMark: Making Invisible Work Visible | Case Study | Vasini Singh',
     description: 'Case study on WorkMark: making invisible work visible. Product design, UX research, and impact for internal collaboration and recognition.',
 };
 
 export default function WorkmarkProject() {
     const heroData = {
-        title: 'WorkMark — Making Invisible Work Visible',
+        title: 'WorkMark: Making Invisible Work Visible',
         subtitle: 'A performance intelligence platform that transforms everyday employee contributions into structured evidence of recoginition, fair evaluation, and organizational intelligence.',
         image: '/images/projects/workmark/workmark-hero.webp',
         tags: ['AI powered B2B SaaS', 'HR Tech x Performance', 'LIVE MVP'],

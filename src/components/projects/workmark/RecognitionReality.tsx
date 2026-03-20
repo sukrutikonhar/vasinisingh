@@ -13,7 +13,7 @@ const RecognitionReality: React.FC = () => {
     const impactCards = [
         { title: 'Lower motivation', description: 'Effort feels detached from outcomes.', icon: 'down' as const },
         { title: 'Reduced engagement', description: 'Recognition deserts weaken discretionary effort.', icon: 'down' as const },
-        { title: 'Employee turnover', description: 'High performers leave when impact goes unseen.', icon: 'up' as const },
+        { title: 'Employee turnover', description: 'High performers leave when impact goes unseen.', icon: 'down' as const },
         { title: 'Weak culture', description: 'Teams stop connecting contribution with growth.', icon: 'down' as const },
     ];
 
@@ -21,11 +21,9 @@ const RecognitionReality: React.FC = () => {
         <section className="py-16 sm:py-20 md:py-24 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <div className="border-t border-gray-200 pt-4 mb-2">
-                        <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
-                            03 — PROOF THE PROBLEM IS REAL
-                        </p>
-                    </div>
+                    <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
+                        03 — PROOF THE PROBLEM IS REAL
+                    </p>
                     <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-4">
                         The Recognition Reality
                     </h2>
@@ -33,7 +31,7 @@ const RecognitionReality: React.FC = () => {
                         Research consistently shows a large gap between how often employees want recognition and how often they actually receive it.
                     </p>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* Left: Recognition Frequency Gap bar chart */}
                         <div className="bg-gray-100 border border-gray-200 rounded-xl p-8">
                             <h3 className="text-sm uppercase tracking-wider font-grotesk font-bold text-black mb-8">
@@ -58,29 +56,31 @@ const RecognitionReality: React.FC = () => {
                         </div>
 
                         {/* Right: What this gap creates */}
-                        <div className="bg-gray-100 border border-gray-200 rounded-xl p-8">
-                            <h3 className="text-lg font-grotesk font-bold text-black mb-6">
+                        <div className="">
+                            <div className="flex items-center gap-2 mb-3">
+                                <div className="w-2 h-2 rounded-full bg-red-400" />
+                                <p className="text-xs uppercase tracking-wider font-grotesk font-bold text-red-400">
+                                    Organizational Impact
+                                </p>
+                            </div>
+                            <h3 className="text-lg font-grotesk font-bold text-gray-900 mb-6">
                                 What this gap creates inside organizations
                             </h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {impactCards.map((card, index) => (
                                     <div
                                         key={index}
-                                        className="bg-white border border-gray-200 rounded-lg p-4"
+                                        className="bg-white border border-red-100 rounded-lg p-4 hover:border-red-300 transition-colors"
                                     >
                                         <div className="flex items-start gap-3">
-                                            <div className="flex-shrink-0 text-black mt-0.5">
-                                                {card.icon === 'up' ? (
-                                                    <ArrowUp className="w-5 h-5" strokeWidth={2} />
-                                                ) : (
-                                                    <ArrowDown className="w-5 h-5" strokeWidth={2} />
-                                                )}
+                                            <div className="flex-shrink-0 mt-0.5 rounded-md p-1 bg-red-100 text-red-400">
+                                                <ArrowDown className="w-4 h-4" strokeWidth={2.5} />
                                             </div>
                                             <div>
-                                                <p className="font-grotesk font-bold text-black text-sm sm:text-base mb-1">
+                                                <p className="font-grotesk font-bold text-gray-900 text-sm sm:text-base mb-1">
                                                     {card.title}
                                                 </p>
-                                                <p className="text-sm font-inter text-gray-600 leading-relaxed">
+                                                <p className="text-sm font-inter text-gray-500 leading-relaxed">
                                                     {card.description}
                                                 </p>
                                             </div>
@@ -88,6 +88,11 @@ const RecognitionReality: React.FC = () => {
                                     </div>
                                 ))}
                             </div>
+
+                            {/* Bottom note */}
+                            <p className="mt-5 text-xs font-inter text-red-400 border-t border-red-100 pt-4">
+                                These outcomes compound over time as recognition gaps widen with scale.
+                            </p>
                         </div>
                     </div>
                 </div>

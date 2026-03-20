@@ -40,11 +40,9 @@ const CoreProductPillars: React.FC = () => {
         <section className="py-16 sm:py-20 md:py-24 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <div className="border-t border-gray-200 pt-4 mb-2">
-                        <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-medium mb-4">
-                            11 — FEATURE STRATEGY
-                        </p>
-                    </div>
+                    <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-medium mb-4">
+                        11 — FEATURE STRATEGY
+                    </p>
                     <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-4">
                         Core Product Pillars
                     </h2>
@@ -79,29 +77,29 @@ const CoreProductPillars: React.FC = () => {
                     <p className="text-xs uppercase tracking-wider text-gray-600 font-grotesk font-bold mb-6">
                         SYSTEM WORKFLOW
                     </p>
-                    <div className="flex flex-wrap items-stretch gap-0">
+                    <div className="flex flex-wrap items-stretch gap-1 sm:gap-2">
                         {workflowSteps.map((step, index) => (
                             <React.Fragment key={index}>
                                 <div
-                                    className={`flex-1 min-w-[120px] rounded-lg border border-gray-200 p-5 ${step.highlighted ? 'bg-black text-white border-black' : 'bg-white'
+                                    className={`flex-1 min-w-[100px] sm:min-w-[120px] rounded-lg border border-gray-200 p-3 sm:p-5 ${step.highlighted ? 'bg-black text-white border-black' : 'bg-white'
                                         }`}
                                 >
                                     <p
-                                        className={`text-base font-grotesk font-bold ${step.highlighted ? 'text-white' : 'text-black'
+                                        className={`text-sm sm:text-base font-grotesk font-bold ${step.highlighted ? 'text-white' : 'text-black'
                                             }`}
                                     >
                                         {step.title}
                                     </p>
                                     <p
-                                        className={`text-sm mt-1 ${step.highlighted ? 'text-gray-300' : 'text-gray-600'
+                                        className={`text-xs sm:text-sm mt-1 ${step.highlighted ? 'text-gray-300' : 'text-gray-600'
                                             }`}
                                     >
                                         {step.subtitle}
                                     </p>
                                 </div>
                                 {index < workflowSteps.length - 1 && (
-                                    <div className="flex items-center justify-center px-2 py-4 text-gray-400">
-                                        <ChevronRight className="w-6 h-6" strokeWidth={2} />
+                                    <div className="flex items-center justify-center px-1 sm:px-2 py-4 text-gray-400 flex-shrink-0">
+                                        <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" strokeWidth={2} />
                                     </div>
                                 )}
                             </React.Fragment>

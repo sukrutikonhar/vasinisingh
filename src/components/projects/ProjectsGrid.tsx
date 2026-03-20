@@ -9,6 +9,18 @@ const ProjectsGrid: React.FC = () => {
     const completedProjects = [
         {
             id: 1,
+            title: 'Workmark',
+            slug: 'workmark',
+            tagline: 'Making Invisible Work Visible',
+            description: 'A product design case study focused on surfacing unrecognized contributions and improving internal collaboration, accountability, and employee recognition.',
+            image: '/images/projects/workmark/workmark-hero.webp',
+            year: '2025',
+            tags: ['Product Design', 'UX Research', 'CASE STUDY'],
+            role: 'Product Designer, UX Researcher',
+            tools: ['Figma', 'Notion', 'Protopie']
+        },
+        {
+            id: 2,
             title: 'MockOraa',
             slug: 'mockoraa',
             tagline: 'AI Mock Interview Platform',
@@ -20,7 +32,7 @@ const ProjectsGrid: React.FC = () => {
             tools: ['Figma', 'FigJam']
         },
         {
-            id: 2,
+            id: 3,
             title: 'Arreglio',
             slug: 'arreglio',
             tagline: 'Workshop Management System',
@@ -32,7 +44,7 @@ const ProjectsGrid: React.FC = () => {
             tools: ['Figma', 'FigJam', 'Maze']
         },
         {
-            id: 3,
+            id: 4,
             title: 'ecoPRISM Tool',
             slug: 'ecoprism',
             tagline: 'ESG Compliance Made Simple',
@@ -43,23 +55,12 @@ const ProjectsGrid: React.FC = () => {
             role: 'Foundation Designer',
             tools: ['Adobe XD', 'Miro', 'Notion']
         },
-        // {
-        //     id: 5,
-        //     title: 'Workmark',
-        //     slug: 'workmark',
-        //     tagline: 'Making Invisible Work Visible',
-        //     description: 'A product design case study focused on surfacing unrecognized contributions and improving internal collaboration, accountability, and employee recognition.',
-        //     image: '/images/projects/workmark/workmark-hero.webp',
-        //     year: '2025',
-        //     tags: ['Product Design', 'UX Research', 'CASE STUDY'],
-        //     role: 'Product Designer, UX Researcher',
-        //     tools: ['Figma', 'Notion', 'Protopie']
-        // }
+
     ];
 
     const inProgressProjects = [
         {
-            id: 4,
+            id: 5,
             title: 'Suana',
             slug: 'suana',
             tagline: 'A Nest for Independent Learning',

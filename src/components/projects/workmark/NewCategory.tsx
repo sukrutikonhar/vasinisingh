@@ -26,38 +26,39 @@ const NewCategory: React.FC = () => {
         <section className="py-16 sm:py-20 md:py-24 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <div className="border-t border-gray-200 pt-4 mb-2">
-                        <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-medium mb-4">
-                            14 — MARKET INNOVATION
-                        </p>
-                    </div>
+                    <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-medium mb-4">
+                        14 — MARKET INNOVATION
+                    </p>
                     <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-6">
                         A New Category
                     </h2>
                     <p className="text-base sm:text-lg font-inter text-gray-600 max-w-3xl leading-relaxed mb-12">
-                        WorkMark is positioned as a performance intelligence platform — distinct from performance management, productivity tracking, or recognition software alone.
+                        WorkMark is positioned as a performance intelligence platform. Distinct from performance management, productivity tracking, or recognition software alone.
                     </p>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* WORKMARK IS NOT */}
-                        <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
-                            <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-6">
-                                WORKMARK IS NOT
-                            </p>
-                            <div className="divide-y divide-gray-200">
+                        <div className="bg-red-50 border border-red-100 rounded-xl p-8">
+                            <div className="flex items-center gap-2 mb-6">
+                                <div className="w-2 h-2 rounded-full bg-red-400" />
+                                <p className="text-xs uppercase tracking-wider text-red-400 font-grotesk font-bold">
+                                    WORKMARK IS NOT
+                                </p>
+                            </div>
+                            <div className="divide-y divide-red-100">
                                 {notItems.map((item, index) => (
                                     <div
                                         key={index}
                                         className="flex gap-4 py-5 first:pt-0 last:pb-0"
                                     >
-                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-400">
                                             <X className="w-4 h-4" strokeWidth={2.5} />
                                         </div>
                                         <div>
-                                            <p className="font-grotesk font-bold text-black mb-1">
+                                            <p className="font-grotesk font-bold text-gray-900 mb-1">
                                                 {item.title}
                                             </p>
-                                            <p className="text-sm font-inter text-gray-600 leading-relaxed">
+                                            <p className="text-sm font-inter text-gray-500 leading-relaxed">
                                                 {item.description}
                                             </p>
                                         </div>

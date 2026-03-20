@@ -35,11 +35,9 @@ const MissingIntelligenceLayer: React.FC = () => {
         <section className="py-16 sm:py-20 md:py-24 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <div className="border-t border-gray-200 pt-4 mb-2">
-                        <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
-                            06 — MARKET GAP
-                        </p>
-                    </div>
+                    <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
+                        06 — MARKET GAP
+                    </p>
                     <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-6">
                         The Missing Intelligence Layer
                     </h2>
@@ -77,59 +75,83 @@ const MissingIntelligenceLayer: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16">
 
                         {/* Intelligence vs Automation grid */}
-                        <div className="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden">
-                            <div className="grid grid-cols-[120px_1fr_1fr] gap-px bg-gray-200 text-center">
+                        <div className="bg-gray-50 border border-gray-200 rounded-lg sm:rounded-xl overflow-hidden">
+                            <div className="hidden lg:grid grid-cols-[120px_1fr_1fr] gap-px bg-gray-200 text-center">
 
                                 {/* Empty top-left */}
-                                <div className="bg-gray-100 p-4" />
+                                <div className="bg-gray-100 p-3 sm:p-4" />
 
                                 {/* Column Headers */}
-                                <div className="bg-gray-100 p-5">
+                                <div className="bg-gray-100 p-4 sm:p-5">
                                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold">
                                         Low Intelligence
                                     </p>
                                 </div>
 
-                                <div className="bg-gray-100 p-5">
+                                <div className="bg-gray-100 p-4 sm:p-5">
                                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold">
                                         High Intelligence
                                     </p>
                                 </div>
 
                                 {/* Manual row label */}
-                                <div className="bg-gray-100 p-5 flex items-center justify-center">
+                                <div className="bg-gray-100 p-4 sm:p-5 flex items-center justify-center">
                                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold">
                                         Manual
                                     </p>
                                 </div>
 
-                                <div className="bg-white p-6 text-left">
-                                    <p className="text-base font-grotesk font-bold text-black">Traditional Reviews</p>
-                                    <p className="text-sm font-inter text-gray-600 leading-relaxed mt-1">Lattice, CultureAmp</p>
+                                <div className="bg-white p-5 sm:p-6 text-left">
+                                    <p className="text-sm sm:text-base font-grotesk font-bold text-black">Traditional Reviews</p>
+                                    <p className="text-xs sm:text-sm font-inter text-gray-600 leading-relaxed mt-1">Lattice, CultureAmp</p>
                                 </div>
 
-                                <div className="bg-white p-6 text-left">
-                                    <p className="text-base font-grotesk font-bold text-black">Recognition</p>
-                                    <p className="text-sm font-inter text-gray-600 leading-relaxed mt-1">Bonusly, Kudos</p>
+                                <div className="bg-white p-5 sm:p-6 text-left">
+                                    <p className="text-sm sm:text-base font-grotesk font-bold text-black">Recognition</p>
+                                    <p className="text-xs sm:text-sm font-inter text-gray-600 leading-relaxed mt-1">Bonusly, Kudos</p>
                                 </div>
 
                                 {/* Automated row label */}
-                                <div className="bg-gray-100 p-5 flex items-center justify-center">
+                                <div className="bg-gray-100 p-4 sm:p-5 flex items-center justify-center">
                                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold">
                                         Automated
                                     </p>
                                 </div>
 
-                                <div className="bg-white p-6 text-left">
-                                    <p className="text-base font-grotesk font-bold text-black">Task Trackers</p>
-                                    <p className="text-sm font-inter text-gray-600 leading-relaxed mt-1">Jira, Slack</p>
+                                <div className="bg-white p-5 sm:p-6 text-left">
+                                    <p className="text-sm sm:text-base font-grotesk font-bold text-black">Task Trackers</p>
+                                    <p className="text-xs sm:text-sm font-inter text-gray-600 leading-relaxed mt-1">Jira, Slack</p>
                                 </div>
 
-                                <div className="bg-black text-white p-6 text-left">
-                                    <p className="text-xl font-grotesk font-bold text-white">WorkMark</p>
-                                    <p className="text-sm font-inter text-gray-300 mt-1">Performance Intelligence</p>
+                                <div className="bg-black text-white p-5 sm:p-6 text-left">
+                                    <p className="text-base sm:text-lg font-grotesk font-bold text-white">WorkMark</p>
+                                    <p className="text-xs sm:text-sm font-inter text-gray-300 mt-1">Performance Intelligence</p>
                                 </div>
 
+                            </div>
+
+                            {/* Mobile alternative - Stack view */}
+                            <div className="lg:hidden space-y-4 p-6">
+                                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                                    <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-2">Manual + Low Intelligence</p>
+                                    <p className="text-base font-grotesk font-bold text-black mb-1">Traditional Reviews</p>
+                                    <p className="text-sm font-inter text-gray-600">Lattice, CultureAmp</p>
+                                </div>
+                                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                                    <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-2">Manual + High Intelligence</p>
+                                    <p className="text-base font-grotesk font-bold text-black mb-1">Recognition</p>
+                                    <p className="text-sm font-inter text-gray-600">Bonusly, Kudos</p>
+                                </div>
+                                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                                    <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-2">Automated + Low Intelligence</p>
+                                    <p className="text-base font-grotesk font-bold text-black mb-1">Task Trackers</p>
+                                    <p className="text-sm font-inter text-gray-600">Jira, Slack</p>
+                                </div>
+                                <div className="bg-black text-white p-4 rounded-lg">
+                                    <p className="text-xs uppercase tracking-wider text-gray-300 font-grotesk font-bold mb-2">Automated + High Intelligence</p>
+                                    <p className="text-base font-grotesk font-bold text-white mb-1">WorkMark</p>
+                                    <p className="text-sm font-inter text-gray-300">Performance Intelligence</p>
+                                </div>
                             </div>
                         </div>
 

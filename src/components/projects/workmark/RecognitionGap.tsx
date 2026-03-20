@@ -9,11 +9,9 @@ const RecognitionGap: React.FC = () => {
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     {/* Section label */}
-                    <div className="border-t border-gray-200 pt-4 mb-2">
-                        <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
-                            01 — THE PROBLEM SPACE
-                        </p>
-                    </div>
+                    <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
+                        01 — THE PROBLEM SPACE
+                    </p>
                     <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-4">
                         The Recognition Gap in Modern Organizations
                     </h2>

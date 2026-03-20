@@ -1,271 +1,241 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import { Briefcase, Building2, Heart, FileText } from 'lucide-react';
-
-interface Role {
-    title: string;
-    period: string;
-    description: string;
-    isProduct?: boolean;
-}
-
-interface Company {
-    name: string;
-    period: string;
-    roles: Role[];
-    icon: React.ElementType;
-}
+import React from 'react';
 
 const ExperienceEducation: React.FC = () => {
-    const [activeCompany, setActiveCompany] = useState(0);
-    const containerRef = useRef<HTMLDivElement>(null);
-    const [scrollProgress, setScrollProgress] = useState(0);
-    const [isInView, setIsInView] = useState(false);
-
-    const companies: Company[] = [
+    const cards = [
         {
-            name: 'Acumant',
-            period: 'Nov 2022 – Present',
-            icon: Building2,
-            roles: [
-                {
-                    title: 'Senior UI/UX Designer',
-                    period: 'May 2024 – Jul 2025',
-                    description: 'Designed enterprise-level SaaS products integrating AI-driven workflows and design systems to enhance product scalability and usability.',
-                },
-                {
-                    title: 'UI/UX Designer',
-                    period: 'Nov 2022 – Apr 2024',
-                    description: 'Contributed to digital transformation projects with a focus on accessibility, user research, and responsive web design across B2B applications.',
-                },
-                {
-                    title: 'Product Designer — Arreglio',
-                    period: 'Oct 2024 – Present',
-                    description: 'Leading UX strategy for a multi-service SaaS (B2B & B2C) platform. Designed reusable UI components and improved user engagement, achieving a 20%+ rise in adoption through feedback-driven iterations.',
-                    isProduct: true,
-                },
-                {
-                    title: 'Product Designer — ecoPRISM',
-                    period: 'Mar 2023 – Present',
-                    description: 'Spearheading end-to-end design for an ESG SaaS platform. Built 10+ core features, a scalable design system, and enhanced usability recognized for its intuitive experience.',
-                    isProduct: true,
-                }
-            ]
+            id: '1',
+            period: '2010 — 2011',
+            role: 'Back Office Executive',
+            company: 'Chuknoo Securities Ltd',
+            description: 'Handled trade processing and back office operations within the broking industry.',
+            tags: ['Operations', 'Process Management', 'Financial Services'],
         },
         {
-            name: 'Bizmeth Solutions',
-            period: 'Mar 2018 – Oct 2022',
-            icon: Briefcase,
-            roles: [
-                {
-                    title: 'UI/UX Designer',
-                    period: 'Jun 2018 – Oct 2022',
-                    description: 'Delivered user-centered web and mobile designs for multiple clients. Improved usability and visual consistency through research, testing, and iterative prototyping.',
-                },
-                {
-                    title: 'Intern (Design Generalist)',
-                    period: 'Mar 2018 – May 2018',
-                    description: 'Explored multiple design domains including UI, motion, and brand communication.',
-                }
-            ]
+            id: '2',
+            period: '2011 — 2015',
+            role: 'Senior Back Office Executive',
+            company: 'Skung CommXperts Ltd',
+            description: 'Managed operational workflows and client coordination, improving internal efficiency and process clarity.',
+            tags: ['Operations', 'Workflow Management', 'Client Coordination'],
         },
         {
-            name: 'Chhanv Foundation',
-            period: 'May 2015 – Present',
-            icon: Heart,
-            roles: [
-                {
-                    title: 'POSH Member',
-                    period: 'Aug 2019 – Present',
-                    description: 'Ensuring workplace inclusivity and awareness through POSH policy training and fair redressal processes within an NGO supporting acid attack survivors.',
-                },
-                {
-                    title: 'Community Manager',
-                    period: 'May 2015 – Feb 2018',
-                    description: 'Led communication, outreach, and digital engagement programs to strengthen community advocacy and awareness initiatives.',
-                }
-            ]
+            id: '3',
+            period: '2015 — Present',
+            role: 'Community Manager & POSH Member',
+            company: 'Chhanv Foundation',
+            description: 'Contributing to community outreach, advocacy programs, and workplace inclusivity initiatives supporting acid attack survivors.',
+            tags: ['Community Impact', 'Advocacy', 'POSH Compliance'],
         },
         {
-            name: 'Skung Commxperts Ltd',
-            period: 'Feb 2011 – Apr 2015',
-            icon: FileText,
-            roles: [
-                {
-                    title: 'Senior Back Office Executive',
-                    period: 'Feb 2011 – Apr 2015',
-                    description: 'Managed operational workflows and client coordination within the financial services domain.',
-                }
-            ]
+            id: '4',
+            period: '2018 — 2022',
+            role: 'UI/UX Designer',
+            company: 'Bizmeth Solutions',
+            description: 'Designed user centered web and mobile experiences across multiple clients, focusing on research, usability, and responsive design.',
+            tags: ['User Research', 'Responsive UX', 'Interaction Design', 'Prototyping'],
         },
         {
-            name: 'Chuknoo Securities Ltd',
-            period: 'Jan 2010 – Jan 2011',
-            icon: FileText,
-            roles: [
-                {
-                    title: 'Back Office Executive',
-                    period: 'Jan 2010 – Jan 2011',
-                    description: 'Handled back-office operations and trade processing in the broking industry.',
-                }
-            ]
+            id: '5',
+            period: '2022 — Present',
+            role: 'UI/UX Designer',
+            company: 'Acumant',
+            description: 'Worked on enterprise SaaS and B2B platforms, improving product usability through research driven design and accessibility focused solutions.',
+            tags: ['Enterprise UX', 'SaaS Products', 'Accessibility', 'Research'],
+        },
+        {
+            id: '6',
+            period: '2024 — 2025',
+            role: 'Senior UI/UX Designer',
+            company: 'Acumant',
+            description: 'Designed scalable product experiences integrating AI driven workflows and design systems for complex enterprise products.',
+            tags: ['Design Systems', 'AI Workflows', 'Enterprise UX', 'Product Strategy'],
+        },
+        {
+            id: '7',
+            period: '2023 — Present',
+            role: 'Product Designer',
+            company: 'ecoPRISM',
+            description: 'Building an ESG SaaS platform with scalable features, reusable components, and improved product usability.',
+            tags: ['ESG Platform', 'Feature Design', 'System Thinking', 'Product UX'],
+        },
+        {
+            id: '8',
+            period: '2024 — Present',
+            role: 'Product Designer',
+            company: 'Arreglio',
+            description: 'Leading UX design for a multi service B2B and B2C SaaS platform with focus on reusable patterns and adoption driven experiences.',
+            tags: ['B2B SaaS', 'B2C Platform', 'Reusable Components', 'Growth UX'],
         }
     ];
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (!containerRef.current) return;
+    const [shouldAnimate, setShouldAnimate] = React.useState(true);
+    const scrollerRef = React.useRef<HTMLDivElement | null>(null);
+    const [manualPause, setManualPause] = React.useState(false);
 
-            const container = containerRef.current;
-            const rect = container.getBoundingClientRect();
-            const containerHeight = container.offsetHeight;
-            const windowHeight = window.innerHeight;
+    React.useEffect(() => {
+        if (typeof window === 'undefined') return;
+        const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const update = () => setShouldAnimate(!media.matches);
+        update();
+        // Safari < 14 compatibility
+        media.addEventListener?.('change', update);
+        media.addListener?.(update);
+        return () => {
+            media.removeEventListener?.('change', update);
+            media.removeListener?.(update);
+        };
+    }, []);
 
-            // Check if section is in view
-            const inView = rect.top <= 0 && rect.bottom >= windowHeight;
-            setIsInView(inView);
+    // Slow horizontal auto-scroll (with seamless-ish loop via duplicated list).
+    React.useEffect(() => {
+        if (!shouldAnimate || manualPause) return;
+        const el = scrollerRef.current;
+        if (!el) return;
 
-            // Calculate scroll progress within the section
-            if (inView) {
-                const scrolled = -rect.top;
-                const totalScroll = containerHeight - windowHeight;
-                const progress = Math.min(Math.max(scrolled / totalScroll, 0), 1);
-                setScrollProgress(progress);
+        // Keep scroll position inside the loop range to avoid visible jumps on resume.
+        const half = el.scrollWidth / 2;
+        if (half > 0) {
+            el.scrollLeft = ((el.scrollLeft % half) + half) % half;
+        }
 
-                // Calculate which company should be active
-                const companyIndex = Math.floor(progress * companies.length);
-                const clampedIndex = Math.min(companyIndex, companies.length - 1);
-                setActiveCompany(clampedIndex);
-            }
+        let raf = 0;
+        let last = 0;
+        const speedPxPerMs = 0.02; // slow, steady
+
+        const step = (t: number) => {
+            raf = window.requestAnimationFrame(step);
+            if (!el) return;
+
+            const dt = last ? t - last : 16;
+            last = t;
+
+            const half = el.scrollWidth / 2;
+            if (half <= 0) return;
+
+            // Wrap using modulo so it never "hits an end".
+            el.scrollLeft = (el.scrollLeft + dt * speedPxPerMs) % half;
         };
 
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
+        raf = window.requestAnimationFrame(step);
+        return () => window.cancelAnimationFrame(raf);
+    }, [shouldAnimate, manualPause]);
 
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [companies.length]);
+    const scrollByCard = (direction: 1 | -1) => {
+        const el = scrollerRef.current;
+        if (!el) return;
+        const cardsEls = el.querySelectorAll<HTMLElement>('[data-work-card="true"]');
+        const first = cardsEls[0];
+        const second = cardsEls[1];
+        const step =
+            first && second
+                ? second.getBoundingClientRect().left - first.getBoundingClientRect().left
+                : first?.offsetWidth ?? 320;
+        el.scrollBy({ left: direction * step, behavior: 'smooth' });
+    };
+
+    const doubledCards = [...cards, ...cards];
 
     return (
-        <>
-            {/* Header - Scrolls Away */}
-            <div className="pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-12 bg-white">
-                <div className="container-custom px-4 sm:px-6 mx-auto text-center">
-                    <div className="bg-gray-100 rounded-full w-fit px-4 py-2 mb-4 sm:mb-6 mx-auto">
-                        <span className="text-xs sm:text-sm font-grotesk font-medium uppercase tracking-wider">
-                            Career Journey
-                        </span>
+        <section className="bg-[linear-gradient(180deg,_#f8f9fa_0%,_#ffffff_100%)] py-16 sm:py-24">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                        <div>
+                            <div className="text-xs sm:text-sm font-inter uppercase tracking-[0.22em] text-gray-500 mb-4">
+                                EXPERIENCE
+                            </div>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black leading-[1.02]">
+                                A timeline of craft, leadership, and product thinking
+                            </h2>
+                        </div>
+                        <p className="text-sm sm:text-base md:text-lg font-inter text-gray-600 leading-relaxed pt-2">
+                            Every role has added a new layer to how I work. I have grown from designing clearer interfaces to shaping product direction, building systems, and creating experiences that support both users and teams.
+                        </p>
                     </div>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-grotesk font-bold text-black mb-3 sm:mb-4">
-                        Experience
-                    </h2>
-                    <p className="text-sm sm:text-base md:text-lg font-inter text-gray-600 max-w-2xl mx-auto">
-                        15+ years transforming ideas into impactful digital experiences
-                    </p>
-                </div>
-            </div>
 
-            {/* Sticky Scroll Section - Companies Only */}
-            <section
-                ref={containerRef}
-                className="relative bg-white"
-                style={{ height: `${companies.length * 50}vh` }}
-            >
-                <div className="sticky top-0 min-h-screen flex items-center justify-center py-8 sm:py-12">
-                    {/* Company Content */}
-                    <div className="w-full">
-                        <div className="container-custom px-4 sm:px-6 mx-auto">
-                            <div className="max-w-7xl mx-auto relative" style={{ minHeight: 'auto' }}>
-                                {companies.map((company, companyIndex) => (
+                    {/* Slider */}
+                    <div className="mt-12 sm:mt-16 relative">
+                        <div className="hidden sm:flex absolute top-[-60] right-0 z-10 gap-2">
+                            <button
+                                type="button"
+                                aria-label="Scroll left"
+                                onClick={() => {
+                                    setManualPause(true);
+                                    scrollByCard(-1);
+                                    window.setTimeout(() => setManualPause(false), 1200);
+                                }}
+                                className="w-11 h-11 rounded-full bg-white border border-gray-200 shadow-card hover:border-black hover:text-black flex items-center justify-center"
+                            >
+                                ←
+                            </button>
+                            <button
+                                type="button"
+                                aria-label="Scroll right"
+                                onClick={() => {
+                                    setManualPause(true);
+                                    scrollByCard(1);
+                                    window.setTimeout(() => setManualPause(false), 1200);
+                                }}
+                                className="w-11 h-11 rounded-full bg-white border border-gray-200 shadow-card hover:border-black hover:text-black flex items-center justify-center"
+                            >
+                                →
+                            </button>
+                        </div>
+
+                        <div
+                            className="overflow-hidden"
+                        >
+                            <div
+                                ref={scrollerRef}
+                                className="work-scroll flex gap-6 sm:gap-8 overflow-x-auto scroll-smooth pb-3 [-ms-overflow-style:none] [scrollbar-width:none]"
+                                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                            >
+                                <div className="sr-only">Work timeline</div>
+                                {doubledCards.map((card, idx) => (
                                     <div
-                                        key={companyIndex}
-                                        className={`transition-all duration-700 ${activeCompany === companyIndex
-                                            ? 'opacity-100 translate-y-0 pointer-events-auto block'
-                                            : activeCompany > companyIndex
-                                                ? 'opacity-0 -translate-y-12 pointer-events-none hidden'
-                                                : 'opacity-0 translate-y-12 pointer-events-none hidden'
-                                            }`}
+                                        key={`${card.id}-${idx < cards.length ? 'a' : 'b'}`}
+                                        data-work-card="true"
+                                        className="flex-shrink-0 w-[280px] sm:w-[300px] md:w-[340px]"
                                     >
-                                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
-                                            {/* Left Side - Company Logo & Info */}
-                                            <div className="lg:col-span-4 flex flex-col justify-center">
-                                                <div className="flex flex-col items-start">
-                                                    {/* Company Icon */}
-                                                    <div
-                                                        className={`w-20 h-20 sm:w-24 sm:h-24 bg-gray-800 flex items-center justify-center mb-6 transition-all duration-700 ${activeCompany === companyIndex
-                                                            ? 'scale-100 rotate-0'
-                                                            : 'scale-90 rotate-12'
-                                                            }`}
-                                                    >
-                                                        {React.createElement(company.icon, {
-                                                            className: "w-10 h-10 sm:w-12 sm:h-12 text-white"
-                                                        })}
-                                                    </div>
+                                        {/* dot + connector */}
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-3 h-3 rounded-full bg-black" />
+                                            <div className="flex-1 h-px bg-gray-200" />
+                                        </div>
 
-                                                    {/* Company Name & Period */}
-                                                    <div className="mb-8">
-                                                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-3">
-                                                            {company.name}
-                                                        </h3>
-                                                        <p className="text-sm sm:text-base font-inter font-semibold text-gray-600">
-                                                            {company.period}
-                                                        </p>
-                                                    </div>
+                                        {/* Year OUTSIDE the box */}
+                                        <div className="mt-4 text-[11px] sm:text-xs font-inter text-gray-500">
+                                            {card.period}
+                                        </div>
 
-                                                    {/* Timeline indicator */}
-                                                    <div className="flex items-center gap-2">
-                                                        {companies.map((_, idx) => (
-                                                            <div
-                                                                key={idx}
-                                                                className={`h-1 rounded-full transition-all duration-500 ${idx === companyIndex
-                                                                    ? 'w-12 bg-gray-800'
-                                                                    : idx < companyIndex
-                                                                        ? 'w-8 bg-gray-400'
-                                                                        : 'w-4 bg-gray-200'
-                                                                    }`}
-                                                            />
-                                                        ))}
-                                                    </div>
-
-                                                    {/* Scroll indicator */}
-                                                    <div className="mt-6 text-xs text-gray-500 font-inter">
-                                                        {companyIndex + 1} / {companies.length}
-                                                    </div>
-                                                </div>
+                                        {/* Card */}
+                                        <div className="mt-4 bg-white border border-black/10 rounded-[6px] p-5 sm:p-6 flex flex-col h-[300px] md:h-[320px]">
+                                            {/* Designation + Company */}
+                                            <h3 className="text-base sm:text-lg font-grotesk font-bold text-black leading-tight">
+                                                {card.role}
+                                            </h3>
+                                            <div className="mt-2 text-[11px] sm:text-xs font-inter font-semibold text-gray-600">
+                                                {card.company}
                                             </div>
 
-                                            {/* Right Side - Role Cards */}
-                                            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                                                {company.roles.map((role, roleIndex) => (
-                                                    <div
-                                                        key={roleIndex}
-                                                        className={`bg-white rounded-[6px] shadow-card p-5 sm:p-6 border border-gray-200 transition-all duration-700 hover:border-gray-800 hover:shadow-xl ${activeCompany === companyIndex
-                                                            ? 'opacity-100 translate-y-0'
-                                                            : 'opacity-0 translate-y-12'
-                                                            }`}
-                                                        style={{
-                                                            transitionDelay: activeCompany === companyIndex ? `${roleIndex * 100}ms` : '0ms'
-                                                        }}
+                                            {/* Description */}
+                                            <p className="mt-4 text-sm sm:text-base font-inter text-gray-700 leading-relaxed flex-1">
+                                                {card.description}
+                                            </p>
+
+                                            {/* Tags */}
+                                            <div className="mt-auto flex flex-wrap gap-2">
+                                                {card.tags.map((tag) => (
+                                                    <span
+                                                        key={tag}
+                                                        className="inline-flex items-center bg-gray-100 border border-gray-100 px-3 py-1 rounded-full"
                                                     >
-                                                        <div className="flex flex-col gap-2 mb-3">
-                                                            <div className="flex items-start justify-between gap-2">
-                                                                <h4 className="text-base sm:text-lg font-grotesk font-bold text-black leading-tight">
-                                                                    {role.title}
-                                                                </h4>
-                                                                {role.isProduct && (
-                                                                    <span className="inline-block flex-shrink-0 px-2 py-0.5 text-[10px] font-inter font-medium bg-gray-800 text-white rounded-full uppercase tracking-wide">
-                                                                        Product
-                                                                    </span>
-                                                                )}
-                                                            </div>
-                                                            <p className="text-xs sm:text-sm font-inter font-semibold text-gray-600">
-                                                                {role.period}
-                                                            </p>
-                                                        </div>
-                                                        <p className="text-xs sm:text-sm font-inter text-gray-700 leading-relaxed">
-                                                            {role.description}
-                                                        </p>
-                                                    </div>
+                                                        <span className="text-[11px] sm:text-xs font-inter text-gray-600">
+                                                            {tag}
+                                                        </span>
+                                                    </span>
                                                 ))}
                                             </div>
                                         </div>
@@ -273,24 +243,15 @@ const ExperienceEducation: React.FC = () => {
                                 ))}
                             </div>
                         </div>
+                        <style jsx>{`
+                            .work-scroll::-webkit-scrollbar {
+                                display: none;
+                            }
+                        `}</style>
                     </div>
                 </div>
-
-                {/* Progress indicator - Fixed at Bottom (Only visible when section is in view) */}
-                {isInView && (
-                    <div className="fixed bottom-0 left-0 right-0 py-4 px-4 sm:px-6 bg-white/80 backdrop-blur-sm z-10">
-                        <div className="container-custom mx-auto">
-                            <div className="h-1 bg-gray-200 rounded-full overflow-hidden max-w-md mx-auto">
-                                <div
-                                    className="h-full bg-gray-800 transition-all duration-300"
-                                    style={{ width: `${(scrollProgress * 100)}%` }}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                )}
-            </section>
-        </>
+            </div>
+        </section>
     );
 };
 
