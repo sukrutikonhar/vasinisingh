@@ -49,7 +49,7 @@ const BlogPostsSection: React.FC = () => {
         {
             id: 5,
             title: "Why and How I Chose Design as a Career",
-            image: "/images/About us/story-01.webp",
+            image: "/images/about-us/story-01.webp",
             date: "Sep 9, 2025",
             platform: "LinkedIn",
             readMoreLink: "https://www.linkedin.com/pulse/why-how-i-chose-design-career-vasini-singh-cgytc/",

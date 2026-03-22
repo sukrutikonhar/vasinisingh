@@ -4,31 +4,31 @@ import React from 'react';
 
 const ExperienceEducation: React.FC = () => {
     const cards = [
-
-        {
-            id: '8',
-            period: '2024 — Present',
-            role: 'Product Designer',
-            company: 'Arreglio',
-            description: 'Leading UX design for a multi service B2B and B2C SaaS platform with focus on reusable patterns and adoption driven experiences.',
-            tags: ['B2B SaaS', 'B2C Platform', 'Reusable Components', 'Growth UX'],
-        },
         {
             id: '7',
             period: '2023 — Present',
-            role: 'Product Designer',
+            role: 'Senior Product Designer',
             company: 'ecoPRISM',
             description: 'Building an ESG SaaS platform with scalable features, reusable components, and improved product usability.',
             tags: ['ESG Platform', 'Feature Design', 'System Thinking', 'Product UX'],
         },
         {
             id: '6',
-            period: '2024 — 2025',
+            period: '2024 — Present',
             role: 'Senior UI/UX Designer',
             company: 'Acumant',
             description: 'Designed scalable product experiences integrating AI driven workflows and design systems for complex enterprise products.',
             tags: ['Design Systems', 'AI Workflows', 'Enterprise UX', 'Product Strategy'],
         },
+        {
+            id: '8',
+            period: '2024 — 2025',
+            role: 'Product Designer',
+            company: 'Arreglio',
+            description: 'Leading UX design for a multi service B2B and B2C SaaS platform with focus on reusable patterns and adoption driven experiences.',
+            tags: ['B2B SaaS', 'B2C Platform', 'Reusable Components', 'Growth UX'],
+        },
+
         {
             id: '5',
             period: '2022 — Present',
