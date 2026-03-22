@@ -7,18 +7,7 @@ import { ArrowRight, Calendar, Tag, Clock } from 'lucide-react';
 
 const ProjectsGrid: React.FC = () => {
     const completedProjects = [
-        {
-            id: 1,
-            title: 'Workmark',
-            slug: 'workmark',
-            tagline: 'Making Invisible Work Visible',
-            description: 'A product design case study focused on surfacing unrecognized contributions and improving internal collaboration, accountability, and employee recognition.',
-            image: '/images/projects/workmark/workmark-hero.webp',
-            year: '2025',
-            tags: ['Product Design', 'UX Research', 'CASE STUDY'],
-            role: 'Product Designer, UX Researcher',
-            tools: ['Figma', 'Notion', 'Protopie']
-        },
+
         {
             id: 2,
             title: 'MockOraa',
@@ -30,6 +19,18 @@ const ProjectsGrid: React.FC = () => {
             tags: ['AI', 'EdTech', 'Mobile App'],
             role: 'Product Strategist',
             tools: ['Figma', 'FigJam']
+        },
+        {
+            id: 1,
+            title: 'Workmark',
+            slug: 'workmark',
+            tagline: 'Making Invisible Work Visible',
+            description: 'A product design case study focused on surfacing unrecognized contributions and improving internal collaboration, accountability, and employee recognition.',
+            image: '/images/projects/workmark/workmark-hero.webp',
+            year: '2026',
+            tags: ['Product Design', 'UX Research', 'CASE STUDY'],
+            role: 'Product Designer, UX Researcher',
+            tools: ['Figma', 'Notion', 'Protopie']
         },
         {
             id: 3,

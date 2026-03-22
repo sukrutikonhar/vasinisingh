@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowDown, ArrowUp } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 const RecognitionReality: React.FC = () => {
     const barData = [

@@ -54,7 +54,7 @@ const BeyondDesign: React.FC = () => {
                                             src={card.image}
                                             alt={card.title}
                                             fill
-                                            className="object-cover grayscale brightness-75"
+                                            className="object-cover"
                                         />
                                     </div>
                                 </div>

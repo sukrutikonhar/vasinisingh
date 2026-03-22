@@ -6,15 +6,18 @@ import Image from 'next/image';
 const AboutHero: React.FC = () => {
     const reelImages = useMemo(
         () => [
-            { id: '1', src: '/images/about-us/vasini-01.webp' },
+            { id: '1', src: '/images/about-us/vasini-07.webp' },
             { id: '2', src: '/images/about-us/story-05.webp' },
             { id: '3', src: '/images/about-us/story-03.webp' },
             { id: '4', src: '/images/about-us/vasini-04.webp' },
             { id: '5', src: '/images/about-us/vasini-05.webp' },
-            { id: '6', src: '/images/about-us/vasini-06.webp' }
+            { id: '6', src: '/images/about-us/vasini-06.webp' },
+            { id: '7', src: '/images/about-us/story-02.webp' },
+            { id: '8', src: '/images/about-us/about-01.webp' },
+            { id: '9', src: '/images/about-us/story-01.webp' },
+            { id: '10', src: '/images/about-us/about-02.webp' }
         ],
-        []
-    );
+        []);
 
     const [shouldAnimate, setShouldAnimate] = useState(true);
 
@@ -64,7 +67,7 @@ const AboutHero: React.FC = () => {
 
                             <div className="relative h-[340px] sm:h-[420px] w-full border border-gray-200 overflow-hidden bg-white rounded-lg shadow-subtle">
                                 <Image
-                                    src="/images/about-us/vasini-07.webp"
+                                    src="/images/about-us/vasini-01.webp"
                                     alt="Portrait placeholder"
                                     fill
                                     className="object-cover"
