@@ -84,10 +84,10 @@ const ContactSection: React.FC = () => {
     };
 
     const socialLinks = [
-        { name: 'X', icon: 'simple-icons:x', url: '#' },
-        { name: 'Medium', icon: 'simple-icons:medium', url: '#' },
-        { name: 'LinkedIn', icon: 'mdi:linkedin', url: '#' },
-        { name: 'Instagram', icon: 'mdi:instagram', url: '#' }
+        { name: 'X', icon: 'simple-icons:x', url: 'https://x.com/VasiniSingh' },
+        { name: 'Medium', icon: 'simple-icons:medium', url: 'https://medium.com/@vasinisingh' },
+        { name: 'LinkedIn', icon: 'mdi:linkedin', url: 'https://www.linkedin.com/in/vasini-singh-18a442205/' },
+        { name: 'Instagram', icon: 'mdi:instagram', url: 'https://www.instagram.com/ghumakkkad_ladki/' }
     ];
 
     return (
