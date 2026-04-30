@@ -31,7 +31,7 @@ const ExperienceEducation: React.FC = () => {
 
         {
             id: '5',
-            period: '2022 — Present',
+            period: '2022 — 2024',
             role: 'UI/UX Designer',
             company: 'Acumant',
             description: 'Worked on enterprise SaaS and B2B platforms, improving product usability through research driven design and accessibility focused solutions.',
