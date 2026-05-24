@@ -28,7 +28,7 @@ export default function WorkmarkProject() {
         subtitle: 'A performance intelligence platform that transforms everyday employee contributions into structured evidence of recoginition, fair evaluation, and organizational intelligence.',
         image: '/images/projects/workmark/workmark-hero.webp',
         tags: ['AI powered B2B SaaS', 'HR Tech x Performance', 'LIVE MVP'],
-        prototypeLink: 'https://theworkmark.lovable.app/contributions',
+        prototypeLink: 'https://theworkmark.lovable.app/',
     };
 
     return (
