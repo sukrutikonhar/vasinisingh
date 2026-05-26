@@ -9,7 +9,6 @@ import { Icon } from '@iconify/react';
 const Footer: React.FC = () => {
     const socialLinks = [
         { name: 'LinkedIn', type: 'lucide' as const, icon: Linkedin, url: 'https://www.linkedin.com/in/vasini-singh-18a442205/', ariaLabel: 'Connect on LinkedIn' },
-        { name: 'Twitter/X', type: 'iconify' as const, icon: 'simple-icons:x', url: 'https://x.com/VasiniSingh', ariaLabel: 'Follow on Twitter/X' },
         { name: 'Instagram', type: 'lucide' as const, icon: Instagram, url: 'https://www.instagram.com/ghumakkkad_ladki/', ariaLabel: 'Follow on Instagram' },
         { name: 'Medium', type: 'iconify' as const, icon: 'simple-icons:medium', url: 'https://medium.com/@vasinisingh', ariaLabel: 'Read on Medium' }
     ];
