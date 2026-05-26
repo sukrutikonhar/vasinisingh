@@ -20,7 +20,7 @@ export type ExperienceCompany = {
 export const experienceCompanies: ExperienceCompany[] = [
   {
     id: "bb",
-    name: "BetaBridge Venture",
+    name: "BetaBridge Ventures",
     role: "Senior Product Designer",
     period: "July 2025 – Present",
     timelinePeriod: "Jul 2025 – Present",
