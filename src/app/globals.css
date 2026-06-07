@@ -182,3 +182,73 @@ input[type="button"] {
     transform: translateY(0);
   }
 }
+
+/* Mountain Path Journey Animations */
+@keyframes pathDraw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes waypointAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.path-animate {
+  animation: pathDraw 1.5s ease-out forwards;
+}
+
+.detail-panel-animate {
+  animation: fadeUp 0.3s ease-out forwards;
+}
+
+.waypoint-animate {
+  animation: waypointAppear 0.4s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .path-animate {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .detail-panel-animate {
+    animation: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .waypoint-animate {
+    animation: none;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Remove focus outline on SVG interactive elements */
+svg g[role="button"]:focus {
+  outline: none;
+}
+
+svg g[role="button"]:focus-visible {
+  outline: none;
+}
