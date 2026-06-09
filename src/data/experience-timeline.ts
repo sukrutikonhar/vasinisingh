@@ -115,6 +115,13 @@ export const experienceCompanies: ExperienceCompany[] = [
         description: "Modern enterprise platform replacing a legacy Microsoft Access system, covering marketing request management, project tracking, approvals, document handling, and reporting. Kanban boards, activity dashboards, automated notifications, and centralized file management for product design and marketing teams.",
         chips: ["Power Apps", "Power BI", "SharePoint", "Azure Blob", "Kanban boards", "Workflow automation"],
       },
+      {
+        id: "neuroassist",
+        name: "NeuroAssist",
+        type: "Clinical decision support tool",
+        description: "Clinical decision support platform for stroke triage and treatment workflows. Covers patient symptom collection, CT imaging upload and analysis, protocol-specific data collection, and a workflow decision engine generating medication and intervention recommendations based on patient data. Includes an admin dashboard for protocol review, decision tree editing, and version history management.",
+        chips: ["Stroke triage", "CT imaging analysis", "Clinical workflows", "Decision engine", "Admin dashboard", "Protocol management"],
+      },
     ],
   },
   {
