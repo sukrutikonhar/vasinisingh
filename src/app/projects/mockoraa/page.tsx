@@ -46,7 +46,7 @@ export default function MockOraaV2Project() {
             <MockOraaV2Final />
             <Gallery />
             <CTASection />
-            <PrevNextProject nextSlug="workmark" nextTitle="WorkMark" />
+            <PrevNextProject prevSlug="neuroassist" prevTitle="NeuroAssist" nextSlug="workmark" nextTitle="WorkMark" />
         </MinimalLayout>
     );
 }

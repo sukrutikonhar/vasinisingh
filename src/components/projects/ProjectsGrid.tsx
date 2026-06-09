@@ -9,6 +9,18 @@ const ProjectsGrid: React.FC = () => {
     const completedProjects = [
 
         {
+            id: 5,
+            title: 'NeuroAssist',
+            slug: 'neuroassist',
+            tagline: 'Stroke Care System — Every Second Counts',
+            description: 'Translating complex neurology protocols into a workflow a stressed emergency physician can trust and act on in under 60 minutes.',
+            image: '',
+            year: '2025',
+            tags: ['Clinical UX', 'Emergency Medicine', 'End-to-End'],
+            role: 'UX Designer',
+            tools: ['Figma', 'FigJam']
+        },
+        {
             id: 2,
             title: 'MockOraa',
             slug: 'mockoraa',
@@ -90,12 +102,20 @@ const ProjectsGrid: React.FC = () => {
                                         {/* Image */}
                                         <div className={`relative h-64 sm:h-80 md:h-96 lg:h-auto ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                                             <div className="relative w-full h-full bg-gray-100">
-                                                <Image
-                                                    src={project.image}
-                                                    alt={project.title}
-                                                    fill
-                                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                                                />
+                                                {project.image ? (
+                                                    <Image
+                                                        src={project.image}
+                                                        alt={project.title}
+                                                        fill
+                                                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                                    />
+                                                ) : (
+                                                    <div className="absolute inset-0 bg-gray-900 flex items-center justify-center">
+                                                        <span className="text-4xl sm:text-5xl font-grotesk font-bold text-white/10 select-none">
+                                                            {project.title}
+                                                        </span>
+                                                    </div>
+                                                )}
                                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
                                             </div>
                                         </div>
