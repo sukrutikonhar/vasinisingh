@@ -14,10 +14,10 @@ const ProjectsGrid: React.FC = () => {
             slug: 'neuroassist',
             tagline: 'Stroke Care System — Every Second Counts',
             description: 'Translating complex neurology protocols into a workflow a stressed emergency physician can trust and act on in under 60 minutes.',
-            image: '',
+            image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1000&auto=format&fit=crop&q=80',
             year: '2025',
             tags: ['Clinical UX', 'Emergency Medicine', 'End-to-End'],
-            role: 'UX Designer',
+            role: 'Product Designer',
             tools: ['Figma', 'FigJam']
         },
         {

@@ -41,7 +41,7 @@ export default function EcoprismProject() {
             <ReflectionLearnings />
             <Gallery />
             <CTASection />
-            <PrevNextProject prevSlug="workmark" prevTitle="WorkMark" nextSlug="arreglio" nextTitle="Arreglio" />
+            <PrevNextProject prevSlug="arreglio" prevTitle="Arreglio" nextSlug="neuroassist" nextTitle="NeuroAssist" />
         </MinimalLayout>
     );
 }
