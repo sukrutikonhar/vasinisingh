@@ -6,7 +6,6 @@ import type { ExperienceProject } from '@/data/experience-timeline';
 
 type ProjectCardProps = {
     project: ExperienceProject;
-    accent: string;
     isActive: boolean;
     onSelect: () => void;
     reduceMotion: boolean;
@@ -14,7 +13,6 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
     project,
-    accent,
     isActive,
     onSelect,
     reduceMotion,
@@ -28,15 +26,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 'bg-[#f5f5f3] transition-[border-color,box-shadow,transform,background-color] duration-300 ease-out',
                 !reduceMotion && 'hover:scale-[1.02] hover:bg-gray-100',
                 isActive
-                    ? 'border-[1.5px] bg-white shadow-[0_0_24px_-8px_var(--project-accent)]'
+                    ? 'border-[1.5px] border-black bg-white shadow-[0_0_24px_-8px_rgba(0,0,0,0.15)]'
                     : 'border-black/10 hover:border-black/20',
             )}
-            style={
-                {
-                    '--project-accent': accent,
-                    borderColor: isActive ? accent : undefined,
-                } as React.CSSProperties
-            }
             aria-pressed={isActive}
         >
             <div className="text-[13px] font-medium text-black transition-colors group-hover:text-black">

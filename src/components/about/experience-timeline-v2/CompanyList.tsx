@@ -20,7 +20,7 @@ const CompanyList: React.FC<CompanyListProps> = ({ companies, activeId, onSelect
                 aria-label="Work experience companies"
             >
                 <div
-                    className="pointer-events-none absolute left-5 top-6 bottom-6 w-px -translate-x-1/2 bg-gradient-to-b from-gray-200 via-gray-300 to-gray-200"
+                    className="pointer-events-none absolute left-8 top-6 bottom-6 w-px -translate-x-1/2 bg-gradient-to-b from-gray-200 via-gray-300 to-gray-200"
                     aria-hidden
                 />
                 <ul className="relative flex flex-col gap-2">
@@ -32,7 +32,7 @@ const CompanyList: React.FC<CompanyListProps> = ({ companies, activeId, onSelect
                                     type="button"
                                     onClick={() => onSelect(company.id)}
                                     className={cn(
-                                        'group flex w-full items-start gap-4 rounded-xl py-4 pr-2 text-left',
+                                        'group flex w-full items-start gap-4 rounded-xl px-3 py-4 text-left',
                                         'transition-[background-color,transform] duration-300 ease-out',
                                         !reduceMotion && 'hover:translate-x-0.5',
                                         isActive && 'bg-black/[0.04]',
@@ -44,28 +44,24 @@ const CompanyList: React.FC<CompanyListProps> = ({ companies, activeId, onSelect
                                             className={cn(
                                                 'absolute inset-0 rounded-full opacity-0 transition-opacity duration-300',
                                                 isActive && !reduceMotion && 'animate-pulse opacity-100',
+                                                isActive && 'shadow-[0_0_20px_4px_rgba(0,0,0,0.08)]',
                                             )}
-                                            style={{
-                                                boxShadow: isActive ? `0 0 20px 4px ${company.accent}55` : undefined,
-                                            }}
                                             aria-hidden
                                         />
                                         <span
                                             className={cn(
                                                 'relative z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 transition-all duration-300',
                                                 !reduceMotion && 'group-hover:scale-110',
+                                                isActive
+                                                    ? 'border-black bg-black shadow-[0_0_16px_rgba(0,0,0,0.12)]'
+                                                    : 'border-gray-300 bg-white',
                                             )}
-                                            style={{
-                                                borderColor: company.accent,
-                                                backgroundColor: isActive ? company.accent : '#ffffff',
-                                                boxShadow: isActive ? `0 0 16px ${company.accent}44` : undefined,
-                                            }}
                                         >
                                             <span
-                                                className="h-4 w-4 rounded-full transition-colors duration-300"
-                                                style={{
-                                                    backgroundColor: isActive ? '#fff' : company.accent,
-                                                }}
+                                                className={cn(
+                                                    'h-4 w-4 rounded-full transition-colors duration-300',
+                                                    isActive ? 'bg-white' : 'bg-black',
+                                                )}
                                             />
                                         </span>
                                     </div>
@@ -120,18 +116,16 @@ const CompanyList: React.FC<CompanyListProps> = ({ companies, activeId, onSelect
                                     className={cn(
                                         'flex h-9 w-9 items-center justify-center rounded-full border-2 transition-transform duration-300',
                                         isActive && !reduceMotion && 'scale-105',
+                                        isActive
+                                            ? 'border-black bg-black shadow-[0_0_14px_rgba(0,0,0,0.12)]'
+                                            : 'border-gray-300 bg-white',
                                     )}
-                                    style={{
-                                        borderColor: company.accent,
-                                        backgroundColor: isActive ? company.accent : '#ffffff',
-                                        boxShadow: isActive ? `0 0 14px ${company.accent}44` : undefined,
-                                    }}
                                 >
                                     <span
-                                        className="h-3 w-3 rounded-full"
-                                        style={{
-                                            backgroundColor: isActive ? '#fff' : company.accent,
-                                        }}
+                                        className={cn(
+                                            'h-3 w-3 rounded-full',
+                                            isActive ? 'bg-white' : 'bg-black',
+                                        )}
                                     />
                                 </span>
                                 <span
