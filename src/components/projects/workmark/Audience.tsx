@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import ImagePlaceholder from './ImagePlaceholder';
 
 const userGoals = [
@@ -19,7 +20,7 @@ export default function Audience() {
         <section className="py-16 sm:py-20 md:py-24 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-2xl sm:text-3xl font-grotesk font-bold text-black mb-6">Target Audience Insights</h2>
+                    <h2 className={`${h2Section} mb-6`}>Target Audience Insights</h2>
                     <p className="text-base font-inter text-gray-600 mb-10 max-w-3xl leading-relaxed">
                         Research included surveys and interviews with employees across roles. We segmented users by age and usage patterns to tailor the experience.
                     </p>

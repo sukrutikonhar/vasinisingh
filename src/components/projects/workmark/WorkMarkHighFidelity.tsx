@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 export default function WorkMarkHighFidelity() {
@@ -8,7 +9,7 @@ export default function WorkMarkHighFidelity() {
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     <p className="text-xs uppercase tracking-widest text-gray-400 font-grotesk font-bold mb-4">HIGH-FIDELITY DESIGNS</p>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-white mb-6">High-Fidelity Designs</h2>
+                    <h2 className={`${h2Section} mb-6`}>High-Fidelity Designs</h2>
                     <p className="text-base font-inter text-gray-300 mb-12 max-w-3xl leading-relaxed">
                         Descriptive text for high-fidelity designs goes here.
                     </p>

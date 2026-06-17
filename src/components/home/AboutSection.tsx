@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Page } from '@/lib/typography';
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
@@ -38,7 +39,7 @@ const AboutSection: React.FC = () => {
                                     About Me
                                 </span>
                             </div>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-grotesk font-bold text-black leading-tight">
+                            <h2 className={`${h2Page}`}>
                                 More Than<br />A Designer
                             </h2>
                         </div>

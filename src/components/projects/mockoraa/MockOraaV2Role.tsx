@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Lightbulb, FileText, Code } from 'lucide-react';
 
@@ -48,7 +49,7 @@ const MockOraaV2Role: React.FC = () => {
                         <div className="inline-block bg-gray-100 rounded-full px-4 py-2 mb-6">
                             <span className="text-xs sm:text-sm font-grotesk font-bold text-[#202022] uppercase tracking-wider">01 — My Role</span>
                         </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6">
+                        <h2 className={`${h2Section} mb-6`}>
                             My Role
                         </h2>
                     </div>
@@ -78,7 +79,7 @@ const MockOraaV2Role: React.FC = () => {
 
                         {/* Approach Section */}
                         <div>
-                            <h2 className="text-2xl sm:text-3xl font-grotesk font-bold text-black mb-8">
+                            <h2 className={`${h2Section} mb-8`}>
                                 Approach
                             </h2>
                             <div className="space-y-6">

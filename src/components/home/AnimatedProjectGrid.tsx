@@ -1,9 +1,14 @@
 'use client';
 
+import { h2Page } from '@/lib/typography';
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, ArrowUp, ArrowDown } from 'lucide-react';
+import ProjectEyebrow from '@/components/ui/ProjectEyebrow';
+import { selectedWorkProjects } from '@/data/projects';
+
+const homepageCaseNumbers = ['01', '02', '03'];
 
 const AnimatedProjectGrid: React.FC = () => {
     const gridRef = useRef<HTMLDivElement>(null);
@@ -28,107 +33,68 @@ const AnimatedProjectGrid: React.FC = () => {
         return () => observer.disconnect();
     }, []);
 
-    const projects = [
-        {
-            id: 1,
-            title: 'Designing Trust in a Sustainability Platform',
-            subtitle: 'Helping users believe and act',
-            image: '/images/projects/ecoprism/ecoprism-landing-image.webp',
-            link: '/projects/ecoprism',
-            metrics: [
-                { value: '52%', label: 'user confidence score', direction: 'up' as const },
-                { value: '29%', label: 'decision making speed', direction: 'up' as const }
-            ]
-        },
-        {
-            id: 2,
-            title: 'Powering Local Service Ecosystems',
-            subtitle: 'Connecting customers and workshops',
-            image: '/images/projects/arreglio1/arreglio-landing.webp',
-            link: '/projects/arreglio',
-            metrics: [
-                { value: '40%', label: 'manual coordination effort', direction: 'down' as const },
-                { value: '65%', label: 'task completion rate', direction: 'up' as const }
-            ]
-        },
-        {
-            id: 3,
-            title: 'Practice Interviews That Actually Feel Real',
-            subtitle: 'and measurable',
-            image: '/images/projects/mockoraa/mockoraa-01.webp',
-            link: '/projects/mockoraa',
-            metrics: [
-                { value: '2.4x', label: 'session engagement', direction: 'up' as const },
-                { value: '31%', label: 'hesitation pauses', direction: 'down' as const }
-            ]
-        }
-    ];
-
     return (
-        <section className="py-32 bg-white">
-            <div className="container-custom">
-                <div className="mb-20">
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-grotesk font-bold text-black mb-6">
+        <section className="py-16 sm:py-24 bg-white">
+            <div className="container-custom px-4 sm:px-6">
+                <div className="mb-12 sm:mb-16 max-w-2xl">
+                    <h2 className={`${h2Page} mb-4`}>
                         Selected Work
                     </h2>
-                    <p className="text-lg text-gray-600 font-inter max-w-2xl">
-                        Projects that demonstrate my approach to solving complex problems
-                        through thoughtful design.
+                    <p className="text-base sm:text-lg text-gray-600 font-inter leading-relaxed">
+                        Three projects where the design had to earn the user&apos;s trust before it earned their action.
                     </p>
                 </div>
 
                 <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    {projects.map((project) => (
+                    {selectedWorkProjects.map((project, index) => (
                         <Link
                             key={project.id}
-                            href={project.link}
+                            href={`/projects/${project.slug}`}
                             className="project-item group block bg-white rounded-[6px] shadow-card overflow-hidden hover:shadow-lg transition-shadow duration-300"
                         >
-                            {/* Top Section: Title, Description, Arrow */}
                             <div className="p-4 sm:p-6">
-                                <div className="flex items-start justify-between gap-0 mb-2">
-                                    <div className="flex-1">
+                                <ProjectEyebrow
+                                    label={project.eyebrow}
+                                    caseNumber={homepageCaseNumbers[index]}
+                                />
+                                <div className="flex items-start justify-between gap-2 mb-2">
+                                    <div className="flex-1 min-w-0">
                                         <h3 className="text-xl sm:text-2xl font-grotesk font-bold text-[#202022] mb-2 leading-tight">
-                                            {project.title}
+                                            {project.hook}
                                         </h3>
                                         <p className="text-sm sm:text-base font-inter text-gray-600 leading-relaxed">
-                                            {project.subtitle}
+                                            {project.description}
                                         </p>
                                     </div>
-                                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#202022] flex-shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
+                                    <ArrowRight className="w-5 h-5 text-[#202022] flex-shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
                                 </div>
                             </div>
 
-                            {/* Middle Section: Image */}
-                            <div className="relative w-full h-48 sm:h-64 md:h-80 overflow-hidden bg-gray-100">
+                            <div className="relative w-full h-48 sm:h-64 md:h-72 overflow-hidden bg-gray-100">
                                 <Image
                                     src={project.image}
-                                    alt={project.title}
+                                    alt={project.hook}
                                     fill
                                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                                 />
                             </div>
 
-                            {/* Bottom Section: Metrics */}
-                            {project.metrics && project.metrics.length > 0 && (
+                            {project.metrics.length > 0 && (
                                 <div className="p-4 sm:p-6 pt-4 border-t border-gray-200">
-                                    <div className="flex justify-between gap-4">
-                                        {project.metrics.map((metric, index) => (
-                                            <div
-                                                key={index}
-                                                className="flex flex-col"
-                                            >
-                                                <div className="flex items-center gap-2 mb-1">
+                                    <div className="flex justify-between gap-3">
+                                        {project.metrics.map((metric, metricIndex) => (
+                                            <div key={metricIndex} className="flex flex-col min-w-0">
+                                                <div className="flex items-center gap-1.5 mb-1">
                                                     {metric.direction === 'up' ? (
-                                                        <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5 text-[#202022] flex-shrink-0" />
+                                                        <ArrowUp className="w-3.5 h-3.5 text-[#202022] flex-shrink-0" />
                                                     ) : (
-                                                        <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 text-[#202022] flex-shrink-0" />
+                                                        <ArrowDown className="w-3.5 h-3.5 text-[#202022] flex-shrink-0" />
                                                     )}
-                                                    <span className="text-base sm:text-lg font-grotesk font-bold text-[#202022]">
+                                                    <span className="text-sm sm:text-base font-grotesk font-bold text-[#202022] tabular-nums">
                                                         {metric.value}
                                                     </span>
                                                 </div>
-                                                <span className="text-xs sm:text-sm font-inter text-gray-600">
+                                                <span className="text-[10px] sm:text-xs font-inter text-gray-600 leading-tight">
                                                     {metric.label}
                                                 </span>
                                             </div>
@@ -140,13 +106,13 @@ const AnimatedProjectGrid: React.FC = () => {
                     ))}
                 </div>
 
-                <div className="mt-16 text-center">
+                <div className="mt-12 text-center">
                     <Link
                         href="/projects"
-                        className="inline-flex items-center text-black font-medium hover:underline group"
+                        className="inline-flex items-center text-black font-grotesk font-medium hover:underline group"
                     >
-                        <span className="mr-2">View All Projects</span>
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        <span className="mr-2">See all five projects</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
             </div>
@@ -155,4 +121,3 @@ const AnimatedProjectGrid: React.FC = () => {
 };
 
 export default AnimatedProjectGrid;
-

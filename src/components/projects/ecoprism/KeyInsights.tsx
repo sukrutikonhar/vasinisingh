@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 const KeyInsights: React.FC = () => {
@@ -27,12 +28,15 @@ const KeyInsights: React.FC = () => {
     ];
 
     return (
-        <section className="py-16 sm:py-20 md:py-24 bg-white">
+        <section className="py-20 sm:py-24 md:py-28 bg-gray-50">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <div className="mb-12 text-center">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
+                    <div className="mb-14 text-center">
+                        <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-500 mb-4">
                             Key Insights
+                        </p>
+                        <h2 className={`${h2Section} mb-6`}>
+                            What shaped every design decision
                         </h2>
                         <p className="text-base sm:text-lg font-inter text-gray-700 leading-relaxed max-w-3xl mx-auto">
                             Critical learnings that shaped the design decisions.

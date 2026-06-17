@@ -1,32 +1,37 @@
+import type { Metadata } from 'next';
 import MinimalLayout from '@/components/layout/MinimalLayout';
 import CaseStudyHero from '@/components/projects/CaseStudyHero';
 import ProjectOverview from '@/components/projects/ecoprism/ProjectOverview';
 import Role from '@/components/projects/ecoprism/Role';
 import Challenge from '@/components/projects/ecoprism/Challenge';
-import Solutions from '@/components/projects/ecoprism/Solutions';
 import KeyInsights from '@/components/projects/ecoprism/KeyInsights';
+import Solutions from '@/components/projects/ecoprism/Solutions';
 import ImpactResults from '@/components/projects/ecoprism/ImpactResults';
 import ReflectionLearnings from '@/components/projects/ecoprism/ReflectionLearnings';
 import CTASection from '@/components/projects/ecoprism/CTASection';
 import Gallery from '@/components/projects/ecoprism/Gallery';
 import PrevNextProject from '@/components/projects/PrevNextProject';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata = {
-    title: 'ecoPRISM - ESG SaaS Platform | Vasini Singh',
-    description: 'A case study on designing an intuitive ESG compliance and sustainability reporting platform.',
-};
+export const metadata: Metadata = createPageMetadata({
+    title: 'ecoPRISM — When Compliance Has to Earn Belief',
+    description:
+        'Case study: designing an ESG compliance platform for ABB where the numbers had to be trusted, not just shown.',
+    path: '/projects/ecoprism',
+});
 
 export default function EcoprismProject() {
     const heroData = {
-        title: 'ecoPRISM',
-        subtitle: 'Simplifying ESG compliance for global enterprises through strategic UI/UX design and user-centered innovation',
+        title: 'When Compliance Has to Earn Belief',
+        subtitle: 'Designing ecoPRISM, an ESG platform for ABB where the numbers had to be trusted, not just shown.',
         image: '/images/projects/ecoprism/ecoprism-landing-image.webp',
-        tags: ['LIVE PRODUCT', 'GLOBAL ENTERPRISE', 'B2B SaaS'],
+        tags: ['Compliance UX', 'Enterprise Dashboard', 'Data-Dense'],
+        statusBadge: 'LIVE PRODUCT',
         metrics: [
-            { value: '89%', label: 'Task Completion Rate' },
+            { value: '95%', label: 'Task Completion' },
             { value: '4.6/5', label: 'User Satisfaction' },
-            { value: '40%', label: 'Time Saved' }
-        ]
+            { value: '40%', label: 'Time Saved' },
+        ],
     };
 
     return (
@@ -35,8 +40,8 @@ export default function EcoprismProject() {
             <ProjectOverview />
             <Role />
             <Challenge />
-            <Solutions />
             <KeyInsights />
+            <Solutions />
             <ImpactResults />
             <ReflectionLearnings />
             <Gallery />

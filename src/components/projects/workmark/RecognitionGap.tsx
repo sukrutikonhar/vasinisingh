@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Clock, Calendar, ClipboardList } from 'lucide-react';
 
@@ -12,12 +13,21 @@ const RecognitionGap: React.FC = () => {
                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
                         01 — THE PROBLEM SPACE
                     </p>
-                    <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-4">
+                    <h2 className={`${h2Section} mb-4`}>
                         The Recognition Gap in Modern Organizations
                     </h2>
-                    <p className="text-base sm:text-lg font-inter text-gray-600 max-w-3xl leading-relaxed mb-12">
+                    <p className="text-base sm:text-lg font-inter text-gray-600 max-w-3xl leading-relaxed mb-8">
                         Employees contribute across multiple tools, conversations, and collaborative efforts every day. However, only a small portion of this work becomes visible in performance reviews or recognition systems.
                     </p>
+
+                    <div className="bg-black text-white rounded-xl p-6 sm:p-8 mb-12 max-w-3xl">
+                        <p className="text-xs uppercase tracking-wider text-gray-400 font-grotesk font-bold mb-3">
+                            Reframing the problem
+                        </p>
+                        <p className="text-lg sm:text-xl font-grotesk font-semibold leading-snug">
+                            From &ldquo;Employees are not recognized enough&rdquo; → &ldquo;Organizations lack a system to translate work into evidence.&rdquo;
+                        </p>
+                    </div>
 
                     {/* Two columns: left = 2 stacked cards, right = 1 reasons card */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -33,6 +43,7 @@ const RecognitionGap: React.FC = () => {
                                 <p className="text-base font-inter text-gray-600 leading-relaxed">
                                     Deliverables, KPIs, and measurable outputs that surface naturally during formal reviews.
                                 </p>
+                                <p className="text-xs font-inter text-gray-500 mt-3">Source: Internal UX research synthesis</p>
                             </div>
                             <div className="bg-black text-white rounded-xl p-6">
                                 <p className="text-sm uppercase tracking-wider text-gray-300 font-grotesk font-bold mb-4">
@@ -44,6 +55,7 @@ const RecognitionGap: React.FC = () => {
                                 <p className="text-base font-inter text-white leading-relaxed">
                                     Collaboration, mentoring, knowledge sharing, issue solving, and proactive ownership.
                                 </p>
+                                <p className="text-xs font-inter text-gray-400 mt-3">Source: Internal UX research synthesis</p>
                             </div>
                         </div>
 

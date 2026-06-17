@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Tag, ExternalLink } from 'lucide-react';
+import { h1Page } from '@/lib/typography';
 
 interface MockOraaV2HeroProps {
     data: {
@@ -38,7 +39,7 @@ const MockOraaV2Hero: React.FC<MockOraaV2HeroProps> = ({ data }) => {
                             </div>
 
                             {/* Title */}
-                            <h1 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-[#202022] mb-3 leading-tight">
+                            <h1 className={`${h1Page} text-[#202022] mb-3`}>
                                 {data.title}
                             </h1>
 

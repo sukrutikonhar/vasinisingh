@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Check } from 'lucide-react';
@@ -29,11 +30,11 @@ export default function MockOraaV2Iterations() {
                             <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">
                                 08. VALIDATION & ITERATION
                             </p>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4 sm:mb-6">
+                            <h2 className={`${h2Section} mb-4 sm:mb-6`}>
                                 Testing with Rigor
                             </h2>
                             <p className="text-sm sm:text-base md:text-lg font-inter text-gray-600 leading-relaxed mb-6 sm:mb-8">
-                                We ran moderated sessions (n=6) and unmoderated Maze testing (n=51) to validate our flows. The initial designs suffered from &ldquo;dashboard blindness&rdquo;, where users were overwhelmed by metrics.
+                                I ran moderated sessions (n=6) and unmoderated Maze testing (n=51) to validate our flows. The initial designs suffered from &ldquo;dashboard blindness&rdquo;, where users were overwhelmed by metrics.
                             </p>
 
                             <div className="bg-gray-100 rounded-lg sm:rounded-xl p-6 sm:p-8 border border-gray-200">
@@ -57,7 +58,7 @@ export default function MockOraaV2Iterations() {
                                         <span className="flex-shrink-0 w-5 h-5 rounded-full bg-black flex items-center justify-center mt-0.5 flex-shrink-0">
                                             <Check className="w-3 h-3 text-white" strokeWidth={2.5} />
                                         </span>
-                                        <span><strong className="text-black">Result:</strong> Time-on-task improved by 31%.</span>
+                                        <span><strong className="text-black">Result:</strong> Navigation clarity improved significantly in follow-up testing.</span>
                                     </li>
                                 </ul>
                             </div>

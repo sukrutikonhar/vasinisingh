@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 const Testing: React.FC = () => {
@@ -25,7 +26,7 @@ const Testing: React.FC = () => {
         <section className="py-20 bg-white">
             <div className="container-custom">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl sm:text-5xl font-grotesk font-bold text-black mb-8">
+                    <h2 className={`${h2Section} mb-8`}>
                         Testing & Refinement
                     </h2>
 

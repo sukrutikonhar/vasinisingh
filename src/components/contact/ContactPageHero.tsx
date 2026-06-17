@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { h1Page } from '@/lib/typography';
 
 const ContactPageHero: React.FC = () => {
     return (
@@ -11,7 +12,7 @@ const ContactPageHero: React.FC = () => {
                 </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-grotesk font-bold text-black mb-6 sm:mb-8 leading-tight">
+            <h1 className={`${h1Page} text-black mb-6 sm:mb-8`}>
                 Let&apos;s Work<br />Together
             </h1>
 

@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import Image from 'next/image';
 import { LayoutDashboard, FileCheck, BarChart3 } from 'lucide-react';
@@ -65,8 +66,8 @@ const Solutions: React.FC = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
                     <div className="mb-20 text-center">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
-                            Few Design Solutions
+                        <h2 className={`${h2Section} mb-4`}>
+                            Key Design Solutions
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed max-w-3xl mx-auto">
                             Strategic solutions designed to transform complex sustainability data into clear, actionable insights
@@ -96,7 +97,7 @@ const Solutions: React.FC = () => {
 
                                             <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
                                                 <div>
-                                                    <h4 className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-2">
+                                                    <h4 className="text-xs font-grotesk font-bold text-red-500 uppercase tracking-wider mb-2">
                                                         Problem Identified
                                                     </h4>
                                                     <p className="text-sm sm:text-base font-inter text-gray-700 leading-relaxed">
@@ -115,7 +116,7 @@ const Solutions: React.FC = () => {
                                             </div>
 
                                             <div>
-                                                <h4 className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-3">
+                                                <h4 className="text-xs font-grotesk font-bold text-green-500 uppercase tracking-wider mb-3">
                                                     Impact
                                                 </h4>
                                                 <div className="flex gap-6 sm:gap-8">

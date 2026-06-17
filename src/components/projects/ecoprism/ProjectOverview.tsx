@@ -5,7 +5,7 @@ import React from 'react';
 const ProjectOverview: React.FC = () => {
     const metadata = [
         { label: 'Domain', value: 'ESG Compliance & Sustainability' },
-        { label: 'My Role', value: 'Foundation Designer' },
+        { label: 'My Role', value: 'Founding Designer' },
         { label: 'Platform', value: 'B2B SaaS Web Application' },
         { label: 'Client Success', value: 'Global Leaders (ABB)' }
     ];

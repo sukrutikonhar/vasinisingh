@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Quote, Users } from 'lucide-react';
 
@@ -29,7 +30,7 @@ const Testimonials: React.FC = () => {
                                 User Testimonials
                             </span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
+                        <h2 className={`${h2Section} mb-4`}>
                             Real Feedback from Our Users
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 max-w-3xl mx-auto leading-relaxed">

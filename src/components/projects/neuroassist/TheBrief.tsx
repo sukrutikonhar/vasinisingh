@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 const TheBrief: React.FC = () => {
@@ -13,7 +14,7 @@ const TheBrief: React.FC = () => {
                         <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-400 mb-3">
                             The brief
                         </p>
-                        <h2 className="text-2xl sm:text-3xl font-grotesk font-bold text-black mb-5 leading-tight">
+                        <h2 className={`${h2Section} mb-5`}>
                             A problem where bad UX<br />can cost a <em className="italic">life</em>
                         </h2>
                         <p className="text-sm sm:text-base font-inter text-gray-600 leading-relaxed mb-4">
@@ -31,20 +32,6 @@ const TheBrief: React.FC = () => {
                             </p>
                         </div>
                     </div>
-
-                    {/* Right: Image */}
-                    <div>
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?w=800&auto=format&fit=crop&q=70"
-                            alt="Emergency physician reviewing patient information in a clinical setting"
-                            className="w-full h-64 sm:h-80 object-cover rounded-[6px] border border-gray-200"
-                        />
-                        <p className="text-xs font-inter text-gray-400 mt-2">
-                            The context I designed for: a physician under pressure, time-critical, no margin for UX friction. Photo: Unsplash
-                        </p>
-                    </div>
-
                 </div>
             </div>
         </section>

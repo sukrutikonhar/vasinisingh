@@ -1,11 +1,12 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Target, Clock, Star, TrendingDown } from 'lucide-react';
 
 const Outcome: React.FC = () => {
     const metrics = [
-        { icon: Target, value: '89%', label: 'Task Completion Rate', description: 'Users successfully complete complex workflows' },
+        { icon: Target, value: '95%', label: 'Task Completion Rate', description: 'Users successfully complete complex workflows' },
         { icon: Clock, value: '40%', label: 'Time Saved on Reporting', description: 'Reduced manual effort significantly' },
         { icon: Star, value: '4.6/5', label: 'User Satisfaction Score', description: 'Highly rated by enterprise teams' },
         { icon: TrendingDown, value: '50%', label: 'Reduction in Errors', description: 'Automated validation prevents mistakes' }
@@ -28,7 +29,7 @@ const Outcome: React.FC = () => {
                                 05 — Measurable Impact
                             </span>
                         </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-white mb-6">
+                        <h2 className={`${h2Section} mb-6`}>
                             Business & User Impact
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-white/80 max-w-3xl mx-auto leading-relaxed">

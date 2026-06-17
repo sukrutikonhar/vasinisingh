@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 const reflections = [
@@ -40,7 +41,7 @@ const Reflection: React.FC = () => {
                             <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-400 mb-3">
                                 Reflection
                             </p>
-                            <h2 className="text-2xl sm:text-3xl font-grotesk font-bold text-black leading-tight">
+                            <h2 className={`${h2Section}`}>
                                 What I took away
                             </h2>
                         </div>
@@ -63,18 +64,6 @@ const Reflection: React.FC = () => {
                             ))}
                         </div>
 
-                        {/* Right: image */}
-                        <div>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                                src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=70"
-                                alt="Digital health interface showing clinical data visualization"
-                                className="w-full h-60 sm:h-72 object-cover rounded-[6px] border border-gray-200 mb-2"
-                            />
-                            <p className="text-xs font-inter text-gray-400">
-                                Designing for these environments means understanding what calm and clarity mean at 3am. Photo: Unsplash
-                            </p>
-                        </div>
                     </div>
 
                     {/* Stats strip */}

@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 const colors = [
     { name: 'Primary', hex: '#000000' },
     { name: 'Secondary', hex: '#B0B0B0' },
@@ -14,7 +15,7 @@ export default function VisualDesignSystem() {
         <section className="py-16 sm:py-20 md:py-24 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-2xl sm:text-3xl font-grotesk font-bold text-black mb-6">Visual Design System</h2>
+                    <h2 className={`${h2Section} mb-6`}>Visual Design System</h2>
                     <p className="text-base font-inter text-gray-600 mb-10 max-w-3xl leading-relaxed">
                         A minimal, monochromatic palette and clear typography hierarchy keep the focus on content and reduce cognitive load.
                     </p>

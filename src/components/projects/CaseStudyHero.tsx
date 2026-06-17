@@ -3,14 +3,17 @@
 import React from 'react';
 import Image from 'next/image';
 import { Tag, ExternalLink } from 'lucide-react';
+import { h1Page } from '@/lib/typography';
 
 interface CaseStudyHeroProps {
     data: {
         title: string;
         subtitle: string;
         image?: string;
+        heroImage?: string;
         youtubeVideoId?: string;
         tags: string[];
+        statusBadge?: string;
         metrics?: {
             value: string;
             label: string;
@@ -19,12 +22,11 @@ interface CaseStudyHeroProps {
     };
     wideLeftColumn?: boolean;
     topPadding?: boolean;
-    compactTitle?: boolean;
     /** Extra top/bottom padding so hero doesn’t touch header or next section (e.g. MockOraa v2) */
     comfortableSpacing?: boolean;
 }
 
-const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = false, topPadding = false, compactTitle = false, comfortableSpacing = false }) => {
+const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = false, topPadding = false, comfortableSpacing = false }) => {
     const sectionClass = [
         topPadding && "pt-8 md:pt-8",
         comfortableSpacing && "pt-24 md:pt-24 pb-24 md:pb-24",
@@ -50,14 +52,20 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = fa
                             </div>
 
                             {/* Title */}
-                            <h1 className={`font-grotesk font-bold text-[#202022] mb-4 leading-tight ${compactTitle ? 'text-2xl sm:text-3xl md:text-5xl' : 'text-5xl sm:text-6xl md:text-7xl'}`}>
+                            <h1 className={`${h1Page} text-[#202022] mb-4`}>
                                 {data.title}
                             </h1>
 
                             {/* Subtitle */}
-                            <p className="text-base sm:text-lg md:text-xl font-inter text-gray-600 mb-10 leading-relaxed">
+                            <p className="text-base sm:text-lg md:text-xl font-inter text-gray-600 mb-4 leading-relaxed">
                                 {data.subtitle}
                             </p>
+
+                            {data.statusBadge && (
+                                <p className="text-xs font-grotesk uppercase tracking-wider text-gray-500 mb-6">
+                                    {data.statusBadge}
+                                </p>
+                            )}
 
                             {/* Metrics */}
                             {data.metrics && (
@@ -65,7 +73,7 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = fa
                                     {data.metrics.map((metric, index) => (
                                         <div
                                             key={index}
-                                            className="bg-white border-2 border-[#202022] p-4 text-center"
+                                            className="bg-white border border-gray-300 rounded-lg p-4 text-center"
                                         >
                                             <div className="text-3xl sm:text-4xl font-grotesk font-bold text-[#202022] mb-1">
                                                 {metric.value}
@@ -94,6 +102,17 @@ const CaseStudyHero: React.FC<CaseStudyHeroProps> = ({ data, wideLeftColumn = fa
 
                         {/* Right: Video or Image */}
                         <div className={`order-1 lg:order-2 ${wideLeftColumn ? 'lg:col-span-5' : ''}`}>
+                            {data.heroImage && (
+                                <div className="relative w-full h-[200px] sm:h-[260px] md:h-[300px] mb-4 rounded-lg overflow-hidden bg-gray-100">
+                                    <Image
+                                        src={data.heroImage}
+                                        alt={`${data.title} product screen`}
+                                        fill
+                                        className="object-cover object-top"
+                                        priority
+                                    />
+                                </div>
+                            )}
                             {data.youtubeVideoId ? (
                                 <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-100">
                                     <iframe

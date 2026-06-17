@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
@@ -50,9 +51,9 @@ export default function MockOraaV2Audience() {
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">03. TARGET USERS</p>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">Designing for Diverse Realities</h2>
+                    <h2 className={`${h2Section} mb-4`}>Designing for Diverse Realities</h2>
                     <p className="text-base sm:text-lg font-inter text-gray-600 mb-12 max-w-3xl leading-relaxed">
-                        We segmented our audience based on behavioral patterns and emotional blockers, not just demographics.
+                        I segmented our audience based on behavioral patterns and emotional blockers, not just demographics.
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

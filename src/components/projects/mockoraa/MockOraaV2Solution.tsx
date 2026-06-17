@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import Image from 'next/image';
 import { Check } from 'lucide-react';
 
@@ -33,11 +34,11 @@ export default function MockOraaV2Solution() {
                             <p className="text-xs uppercase tracking-widest text-gray-400 font-grotesk font-bold mb-4">
                                 05. CONCEPTUALIZATION
                             </p>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-white mb-4 sm:mb-6">
+                            <h2 className={`${h2Section} mb-4 sm:mb-6`}>
                                 Translating Ideas to Product Pillars
                             </h2>
                             <p className="text-sm sm:text-base md:text-lg font-inter text-gray-300 leading-relaxed mb-6 sm:mb-8">
-                                Using SCAMPER and Crazy 8s, we diverged rapidly before converging on four core product pillars designed to directly target our research insights.
+                                I led SCAMPER and Crazy 8s sessions, diverging rapidly before converging on four core product pillars designed to directly target our research insights.
                             </p>
                             <ul className="space-y-3 sm:space-y-4">
                                 {pillars.map((pillar, index) => (

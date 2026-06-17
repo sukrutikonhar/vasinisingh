@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Page } from '@/lib/typography';
 import React from 'react';
 import { Icon } from '@iconify/react';
 
@@ -30,7 +31,7 @@ const SkillsTools: React.FC = () => {
         <section className="py-16 sm:py-24 md:py-32 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-12 sm:mb-16 text-center">
+                    <h2 className={`${h2Page} mb-12 sm:mb-16`}>
                         Skills & Tools
                     </h2>
 

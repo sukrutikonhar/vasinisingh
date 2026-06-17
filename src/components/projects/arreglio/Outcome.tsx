@@ -1,14 +1,14 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
-import { Clock, Users, DollarSign, Heart } from 'lucide-react';
+import { Clock, Users, DollarSign } from 'lucide-react';
 
 const Outcome: React.FC = () => {
     const metrics = [
-        { icon: Clock, value: '70%', label: 'Faster Turnaround', description: 'Digitization eliminated paperwork bottlenecks' },
-        { icon: Users, value: '80%', label: 'Customer Satisfaction', description: 'Transparency built trust and loyalty' },
-        { icon: DollarSign, value: '40%', label: 'Cost Savings', description: 'Reduced admin time and operational waste' },
-        { icon: Heart, value: '60%', label: 'Owner Satisfaction', description: 'Streamlined operations improved work-life balance' }
+        { icon: Clock, value: '3x', label: 'Faster Processing', description: 'Average repair job completion time' },
+        { icon: Users, value: '$50K', label: 'Annual Savings', description: 'Reduced administrative overhead' },
+        { icon: DollarSign, value: '98%', label: 'Adoption Rate', description: 'Within first month of launch' },
     ];
 
     return (
@@ -28,7 +28,7 @@ const Outcome: React.FC = () => {
                                 05 — Impact & Results
                             </span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-white mb-4">
+                        <h2 className={`${h2Section} mb-4`}>
                             Early MVP Validation & Measurable Impact
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -37,7 +37,7 @@ const Outcome: React.FC = () => {
                     </div>
 
                     {/* Metrics Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {metrics.map((metric, index) => (
                             <div
                                 key={index}

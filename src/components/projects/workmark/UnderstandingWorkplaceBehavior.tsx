@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
@@ -65,7 +66,7 @@ const UnderstandingWorkplaceBehavior: React.FC = () => {
                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
                         07 — RESEARCH
                     </p>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
+                    <h2 className={`${h2Section} mb-4`}>
                         Understanding Real Workplace Behavior
                     </h2>
                     <p className="text-sm sm:text-base md:text-lg font-inter text-gray-600 max-w-3xl leading-relaxed mb-12">

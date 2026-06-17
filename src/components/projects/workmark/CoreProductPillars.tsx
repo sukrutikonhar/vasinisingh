@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Zap, Brain, Scale, Heart } from 'lucide-react';
 import { ChevronRight } from 'lucide-react';
@@ -41,9 +42,9 @@ const CoreProductPillars: React.FC = () => {
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-medium mb-4">
-                        11 — FEATURE STRATEGY
+                        09 — FEATURE STRATEGY
                     </p>
-                    <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-4">
+                    <h2 className={`${h2Section} mb-4`}>
                         Core Product Pillars
                     </h2>
                     <p className="text-base sm:text-lg font-inter text-gray-600 max-w-3xl leading-relaxed mb-12">

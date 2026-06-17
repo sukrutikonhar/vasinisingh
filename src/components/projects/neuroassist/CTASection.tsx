@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import Link from 'next/link';
 
@@ -8,7 +9,7 @@ const CTASection: React.FC = () => {
         <section className="py-14 sm:py-16 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-6">
+                    <h2 className={`${h2Section} mb-6`}>
                         Interested in safety-critical design?
                     </h2>
                     <p className="text-lg sm:text-xl font-inter text-gray-600 mb-10 leading-relaxed">

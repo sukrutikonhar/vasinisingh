@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Page } from '@/lib/typography';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 interface Phase {
@@ -13,25 +14,25 @@ interface Phase {
 const phases: Phase[] = [
     {
         id: 1,
-        phase: 'PHASE 01: CURIOSITY',
-        title: 'I began with a deep curiosity about how people experience things.',
-        body: 'I was drawn to the small details that shape emotion, trust, and ease. That early curiosity taught me to observe carefully and to understand design as something people feel, not just something they see.',
-        foot: 'This phase shaped my sensitivity to people, behaviors, and the power of thoughtful decisions.',
+        phase: 'PHASE 01: BEFORE DESIGN',
+        title: 'Eight years before design, I was learning to read people.',
+        body: 'My career didn\'t start in product design. It started in back-office operations and community management, where for eight years I watched how people made decisions about what to buy, what to believe, and what to trust. One thing kept showing up: the most useful work was never the cleverest. It was the one that made the next step obvious. That observation pulled me into product design, and I haven\'t left.',
+        foot: '',
     },
     {
         id: 2,
-        phase: 'PHASE 02: GROWTH',
-        title: 'Then I learned how to turn complexity into clarity.',
-        body: 'Working across products and industries helped me see how many moving parts, competing needs, and technical constraints can still become intuitive experiences when the right structure is in place.',
-        foot: 'This is where my practice became more strategic and more grounded in real product challenges.',
+        phase: 'PHASE 02: LEARNING THE CRAFT',
+        title: 'Then came the work of turning systems into something a person could actually use.',
+        body: 'At Bizmeth Solutions, and later at Acumant Technologies, I learned how products really get built. Not the polished version in a portfolio, but the messy version with edge cases, stakeholder politics, and constraints that shift every week. I shipped an ESG dashboard for ABB, a workshop management system that rolled out across the EU, India, and the UAE, and the foundations of products other designers later inherited. The lesson from those years: design is less about solving problems on paper, and more about holding a clear vision while the ground moves underneath you.',
+        foot: '',
     },
     {
         id: 3,
         phase: 'PHASE 03: TODAY',
-        title: 'Today I design experiences that help people move with confidence.',
-        body: 'I care about the full picture, from the problem being framed to the system supporting the interface. My work is guided by clarity, emotional intelligence, and a desire to make products feel calm and meaningful.',
-        foot: 'The goal is simple: create experiences that feel useful, thoughtful, and easy to trust.',
-    }
+        title: 'Today, I design for trust at enterprise scale.',
+        body: 'At BetaBridge Ventures, I lead end-to-end design for clients including ABB and Crown Beverage Europe. The work spans knowledge platforms, workforce productivity tools, operational dashboards, and AI-driven support experiences. The thread that runs through all of it is simple. Every system I design has to earn the user\'s belief before it earns their action. That\'s the work I\'m here to do.',
+        foot: '',
+    },
 ];
 
 // Waypoint positions on the SVG path (x, y coordinates for desktop)
@@ -107,13 +108,13 @@ const AboutIntro: React.FC = () => {
                             <div className="text-xs sm:text-sm font-inter uppercase tracking-[0.22em] text-gray-500 mb-2">
                                 THE JOURNEY
                             </div>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black leading-[1.1]">
+                            <h2 className={`${h2Page}`}>
                                 A story of becoming a product designer
                             </h2>
                         </div>
 
                         <p className="text-sm sm:text-base font-inter text-gray-600 leading-relaxed pt-1">
-                            This journey is really about how I learned to connect people, systems, and business goals through design. Each phase shaped the way I think, the way I collaborate, and the kind of experiences I want to create.
+                            This journey is really about how I learned to connect people, systems, and business goals through design. Each phase shaped how I think, how I collaborate, and the kind of experiences I want to create.
                         </p>
                     </div>
 
@@ -141,8 +142,8 @@ const AboutIntro: React.FC = () => {
                                         activePhase === 1
                                             ? "M 40 120 Q 95 110 150 105"
                                             : activePhase === 2
-                                            ? "M 40 120 Q 95 110 150 105 Q 220 100 280 70 Q 340 40 400 45"
-                                            : "M 40 120 Q 95 110 150 105 Q 220 100 280 70 Q 340 40 400 45 Q 460 50 520 60 Q 580 70 650 85"
+                                                ? "M 40 120 Q 95 110 150 105 Q 220 100 280 70 Q 340 40 400 45"
+                                                : "M 40 120 Q 95 110 150 105 Q 220 100 280 70 Q 340 40 400 45 Q 460 50 520 60 Q 580 70 650 85"
                                     }
                                     fill="none"
                                     stroke="#202022"
@@ -222,11 +223,6 @@ const AboutIntro: React.FC = () => {
                                 );
                             })}
                         </svg>
-
-                        {/* Hint text */}
-                        <p className="text-center text-xs font-inter text-gray-400 mt-2">
-                            tap a waypoint to read that chapter
-                        </p>
                     </div>
 
                     {/* Mobile Layout - Vertical Path */}
@@ -250,28 +246,25 @@ const AboutIntro: React.FC = () => {
                                             {/* Waypoint marker */}
                                             <button
                                                 onClick={() => handleWaypointClick(phase.id)}
-                                                className={`absolute left-0 top-0 w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 ${
-                                                    isActive
+                                                className={`absolute left-0 top-0 w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 ${isActive
                                                         ? 'bg-black border-black'
                                                         : 'bg-white border-gray-400 hover:border-gray-600'
-                                                }`}
+                                                    }`}
                                                 aria-pressed={isActive}
                                                 aria-label={`${phase.phase}: ${phase.title}`}
                                             >
                                                 <span
-                                                    className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                                                        isActive ? 'bg-white' : 'bg-black'
-                                                    }`}
+                                                    className={`w-3 h-3 rounded-full transition-colors duration-200 ${isActive ? 'bg-white' : 'bg-black'
+                                                        }`}
                                                 />
                                             </button>
 
                                             {/* Phase card */}
                                             <div
-                                                className={`border rounded-lg p-4 transition-all duration-200 cursor-pointer ${
-                                                    isActive
+                                                className={`border rounded-lg p-4 transition-all duration-200 cursor-pointer ${isActive
                                                         ? 'border-black bg-white shadow-md'
                                                         : 'border-gray-200 bg-white hover:border-gray-400'
-                                                }`}
+                                                    }`}
                                                 onClick={() => handleWaypointClick(phase.id)}
                                                 role="button"
                                                 tabIndex={0}
@@ -290,9 +283,11 @@ const AboutIntro: React.FC = () => {
                                                         <p className="text-sm font-inter text-gray-600 leading-relaxed">
                                                             {phase.body}
                                                         </p>
-                                                        <p className="mt-4 text-xs font-inter text-gray-400 leading-relaxed">
-                                                            {phase.foot}
-                                                        </p>
+                                                        {phase.foot ? (
+                                                            <p className="mt-4 text-xs font-inter text-gray-400 leading-relaxed">
+                                                                {phase.foot}
+                                                            </p>
+                                                        ) : null}
                                                     </div>
                                                 )}
                                             </div>
@@ -304,7 +299,7 @@ const AboutIntro: React.FC = () => {
 
                         {/* Hint text */}
                         <p className="text-center text-sm font-inter text-gray-400 mt-6">
-                            tap a phase to read that chapter
+                            Three phases that shaped how I think, collaborate, and design. Click a phase to read it.
                         </p>
                     </div>
 
@@ -328,13 +323,15 @@ const AboutIntro: React.FC = () => {
                                 <p className="mt-3 text-sm font-inter text-gray-600 leading-relaxed">
                                     {activePhaseData.body}
                                 </p>
-                                <p className="mt-3 text-xs font-inter text-gray-400 leading-relaxed">
-                                    {activePhaseData.foot}
-                                </p>
+                                {activePhaseData.foot ? (
+                                    <p className="mt-3 text-xs font-inter text-gray-400 leading-relaxed">
+                                        {activePhaseData.foot}
+                                    </p>
+                                ) : null}
                             </div>
                         ) : (
                             <div className="max-w-2xl mx-auto text-center py-6 text-gray-400 font-inter text-sm">
-                                Select a waypoint above to explore each phase of the journey
+                                Three phases that shaped how I think, collaborate, and design. Click a phase to read it.
                             </div>
                         )}
                     </div>

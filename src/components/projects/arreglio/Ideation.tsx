@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Zap, DollarSign, MessageSquare, Layout, ShieldCheck, Palette, CheckCircle2, Target } from 'lucide-react';
 
@@ -67,7 +68,7 @@ const Ideation: React.FC = () => {
                                 03 — Key Design Decisions
                             </span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4 max-w-4xl">
+                        <h2 className={`${h2Section} mb-4 max-w-4xl`}>
                             Strategic Trade-offs & Solutions
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 max-w-3xl leading-relaxed">

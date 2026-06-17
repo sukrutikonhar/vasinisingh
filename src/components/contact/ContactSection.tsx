@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
+import { h1Page, h2Section } from '@/lib/typography';
 
 const ContactSection: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -98,7 +99,7 @@ const ContactSection: React.FC = () => {
                         {/* Left - Heading and Social Links */}
                         <div className="flex flex-col justify-between">
                             <div>
-                                <h1 className="text-5xl sm:text-6xl md:text-7xl font-grotesk font-bold text-black mb-4">
+                                <h1 className={`${h1Page} text-black mb-4`}>
                                     Contact Me
                                 </h1>
                                 <p className="text-base sm:text-lg font-inter text-gray-600 mb-6">
@@ -147,7 +148,7 @@ const ContactSection: React.FC = () => {
 
                     {/* Contact Form Section - Centered */}
                     <div className="max-w-2xl mx-auto">
-                        <h2 className="text-3xl sm:text-4xl font-grotesk font-bold text-black mb-6 text-center">
+                        <h2 className={`${h2Section} mb-6`}>
                             Send me an email
                         </h2>
 

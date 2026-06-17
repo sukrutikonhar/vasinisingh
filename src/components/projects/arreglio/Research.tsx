@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Search, Target, TestTube, Users2 } from 'lucide-react';
 
@@ -74,7 +75,7 @@ const Research: React.FC = () => {
                                 02 — Strategic Approach
                             </span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
+                        <h2 className={`${h2Section} mb-4`}>
                             Problem-Solving Framework
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed">

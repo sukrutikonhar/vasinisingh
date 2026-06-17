@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 export default function WorkMarkAudience() {
@@ -15,7 +16,7 @@ export default function WorkMarkAudience() {
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     <p className="text-xs uppercase tracking-widest text-gray-400 font-grotesk font-bold mb-4">DEFINING THE AUDIENCE</p>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-white mb-6">Defining the Audience</h2>
+                    <h2 className={`${h2Section} mb-6`}>Defining the Audience</h2>
                     <p className="text-base font-inter text-gray-300 mb-12 max-w-3xl leading-relaxed">Descriptive text for defining the audience goes here.</p>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-12">
                         <div className="bg-gray-800 rounded-lg flex items-center justify-center min-h-[280px]">

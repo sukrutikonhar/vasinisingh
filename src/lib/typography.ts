@@ -1,5 +1,17 @@
 // Typography system for consistent font sizing across the application
 
+/** Single h1 scale used on every page hero */
+export const h1Page =
+  "text-4xl sm:text-5xl md:text-6xl font-grotesk font-bold leading-[1.05] tracking-tight";
+
+/** Section titles on main pages (home, about) — below h1 */
+export const h2Page =
+  "text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold leading-tight tracking-tight";
+
+/** Section titles in case studies — smaller than main-page h2 */
+export const h2Section =
+  "text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold leading-tight tracking-tight";
+
 export const typography = {
   // Headings - Using Poppins font
   h1: {

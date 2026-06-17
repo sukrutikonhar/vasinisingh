@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Lightbulb, Shield, BarChart3, Users2, Sparkles } from 'lucide-react';
 
@@ -39,7 +40,7 @@ const Learnings: React.FC = () => {
                                 06 — Key Learnings & Insights
                             </span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
+                        <h2 className={`${h2Section} mb-4`}>
                             Strategic Takeaways
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed">

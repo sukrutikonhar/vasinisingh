@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React, { useState, useEffect, useRef } from 'react';
 import { Palette, Users2, ShieldCheck, Layers } from 'lucide-react';
 
@@ -67,7 +68,7 @@ const DesignProcess: React.FC = () => {
                                     04 — My Contribution
                                 </span>
                             </div>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-grotesk font-bold text-black mb-4 sm:mb-6 leading-tight">
+                            <h2 className={`${h2Section} mb-4 sm:mb-6`}>
                                 UI/UX Design<br />Leadership
                             </h2>
                             <p className="text-sm sm:text-base md:text-lg font-inter text-gray-600 leading-relaxed mb-6 sm:mb-8">
@@ -79,7 +80,7 @@ const DesignProcess: React.FC = () => {
                                 <div className="flex items-center gap-3 mb-3">
                                     <span className="text-xl sm:text-2xl">✨</span>
                                     <h3 className="text-base sm:text-lg md:text-xl font-grotesk font-bold">
-                                        Foundation Designer
+                                        Founding Designer
                                     </h3>
                                 </div>
                                 <p className="text-xs sm:text-sm md:text-base font-inter text-gray-300 leading-relaxed">

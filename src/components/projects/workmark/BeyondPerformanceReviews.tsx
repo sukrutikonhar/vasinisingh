@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { TrendingUp, Heart, Flame, GitBranch, MapPin } from 'lucide-react';
 
@@ -22,7 +23,7 @@ const BeyondPerformanceReviews: React.FC = () => {
                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4 text-center">
                         15 — FUTURE VISION
                     </p>
-                    <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-6 text-center">
+                    <h2 className={`${h2Section} mb-6`}>
                         Beyond Performance Reviews
                     </h2>
                     <p className="text-base sm:text-lg font-inter text-gray-600 max-w-3xl mx-auto text-center leading-relaxed mb-12">

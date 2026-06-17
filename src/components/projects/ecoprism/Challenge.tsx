@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Database, FileText, Clock } from 'lucide-react';
 
@@ -8,7 +9,7 @@ const Challenge: React.FC = () => {
         {
             icon: Database,
             title: 'Data Fragmentation',
-            description: 'Users spent 60% of their time aggregating data from multiple disconnected systems.'
+            description: 'Users spent 60% of their time aggregating data from multiple disconnected systems. (Source: User interviews, n=15)'
         },
         {
             icon: FileText,
@@ -28,7 +29,7 @@ const Challenge: React.FC = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
                     <div className="mb-12">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8 text-center">
+                        <h2 className={`${h2Section} mb-8`}>
                             The Challenge
                         </h2>
                         <div className="bg-white border border-gray-200 p-8 sm:p-12 rounded-[6px] mb-12">

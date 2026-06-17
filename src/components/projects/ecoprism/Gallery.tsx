@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import Image from 'next/image';
 
@@ -17,7 +18,7 @@ const Gallery: React.FC = () => {
         <section className="py-20 bg-white">
             <div className="container-custom">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-16 text-center">
+                    <h2 className={`${h2Section} mb-16`}>
                         Final Designs
                     </h2>
 

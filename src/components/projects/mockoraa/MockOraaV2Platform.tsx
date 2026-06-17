@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Video, TrendingUp, Heart, User, Shield } from 'lucide-react';
@@ -25,7 +26,7 @@ const solutions = [
         title: 'Role Based Interview Preparation',
         challenge: 'Generic interview tools fail to prepare candidates for role specific interview scenarios.',
         solution: 'Structured interview paths tailored for fresher, mid level, and experienced roles.',
-        result: 'Role confusion reduced by 40% and users practiced more relevant interview scenarios.',
+        result: 'Users practiced more relevant interview scenarios with clearer role expectations.',
         icon: User,
         image: '/images/projects/mockoraa/mockoraa-05.webp',
     },
@@ -33,7 +34,7 @@ const solutions = [
         title: 'Confidence Focused Feedback',
         challenge: 'Traditional feedback focuses only on answers rather than communication confidence.',
         solution: 'Supportive feedback that highlights strengths and provides actionable improvement tips.',
-        result: 'Users reported higher clarity and achieved a CSAT score of 4.4/5 during testing.',
+        result: 'Users reported higher clarity and more actionable feedback during testing.',
         icon: Heart,
         image: '/images/projects/mockoraa/mockoraa-03.webp',
     },
@@ -41,7 +42,7 @@ const solutions = [
         title: 'Safe Practice Environment',
         challenge: 'Fear of failure prevents many candidates from practicing interviews frequently.',
         solution: 'A private mock interview environment with replay and self review capabilities.',
-        result: 'Practice sessions increased and task completion rates improved by 32% after design iterations.',
+        result: 'Practice sessions increased as users felt safer retrying without judgment.',
         icon: Shield,
         image: '/images/projects/mockoraa/mockoraa-01.webp',
     },
@@ -68,11 +69,11 @@ export default function MockOraaV2Platform() {
                 <div className="max-w-6xl mx-auto">
                     <div className="mb-16 sm:mb-20 text-center">
                         <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">07. The solution</p>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
+                        <h2 className={`${h2Section} mb-4`}>
                             The Core Experience
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                            Every pixel is optimized to balance realism with safety. The UI gets out of the way, allowing the conversation to take center stage.
+                            The UI gets out of the way, allowing the conversation to take center stage.
                         </p>
                     </div>
 

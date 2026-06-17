@@ -6,6 +6,28 @@ export type ExperienceProject = {
   chips: string[];
 };
 
+export type ProjectLiveStatus = 'live-product' | 'live-mvp';
+
+const LIVE_MVP_PROJECT_IDS = new Set(['neuroassist', 'arreglio', 'resume-ai-parsing']);
+
+export function getProjectLiveStatus(
+  companyId: string,
+  projectId: string,
+): ProjectLiveStatus | null {
+  if (companyId === 'bm') {
+    return projectId === 'fintech-application' ? 'live-product' : null;
+  }
+  if (LIVE_MVP_PROJECT_IDS.has(projectId)) {
+    return 'live-mvp';
+  }
+  return 'live-product';
+}
+
+export const projectLiveStatusLabel: Record<ProjectLiveStatus, string> = {
+  'live-product': 'Live product',
+  'live-mvp': 'Live MVP',
+};
+
 export type ExperienceCompany = {
   id: string;
   name: string;
@@ -22,8 +44,8 @@ export const experienceCompanies: ExperienceCompany[] = [
     id: "bb",
     name: "BetaBridge Ventures",
     role: "Senior Product Designer",
-    period: "July 2025 – Present",
-    timelinePeriod: "Jul 2025 – Present",
+    period: "July 2025 to Present",
+    timelinePeriod: "Jul 2025 to Present",
     accent: "#1a1a1a",
     summary: "Leading end-to-end UX design for enterprise clients including ABB and Crown, spanning knowledge platforms, workforce productivity tools, operational dashboards, and AI-driven support experiences.",
     projects: [
@@ -61,24 +83,24 @@ export const experienceCompanies: ExperienceCompany[] = [
     id: "ac",
     name: "Acumant Technologies",
     role: "Senior Product Designer",
-    period: "Oct 2022 – Jun 2025 · 2 yrs 9 mos",
-    timelinePeriod: "Oct 2022 – Jun 2025",
+    period: "October 2022 to June 2025 · 2 yrs 9 mos",
+    timelinePeriod: "Oct 2022 to Jun 2025",
     accent: "#1a1a1a",
-    summary: "Owned end-to-end design for B2B SaaS and AI-driven platforms, from ESG reporting and AI tooling to enterprise workflow automation, reducing reporting effort by ~40% and cutting design-to-dev turnaround by 35%.",
+    summary: "Designed end-to-end experiences for enterprise clients across compliance, automotive services, and sustainability. Led the founding design for ecoPRISM, an ESG compliance platform for ABB. Shaped Arreglio's workshop management system for a multi-region rollout across the EU, India, and the UAE. Built design systems that scaled across product teams and reduced consistency drift as new designers joined.",
     projects: [
       {
         id: "ecoprism",
         name: "ecoPRISM",
-        type: "ESG & CSRD reporting platform",
-        description: "Unified workflow-driven platform replacing fragmented manual ESG and CSRD reporting. Simplified complex regulatory data into intuitive step-by-step experiences, reducing enterprise reporting effort by ~40% and improving data accuracy and audit readiness.",
-        chips: ["ESG reporting", "CSRD compliance", "Enterprise workflows", "Data dashboards", "~40% effort reduction", "React", "Tailwind CSS"],
+        type: "ESG compliance platform · ABB",
+        description: "Founding design for an ESG compliance platform where the numbers had to be trusted, not just shown. Unified workflow-driven reporting that reduced enterprise effort and improved audit readiness.",
+        chips: ["ESG reporting", "CSRD compliance", "Enterprise workflows", "Data dashboards", "ABB"],
       },
       {
         id: "arreglio",
         name: "Arreglio",
-        type: "Marketplace for service ecosystems",
-        description: "End-to-end digital operations platform solving real-time visibility gaps in disconnected workshop tools. Streamlined workflows and dashboards reduced turnaround time by up to 70% and boosted customer satisfaction for enterprise clients.",
-        chips: ["Marketplace", "Workshop ops", "Real-time visibility", "70% TAT reduction", "Enterprise UX", "React", "Tailwind CSS"],
+        type: "Multi-region workshop management SaaS",
+        description: "End-to-end digital operations platform for workshop management, rolled out across the EU, India, and the UAE. Streamlined workflows and dashboards that reduced turnaround time and improved customer satisfaction.",
+        chips: ["Workshop ops", "Multi-region UX", "Real-time visibility", "B2B SaaS", "Service coordination"],
       },
       {
         id: "neuroassist",
@@ -135,10 +157,10 @@ export const experienceCompanies: ExperienceCompany[] = [
     id: "bm",
     name: "Bizmeth Solutions",
     role: "UI/UX Designer",
-    period: "Mar 2018 – Oct 2022 · 4 yrs 8 mos",
-    timelinePeriod: "Mar 2018 – Oct 2022",
+    period: "March 2018 to October 2022 · 4 yrs 8 mos",
+    timelinePeriod: "Mar 2018 to Oct 2022",
     accent: "#1a1a1a",
-    summary: "Designed responsive websites across a wide range of client verticals, graphics, newsletters, and a fintech application, delivering end-to-end UX from research to high-fidelity UI across 4+ years of multi-domain client work.",
+    summary: "Worked across web and mobile product design for early-stage and growth-stage startups. Covered everything from interaction patterns to research synthesis to component libraries. The four-and-a-half years where I learned how products actually ship: faster than you'd like, with constraints you didn't see coming, and only as good as the conversations behind them.",
     projects: [
       {
         id: "responsive-websites",

@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 type BadgeVariant = 'gate' | 'flag' | 'branch' | 'governance' | 'auto';
@@ -97,7 +98,7 @@ const Workflow: React.FC = () => {
                             <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-400 mb-3">
                                 Workflow
                             </p>
-                            <h2 className="text-2xl sm:text-3xl font-grotesk font-bold text-black leading-tight">
+                            <h2 className={`${h2Section}`}>
                                 Eight stages, one session
                             </h2>
                         </div>

@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Layers, UserCog, RefreshCw, MessageCircleOff } from 'lucide-react';
 
@@ -57,11 +58,12 @@ const WhyUnrecognized: React.FC = () => {
                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
                         04 - ROOT CAUSES
                     </p>
-                    <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-4">
+                    <h2 className={`${h2Section} mb-4`}>
                         Why Contributions Go Unrecognized
                     </h2>
                     <p className="text-base sm:text-lg font-inter text-gray-600 max-w-3xl leading-relaxed mb-12">
                         The issue is not a lack of effort. It is a systemic breakdown in how organizations capture, remember, and evaluate day to day work.
+                        <span className="block text-xs text-gray-500 mt-2">Source: Internal UX research synthesis (n=120+)</span>
                     </p>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import MinimalLayout from '@/components/layout/MinimalLayout';
 import NeuroHero from '@/components/projects/neuroassist/NeuroHero';
 import ProjectOverview from '@/components/projects/neuroassist/ProjectOverview';
@@ -10,11 +11,14 @@ import KeyDecisions from '@/components/projects/neuroassist/KeyDecisions';
 import Reflection from '@/components/projects/neuroassist/Reflection';
 import CTASection from '@/components/projects/neuroassist/CTASection';
 import PrevNextProject from '@/components/projects/PrevNextProject';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata = {
-    title: 'NeuroAssist — Stroke Care UX | Vasini Singh',
-    description: 'A case study on designing a stroke care system where every second counts — translating complex neurology protocols into a workflow a stressed emergency physician can trust.',
-};
+export const metadata: Metadata = createPageMetadata({
+    title: 'NeuroAssist — Every Second Is a Decision',
+    description:
+        'Case study: designing a stroke care system where the right action must be the easiest action.',
+    path: '/projects/neuroassist',
+});
 
 export default function NeuroAssistProject() {
     return (

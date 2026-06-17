@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
@@ -34,7 +35,7 @@ export default function MockOraaV2Teams() {
         <section ref={sectionRef} className="py-16 sm:py-20 md:py-24 bg-white border-t border-gray-100">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-12">Meet the Team</h2>
+                    <h2 className={`${h2Section} mb-12`}>Meet the Team</h2>
 
                     <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                         {teamMembers.map((member, index) => (

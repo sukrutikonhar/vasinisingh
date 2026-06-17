@@ -1,307 +1,139 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Calendar, Tag, Clock } from 'lucide-react';
+import { ArrowRight, ArrowUp, ArrowDown, Clock } from 'lucide-react';
+import ProjectEyebrow from '@/components/ui/ProjectEyebrow';
+import { completedProjects, inProgressProjects } from '@/data/projects';
 
 const ProjectsGrid: React.FC = () => {
-    const completedProjects = [
-
-        {
-            id: 5,
-            title: 'NeuroAssist',
-            slug: 'neuroassist',
-            tagline: 'Stroke Care System — Every Second Counts',
-            description: 'Translating complex neurology protocols into a workflow a stressed emergency physician can trust and act on in under 60 minutes.',
-            image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1000&auto=format&fit=crop&q=80',
-            year: '2025',
-            tags: ['Clinical UX', 'Emergency Medicine', 'End-to-End'],
-            role: 'Product Designer',
-            tools: ['Figma', 'FigJam']
-        },
-        {
-            id: 2,
-            title: 'MockOraa',
-            slug: 'mockoraa',
-            tagline: 'AI Mock Interview Platform',
-            description: 'Practice realistic interview scenarios with empathetic AI avatars that listen, respond, and guide. Get instant feedback on confidence, clarity, and technical depth.',
-            image: '/images/projects/mockoraa/mockoraa-01.webp',
-            year: '2025',
-            tags: ['AI', 'EdTech', 'Mobile App'],
-            role: 'Product Strategist',
-            tools: ['Figma', 'FigJam']
-        },
-        {
-            id: 1,
-            title: 'Workmark',
-            slug: 'workmark',
-            tagline: 'Making Invisible Work Visible',
-            description: 'A product design case study focused on surfacing unrecognized contributions and improving internal collaboration, accountability, and employee recognition.',
-            image: '/images/projects/workmark/workmark-hero.webp',
-            year: '2026',
-            tags: ['Product Design', 'UX Research', 'CASE STUDY'],
-            role: 'Product Designer, UX Researcher',
-            tools: ['Figma', 'Notion', 'Protopie']
-        },
-        {
-            id: 3,
-            title: 'Arreglio',
-            slug: 'arreglio',
-            tagline: 'Workshop Management System',
-            description: 'Streamlining service bookings and customer management for automotive workshops with an intuitive mobile-first experience.',
-            image: '/images/projects/arreglio1/arreglio-landing.webp',
-            year: '2025',
-            tags: ['Mobile App', 'SaaS', 'B2B'],
-            role: 'Senior Product Designer',
-            tools: ['Figma', 'FigJam', 'Maze']
-        },
-        {
-            id: 4,
-            title: 'ecoPRISM Tool',
-            slug: 'ecoprism',
-            tagline: 'ESG Compliance Made Simple',
-            description: 'Simplifying ESG compliance for global enterprises through strategic UI/UX design and user-centered innovation.',
-            image: '/images/projects/ecoprism/ecoprism-landing-image.webp',
-            year: '2024',
-            tags: ['SaaS', 'Enterprise', 'Dashboard'],
-            role: 'Foundation Designer',
-            tools: ['Adobe XD', 'Miro', 'Notion']
-        },
-
-    ];
-
-    const inProgressProjects = [
-        {
-            id: 5,
-            title: 'Suana',
-            slug: 'suana',
-            tagline: 'A Nest for Independent Learning',
-            description: 'An accessible, gamified, multi-task app that guides children through daily activities with step-by-step visual, audio, and animated instructions, tailored to varying abilities, while minimizing caregiver intervention.',
-            image: '/images/projects/ChatGPT Image Oct 2, 2025, 07_02_56 PM.webp',
-            year: 'In Progress',
-            tags: ['Mobile App', 'Accessibility', 'Passion Project'],
-            role: 'Product Designer',
-            tools: ['Figma', 'Illustrator', 'Protopie']
-        }
-    ];
-
     return (
         <>
-            {/* Completed Projects Section */}
-            <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+            <section className="py-10 sm:py-14 bg-gray-50">
                 <div className="container-custom px-4 sm:px-6">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-1 gap-8 sm:gap-12 md:gap-16">
-                            {completedProjects.map((project, index) => (
-                                <div
+                    <div className="max-w-5xl mx-auto">
+                        <div className="flex flex-col gap-4 sm:gap-5">
+                            {completedProjects.map((project) => (
+                                <Link
                                     key={project.id}
-                                    className="group bg-white overflow-hidden shadow-card hover:shadow-2xl transition-all duration-300 rounded-[6px]"
+                                    href={`/projects/${project.slug}`}
+                                    className="group flex flex-col sm:flex-row bg-white rounded-lg border border-gray-100 overflow-hidden shadow-sm hover:shadow-md hover:border-gray-200 transition-all duration-300"
                                 >
-                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                                        {/* Image */}
-                                        <div className={`relative h-64 sm:h-80 md:h-96 lg:h-auto ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                                            <div className="relative w-full h-full bg-gray-100">
-                                                {project.image ? (
-                                                    <Image
-                                                        src={project.image}
-                                                        alt={project.title}
-                                                        fill
-                                                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                                                    />
-                                                ) : (
-                                                    <div className="absolute inset-0 bg-gray-900 flex items-center justify-center">
-                                                        <span className="text-4xl sm:text-5xl font-grotesk font-bold text-white/10 select-none">
-                                                            {project.title}
+                                    <div className="relative w-full sm:w-44 md:w-52 h-40 sm:h-auto sm:min-h-[140px] flex-shrink-0 bg-gray-100">
+                                        <Image
+                                            src={project.image}
+                                            alt={project.hook}
+                                            fill
+                                            className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        />
+                                        {project.statusBadge && (
+                                            <span className="absolute top-2 left-2 bg-black/75 text-white text-[9px] font-grotesk uppercase tracking-wider px-2 py-0.5 rounded">
+                                                {project.statusBadge}
+                                            </span>
+                                        )}
+                                    </div>
+
+                                    <div className="flex-1 p-4 sm:p-5 flex flex-col justify-center min-w-0">
+                                        <ProjectEyebrow
+                                            label={project.eyebrow}
+                                            caseNumber={project.caseNumber}
+                                        />
+
+                                        <h2 className="text-lg sm:text-xl font-grotesk font-bold text-black mt-1 mb-1.5 leading-tight group-hover:text-gray-800">
+                                            {project.hook}
+                                        </h2>
+
+                                        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-inter text-gray-500 mb-3">
+                                            <span>{project.tags[0]}</span>
+                                            {project.tags[1] && (
+                                                <>
+                                                    <span className="text-gray-300">·</span>
+                                                    <span>{project.tags[1]}</span>
+                                                </>
+                                            )}
+                                            <span className="text-gray-300">·</span>
+                                            <span>{project.year}</span>
+                                        </div>
+
+                                        {project.metrics.length > 0 && (
+                                            <div className="flex flex-wrap gap-x-4 gap-y-1">
+                                                {project.metrics.map((metric, metricIndex) => (
+                                                    <div key={metricIndex} className="flex items-center gap-1">
+                                                        {metric.direction === 'up' ? (
+                                                            <ArrowUp className="w-3 h-3 text-gray-400 flex-shrink-0" />
+                                                        ) : (
+                                                            <ArrowDown className="w-3 h-3 text-gray-400 flex-shrink-0" />
+                                                        )}
+                                                        <span className="text-sm font-grotesk font-bold text-black">
+                                                            {metric.value}
+                                                        </span>
+                                                        <span className="text-xs font-inter text-gray-500">
+                                                            {metric.label}
                                                         </span>
                                                     </div>
-                                                )}
-                                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
-                                            </div>
-                                        </div>
-
-                                        {/* Content */}
-                                        <div className={`p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                                            {/* Tags */}
-                                            <div className="flex flex-wrap items-center gap-2 mb-3 sm:mb-4">
-                                                {project.tags.map((tag, tagIndex) => (
-                                                    <span
-                                                        key={tagIndex}
-                                                        className="inline-flex items-center gap-1 bg-gray-100 px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-grotesk uppercase tracking-wider rounded-[6px]"
-                                                    >
-                                                        <Tag className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-                                                        {tag}
-                                                    </span>
                                                 ))}
                                             </div>
-
-                                            {/* Title */}
-                                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-grotesk font-bold text-black mb-2 sm:mb-3">
-                                                {project.title}
-                                            </h2>
-
-                                            <p className="text-base sm:text-lg md:text-xl font-grotesk font-medium text-gray-700 mb-4 sm:mb-6">
-                                                {project.tagline}
-                                            </p>
-
-                                            {/* Description */}
-                                            <p className="text-sm sm:text-base md:text-lg font-inter text-gray-600 leading-relaxed mb-6 sm:mb-8">
-                                                {project.description}
-                                            </p>
-
-                                            {/* Meta Info */}
-                                            <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-6 sm:mb-8 text-xs sm:text-sm font-inter text-gray-500">
-                                                <div className="flex items-center gap-2">
-                                                    <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
-                                                    <span>{project.year}</span>
-                                                </div>
-                                                <div className="border-l border-gray-300 pl-4 sm:pl-6">
-                                                    <span className="font-semibold text-black">{project.role}</span>
-                                                </div>
-                                            </div>
-
-                                            {/* Tools */}
-                                            <div className="mb-6 sm:mb-8">
-                                                <p className="text-[10px] sm:text-xs font-grotesk uppercase tracking-wider text-gray-500 mb-1 sm:mb-2">
-                                                    Tools Used
-                                                </p>
-                                                <div className="flex flex-wrap items-center gap-2">
-                                                    {project.tools.map((tool, toolIndex) => (
-                                                        <span
-                                                            key={toolIndex}
-                                                            className="text-xs sm:text-sm font-inter text-gray-700"
-                                                        >
-                                                            {tool}{toolIndex < project.tools.length - 1 ? ' •' : ''}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-
-                                            {/* CTA */}
-                                            <Link
-                                                href={`/projects/${project.slug}`}
-                                                className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3 sm:px-8 sm:py-4 font-grotesk font-semibold hover:bg-gray-800 transition-all group/btn w-full sm:w-fit rounded-[12px]"
-                                            >
-                                                <span className="text-sm sm:text-base">View Case Study</span>
-                                                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform" />
-                                            </Link>
-                                        </div>
+                                        )}
                                     </div>
-                                </div>
+
+                                    <div className="hidden sm:flex items-center pr-5 text-gray-300 group-hover:text-black transition-colors">
+                                        <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* In Progress Projects Section */}
-            <section className="py-12 sm:py-16 md:py-20 bg-white">
+            <section className="py-10 sm:py-14 bg-white">
                 <div className="container-custom px-4 sm:px-6">
-                    <div className="max-w-7xl mx-auto">
-                        {/* Section Header */}
-                        <div className="text-center mb-8 sm:mb-12 md:mb-16">
-                            <div className="inline-block bg-gray-100 px-4 py-2 mb-4 sm:mb-6 rounded-full">
-                                <span className="text-xs sm:text-sm font-grotesk font-medium uppercase tracking-wider flex items-center gap-2">
-                                    <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <div className="max-w-5xl mx-auto">
+                        <div className="text-center mb-8">
+                            <div className="inline-flex items-center gap-1.5 bg-gray-100 px-3 py-1 mb-3 rounded-full">
+                                <Clock className="w-3 h-3" />
+                                <span className="text-[10px] sm:text-xs font-grotesk font-medium uppercase tracking-wider">
                                     In Progress
                                 </span>
                             </div>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-4">
+                            <h2 className={`${h2Section} mb-2`}>
                                 Works in Development
                             </h2>
-                            <p className="text-base sm:text-lg text-gray-600 font-inter max-w-2xl mx-auto">
-                                Passion projects and experimental work currently in the making
+                            <p className="text-sm text-gray-600 font-inter">
+                                Passion projects currently in the making
                             </p>
                         </div>
 
-                        {/* Projects Grid - 2 Blocks */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {inProgressProjects.map((project) => (
                                 <div
                                     key={project.id}
-                                    className="group bg-white border-2 border-dashed border-gray-300 hover:border-black overflow-hidden shadow-card hover:shadow-xl transition-all duration-300 rounded-[6px]"
+                                    className="bg-white border border-dashed border-gray-200 rounded-lg overflow-hidden"
                                 >
-                                    {/* Image */}
-                                    <div className="relative h-56 sm:h-64 md:h-72 bg-gray-100">
+                                    <div className="relative h-36 bg-gray-100">
                                         <Image
                                             src={project.image}
-                                            alt={project.title}
+                                            alt={project.hook}
                                             fill
-                                            className="object-cover transition-all duration-700"
+                                            className="object-cover"
                                         />
-                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
-
-                                        {/* In Progress Badge */}
-                                        <div className="absolute top-4 right-4 bg-black text-white px-3 py-1.5 rounded-full flex items-center gap-2">
-                                            <Clock className="w-3 h-3" />
-                                            <span className="text-xs font-grotesk font-semibold uppercase tracking-wider">
+                                        <div className="absolute top-2 right-2 bg-black text-white px-2 py-0.5 rounded-full flex items-center gap-1">
+                                            <Clock className="w-2.5 h-2.5" />
+                                            <span className="text-[9px] font-grotesk font-semibold uppercase tracking-wider">
                                                 In Progress
                                             </span>
                                         </div>
                                     </div>
 
-                                    {/* Content */}
-                                    <div className="p-6 sm:p-8">
-                                        {/* Tags */}
-                                        <div className="flex flex-wrap items-center gap-2 mb-3">
-                                            {project.tags.map((tag, tagIndex) => (
-                                                <span
-                                                    key={tagIndex}
-                                                    className="inline-flex items-center gap-1 bg-gray-100 border border-gray-300 px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-grotesk uppercase tracking-wider rounded-[6px]"
-                                                >
-                                                    <Tag className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
-                                                    {tag}
-                                                </span>
-                                            ))}
-                                        </div>
-
-                                        {/* Title */}
-                                        <h3 className="text-xl sm:text-2xl md:text-3xl font-grotesk font-bold text-black mb-2">
-                                            {project.title}
+                                    <div className="p-4">
+                                        <h3 className="text-base font-grotesk font-bold text-black mb-1">
+                                            {project.hook}
                                         </h3>
-
-                                        <p className="text-sm sm:text-base font-grotesk font-medium text-gray-700 mb-4">
-                                            {project.tagline}
+                                        <p className="text-xs font-inter text-gray-500">
+                                            {project.tags.slice(0, 2).join(' · ')}
                                         </p>
-
-                                        {/* Description */}
-                                        <p className="text-sm sm:text-base font-inter text-gray-600 leading-relaxed mb-6">
-                                            {project.description}
-                                        </p>
-
-                                        {/* Meta Info */}
-                                        <div className="flex flex-wrap items-center gap-4 mb-6 text-xs sm:text-sm font-inter text-gray-500">
-                                            <div className="flex items-center gap-2">
-                                                <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
-                                                <span>{project.year}</span>
-                                            </div>
-                                            <div className="border-l border-gray-300 pl-4">
-                                                <span className="font-semibold text-black">{project.role}</span>
-                                            </div>
-                                        </div>
-
-                                        {/* Tools */}
-                                        <div className="mb-6">
-                                            <p className="text-[10px] sm:text-xs font-grotesk uppercase tracking-wider text-gray-500 mb-2">
-                                                Tools Used
-                                            </p>
-                                            <div className="flex flex-wrap items-center gap-2">
-                                                {project.tools.map((tool, toolIndex) => (
-                                                    <span
-                                                        key={toolIndex}
-                                                        className="text-xs sm:text-sm font-inter text-gray-700"
-                                                    >
-                                                        {tool}{toolIndex < project.tools.length - 1 ? ' •' : ''}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                        </div>
-
-                                        {/* CTA */}
-                                        <div className="inline-flex items-center justify-center gap-2 bg-gray-100 text-gray-600 px-6 py-3 sm:px-8 sm:py-4 font-grotesk font-semibold w-full rounded-[12px] border-2 border-gray-300">
-                                            <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
-                                            <span className="text-sm sm:text-base">Case Study Coming Soon</span>
-                                        </div>
                                     </div>
                                 </div>
                             ))}

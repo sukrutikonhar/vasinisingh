@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { User, Layout, Code } from 'lucide-react';
 
@@ -7,7 +8,7 @@ const Role: React.FC = () => {
     const roles = [
         {
             icon: User,
-            title: 'Lead UI, UX Designer',
+            title: 'Founding Designer',
             description: 'End-to-end design ownership from research to final implementation'
         },
         {
@@ -26,17 +27,17 @@ const Role: React.FC = () => {
         {
             number: '1',
             title: 'Research & Discovery',
-            description: 'Understanding user needs and market landscape'
+            description: 'Interviewed 15 sustainability professionals across ABB and external partners. Studied CSRD, GRI, SASB, and ESRS frameworks to map regulatory requirements to user tasks.'
         },
         {
             number: '2',
             title: 'Ideation & Prototyping',
-            description: 'Rapid iteration and concept validation'
+            description: 'Co-design workshops with sustainability leads. Rapid wireframe iterations focused on data lineage visibility and reporting wizard flows.'
         },
         {
             number: '3',
             title: 'Testing & Refinement',
-            description: 'User feedback integration and design optimization'
+            description: 'Three rounds of moderated usability testing on core workflows. Iterated dashboard density and CSRD wizard steps based on task completion data.'
         }
     ];
 
@@ -47,7 +48,7 @@ const Role: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* My Role Section */}
                         <div>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8">
+                            <h2 className={`${h2Section} mb-8`}>
                                 My Role
                             </h2>
                             <div className="space-y-6">
@@ -73,7 +74,7 @@ const Role: React.FC = () => {
 
                         {/* Approach Section */}
                         <div>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8">
+                            <h2 className={`${h2Section} mb-8`}>
                                 Approach
                             </h2>
                             <div className="space-y-6">

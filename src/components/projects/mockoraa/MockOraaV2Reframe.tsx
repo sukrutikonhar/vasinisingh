@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
@@ -23,9 +24,9 @@ export default function MockOraaV2Reframe() {
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">04. Strategy & Ideation</p>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4 sm:mb-6">Finding the Opportunity Space</h2>
+                    <h2 className={`${h2Section} mb-4 sm:mb-6`}>Finding the Opportunity Space</h2>
                     <p className="text-sm sm:text-base md:text-lg font-inter text-gray-600 mb-8 sm:mb-10 leading-relaxed">
-                        We mapped the emotional journey of candidates from application to rejection. The lowest emotional point occurs exactly when feedback is withheld. Competitors like <strong>Huru.ai</strong> and <strong>InterviewBuddy</strong> focus heavily on basic video recording, but miss the mark on contextual intelligence and psychological safety.
+                        I mapped the emotional journey of candidates from application to rejection. The lowest emotional point occurs exactly when feedback is withheld. Competitors like <strong>Huru.ai</strong> and <strong>InterviewBuddy</strong> focus heavily on basic video recording, but miss the mark on contextual intelligence and psychological safety.
                     </p>
 
                     {/* User Journey Map */}

@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
@@ -67,7 +68,7 @@ export default function MockOraaV2Personas() {
     return (
         <section ref={sectionRef} className="py-24 bg-gray-50">
             <div className="max-w-6xl mx-auto px-8">
-                <h2 className="text-5xl font-semibold mb-8 tracking-tight">
+                <h2 className={`${h2Section} mb-8`}>
                     User Personas Deep Dive
                 </h2>
                 <p className="text-xl mb-16 text-gray-600">

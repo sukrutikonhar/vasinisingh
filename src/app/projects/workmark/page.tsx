@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import MinimalLayout from '@/components/layout/MinimalLayout';
 import CaseStudyHero from '@/components/projects/CaseStudyHero';
 import WorkmarkOverview from '@/components/projects/workmark/WorkMarkOverview';
@@ -12,28 +13,31 @@ import DesigningSolution from '@/components/projects/workmark/DesigningSolution'
 import CoreProductPillars from '@/components/projects/workmark/CoreProductPillars';
 import ThreeUserPerspectives from '@/components/projects/workmark/ThreeUserPerspectives';
 import WhatCouldChange from '@/components/projects/workmark/WhatCouldChange';
-import NewCategory from '@/components/projects/workmark/NewCategory';
-import BeyondPerformanceReviews from '@/components/projects/workmark/BeyondPerformanceReviews';
+import WorkmarkReflection from '@/components/projects/workmark/WorkmarkReflection';
 import WorkmarkCTA from '@/components/projects/workmark/WorkmarkCTA';
 import PrevNextProject from '@/components/projects/PrevNextProject';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata = {
-    title: 'WorkMark: Making Invisible Work Visible | Case Study | Vasini Singh',
-    description: 'Case study on WorkMark: making invisible work visible. Product design, UX research, and impact for internal collaboration and recognition.',
-};
+export const metadata: Metadata = createPageMetadata({
+    title: 'Workmark — Making Invisible Work Visible',
+    description:
+        'Case study: a performance intelligence platform that transforms everyday employee contributions into structured evidence of recognition and fair evaluation.',
+    path: '/projects/workmark',
+});
 
 export default function WorkmarkProject() {
     const heroData = {
         title: 'WorkMark: Making Invisible Work Visible',
-        subtitle: 'A performance intelligence platform that transforms everyday employee contributions into structured evidence of recoginition, fair evaluation, and organizational intelligence.',
+        subtitle: 'A performance intelligence platform that transforms everyday employee contributions into structured evidence of recognition, fair evaluation, and organizational intelligence.',
         image: '/images/projects/workmark/workmark-hero.webp',
-        tags: ['AI powered B2B SaaS', 'HR Tech x Performance', 'LIVE MVP'],
+        tags: ['Evidence Design', 'HR Tech', 'AI Experience'],
+        statusBadge: 'LIVE MVP',
         prototypeLink: 'https://theworkmark.lovable.app/',
     };
 
     return (
         <MinimalLayout>
-            <CaseStudyHero data={heroData} compactTitle />
+            <CaseStudyHero data={heroData} />
             <WorkmarkOverview />
             <RecognitionGap />
             <WhoWeDesignFor />
@@ -46,8 +50,7 @@ export default function WorkmarkProject() {
             <CoreProductPillars />
             <ThreeUserPerspectives />
             <WhatCouldChange />
-            <NewCategory />
-            <BeyondPerformanceReviews />
+            <WorkmarkReflection />
             <WorkmarkCTA />
             <PrevNextProject prevSlug="mockoraa" prevTitle="MockOraa" nextSlug="arreglio" nextTitle="Arreglio" />
         </MinimalLayout>

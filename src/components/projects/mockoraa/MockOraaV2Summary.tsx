@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 export default function MockOraaV2Summary() {
     const failureReasons = [
         { title: 'Generic Question Banks', desc: 'Existing tools offer static, one-size-fits-all questions that fail to reflect real job descriptions or individual career trajectories.' },
@@ -18,7 +19,7 @@ export default function MockOraaV2Summary() {
                                 <div className="inline-block bg-gray-100 rounded-full px-4 py-2 mb-6">
                                     <span className="text-xs sm:text-sm font-grotesk font-bold text-[#202022] uppercase tracking-wider">03 — Contextual Analysis</span>
                                 </div>
-                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6">
+                                <h2 className={`${h2Section} mb-6`}>
                                     Why Current Solutions Fail
                                 </h2>
                                 <p className="text-lg sm:text-xl font-inter text-gray-600 max-w-3xl leading-relaxed">

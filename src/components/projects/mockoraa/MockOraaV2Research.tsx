@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import { useEffect, useRef, useState } from 'react';
 
 export default function MockOraaV2Research() {
@@ -30,9 +31,9 @@ export default function MockOraaV2Research() {
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">02. RESEARCH & DISCOVERY</p>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8">Uncovering the Hidden Frictions</h2>
+                    <h2 className={`${h2Section} mb-8`}>Uncovering the Hidden Frictions</h2>
                     <p className="text-base sm:text-lg font-inter text-gray-600 mb-12 max-w-3xl leading-relaxed">
-                        We initiated a rigorous discovery phase combining moderated interviews, behavioral surveys, and competitive audits to move beyond assumptions.
+                        I initiated a rigorous discovery phase combining moderated interviews, behavioral surveys, and competitive audits to move beyond assumptions.
                     </p>
 
                     {/* Quote */}

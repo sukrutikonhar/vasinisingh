@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { h2Page } from '@/lib/typography';
 import { experienceCompanies } from '@/data/experience-timeline';
 import CompanyList from './CompanyList';
 import ExperienceDetails from './ExperienceDetails';
@@ -68,7 +69,7 @@ const ExperienceTimelineV2: React.FC = () => {
                             </div>
                             <h2
                                 id="experience-timeline-v2-heading"
-                                className="font-grotesk text-3xl font-bold leading-[1.02] text-black sm:text-4xl md:text-5xl"
+                                className={`${h2Page} text-black`}
                             >
                                 A timeline of craft, leadership, and product thinking
                             </h2>

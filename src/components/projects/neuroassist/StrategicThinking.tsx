@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 const steps = [
@@ -37,7 +38,7 @@ const StrategicThinking: React.FC = () => {
                             <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-400 mb-3">
                                 Strategic thinking
                             </p>
-                            <h2 className="text-2xl sm:text-3xl font-grotesk font-bold text-black leading-tight">
+                            <h2 className={`${h2Section}`}>
                                 Reframing the product
                             </h2>
                         </div>

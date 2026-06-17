@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { h1Page } from '@/lib/typography';
 
 const BlogsHeroSection: React.FC = () => {
     return (
@@ -13,7 +14,7 @@ const BlogsHeroSection: React.FC = () => {
                         </span>
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-grotesk font-bold text-black mb-4 sm:mb-6 leading-tight">
+                    <h1 className={`${h1Page} text-black mb-4 sm:mb-6`}>
                         Blogs
                     </h1>
 

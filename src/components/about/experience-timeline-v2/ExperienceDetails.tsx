@@ -3,7 +3,9 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import type { ExperienceCompany } from '@/data/experience-timeline';
+import { getProjectLiveStatus } from '@/data/experience-timeline';
 import ProjectCard from './ProjectCard';
+import LiveStatusTag from './LiveStatusTag';
 
 type ExperienceDetailsProps = {
     company: ExperienceCompany;
@@ -23,6 +25,7 @@ const ExperienceDetails: React.FC<ExperienceDetailsProps> = ({
     const project =
         company.projects.find((p) => p.id === selectedProjectId) ?? company.projects[0];
     const useThreeColumnGrid = company.id === 'ac' || company.projects.length <= 4;
+    const projectLiveStatus = getProjectLiveStatus(company.id, project.id);
 
     return (
         <article
@@ -61,6 +64,7 @@ const ExperienceDetails: React.FC<ExperienceDetailsProps> = ({
                         <ProjectCard
                             key={proj.id}
                             project={proj}
+                            companyId={company.id}
                             isActive={proj.id === project.id}
                             onSelect={() => onSelectProject(proj.id)}
                             reduceMotion={reduceMotion}
@@ -76,10 +80,15 @@ const ExperienceDetails: React.FC<ExperienceDetailsProps> = ({
                     !reduceMotion && 'fade-in',
                 )}
             >
-                <h4 className="font-grotesk text-base font-semibold text-black sm:text-lg">
-                    {project.name}
-                    <span className="font-normal text-gray-500"> · {project.type}</span>
-                </h4>
+                <div className="flex items-start justify-between gap-4">
+                    <h4 className="font-grotesk text-base font-semibold text-black sm:text-lg min-w-0">
+                        {project.name}
+                        <span className="font-normal text-gray-500"> · {project.type}</span>
+                    </h4>
+                    {projectLiveStatus ? (
+                        <LiveStatusTag status={projectLiveStatus} size="md" className="flex-shrink-0" />
+                    ) : null}
+                </div>
                 {project.description ? (
                     <p className="mt-3 text-sm leading-relaxed text-gray-600 sm:text-[15px]">
                         {project.description}

@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import Image from 'next/image';
 import { Database, Cpu, LayoutGrid } from 'lucide-react';
@@ -55,7 +56,7 @@ const Ideation: React.FC = () => {
                                 03 — Design Solutions
                             </span>
                         </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6">
+                        <h2 className={`${h2Section} mb-6`}>
                             Strategic Design Solutions
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 max-w-3xl leading-relaxed">

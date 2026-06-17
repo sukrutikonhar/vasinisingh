@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import { Brain, Code, Heart } from "lucide-react";
 import React from "react";
 
@@ -30,7 +31,7 @@ export default function MockOraaV2Final() {
                 <div className="max-w-6xl mx-auto">
                     <div className="mb-8 sm:mb-12 md:mb-16">
                         <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">11. RETROSPECTIVE</p>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black">
+                        <h2 className={`${h2Section}`}>
                             Reflection &amp; Learnings
                         </h2>
                     </div>

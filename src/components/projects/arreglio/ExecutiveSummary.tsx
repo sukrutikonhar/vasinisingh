@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Target, Lightbulb, TrendingUp, Sparkles } from 'lucide-react';
 
@@ -37,7 +38,7 @@ const ExecutiveSummary: React.FC = () => {
                                 Executive Summary
                             </span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4 leading-tight">
+                        <h2 className={`${h2Section} mb-4`}>
                             Transforming Traditional Workshops Into Digital-First Operations
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed">

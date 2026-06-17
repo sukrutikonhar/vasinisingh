@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { h1Page } from '@/lib/typography';
 
 const ProjectsPageHero: React.FC = () => {
     return (
@@ -13,12 +14,12 @@ const ProjectsPageHero: React.FC = () => {
                         </span>
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-grotesk font-bold text-black mb-4 sm:mb-6 leading-tight">
+                    <h1 className={`${h1Page} text-black mb-4 sm:mb-6`}>
                         Selected Projects
                     </h1>
 
                     <p className="text-base sm:text-lg md:text-xl font-inter text-gray-600 max-w-2xl mx-auto px-4">
-                        A collection of work showcasing my process, creativity, and problem-solving approach
+                        Most of my work sits at the same place: turning expert-only workflows into something a stressed user can act on quickly.
                     </p>
                 </div>
             </div>

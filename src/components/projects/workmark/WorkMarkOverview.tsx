@@ -46,13 +46,13 @@ const WorkmarkOverview: React.FC = () => {
 
                         <div className="bg-white text-black p-6 sm:p-8 rounded-lg">
                             <div className="text-xs uppercase tracking-wider text-gray-500 mb-3 font-grotesk font-bold">
-                                Outcomes
+                                Projected Impact
                             </div>
                             <div className="space-y-1">
-                                <div className="text-sm font-semibold">+30% recognition frequency</div>
-                                <div className="text-sm font-semibold">−60% review prep time</div>
-                                <div className="text-sm font-semibold">+18% productivity</div>
-                                <div className="text-sm font-semibold">+25% retention</div>
+                                <div className="text-sm font-semibold">+30% recognition frequency (projected)</div>
+                                <div className="text-sm font-semibold">−60% review prep time (projected)</div>
+                                <div className="text-sm font-semibold">+18% productivity (projected)</div>
+                                <div className="text-sm font-semibold">+25% retention (projected)</div>
                             </div>
                         </div>
                     </div>

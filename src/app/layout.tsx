@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { siteMetadata } from "@/lib/metadata";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -15,8 +16,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Vasini Singh - Product Designer",
-  description: "Product Designer crafting minimal, purposeful digital experiences.",
+  title: {
+    default: siteMetadata.title,
+    template: `%s | ${siteMetadata.name}`,
+  },
+  description: siteMetadata.description,
+  metadataBase: new URL(siteMetadata.url),
 };
 
 export default function RootLayout({

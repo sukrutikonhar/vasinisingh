@@ -6,8 +6,8 @@ const ProjectOverview: React.FC = () => {
     const metadata = [
         { label: 'DURATION', value: 'End-to-end, 8 stages' },
         { label: 'ROLE', value: 'Product Designer' },
-        { label: 'DOMAIN', value: 'Health Tech' },
-        { label: 'TYPE', value: 'Clinical UX' }
+        { label: 'TEAM', value: 'Solo · Clinical advisor input' },
+        { label: 'STATUS', value: 'Self-initiated · In Progress' },
     ];
 
     return (

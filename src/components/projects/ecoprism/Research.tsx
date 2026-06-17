@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { Lightbulb, BookOpen, Sparkles } from 'lucide-react';
 
@@ -36,7 +37,7 @@ const Research: React.FC = () => {
                                 02 — Design Process
                             </span>
                         </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold text-black mb-6">
+                        <h2 className={`${h2Section} mb-6`}>
                             User-Centered Design Approach
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 max-w-3xl leading-relaxed">

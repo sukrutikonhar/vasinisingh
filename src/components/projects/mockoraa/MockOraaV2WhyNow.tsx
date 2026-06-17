@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import { useEffect, useRef, useState } from 'react';
 
 export default function MockOraaV2WhyNow() {
@@ -32,7 +33,7 @@ export default function MockOraaV2WhyNow() {
     return (
         <section ref={sectionRef} className="py-24">
             <div className="max-w-6xl mx-auto px-8">
-                <h2 className="text-5xl font-semibold mb-16 tracking-tight">
+                <h2 className={`${h2Section} mb-16`}>
                     Why This Problem Matters Now
                 </h2>
                 

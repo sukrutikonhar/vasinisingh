@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { LayoutDashboard, Bot, DollarSign, Bell, Palette, Star } from 'lucide-react';
 
@@ -49,7 +50,7 @@ const DesignProcess: React.FC = () => {
                                 04 — Solution Architecture
                             </span>
                         </div>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
+                        <h2 className={`${h2Section} mb-4`}>
                             Strategic Features Designed to Address Core Pain Points
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed">

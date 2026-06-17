@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import { useEffect, useRef, useState } from 'react';
 
 export default function MockOraaV2Problem() {
@@ -29,9 +30,12 @@ export default function MockOraaV2Problem() {
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">01. THE PROBLEM SPACE</p>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">The Confidence Gap in Modern Hiring</h2>
-                    <p className="text-base sm:text-lg font-inter text-gray-600 mb-12 max-w-3xl leading-relaxed">
+                    <h2 className={`${h2Section} mb-4`}>The Confidence Gap in Modern Hiring</h2>
+                    <p className="text-base sm:text-lg font-inter text-gray-600 mb-4 max-w-3xl leading-relaxed">
                         Hiring processes have adopted AI screening and automation, yet preparation remains passive, generic, and emotionally disconnected. Candidates struggle not because they lack knowledge, but because they lack the space to perform under pressure.
+                    </p>
+                    <p className="text-xs font-inter text-gray-500 mb-12">
+                        Source: Internal research, n=50+
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12">
                         {stats.map((stat, index) => (
@@ -51,7 +55,7 @@ export default function MockOraaV2Problem() {
                             Why Current Solutions Fail to Address the Problem?
                         </p>
                         <p className="text-sm sm:text-base md:text-lg font-inter text-gray-600 max-w-3xl leading-relaxed">
-                            We audited existing platforms and found a critical gap. Tools either relied on static recorded video (lacking dynamic conversation) or provided overwhelming, unstructured data dumps that increased cognitive load rather than building confidence.
+                            I audited existing platforms and found a critical gap. Tools either relied on static recorded video (lacking dynamic conversation) or provided overwhelming, unstructured data dumps that increased cognitive load rather than building confidence.
                         </p>
                     </div>
                 </div>

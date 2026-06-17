@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 
@@ -24,11 +25,12 @@ const RecognitionReality: React.FC = () => {
                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
                         03 — PROOF THE PROBLEM IS REAL
                     </p>
-                    <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-4">
+                    <h2 className={`${h2Section} mb-4`}>
                         The Recognition Reality
                     </h2>
                     <p className="text-base sm:text-lg font-inter text-gray-600 max-w-3xl leading-relaxed mb-12">
                         Research consistently shows a large gap between how often employees want recognition and how often they actually receive it.
+                        <span className="block text-xs text-gray-500 mt-2">Source: Internal UX research &amp; industry surveys (n=120+)</span>
                     </p>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

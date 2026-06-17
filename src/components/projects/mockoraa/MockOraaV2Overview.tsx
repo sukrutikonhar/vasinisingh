@@ -53,7 +53,7 @@ const MockOraaV2Overview: React.FC = () => {
                                 81 SUS Score
                             </div>
                             <div className="text-sm font-inter text-gray-600 mt-1 leading-relaxed">
-                                31% faster task completion
+                                4.45/5 CSAT · −67% confusion reduction
                             </div>
                         </div>
                     </div>

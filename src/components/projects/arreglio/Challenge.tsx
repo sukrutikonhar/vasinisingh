@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { RefreshCw, Users, Clock } from 'lucide-react';
 
@@ -28,7 +29,7 @@ const Challenge: React.FC = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
                     <div className="mb-12">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-8 text-center">
+                        <h2 className={`${h2Section} mb-8`}>
                             The Challenge
                         </h2>
                         <div className="bg-gray-50 border border-gray-300 p-8 sm:p-12 rounded-[6px] mb-12 shadow-sm">

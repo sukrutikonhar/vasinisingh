@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import { useEffect, useRef, useState } from 'react';
 
 const designTokens = {
@@ -36,9 +37,9 @@ export default function MockOraaV2Visual() {
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     <p className="text-xs uppercase tracking-widest text-gray-500 font-grotesk font-bold mb-4">06. DESIGN SYSTEM</p>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4 sm:mb-6">Designing for Calm and Clarity</h2>
+                    <h2 className={`${h2Section} mb-4 sm:mb-6`}>Designing for Calm and Clarity</h2>
                     <p className="text-sm sm:text-base md:text-lg font-inter text-gray-600 mb-8 sm:mb-12 max-w-3xl leading-relaxed">
-                        Interview anxiety is visceral. We chose a &ldquo;Deep Sea&rdquo; color palette (anchored by #316E51) to evoke calm focus. Typography relies on highly legible sans-serifs with ample line height to reduce cognitive strain during reading tasks.
+                        Interview anxiety is visceral. I chose a &ldquo;Deep Sea&rdquo; color palette (anchored by #316E51) to evoke calm focus. Typography relies on highly legible sans-serifs with ample line height to reduce cognitive strain during reading tasks.
                     </p>
 
                     {/* Dynamic Design System: Deep Sea — layout like image */}

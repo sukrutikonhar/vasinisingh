@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 const pathways = [
@@ -19,7 +20,7 @@ const DecisionArchitecture: React.FC = () => {
                         <p className="text-xs font-grotesk font-bold uppercase tracking-wider text-gray-400 mb-3">
                             Decision architecture
                         </p>
-                        <h2 className="text-2xl sm:text-3xl font-grotesk font-bold text-black mb-4 leading-tight">
+                        <h2 className={`${h2Section} mb-4`}>
                             Four pathways, one entry point
                         </h2>
                         <p className="text-sm sm:text-base font-inter text-gray-600 leading-relaxed mb-7">
@@ -51,17 +52,6 @@ const DecisionArchitecture: React.FC = () => {
                                 ))}
                             </div>
                         </div>
-                    </div>
-
-                    {/* Right: medical image */}
-                    <div className="relative h-[280px] sm:h-[360px] lg:h-[420px] rounded-[6px] overflow-hidden">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?w=800&auto=format&fit=crop&q=70"
-                            alt="Hospital corridor representing clinical pathway decisions"
-                            className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                     </div>
 
                 </div>

@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import { X, Check } from 'lucide-react';
 
@@ -38,7 +39,7 @@ const MissingIntelligenceLayer: React.FC = () => {
                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
                         06 — MARKET GAP
                     </p>
-                    <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-6">
+                    <h2 className={`${h2Section} mb-6`}>
                         The Missing Intelligence Layer
                     </h2>
                     <p className="text-base sm:text-lg font-inter text-gray-600 max-w-3xl leading-relaxed mb-12">

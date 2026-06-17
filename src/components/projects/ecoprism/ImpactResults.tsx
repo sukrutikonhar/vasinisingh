@@ -1,23 +1,24 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 const ImpactResults: React.FC = () => {
     const metrics = [
         {
-            value: '85%',
+            value: '95%',
+            label: 'Task Completion',
+            description: 'Success rate for core workflows'
+        },
+        {
+            value: '4.6/5',
             label: 'User Satisfaction',
-            description: 'Increase from baseline survey'
+            description: 'Average rating from enterprise users'
         },
         {
             value: '40%',
             label: 'Time Savings',
             description: 'Reduction in data processing time'
-        },
-        {
-            value: '95%',
-            label: 'Task Completion',
-            description: 'Success rate for core workflows'
         }
     ];
 
@@ -27,7 +28,7 @@ const ImpactResults: React.FC = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
                     <div className="mb-12 text-center">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
+                        <h2 className={`${h2Section} mb-4`}>
                             Measurable Impact
                         </h2>
                         <div className="w-24 h-1 bg-black mx-auto mb-8"></div>
@@ -59,7 +60,7 @@ const ImpactResults: React.FC = () => {
                             &quot;The new ecoPRISM interface has transformed how our team approaches sustainability reporting. What used to take days now takes hours, and the insights are so much clearer.&quot;
                         </blockquote>
                         <p className="text-sm font-inter text-gray-600 text-center">
-                            —Sarah Chen, Head of Sustainability at Fortune 500 Company
+                            — Head of Sustainability, ABB (name withheld under NDA)
                         </p>
                     </div>
                 </div>

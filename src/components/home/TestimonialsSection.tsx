@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Page } from '@/lib/typography';
 import React, { useEffect, useRef } from 'react';
 import { Quote, Linkedin } from 'lucide-react';
 
@@ -55,11 +56,11 @@ const TestimonialsSection: React.FC = () => {
                 <div ref={testimonialsRef} className="max-w-6xl mx-auto">
                     {/* Header */}
                     <div className="text-center mb-12 sm:mb-16 md:mb-20">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-grotesk font-bold text-black mb-4 sm:mb-6">
+                        <h2 className={`${h2Page} mb-4 sm:mb-6`}>
                             Testimonials
                         </h2>
                         <p className="text-base sm:text-lg md:text-xl text-gray-600 font-inter">
-                            Kind words from collaborators
+                            What people I&apos;ve worked with say.
                         </p>
                     </div>
 

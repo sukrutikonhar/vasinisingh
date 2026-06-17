@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 import Image from 'next/image';
 import { LayoutDashboard, DollarSign, Bell, Bot, Palette, Star } from 'lucide-react';
@@ -13,7 +14,7 @@ const Solutions: React.FC = () => {
             solution: 'Started with core features (shop profile, services, pricing) and gradually introduced advanced tools once users were comfortable.',
             result: 'Onboarding time reduced from 15 to 4 minutes',
             icon: LayoutDashboard,
-            image: '/images/projects/arreglio1/kanban-board.webp'
+            image: '/images/projects/arreglio1/arreglio-03.webp'
         },
         {
             title: 'Pricing Transparency as Competitive Advantage',
@@ -40,7 +41,7 @@ const Solutions: React.FC = () => {
             solution: 'Designed familiar Kanban interface (To Do, In Progress, Done) with drag-and-drop functionality.',
             result: '90% adoption rate among active users',
             icon: Bot,
-            image: '/images/projects/arreglio1/arreglio-06.webp'
+            image: '/images/projects/arreglio1/arreglio-05.webp'
         },
         {
             title: 'Multi-Region Compliance by Design',
@@ -68,8 +69,8 @@ const Solutions: React.FC = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
                     <div className="mb-20 text-center">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
-                            Few Design Solutions
+                        <h2 className={`${h2Section} mb-4`}>
+                            Key Design Solutions
                         </h2>
                         <p className="text-lg sm:text-xl font-inter text-gray-600 leading-relaxed max-w-3xl mx-auto">
                             Strategic features designed to address core pain points for both shop owners and customers
@@ -99,7 +100,7 @@ const Solutions: React.FC = () => {
 
                                             <div className="space-y-4 sm:space-y-6">
                                                 <div>
-                                                    <h4 className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-2">
+                                                    <h4 className="text-xs font-grotesk font-bold text-red-500 uppercase tracking-wider mb-2">
                                                         Challenge
                                                     </h4>
                                                     <p className="text-sm sm:text-base font-inter text-gray-700 leading-relaxed">
@@ -117,7 +118,7 @@ const Solutions: React.FC = () => {
                                                 </div>
 
                                                 <div>
-                                                    <h4 className="text-xs font-grotesk font-bold text-gray-500 uppercase tracking-wider mb-2">
+                                                    <h4 className="text-xs font-grotesk font-bold text-green-500 uppercase tracking-wider mb-2">
                                                         Result
                                                     </h4>
                                                     <p className="text-sm sm:text-base font-inter text-gray-700 leading-relaxed font-semibold">

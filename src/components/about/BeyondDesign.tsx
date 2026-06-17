@@ -1,11 +1,12 @@
 'use client';
 
+import { h2Page } from '@/lib/typography';
 import React from 'react';
 import Image from 'next/image';
 
 const BeyondDesign: React.FC = () => {
     return (
-        <section className="py-24 sm:py-28 md:py-32 bg-[#111] text-white">
+        <section className="py-20 sm:py-24 md:py-28 bg-[#111] text-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
@@ -13,7 +14,7 @@ const BeyondDesign: React.FC = () => {
                             <div className="text-xs sm:text-sm font-inter uppercase tracking-[0.22em] text-gray-500 mb-4">
                                 BEYOND DESIGN
                             </div>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-grotesk font-bold leading-[1.02]">
+                            <h2 className={`${h2Page}`}>
                                 The experiences that shape how I see people
                             </h2>
                         </div>
@@ -23,29 +24,28 @@ const BeyondDesign: React.FC = () => {
                         </p>
                     </div>
 
-                    {/* Interest cards */}
-                    <div className="mt-14 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8">
+                    <div className="mt-12 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8">
                         {[
                             {
                                 image: '/images/about-us/story-05.webp',
                                 title: 'Photography',
-                                description: 'Photography sharpens my attention to detail, composition, and human moments that often go unnoticed.',
+                                description: 'I shoot mostly portraits and street. It taught me that people perform when they know they\'re being watched. The same thing happens in user research. Reading what people actually do under that pressure is most of the work.',
                             },
                             {
                                 image: '/images/about-us/vasini-06.webp',
                                 title: 'Travel',
-                                description: 'Travel broadens my perspective and reminds me that people experience the world and technology in different ways.',
+                                description: 'You can find me on Instagram as @ghumakkkad_ladki. Traveling solo across cultures taught me how much trust is encoded in tiny moments: a fare estimate, a map without a route, a confirmation screen in a language you don\'t read. Good design is what holds those moments together.',
                             },
                             {
                                 image: '/images/about-us/story-04.webp',
                                 title: 'Coffee Culture',
-                                description: 'Slow conversations over coffee often inspire ideas, reflection, and deeper thinking.',
+                                description: 'My best ideas don\'t come from the brief. They come from the third refill, somewhere around the moment the conversation drifts off-topic. I treat slow conversation as a research method.',
                             },
                             {
                                 image: '/images/about-us/about-04.webp',
                                 title: 'Community Advocacy',
-                                description: 'As a POSH committee member in a non-profit, I stay connected to empathy, inclusion, and responsible decision making.',
-                            }
+                                description: 'I serve on a workplace harassment-prevention committee at a non-profit. The work showed me how policies fail when they don\'t account for how people actually behave. That\'s the same thing that goes wrong in products.',
+                            },
                         ].map((card) => (
                             <div key={card.title} className="bg-[#1a1a1a] rounded-lg p-6">
                                 <div className="rounded-lg overflow-hidden border border-white/10 bg-white/5">
@@ -74,4 +74,3 @@ const BeyondDesign: React.FC = () => {
 };
 
 export default BeyondDesign;
-

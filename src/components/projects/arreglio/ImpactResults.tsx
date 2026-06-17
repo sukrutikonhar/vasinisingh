@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 const ImpactResults: React.FC = () => {
@@ -27,7 +28,7 @@ const ImpactResults: React.FC = () => {
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}
                     <div className="mb-12 text-center">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-grotesk font-bold text-black mb-4">
+                        <h2 className={`${h2Section} mb-4`}>
                             Impact & Results
                         </h2>
                         <div className="w-24 h-1 bg-black mx-auto"></div>
@@ -48,16 +49,6 @@ const ImpactResults: React.FC = () => {
                                 </p>
                             </div>
                         ))}
-                    </div>
-
-                    {/* Testimonial */}
-                    <div className="bg-green-50 border border-green-200 rounded-lg p-8 sm:p-12">
-                        <blockquote className="text-lg sm:text-xl font-inter text-gray-800 leading-relaxed mb-4 text-center">
-                            &quot;This system transformed our entire business. What used to take hours now takes minutes, and our customers are amazed by how professional we&apos;ve become.&quot;
-                        </blockquote>
-                        <p className="text-sm font-inter text-gray-600 text-center">
-                            —Maria Rodriguez, Shop Owner
-                        </p>
                     </div>
                 </div>
             </div>

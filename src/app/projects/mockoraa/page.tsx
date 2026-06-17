@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import MinimalLayout from '@/components/layout/MinimalLayout';
 import CaseStudyHero from '@/components/projects/CaseStudyHero';
 import MockOraaV2Overview from '@/components/projects/mockoraa/MockOraaV2Overview';
@@ -15,23 +16,27 @@ import MockOraaV2Final from '@/components/projects/mockoraa/MockOraaV2Final';
 import PrevNextProject from '@/components/projects/PrevNextProject';
 import Gallery from '@/components/projects/mockoraa/Gallery';
 import CTASection from '@/components/projects/mockoraa/CTASection';
-export const metadata = {
-    title: 'MockOraa - AI-Driven Interview Intelligence | Case Study | Vasini Singh',
-    description: 'MockOraa is an AI powered mock interview platform designed to transform interview anxiety into measurable performance improvement.',
-};
+import { createPageMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = createPageMetadata({
+    title: 'MockOraa — Practice Until It Feels Real',
+    description:
+        'Case study: an AI mock interview platform designed to transform interview anxiety into measurable readiness.',
+    path: '/projects/mockoraa',
+});
 
 export default function MockOraaV2Project() {
     const heroData = {
-        title: 'Designing Confidence Through AI-Driven Interview Intelligence',
+        title: 'Practice Until It Feels Real',
         subtitle: 'MockOraa is an AI powered mock interview platform designed to transform interview anxiety into measurable readiness through realistic simulations, behavioral analysis, and structured feedback loops.',
         youtubeVideoId: 'FIleByUXYqY',
-        tags: ['AI', 'EdTech', 'Mobile App'],
+        tags: ['Behavioral Design', 'Conversational AI', 'Confidence UX'],
         prototypeLink: 'https://www.figma.com/proto/dDS6lfVky5LwPI8PadYt4O/Final-Flow?node-id=1448-6286&starting-point-node-id=1448%3A6286',
     };
 
     return (
         <MinimalLayout>
-            <CaseStudyHero data={heroData} compactTitle comfortableSpacing />
+            <CaseStudyHero data={heroData} comfortableSpacing />
             <MockOraaV2Overview />
             <MockOraaV2Problem />
             <MockOraaV2Research />

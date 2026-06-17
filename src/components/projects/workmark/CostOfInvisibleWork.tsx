@@ -1,5 +1,6 @@
 'use client';
 
+import { h2Section } from '@/lib/typography';
 import React from 'react';
 
 const CostOfInvisibleWork: React.FC = () => {
@@ -37,11 +38,12 @@ const CostOfInvisibleWork: React.FC = () => {
                     <p className="text-xs uppercase tracking-wider text-gray-500 font-grotesk font-bold mb-4">
                         05 — CONSEQUENCES
                     </p>
-                    <h2 className="text-3xl lg:text-4xl font-grotesk font-bold text-black mb-4">
+                    <h2 className={`${h2Section} mb-4`}>
                         The Cost of Invisible Work
                     </h2>
                     <p className="text-base sm:text-lg font-inter text-gray-600 mb-12 max-w-3xl leading-relaxed">
                         Unrecognized contribution is not only a morale issue. It creates measurable cost at talent, productivity, and culture level.
+                        <span className="block text-xs text-gray-500 mt-2">$8.8T figure: Gallup, State of the Global Workplace</span>
                     </p>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
