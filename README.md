@@ -1,4 +1,4 @@
-# Vasini Singh — Senior Product Designer Portfolio
+# Vasini Singh Portfolio — Frontend Build
 
 [![Live Demo](https://img.shields.io/badge/demo-live-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vasinisingh.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-15.5-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
@@ -6,11 +6,13 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-A production-grade personal portfolio that turns eight years of product design work into a credible, conversion-focused hiring asset. Built for recruiters, hiring managers, and design leaders who need to evaluate craft, business impact, and execution quality in under five minutes — without sacrificing the depth required for a serious case study review.
+A production-grade portfolio website I designed and built for **Vasini Singh**, a Senior Product Designer. This repo documents the **frontend engineering work** — not the design case studies themselves, which belong to the client.
 
-**Who it is for:** SaaS and enterprise teams hiring senior product designers, and stakeholders evaluating design leadership for complex B2B, healthcare, compliance, and AI-adjacent products.
+**My role:** Full-stack frontend developer — architecture, component system, routing, performance, SEO, contact integration, responsive implementation, and Vercel deployment.
 
-**Business problem it solves:** Strong designers often lose opportunities because their work lives in scattered PDFs, Figma links, and slide decks that fail to communicate outcomes. This site centralizes proof of impact — adoption rates, time saved, satisfaction scores, and live product status — inside a fast, trustworthy experience that mirrors the calm, strategic product voice Vasini brings to client work.
+**Client:** [Vasini Singh](https://vasinisingh.vercel.app/) — Senior Product Designer (content, UX direction, case study narratives, visual design)
+
+**What I delivered:** A fast, statically generated Next.js application that turns a designer's scattered Figma files and PDFs into a cohesive hiring asset — 12 routes, 130+ components, 5 long-form case studies, an interactive experience timeline, and a working contact funnel — deployed to production on Vercel.
 
 ---
 
@@ -34,38 +36,39 @@ A production-grade personal portfolio that turns eight years of product design w
 
 ---
 
-## Key Features
+## What I Built
 
-### Homepage that sells outcomes, not aesthetics
-A hero with clear positioning, credibility stats (8+ years, 40+ products, 5 industries), and a curated **Selected Work** grid that surfaces business metrics — adoption, savings, satisfaction — before a visitor clicks into any case study.
+### Multi-page portfolio application
+Implemented the full site from a designer's specifications: homepage, about, projects index, contact, blogs, and five individual case study routes — each with its own section composition and SEO metadata.
 
-### Five deep-dive case studies
-Long-form narrative pages for real product work across high-stakes domains:
-
-| Project | Domain | Outcome signal |
-| --- | --- | --- |
-| **Arreglio** | B2B service coordination for repair shops | 3× faster processing, $50K annual savings, 98% adoption |
-| **ecoPRISM** | Enterprise ESG compliance (ABB) | 95% task completion, 4.6/5 satisfaction, 40% time saved |
-| **MockOraa** | AI interview practice (EdTech) | 81 SUS score, 4.45/5 CSAT, 67% confusion reduction |
-| **WorkMark** | HR tech — invisible work recognition | Projected recognition +30%, review prep −60% |
-| **NeuroAssist** | Clinical stroke-care workflow | 8-stage end-to-end flow, 4 pathways, zero dead-end states |
-
-Each case study follows a repeatable story arc: problem → role → challenge → solution → impact → reflection → gallery → CTA, with prev/next navigation to keep reviewers in flow.
+### Reusable case study engine
+Built a composable architecture so each project (B2B SaaS, ESG compliance, clinical UX, HR tech, EdTech) can tell a different story without forking the layout. Shared primitives (`CaseStudyHero`, `PrevNextProject`, `MinimalLayout`) keep five narratives structurally consistent while allowing per-project section assembly.
 
 ### Interactive experience timeline
-A two-panel About experience that lets hiring managers explore career history by company and drill into individual shipped projects — with live product / live MVP status badges — without leaving the page.
+Engineered a master–detail About page component: company selection, project drill-down, live product / MVP status badges, smooth scroll with `prefers-reduced-motion` fallback, and mobile-friendly layout.
 
-### Lead capture that respects the visitor
-A validated contact form (client-side validation, loading states, success/error feedback) integrated with Web3Forms so inbound opportunities reach inbox reliably — no backend infrastructure required.
+### Content-driven data layer
+Separated presentation from content with typed TypeScript modules (`projects.ts`, `experience-timeline.ts`). The client can update portfolio cards, metrics, and career history in one place — changes propagate to the homepage grid, projects index, and case study pages automatically.
 
-### Content architecture built to scale
-Portfolio projects, metrics, tags, and experience data live in typed data modules. Adding a sixth case study means a new route folder and section components — not rewriting the entire site.
+### Production contact form
+Integrated Web3Forms with client-side validation, async submission, loading states, and success/error feedback — no custom backend required.
 
-### Blogs hub (content-ready)
-A dedicated `/blogs` route structured for design writing and thought leadership, positioned for ongoing SEO and personal brand growth.
+### Performance-first static delivery
+All 12 routes pre-render at build time. Images optimized via `next/image` and WebP assets. Fonts loaded through `next/font`. Shared JS baseline ~129 kB.
 
-### Resume download paths
-Multiple CTA entry points (hero, footer, contact) drive recruiters toward the next step in the hiring funnel.
+---
+
+## Client Context
+
+The site showcases Vasini's product design work across high-stakes domains. I implemented the frontend to surface her business outcomes clearly:
+
+| Case Study | Domain | Metrics surfaced in UI |
+| --- | --- | --- |
+| **Arreglio** | B2B service coordination | 3× faster processing, $50K savings, 98% adoption |
+| **ecoPRISM** | Enterprise ESG (ABB) | 95% task completion, 4.6/5 satisfaction, 40% time saved |
+| **MockOraa** | AI interview practice | 81 SUS score, 4.45/5 CSAT, 67% confusion reduction |
+| **WorkMark** | HR tech / recognition | Projected +30% recognition, −60% review prep |
+| **NeuroAssist** | Clinical stroke-care UX | 8-stage flow, 4 pathways, zero dead-end states |
 
 ---
 
@@ -80,7 +83,7 @@ Multiple CTA entry points (hero, footer, contact) drive recruiters toward the ne
 | Icons | [Lucide React](https://lucide.dev/), [Iconify](https://iconify.design/) |
 | Fonts | `next/font` — Inter (body), Space Grotesk (display) |
 | Utilities | `clsx`, `tailwind-merge` |
-| Build tooling | Turbopack (`next dev --turbopack`, `next build --turbopack`) |
+| Build tooling | Turbopack |
 | Form handling | Web3Forms REST API |
 | Deployment | [Vercel](https://vercel.com/) |
 | Linting | ESLint 9 + `eslint-config-next` |
@@ -89,30 +92,30 @@ Multiple CTA entry points (hero, footer, contact) drive recruiters toward the ne
 
 ## Architecture Overview
 
-This project uses the **Next.js App Router** with a deliberate **server-first, client-on-demand** split:
+I structured this as a **server-first Next.js App Router** project with client components only where interactivity is required:
 
-- **Route files** (`src/app/**/page.tsx`) are Server Components. They export per-page `metadata` for SEO and statically compose page sections.
-- **Interactive UI** (navigation, forms, scroll animations, experience timeline) is isolated in `'use client'` components to keep the client JavaScript bundle lean.
-- **Feature-based component folders** mirror product domains: `home/`, `about/`, `projects/{slug}/`, `contact/`, `blogs/`, `layout/`, `ui/`.
-- **Shared primitives** (`CaseStudyHero`, `PrevNextProject`, `MinimalLayout`, `ProjectEyebrow`) enforce visual and structural consistency across five different case study narratives.
-- **Data layer** (`src/data/projects.ts`, `src/data/experience-timeline.ts`) decouples content from presentation — the same project objects power the homepage grid, projects index, and case study metadata.
-- **Cross-cutting lib** (`metadata.ts`, `typography.ts`, `utils.ts`) centralizes SEO helpers, typographic scale, and class-name merging.
+- **Server Components** for all route files — static generation, per-page `metadata`, minimal client JS
+- **Client Components** isolated to navigation, forms, scroll animations, and the experience timeline
+- **Feature-based folders** — `home/`, `about/`, `projects/{slug}/`, `contact/`, `blogs/`, `layout/`, `ui/`
+- **Shared layout primitives** — consistent header, footer, case study hero, prev/next navigation
+- **Typed data modules** — single source of truth for portfolio and experience content
+- **Cross-cutting lib** — `createPageMetadata()`, typography tokens, `cn()` utility
 
-### Why these decisions matter
+### Key engineering decisions
 
-| Decision | Business / engineering rationale |
+| Decision | Why I made it |
 | --- | --- |
-| Static generation for all 12 routes | Predictable performance for global recruiters on any connection; no server latency on page load |
-| Composable case study sections | Each project tells a different story without forking the entire layout system |
-| Typed portfolio data | Prevents broken links, missing metrics, and inconsistent cards when content changes |
-| Centralized metadata factory | Every new page gets Open Graph, Twitter, and canonical URLs automatically |
-| Minimal global state | React `useState` only where interaction demands it — no unnecessary state library |
+| Static generation for all routes | Global recruiters get instant page loads with no server latency |
+| Composable case study sections | Each project has unique narrative blocks without duplicating layout code |
+| Typed portfolio data | Content updates stay safe — no broken cards or stale metrics across pages |
+| Centralized metadata factory | Every route gets Open Graph, Twitter cards, and canonical URLs for free |
+| No global state library | Local React state is sufficient; keeps bundle lean on a content site |
 
 ---
 
 ## Performance Optimizations
 
-Production build results (Next.js 15 + Turbopack):
+Verified production build (Next.js 15 + Turbopack):
 
 | Route | First Load JS |
 | --- | --- |
@@ -121,81 +124,81 @@ Production build results (Next.js 15 + Turbopack):
 | `/projects/workmark` | 145 kB |
 | Shared baseline | 129 kB |
 
-**Techniques in use:**
+**What I implemented:**
 
-- **Full static prerendering** — all 12 app routes ship as pre-built HTML (`○ Static`).
-- **`next/image`** — responsive images with `fill`, optimized formats, and remote pattern allowlisting for Unsplash avatars.
-- **WebP assets** — hero and case study imagery stored as `.webp` in `/public/images`.
-- **`next/font`** — self-hosted Google fonts with zero layout shift and no render-blocking font requests.
-- **Intersection Observer scroll reveals** — homepage project cards animate in when visible, not on initial paint.
-- **`prefers-reduced-motion`** — global CSS and timeline logic respect user motion preferences.
-- **Turbopack** — faster dev and production compile cycles during iteration.
+- Full static prerendering — all 12 routes ship as pre-built HTML
+- `next/image` with responsive `fill` layouts and remote pattern allowlisting
+- WebP image assets throughout `/public/images`
+- `next/font` for zero layout-shift font loading
+- Intersection Observer scroll reveals on homepage project cards
+- Global `prefers-reduced-motion` CSS + timeline scroll behavior fallback
+- Turbopack for faster dev/build iteration
 
 ---
 
 ## Responsive Design
 
-Mobile-first Tailwind breakpoints (`sm`, `md`, `lg`) drive layout at every level:
+Mobile-first implementation across all breakpoints:
 
-- **Navigation:** transparent fixed header on desktop; collapsible hamburger menu on mobile with active-route indicators.
-- **Grids:** homepage projects scale `1 → 2 → 3` columns; case study heroes stack content and imagery vertically on small screens.
-- **Typography:** fluid type scale via shared tokens (`h1Page`, `h2Page`, `h2Section`) — readable on phone, impactful on desktop.
-- **Spacing:** CSS custom properties (`--section-padding`, `--container-padding`) increase section rhythm at larger viewports.
-- **Touch targets:** full-width mobile CTAs, adequate padding on form fields and nav items.
+- Fixed header with transparent → solid scroll state; hamburger menu on mobile
+- Responsive grids: `1 → 2 → 3` columns on homepage; stacked heroes on small screens
+- Fluid typography via shared tokens (`h1Page`, `h2Page`, `h2Section`)
+- CSS custom properties for section/container padding that scale with viewport
+- Touch-friendly CTAs and form fields on mobile
 
 ---
 
 ## Accessibility
 
-- Semantic landmarks: `<header>`, `<main>`, `<nav>`, `<section>`.
-- `lang="en"` on the document root.
-- Form fields paired with visible `<label htmlFor="...">` associations.
-- `aria-label` on the mobile menu toggle; `aria-labelledby` on major sections (experience timeline).
-- `prefers-reduced-motion: reduce` disables animations globally and switches smooth scroll to instant in the timeline.
-- Focus-visible patterns on interactive SVG elements in complex case study visuals.
-- Sufficient color contrast on the black-and-white design system (`#202022` ink on white).
+Built-in from the start, not bolted on later:
+
+- Semantic HTML landmarks (`header`, `main`, `nav`, `section`)
+- `lang="en"` on document root
+- Form labels with `htmlFor` associations
+- `aria-label` on mobile menu toggle; `aria-labelledby` on timeline section
+- `prefers-reduced-motion: reduce` disables animations globally
+- Focus-visible handling on interactive SVG elements in case study visuals
 
 ---
 
-## Challenges Solved
+## Engineering Challenges I Solved
 
-### 1. Telling five different product stories with one design system
-Each case study (automotive SaaS, ESG compliance, clinical UX, HR AI, EdTech AI) has unique narrative sections — wireframes, personas, information architecture, metrics — without duplicating layout code. `CaseStudyHero` accepts flexible props (metrics, status badges, YouTube embeds, prototype links) while each `page.tsx` assembles only the sections that story needs.
+### 1. Five different case studies, one component system
+Each case study needed unique sections (wireframes, personas, IA diagrams, metrics dashboards) but shared visual language. I built flexible shared components (`CaseStudyHero` accepts metrics, badges, YouTube embeds, prototype links) and composed each route from only the sections that story needs.
 
-### 2. Making career history scannable for busy reviewers
-The Experience Timeline V2 uses a master–detail pattern: company list on the left, project detail on the right, with live-status tags and smooth-scroll behavior that respects reduced-motion settings. Recruiters can evaluate breadth (companies, roles) and depth (individual shipped products) in one interaction.
+### 2. Scannable career history without page reloads
+The Experience Timeline V2 required a two-panel master–detail UI with company switching, project selection, live-status tags, and accessible scroll behavior — all in a single About page without routing overhead.
 
-### 3. Keeping content updates safe at scale
-Portfolio cards, homepage selection, and case study ordering are driven from `projects.ts` with TypeScript interfaces (`PortfolioProject`, `ProjectMetric`). A content edit in one file propagates everywhere — reducing the risk of stale copy on the homepage vs. the projects index.
+### 3. Content that stays in sync everywhere
+Portfolio data powers the homepage selected-work grid, the projects index, and individual case study metadata. One typed edit in `projects.ts` updates all surfaces — preventing the common portfolio bug of inconsistent copy across pages.
 
-### 4. Production contact flow without a custom backend
-The contact form validates on the client, posts to Web3Forms, and surfaces loading / success / error UI states — giving hiring managers a frictionless path to reach out without maintaining server infrastructure.
+### 4. Contact capture without backend infrastructure
+Integrated Web3Forms so the client's inbound leads reach her inbox with validated form UX (loading, success, error states) and zero server maintenance.
 
-### 5. SEO for a personal brand site
-A `createPageMetadata()` helper generates title, description, Open Graph, Twitter card, and canonical URL for every route — critical when recruiters Google a candidate name or share a case study link on LinkedIn.
+### 5. SEO for a personal brand domain
+Built `createPageMetadata()` to generate title, description, Open Graph, Twitter card, and canonical URL for every route — so shared case study links render correctly on LinkedIn and in search results.
 
 ---
 
 ## What I Learned
 
-- **Server vs. client boundaries in App Router** — keeping pages as Server Components and pushing interactivity to leaf components materially reduces bundle size on content-heavy routes.
-- **Content-driven architecture for portfolios** — treating case studies as data + composition beats monolithic page files when the number of projects grows.
-- **Design systems in code** — shared typography tokens and UI primitives (`ProjectEyebrow`, `Button`, container utilities) keep five case studies visually cohesive without a component library dependency.
-- **Static-first deployment** — pre-rendering every route on Vercel delivers consistent global performance for an audience that spans time zones and devices.
-- **Accessibility as a default** — reduced-motion support and semantic structure are cheaper to build in from the start than to retrofit after launch.
+- **Server/client boundaries in App Router** — pushing interactivity to leaf components materially reduced bundle size on content-heavy routes
+- **Content-driven architecture** — data modules + composition scales better than monolithic page files as case studies grow
+- **Design-to-code collaboration** — implementing a designer's system in Tailwind tokens and shared primitives without a component library dependency
+- **Static-first client delivery** — pre-rendering every route gives predictable global performance without ops overhead
+- **Accessibility as a build requirement** — reduced-motion and semantic structure are cheaper upfront than retrofitting
 
 ---
 
 ## Future Improvements
 
-- Move Web3Forms `access_key` to an environment variable (`NEXT_PUBLIC_` or server action) to keep secrets out of source control.
-- Add `sitemap.xml` and `robots.txt` via Next.js metadata routes for stronger crawl coverage.
-- Implement `next/image` `priority` on above-the-fold hero images for faster LCP.
-- Add structured data (`Person`, `CreativeWork`) JSON-LD for rich search results.
-- Introduce a lightweight CMS (Sanity, Contentlayer, or MDX) so case study copy can be updated without redeploying.
-- Add Playwright or Cypress smoke tests for critical flows: navigation, contact form, case study prev/next.
-- Complete NeuroAssist and Suana visual assets to replace placeholder imagery.
-- Publish blog posts with dynamic `[slug]` routes and RSS feed.
+- Move Web3Forms `access_key` to a Vercel environment variable
+- Add `sitemap.xml` and `robots.txt` via Next.js metadata routes
+- Set `next/image` `priority` on above-the-fold hero images for faster LCP
+- Add JSON-LD structured data (`Person`, `CreativeWork`)
+- Introduce MDX or a headless CMS so the client can update copy without redeploying
+- Add Playwright smoke tests for navigation, contact form, and case study flows
+- Dynamic `[slug]` blog routes with RSS feed
 
 ---
 
@@ -209,14 +212,9 @@ A `createPageMetadata()` helper generates title, description, Open Graph, Twitte
 ### Setup
 
 ```bash
-# Clone the repository
 git clone https://github.com/sukrutikonhar/vasinisingh.git
 cd vasinisingh
-
-# Install dependencies
 npm install
-
-# Start development server (Turbopack)
 npm run dev
 ```
 
@@ -238,106 +236,89 @@ Open [http://localhost:3000](http://localhost:3000).
 ```
 vasini-portfolio/
 ├── public/
-│   └── images/                  # Optimized WebP/PNG assets (projects, about, logo)
+│   └── images/                  # Client assets (WebP/PNG)
 ├── src/
-│   ├── app/                     # Next.js App Router — routes & page-level metadata
-│   │   ├── layout.tsx           # Root layout, fonts, global metadata
-│   │   ├── globals.css          # Design tokens, animations, a11y utilities
+│   ├── app/                     # Next.js App Router — routes & metadata
+│   │   ├── layout.tsx
+│   │   ├── globals.css          # Design tokens, animations, a11y
 │   │   ├── page.tsx             # Homepage
 │   │   ├── about/page.tsx
 │   │   ├── blogs/page.tsx
 │   │   ├── contact/page.tsx
-│   │   └── projects/
-│   │       ├── page.tsx         # Projects index
-│   │       ├── arreglio/page.tsx
-│   │       ├── ecoprism/page.tsx
-│   │       ├── mockoraa/page.tsx
-│   │       ├── neuroassist/page.tsx
-│   │       └── workmark/page.tsx
+│   │   const └── projects/         # 5 case study routes + index
 │   ├── components/
-│   │   ├── about/               # About page sections + experience timeline v2
-│   │   ├── blogs/               # Blog listing components
-│   │   ├── contact/             # Contact form, info, hero
-│   │   ├── home/                # Homepage sections (hero, grid, testimonials)
-│   │   ├── layout/              # MinimalLayout, header, footer
-│   │   ├── projects/            # Shared case study + per-project sections
-│   │   │   ├── arreglio/
-│   │   │   ├── ecoprism/
-│   │   │   ├── mockoraa/
-│   │   │   ├── neuroassist/
-│   │   │   ├── workmark/
-│   │   │   ├── CaseStudyHero.tsx
-│   │   │   └── PrevNextProject.tsx
+│   │   ├── about/               # Experience timeline v2
+│   │   ├── home/                # Hero, grid, testimonials
+│   │   ├── layout/              # Header, footer, MinimalLayout
+│   │   ├── projects/            # Shared + per-project case study sections
 │   │   └── ui/                  # Button, Logo, ProjectEyebrow
 │   ├── data/
-│   │   ├── projects.ts          # Portfolio project definitions & metrics
-│   │   └── experience-timeline.ts  # Career history & shipped products
+│   │   ├── projects.ts          # Portfolio definitions
+│   │   └── experience-timeline.ts
 │   └── lib/
-│       ├── metadata.ts          # SEO & Open Graph helpers
-│       ├── typography.ts        # Shared type scale tokens
-│       └── utils.ts             # cn() — clsx + tailwind-merge
-├── next.config.ts               # Image remote patterns
+│       ├── metadata.ts          # SEO helpers
+│       ├── typography.ts        # Type scale tokens
+│       └── utils.ts             # cn() utility
+├── next.config.ts
 ├── package.json
-├── tsconfig.json
-└── eslint.config.mjs
+└── tsconfig.json
 ```
 
-**Scale:** 12 static routes · 130+ React components · 5 full case studies · 2 typed data modules
+**Scale:** 12 static routes · 130+ React components · 5 case studies · 2 typed data modules
 
 ---
 
 ## Deployment
 
-| Step | Detail |
+| Detail | Value |
 | --- | --- |
-| Platform | Vercel (native Next.js integration) |
-| Trigger | Push to `main` → automatic production deploy |
+| Platform | Vercel |
 | Output | Fully static HTML for all routes |
-| Domain | [vasinisingh.vercel.app](https://vasinisingh.vercel.app/) |
-| Env vars | Web3Forms access key (recommended: move to Vercel env) |
+| Live URL | [vasinisingh.vercel.app](https://vasinisingh.vercel.app/) |
+| Deploy trigger | Push to `master` |
 
 ```bash
-# Manual production verification
 npm run build
 npm run start
 ```
 
-No Docker, database, or server runtime required — the site is a static frontend deployed to the edge.
+No Docker, database, or server runtime — edge-static frontend only.
 
 ---
 
-## Skills Demonstrated
+## Skills Demonstrated (My Work)
 
-| Skill | Evidence in this project |
+| Skill | How this repo proves it |
 | --- | --- |
-| **React** | 130+ functional components; hooks for forms, scroll, intersection observers, and timeline state |
-| **Next.js** | App Router, Server Components, static generation, `next/image`, `next/font`, per-route metadata |
-| **TypeScript** | Typed data models (`PortfolioProject`, `ExperienceCompany`), props interfaces across all components |
-| **Component Architecture** | Feature folders, shared layout primitives, composable case study sections |
-| **State Management** | Local React state only — no external store; appropriate for a content site |
-| **API Integration** | Contact form → Web3Forms REST with async fetch, error handling, and UI feedback |
-| **Responsive Design** | Mobile-first Tailwind grids, fluid typography, adaptive navigation |
-| **Performance Optimization** | Static prerender, WebP images, font optimization, ~129 kB shared JS baseline |
-| **SEO** | `createPageMetadata()`, Open Graph, Twitter cards, canonical URLs, semantic HTML |
-| **Deployment** | Vercel CI/CD, production build verified, edge-static delivery |
+| **React** | 130+ components; hooks for forms, scroll, intersection observers, timeline state |
+| **Next.js** | App Router, Server Components, SSG, `next/image`, `next/font`, per-route metadata |
+| **TypeScript** | Typed data models and props interfaces across the codebase |
+| **Component Architecture** | Feature folders, shared primitives, composable case study pages |
+| **State Management** | Appropriate local React state — no unnecessary global store |
+| **API Integration** | Web3Forms REST with async fetch, validation, and UI feedback states |
+| **Responsive Design** | Mobile-first Tailwind, adaptive nav, fluid typography |
+| **Performance** | Static prerender, WebP images, ~129 kB shared JS baseline |
+| **SEO** | Open Graph, Twitter cards, canonical URLs on every route |
+| **Deployment** | Vercel CI/CD, verified production build |
+| **Design Collaboration** | Translated a designer's vision into a maintainable, production codebase |
 
 ---
 
-## Why This Project Matters
+## Why This Project Matters (For Recruiters)
 
-Hiring managers do not hire designers based on pretty mockups alone — they hire people who can **translate complex product problems into outcomes users and businesses trust**. This portfolio proves that capability end to end:
+This repo is evidence of **shipping real client work to production**, not a tutorial clone:
 
-1. **It sells business impact first.** Every featured project leads with metrics recruiters understand — adoption, savings, satisfaction, task completion — not tool names or process jargon.
+1. **End-to-end delivery.** I took a designer's portfolio from concept to a live Vercel deployment with working contact capture — the full client project lifecycle.
 
-2. **It demonstrates production thinking.** The site is not a prototype. It is a statically generated, type-safe, SEO-ready application deployed to production with real contact capture — the same discipline required when shipping client-facing SaaS.
+2. **Architecture at scale.** 130+ components organized by feature, not a single-page throwaway. Case studies compose from shared primitives; content lives in typed modules.
 
-3. **It shows architectural maturity.** Case studies are composed from reusable sections; content lives in typed data modules; server and client boundaries are intentional. This is how maintainable frontend systems are built on product teams.
+3. **Production discipline.** Static generation, SEO metadata, accessibility defaults, performance budgets, and error-handled form submission — the same standards expected on product teams.
 
-4. **It reflects UX craft in the implementation.** Calm typography, reduced-motion support, mobile navigation, and scroll-driven reveals mirror the "trust before action" design philosophy described in the work itself.
+4. **Complex UI without over-engineering.** Interactive timeline, scroll animations, multi-route case studies — implemented with intentional server/client splits, not by adding Redux or a CMS prematurely.
 
-5. **It compresses evaluation time.** A recruiter can scan the homepage in 30 seconds, dive into a relevant case study in 5 minutes, and contact the candidate in one click — reducing friction in the hiring funnel the same way good product design reduces friction for end users.
+5. **Maintainable for the client.** The content layer is separated from components so the site owner can grow case studies and update career data without restructuring the app.
 
-For frontend and product engineering leaders, this repository is evidence that Vasini Singh does not only design interfaces — she ships coherent, performant, recruiter-ready product experiences.
+For hiring managers evaluating frontend engineers: this is a **client portfolio build** that demonstrates I can translate design intent into a performant, typed, deployable Next.js application.
 
 ---
 
@@ -346,31 +327,34 @@ For frontend and product engineering leaders, this repository is evidence that V
 ### Suggested repository description
 
 ```
-Production-grade portfolio for a Senior Product Designer — Next.js 15, React 19, TypeScript, 5 case studies with measurable impact, static deploy on Vercel.
+Client portfolio build — Next.js 15, React 19, TypeScript, 5 case study
 ```
 
 ### Suggested topics / tags
 
 ```
-nextjs, react, typescript, tailwindcss, portfolio, product-design, case-study, frontend, vercel, app-router, static-site, ui-ux, design-system, seo, accessibility
+nextjs, react, typescript, tailwindcss, frontend, portfolio-website, client-project, vercel, app-router, static-site, component-architecture, seo, accessibility, web-development
 ```
 
-### Additional badge ideas
+### Additional badges
 
 ```markdown
-[![TypeScript](https://img.shields.io/badge/types-TypeScript-blue?style=flat-square&logo=typescript)]()
+[![Built for Client](https://img.shields.io/badge/project-client_portfolio-blue?style=flat-square)]()
 [![Vercel](https://img.shields.io/badge/deployed-Vercel-black?style=flat-square&logo=vercel)](https://vasinisingh.vercel.app/)
 [![Static Site](https://img.shields.io/badge/SSG-12_routes-success?style=flat-square)]()
-[![License](https://img.shields.io/badge/license-Private-lightgrey?style=flat-square)]()
 ```
 
 ---
 
-## Author
+## Credits
 
-**Vasini Singh** — Senior Product Designer  
-[Live portfolio](https://vasinisingh.vercel.app/) · [GitHub](https://github.com/sukrutikonhar/vasinisingh)
+| Role | Person |
+| --- | --- |
+| **Developer** | [Sukruti Konhar](https://github.com/sukrutikonhar) |
+| **Client / Designer** | [Vasini Singh](https://vasinisingh.vercel.app/) |
+
+Design content, case study narratives, and visual direction belong to the client. Frontend architecture, implementation, and deployment are my work.
 
 ---
 
-*Built with Next.js 15, React 19, and TypeScript. Designed and developed as a single source of truth for hiring conversations.*
+*Built with Next.js 15, React 19, and TypeScript. A client project showcasing production frontend engineering.*
