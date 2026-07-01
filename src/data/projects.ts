@@ -64,6 +64,23 @@ export const completedProjects: PortfolioProject[] = [
         statusBadge: 'LIVE PRODUCT',
     },
     {
+        id: 7,
+        slug: 'aks',
+        title: 'AKS',
+        hook: 'Application Knowledge Store',
+        description:
+            'Engineers across ABB\'s global teams were re-solving the same technical problems in isolation, with no shared memory of what had already been figured out. AKS turned scattered, one-off answers into a governed, searchable knowledge system.',
+        image: '/images/projects/aks/Section_Overview_trim.webp',
+        year: '2025',
+        tags: ['Enterprise Platform', 'Knowledge Management', 'ABB'],
+        role: 'Senior Product Designer',
+        tools: ['Figma', 'FigJam', 'Notion'],
+        eyebrow: 'KNOWLEDGE MANAGEMENT',
+        caseNumber: '03',
+        metrics: [],
+        statusBadge: 'DESIGN PHASE',
+    },
+    {
         id: 5,
         slug: 'neuroassist',
         title: 'NeuroAssist',
@@ -75,7 +92,7 @@ export const completedProjects: PortfolioProject[] = [
         role: 'Product Designer',
         tools: ['Figma', 'FigJam'],
         eyebrow: 'TRUST UNDER PRESSURE',
-        caseNumber: '03',
+        caseNumber: '04',
         metrics: [
             { value: '8', label: 'stages · end-to-end', direction: 'up' },
             { value: '4', label: 'clinical pathways', direction: 'up' },
@@ -95,7 +112,7 @@ export const completedProjects: PortfolioProject[] = [
         role: 'Senior Product Designer',
         tools: ['Figma', 'Notion', 'Protopie'],
         eyebrow: 'EVIDENCE DESIGN',
-        caseNumber: '04',
+        caseNumber: '05',
         metrics: [
             { value: '+30%', label: 'recognition frequency (projected)', direction: 'up' },
             { value: '−60%', label: 'review prep time (projected)', direction: 'down' },
@@ -114,7 +131,7 @@ export const completedProjects: PortfolioProject[] = [
         role: 'Senior Product Designer',
         tools: ['Figma', 'FigJam'],
         eyebrow: 'CONFIDENCE DESIGN',
-        caseNumber: '05',
+        caseNumber: '06',
         metrics: [
             { value: '81', label: 'SUS score', direction: 'up' },
             { value: '4.45/5', label: 'CSAT', direction: 'up' },

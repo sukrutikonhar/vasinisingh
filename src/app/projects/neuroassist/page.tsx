@@ -33,7 +33,7 @@ export default function NeuroAssistProject() {
             <KeyDecisions />
             <Reflection />
             <CTASection />
-            <PrevNextProject prevSlug="ecoprism" prevTitle="ecoPRISM" nextSlug="mockoraa" nextTitle="MockOraa" />
+            <PrevNextProject prevSlug="aks" prevTitle="AKS" nextSlug="mockoraa" nextTitle="MockOraa" />
         </MinimalLayout>
     );
 }

@@ -111,7 +111,7 @@ const AnimatedProjectGrid: React.FC = () => {
                         href="/projects"
                         className="inline-flex items-center text-black font-grotesk font-medium hover:underline group"
                     >
-                        <span className="mr-2">See all five projects</span>
+                        <span className="mr-2">See all six projects</span>
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
