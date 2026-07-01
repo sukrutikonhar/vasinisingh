@@ -9,11 +9,11 @@ const CTASection: React.FC = () => {
         <section className="py-16 sm:py-20 md:py-24 bg-white">
             <div className="container-custom px-4 sm:px-6">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className={`${h2Section} mb-4`}>
-                        Interested in working together?
+                    <h2 className={`${h2Section} mb-6`}>
+                        Building an enterprise knowledge platform?
                     </h2>
-                    <p className="text-lg sm:text-xl font-inter text-gray-600 mb-10 leading-relaxed max-w-xl mx-auto">
-                        Let&apos;s discuss your project and explore how we can bring your vision to life.
+                    <p className="text-lg sm:text-xl font-inter text-gray-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+                        When teams lose answers in Slack threads and siloed docs, the problem isn&apos;t storage — it&apos;s trust, governance, and findability. I&apos;d like to hear about the knowledge your users need to reuse, not re-discover.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

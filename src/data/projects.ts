@@ -77,7 +77,11 @@ export const completedProjects: PortfolioProject[] = [
         tools: ['Figma', 'FigJam', 'Notion'],
         eyebrow: 'KNOWLEDGE MANAGEMENT',
         caseNumber: '03',
-        metrics: [],
+        metrics: [
+            { value: '3', label: 'user roles', direction: 'up' },
+            { value: '5', label: 'IA levels', direction: 'up' },
+            { value: '4', label: 'step KB merge flow', direction: 'up' },
+        ],
         statusBadge: 'DESIGN PHASE',
     },
     {

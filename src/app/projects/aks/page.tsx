@@ -30,6 +30,11 @@ export default function AksProject() {
         image: '/images/projects/aks/Section_Overview_trim.webp',
         tags: ['Enterprise Platform', 'Knowledge Management', 'ABB'],
         statusBadge: 'Application Knowledge Store',
+        metrics: [
+            { value: '3', label: 'User Roles' },
+            { value: '5', label: 'IA Levels' },
+            { value: '4', label: 'Step KB Merge Flow' },
+        ],
     };
 
     return (
